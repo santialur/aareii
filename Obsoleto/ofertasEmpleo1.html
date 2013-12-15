@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Dashboard - W8 Admin</title>
+		<meta name="description" content="This is page-header (.page-header &gt; h1)" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!--basic styles-->
+
+		<link 	href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+		<link 	href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+		<link 	rel="stylesheet" 			href="themes/font-awesome/css/font-awesome.min.css" />
+		<link 	rel="stylesheet"			href="http://fonts.googleapis.com/css?family=Raleway:500"  	type="text/css"/> 
+		<link 	rel="stylesheet"			href="empresaStyles.css"  	type="text/css"/> 
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+
+	</head>
+
+	<body >
+        
+
+    	<div style="width:950px; margin:auto">
+    		<div id="header" style="background-color: green">
+    			menu <br> menu <br> menu <br> menu <br> menu <br>
+    		</div>
+
+    		<div id="sideMenu">
+ 				<ul id="listMenu">
+ 					<li><a href="stand1.html">			Stand				</a></li>
+ 					<li><a href="empresa1.html">			Quienes Somos		</a></li>
+ 					<li><a href="agenda1.html">			Agenda				</a></li>
+ 					<li><a href="ofertasEmpleo1.html">	Ofertas de Empleo 	</a></li>
+ 					<li><a href="multimedia1.html">		Multimedia			</a></li>
+ 					<li><a href="chat1.html">			Chat 				</a></li>
+ 				</ul>
+    		</div>
+
+    		<div id="content">
+    			<div style="margin: 0 auto; padding: 20px 50px">
+	                <table class="offerTable">
+				        <thead>
+					        <tr>
+						        <th>Puesto</th><th>Descripcion</th><th>Fecha</th>
+					        </tr>
+				        </thead>
+				        <tbody>
+					        <tr>
+						        <td> <h5> <a onclick="myFunction()"> Pasante de Mantenimiento </a></h5></td>
+						        <td><h5 style="text-align: left">Nuestra busqueda esta orientada a estudiantes que se <br> encuentren promediando la carrera de Ingenieria Electrica,
+	                            <br>Electromecania, Industrial o afines para desarrollarse en<br> nuestra Planta Zarate. Los...</h5> </td>
+						        <td><h5>25-Sep-2013</h5> </td>
+					        </tr>
+							 <tr>
+						        <td> <h5> <a onclick="myFunction()"> Pasante para elaboracion <br>
+								de cerveza</a></h5></td>
+						        <td><h5 style="text-align: left">Nuestra busqueda esta orientada a estudiantes avanzados <br> de Ingenieria Quimica,
+	                            <br>Ingenieria electromecanica, Ingenieria Mecanica, Ingenieria<br> Electronica o afines para desarrollarse en nuestra Planta<br> Mendoza. Los...</h5> </td>
+						        <td><h5>25-Sep-2013</h5> </td>
+					        </tr>
+	                        <tr>
+						        <td> <h5> <a onclick="myFunction()"> Pasante de Envasado </a></h5></td>
+						        <td><h5 style="text-align: left">Nuestra busqueda esta orientada a estudiantes avanzados <br> de Ingenieria Quimica,
+	                            <br>Ingenieria electromecanica, Ingenieria Mecanica, Ingenieria<br> Electronica o afines para desarrollarse en nuestra Planta<br> Mendoza. Los...</h5> </td>
+						        <td><h5>25-Sep-2013</h5> </td>
+					        </tr>
+				        </tbody>
+			        </table>
+
+    			</div>
+    		</div>
+    		<div id="footer">
+		    	<p>
+		    		© 2013  Encontra+    <br />
+		        	Todos los derechos reservados.
+		    	</p>
+			</div>
+    	</div>
+	</body>
+
+    <script>
+	    function myFunction()
+	    {
+		    window.open("Postularse.html","popUpWindow",'width=300,height=400,toolbar=0,menubar=0,location=0,status=1,scrollbars=0,resizable=0,left=700,top=300');
+		    return false;
+	    }
+	</script>
+</html>
