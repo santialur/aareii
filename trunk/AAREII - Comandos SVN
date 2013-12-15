@@ -1,0 +1,35 @@
+/*----------------------------------------------------
+		COMANDOS SVN
+----------------------------------------------------*/
+
+CUANDO CREAMOS UN PROYECTO NUEVO, NO NOS OLVIDEMOS DE AGREGAR LAS LIBRERIAS DE MAVEN AL PROYECTO
+PARA HACER ESTO, DEBEMOS HACER CLICK DERECHO EN EL PROYECTO, CLICKEAR "Propiedades" Y LUEGO
+EN LA PESTAÑA DEPLOYMENT ASSEMBLY AÑADIMOS LAS LIBRERIAS
+
+
+/*----------------------------------------------------
+	Añadir
+----------------------------------------------------*/
+
+svn add --force * --auto-props --parents --depth infinity -q
+
+
+/*----------------------------------------------------
+	Update
+----------------------------------------------------*/
+
+svn update
+
+/*----------------------------------------------------
+	Commit
+----------------------------------------------------*/
+
+svn commit -m ""
+
+/*----------------------------------------------------
+	Delete
+----------------------------------------------------*/
+
+
+
+
