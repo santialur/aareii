@@ -1,11 +1,13 @@
-var phonecatApp = angular.module('AdminApp', []);
+var adminApp = angular.module('AdminApp', []);
  
-phonecatApp.controller('AdminCtrl', function ($scope) {
-  $scope.phones = [
-    {'item': 'Internet explorer'},
-    {'item': 'Chrome'},
-    {'item': 'Firefox'},
-    {'item': 'Safari'},
-    {'item': 'Other'}
-  ];
+adminApp.controller('PollCtrl', function ($scope, $http) {
+  $http.get('../js/poll.json').success(function(data) {
+  	$scope.poll = data;	
+  });
+});
+
+adminApp.controller('NewsCtrl', function ($scope, $http){
+   $http.get('../js/news.json').success(function(data){
+   	$scope.news = data;
+   });
 });
