@@ -1,0 +1,209 @@
+
+<html ng-app="AdminApp">
+	<head>
+	<jdoc:include type="head" />
+		<meta name="viewport" content="width=device-width, user-scalable=false ">
+		<link 	rel=	"stylesheet" 		href="../css/styles.css" type="text/css" />
+		<link 	rel=	"stylesheet" 		href="../css/SlidesJS.css" type="text/css" />
+		<link 	rel=	"stylesheet" 		href="../css/marquee.css" type="text/css" />
+
+		<!--- Pop up --> 		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				var moveLeft = 20;
+				var moveDown = 10;
+        
+        			$('#trigger').hover(function(e) {
+        				$('div#pop-up').show();
+ 	  		 	}, function() {
+					$('div#pop-up').hide();
+        			});
+        
+        			$('#trigger').mousemove(function(e) {
+			        	$("div#pop-up").css('top', e.pageY + moveDown).css('left', e.pageX + moveLeft);
+		        	});
+        
+      			});
+    		</script>
+
+
+		<script type="text/javascript">
+			$(window).load(function() {
+    				$('#slider').nivoSlider();
+			});
+		</script>
+
+		<!-- jQuery library Fancybox-->
+		<!-- fancyBox -->
+		<link 	rel="stylesheet" href="../features/fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="../features/fancybox/source/jquery.fancybox.pack.js"></script>
+				
+		<script language="javascript" type="text/javascript">
+			$(document).ready(function(){
+				$(".ifancybox").fancybox({
+					'width' : 		'100%',
+		 			'height' : 		'120%',
+		 			'autoScale' : 		'none',
+		 			'transitionIn' : 	'none',
+		 			'transitionOut' : 	'none',
+		 			'type' : 		'iframe'
+				});
+			});
+		</script>
+		
+		
+
+		<script type="text/javascript" src="../lib/bootsrap/js/bootsrap.min.js"></script>
+
+  		<!-- End SlidesJS Required: Start Slides -->
+
+	  	<!-- SlidesJS Required: Link to jQuery -->
+	  	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	  	<!-- End SlidesJS Required -->
+
+	  	<!-- SlidesJS Required: Link to jquery.slides.js -->
+	  	<script src="../lib/SlidesJS-3/source/jquery.slides.min.js"></script>
+	  	<!-- End SlidesJS Required -->
+
+	  	<!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
+	  	<script>
+	    	$(function() {
+	      		$('#slides').slidesjs({
+	        	width: 840,
+        		height: 540,
+        		play: {
+          			active: false,
+          			auto: true,
+          			interval: 5000,
+          			effect: 'fade',
+          			swap: true,
+          			restartDelay: 2500
+        		},
+        		navigation: {
+        			active: false
+        		}
+	      		});
+	    	});
+	  	</script>
+	  	<!-- End SlidesJS Required -->
+
+	  	<script type="text/javascript" src="../js/LogoMarquee.js"></script>
+
+	  	<script src="../lib/angular/angular.min.js"></script>
+  		<script src="../js/controllers.js"></script>
+
+	</head>
+
+
+	<body >
+	
+			<div id="nav">
+				
+					<ul class="nav-bar">	
+						<li><a href="http://www.encontramas.com.ar/">Encontra +</a></li>
+						<li><a href="../index.html">Exterior</a></li>
+						<li><a href="interior.html">Interior</a></li>
+						<li><a href="empresas.html">Empresas</a></li>
+					</ul>
+				
+			</div>
+
+			<div class="wrapper" align="center">
+				<div id="content" class="box" style="height: 110%">
+	
+					<div id="bloqueIzquierdo" style="float: left; width: 70%; height:100%">
+						<div align="center" style="position: relative;">
+							<img src="../features/images/fondo.png" id="imgMap" width="100%" style="position:z-index:0;top:20px" />
+							<a class="ifancybox" href="empresa1.html" ><img src="../features/images/stand.png" id="trigger" /></a>
+							<div id="pop-up">
+								<img src="../features/images/Quilmes.png" width="100" height="60" /></br>
+								<p>Horarios: 10:00 a 12:00</p> </br>
+								<p>Rubro: Alimenticio</p>
+							</div>
+							<a class="ifancybox" href="empresa2.html" ><img src="../features/images/stand2.png" id="trigger2" /></a>
+							<div id="pop-up">
+								<img src="../features/images/Quilmes.png" width="100" height="60" /></br>
+								<p>Horarios: 11:00 a 13:00</p> </br>
+								<p>Rubro: Bebidas</p>
+							</div>
+						</div>
+						<div class="wrapper">
+							<div>
+									<ul class="slide">
+									  	<li><img src="http://www.google.com/logos/2010/canadianthanksgiving2010-hp.jpg"/></li>
+									  	<li><img src="http://www.google.com/logos/2010/germany10-hp.gif"/></li>
+								  		<li><img src="http://www.google.com/logos/stpatricks_02.gif"/></li>
+									</ul>
+							</div>
+						</div>
+					</div>
+
+					<div id="bloqueDerecho" style="float: right; width: 28%">
+						<div >
+							<div class="container">
+							    <div id="slides" style="top: 20px">
+							      <img src="../features/images/avon.gif">
+							      <img src="../features/images/adecco.jpg">
+							      <img src="../features/images/arcor.png">
+							      <img src="../features/images/Quilmes.png">
+							    </div>
+  							</div>	
+						</div>
+						<hr>
+						<div ng-controller="NewsCtrl">
+							<div ng-repeat="new in newspaper.news">
+								<h4>{{new.title}}</h4>
+								<br>
+								<h5>{{new.body}}</h5>
+								<hr>
+							</div>
+						</div>
+						
+						<div ng-controller="PollCtrl" style="text-align:left">
+    							
+    							<h4 style="text-align:center">{{poll.title}}</h4>
+    							<br>
+    							
+    							<div ng-repeat="value in poll.values">
+    								<input type="radio" name="Q1" >
+    								<label >{{value}}
+    								</label>
+						     		<br>
+						    	</div>
+						    	<br>
+    						</div>
+    						<button class="button" style="position:static; top:50%">Votar</button>
+    						<br>
+    						<br>
+						<hr>
+						<div style="height: 100px">
+							<h4 style="text-align:center">Compartir</h4>
+							<br>
+							<div class="Social">
+								<!-- Facebook -->
+								<a href="http://www.facebook.com/sharer.php?u=http://www.encontramas.com.ar/virtual/pages/interior" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" /></a>
+								<!-- Twitter -->
+								<a href="http://twitter.com/share?url=http://www.encontramas.com.ar&text=Encontra +" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter"/></a>
+								<!-- Google+ -->
+								<a href="https://plus.google.com/share?url=http://www.encontramas.com.ar" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/google.png" alt="Google" /></a>
+								<!-- LinkedIn -->
+								<a href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.simplesharebuttons.com" target="_blank">
+								<img src="http://www.simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" /></a>
+								<!-- Pinterest -->
+								<a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img src="http://www.simplesharebuttons.com/images/somacro/pinterest.png" alt="Pinterest"/></a>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+			</div>
+			<div id="footer" class="box centered" >
+					<p>
+						Copyright 2013  AArEII    <br />
+    					Todos los derechos reservados.
+					</p>
+			</div>
+	</body>
+</html>
