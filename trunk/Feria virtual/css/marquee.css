@@ -1,0 +1,13 @@
+ul.slide{margin:0;
+         padding:0;
+         height:80px;
+         list-style-type:none;
+}
+
+ul.slide li{float:left;
+            list-style-type:none;
+}
+ul.slide img{border:1px solid silver;
+             height:80px;
+}
+
