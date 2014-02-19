@@ -2,43 +2,39 @@
 <html ng-app="AdminApp">
 	<head>
 	<jdoc:include type="head" />
-		<meta name="viewport" content="width=device-width, user-scalable=false ">
-		<link 	rel=	"stylesheet" 		href="../css/styles.css" type="text/css" />
-		<link 	rel=	"stylesheet" 		href="../css/SlidesJS.css" type="text/css" />
-		<link 	rel=	"stylesheet" 		href="../css/marquee.css" type="text/css" />
+		<meta 	name=	"viewport" 			content="width=device-width, user-scalable=false "	/>
+		<link 	rel=	"stylesheet" 		href="../css/styles.css" type="text/css" 			/>
+		<link 	rel=	"stylesheet" 		href="../css/SlidesJS.css" type="text/css" 			/>
+		<link 	rel=	"stylesheet" 		href="../css/marquee.css" type="text/css" 			/>
 
 		<!--- Pop up --> 		
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"/>
 		<script type="text/javascript">
 			$(function() {
 				var moveLeft = 20;
 				var moveDown = 10;
+        			$('#trigger').hover(
+        				function(e){ $('div#pop-up').show(); }, 
+        				function() { $('div#pop-up').hide(); }
+        				);
         
-        			$('#trigger').hover(function(e) {
-        				$('div#pop-up').show();
- 	  		 	}, function() {
-					$('div#pop-up').hide();
-        			});
-        
-        			$('#trigger').mousemove(function(e) {
-			        	$("div#pop-up").css('top', e.pageY + moveDown).css('left', e.pageX + moveLeft);
-		        	});
-        
+        			$('#trigger').mousemove(
+        				function(e){$("div#pop-up").css('top', e.pageY + moveDown).css('left', e.pageX + moveLeft);}
+        				);
       			});
-    		</script>
+		</script>
 
-
+		<!--- Nivo Slider --> 
 		<script type="text/javascript">
-			$(window).load(function() {
+			$(window).load(function(){
     				$('#slider').nivoSlider();
 			});
 		</script>
 
-		<!-- jQuery library Fancybox-->
-		<!-- fancyBox -->
-		<link 	rel="stylesheet" href="../features/fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
-		<script type="text/javascript" src="../features/fancybox/source/jquery.fancybox.pack.js"></script>
-				
+		<!-- Fancybox -->
+		<link 	type="text/css" 		rel="stylesheet" href="../features/fancybox/source/jquery.fancybox.css" media="screen" />
+		<script type="text/javascript" 	src="../features/fancybox/source/jquery.fancybox.pack.js"/>
+
 		<script language="javascript" type="text/javascript">
 			$(document).ready(function(){
 				$(".ifancybox").fancybox({
@@ -51,22 +47,14 @@
 				});
 			});
 		</script>
-		
-		
 
 		<script type="text/javascript" src="../lib/bootsrap/js/bootsrap.min.js"></script>
 
-  		<!-- End SlidesJS Required: Start Slides -->
+  		<!-- SlidesJS -->
 
-	  	<!-- SlidesJS Required: Link to jQuery -->
 	  	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	  	<!-- End SlidesJS Required -->
-
-	  	<!-- SlidesJS Required: Link to jquery.slides.js -->
 	  	<script src="../lib/SlidesJS-3/source/jquery.slides.min.js"></script>
-	  	<!-- End SlidesJS Required -->
 
-	  	<!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
 	  	<script>
 	    	$(function() {
 	      		$('#slides').slidesjs({
@@ -86,10 +74,8 @@
 	      		});
 	    	});
 	  	</script>
-	  	<!-- End SlidesJS Required -->
 
 	  	<script type="text/javascript" src="../js/LogoMarquee.js"></script>
-
 	  	<script src="../lib/angular/angular.min.js"></script>
   		<script src="../js/controllers.js"></script>
 
@@ -122,7 +108,9 @@
 								<p>Rubro: Alimenticio</p>
 							</div>
 							<a class="ifancybox" href="empresa2.html" ><img src="../features/images/stand2.png" id="trigger2" /></a>
-							<div id="pop-up">
+
+							//TODO: Pop-up necesita otro ID
+							<div id="pop-up">	
 								<img src="../features/images/Quilmes.png" width="100" height="60" /></br>
 								<p>Horarios: 11:00 a 13:00</p> </br>
 								<p>Rubro: Bebidas</p>
@@ -199,6 +187,7 @@
 				</div>
 				
 			</div>
+
 			<div id="footer" class="box centered" >
 					<p>
 						Copyright 2013  AArEII    <br />
