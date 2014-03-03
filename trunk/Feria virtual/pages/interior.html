@@ -25,13 +25,35 @@
 		        	});
         
       			});
-    		</script>
+
+    	</script>
 
 
 		<script type="text/javascript">
 			$(window).load(function() {
     				$('#slider').nivoSlider();
 			});
+
+			/*$.ajax({
+			      url: "../js/inscription.php?action=testDB&arg1=hola"
+			    });*/
+			/*$.ajax({ url: '../js/inscription.php',
+         	data: {action: 'test'},
+        	type: 'post',
+         	success: function(output) {
+                      alert(output);
+                  }*/
+           xmlhttp=new XMLHttpRequest();
+           xmlhttp.onreadystatechange=function()
+		  {
+		  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		    {
+		    alert(xmlhttp.responseText);
+		    }
+		  }
+            xmlhttp.open("GET","../js/inscription.php?q=1",true);
+			xmlhttp.send();
+		/*});*/
 		</script>
 
 		<!-- jQuery library Fancybox-->
@@ -97,11 +119,11 @@
 
 
 	<body >
-			
+	
 			<div id="nav">
+				
 					<ul class="nav-bar">	
-						<!--<li><a href="http://www.encontramas.com.ar/">Encontra+</a></li>-->
-						<li><a href="http://www.encontramas.com.ar/"><img src="../encontramas.png" width="50%"></a></li>
+						<li><a href="http://www.encontramas.com.ar/">Encontra +</a></li>
 						<li><a href="../index.html">Exterior</a></li>
 						<li><a href="interior.html">Interior</a></li>
 						<li><a href="empresas.html">Empresas</a></li>
@@ -129,13 +151,14 @@
 								<p>Rubro: Bebidas</p>
 							</div>
 						</div>
-
-						<div style="margin-top:5%">
-								<ul class="slide">
-								  	<li><img src="http://www.google.com/logos/2010/canadianthanksgiving2010-hp.jpg"/></li>
-								  	<li><img src="http://www.google.com/logos/2010/germany10-hp.gif"/></li>
-							  		<li><img src="http://www.google.com/logos/stpatricks_02.gif"/></li>
-								</ul>
+						<div class="wrapper">
+							<div>
+									<ul class="slide">
+									  	<li><img src="http://www.google.com/logos/2010/canadianthanksgiving2010-hp.jpg"/></li>
+									  	<li><img src="http://www.google.com/logos/2010/germany10-hp.gif"/></li>
+								  		<li><img src="http://www.google.com/logos/stpatricks_02.gif"/></li>
+									</ul>
+							</div>
 						</div>
 					</div>
 
