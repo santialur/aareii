@@ -23,6 +23,9 @@ footer, header, hgroup, menu, nav, section {
 	display: 				block;
 }
 
+/*FONT*/
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,600,300");
+
 body, html {
     height: 100%;
     width: 100%;
@@ -42,7 +45,7 @@ blockquote, q {
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: 		'';
+	content: 				'';
 	content: 				none;
 }
 
@@ -59,7 +62,11 @@ a
 /*MINE*/
 
 *{	
-	font-family: 			'Impact', sans-serif;
+	font-family: 			'Open Sans', sans-serif;	
+}
+
+body{
+	background-color: 		#B10B0B;
 }
 
 #header{
@@ -67,27 +74,29 @@ a
 	background-image:       url(../features/images/texture1.png);
 }
 
-#wr{
-	
+#wrapper{
+	box-shadow: 			5px 5px 35px #000000;
+	margin:					auto; 
+	width:					950px; 
 }
 
 #content{
-	width: 80%; 
-	background-color: #FAFAFA; 
-	float: right;
-	min-height: 100%;
+	width: 					80%; 
+	background-color: 		#FAFAFA; 
+	float: 					right;
+	min-height: 			100%;
 }
 
 #sideMenu{
-	width: 20%; 
-	background-color: #CCCCCC; 
-	float: left;
-	min-height: 100%;
+	width: 					20%; 
+	background-color: 		#CCCCCC; 
+	float: 					left;
 }
 
 
 #listMenu{
 	list-style-type:		none;
+	text-shadow: 			0.07em 0.07em #777777;
 }
 
 #listMenu li{
@@ -99,15 +108,37 @@ a
 	color:					black;
 	display: 				inline-block;
 	text-decoration: 		none;
-
 }
 
 #listMenu li:hover{
-	background-color: 		grey;
-	-webkit-transition: 	background-color 1.1s ease-out;  	
-	-moz-transition: 		background-color 1.1s ease-out;  
-	-o-transition: 			background-color 1.1s ease-out;  	
-	transition: 			background-color 1.1s ease-out;
+
+	background-color: 		#B0B0B0;
+	box-shadow:				0px 1px 1px #000000;	
+
+	/*Escalar*/
+	-webkit-transform:			scale(1.04, 1.04);
+	-o-transform:				scale(1.04, 1.04);
+	-moz-transform:				scale(1.04, 1.04);
+	transform:					scale(1.04, 1.04);
+
+	/*Transicion*/
+	-webkit-transition: 		all 0.3s ease-out;  	/* Chrome 1-25, Safari 3.2+ */
+    -moz-transition: 			all 0.3s ease-out;  	/* Firefox 4-15 */
+   	-o-transition: 				all 0.3s ease-out;  	/* Opera 10.50–12.00 */
+    transition: 				all 0.3s ease-out;  
+}
+
+#aareiiLogo{
+	position: 				relative; 
+	left: 					20px;
+	top:					10px; 
+	z-index:				0;
+}
+
+.textBoxes
+{
+	border:					1px solid #CCCCCC;
+	padding:				20px
 }
 
 #footer
@@ -123,6 +154,6 @@ a
 	position: 				relative;
 	text-align:				center;
 	width:					100%;
- 	z-index: 				10;
+ 	z-index: 				10
 }
 
