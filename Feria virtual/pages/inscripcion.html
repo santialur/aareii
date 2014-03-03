@@ -25,7 +25,7 @@
 <center>
 <br>
 
-<table width="60%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse">
+<table width="70%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse">
   <tbody><tr>
     <td bgcolor="#FFFFFF" width="755" style="border-style:solid;border-width:1">
 
@@ -66,31 +66,6 @@
             <form action="http://www.worktec.com.ar/formulario_registro/registro.php" method="post" name="0.1_inscripcion" target="_blank" onsubmit="return window.confirm(&quot;You are submitting information to an external page.\nAre you sure?&quot;);">
               <table width="100%" border="0" cellspacing="10px" cellpadding="2">
                 <tbody>
-    
-
-                                                                    <tr>
-                                                                      <td>
-                                                                        <div align="right"><strong>Tipo de Documento </strong><br></div>
-                                                                      </td>
-                                                                      <td valign="top"><div align="right"> </div></td>
-                                                                      <td> </td>
-                                                                      <td>
-                                                                        <div align="left">
-                                                                          <strong>
-                                                                            <select name="tipo_de_documento">
-                                                                              <option value="0" selected>Seleccione Tipo Documento</option>
-                                                                              <option value="Cedula de Identidad">Cedula de Identidad</option>
-                                                                              <option value="D.N.I.">D.N.I.</option>
-                                                                              <option value="L.C.">L.C.</option>
-                                                                              <option value="L.E.">L.E.</option>
-                                                                              <option value="Pasaporte">Pasaporte</option>
-                                                                            </select>
-                                                                          </strong>
-                                                                        </div>
-                                                                      </td>
-                                                                      <td valign="middle"> </td>
-                                                                    </tr>
-
                                                                     <tr>
                                                                       <td>
                                                                         <div align="right"><strong>Nro. de Documento</strong>:</div>
@@ -99,7 +74,7 @@
                                                                       <td> </td>
                                                                       <td>
                                                                         <div align="left">
-                                                                          <input name="numero_de_documento" type="text">  * 
+                                                                          <input id="numero_de_documento" name="numero_de_documento" type="text">  * 
                                                                         </div>
                                                                       </td>
                                                                      
@@ -110,7 +85,7 @@
                                                                     <td></td>
                                                                       <td>
                                                                         <div align="right">
-                                                                          <input type="button" value="Verificar usuario" class="button2">
+                                                                          <input type="button" value="Verificar usuario" class="button2" onclick="checkUser()">
                                                                         </div>
                                                                       </td>
                                                                       
@@ -198,7 +173,7 @@
 
                                                                     <tr bgcolor="#FFFFFF">
                                                                       <td width="32%" valign="top">
-                                                                        <div align="right"><strong>Confirmar contraseña</strong>:<br>
+                                                                        <div name="confirme_contraseña" align="right"><strong>Confirmar contraseña</strong>:<br>
                                                                           
                                                                         </div>
                                                                         <div align="right"></div>
@@ -208,7 +183,7 @@
                                                                       <td width="1%"> </td>
                                                                       <td width="41%">
                                                                         <div align="left">
-                                                                          <input id="confirme_contraseña" name="confirme_contraseña" type="password" disabled>  *
+                                                                          <input id="confirme_contraseña" name="confirme_contraseña" type="password" disabled> 
                                                                         </div>
                                                                       </td>
                                                                     </tr>
@@ -239,15 +214,15 @@
                                                                       <td>
                                                                         <select id="fecha_nacimiento_dia" name="fecha_nacimiento_dia" disabled>
                                                                           <option value="0" selected></option>
-                                                                          <option value="1">1</option>
-                                                                          <option value="2">2</option>
-                                                                          <option value="3">3</option>
-                                                                          <option value="4">4</option>
-                                                                          <option value="5">5</option>
-                                                                          <option value="6">6</option>
-                                                                          <option value="7">7</option>
-                                                                          <option value="8">8</option>
-                                                                          <option value="9">9</option>
+                                                                          <option value="1">01</option>
+                                                                          <option value="2">02</option>
+                                                                          <option value="3">03</option>
+                                                                          <option value="4">04</option>
+                                                                          <option value="5">05</option>
+                                                                          <option value="6">06</option>
+                                                                          <option value="7">07</option>
+                                                                          <option value="8">08</option>
+                                                                          <option value="9">09</option>
                                                                           <option value="10">10</option>
                                                                           <option value="11">11</option>
                                                                           <option value="12">12</option>
@@ -273,15 +248,15 @@
                                                                         </select>
                                                                         <select id="fecha_nacimiento_mes" name="fecha_nacimiento_mes" disabled>
                                                                           <option value="0" selected></option>
-                                                                          <option value="1">1</option>
-                                                                          <option value="2">2</option>
-                                                                          <option value="3">3</option>
-                                                                          <option value="4">4</option>
-                                                                          <option value="5">5</option>
-                                                                          <option value="6">6</option>
-                                                                          <option value="7">7</option>
-                                                                          <option value="8">8</option>
-                                                                          <option value="9">9</option>
+                                                                          <option value="1">01</option>
+                                                                          <option value="2">02</option>
+                                                                          <option value="3">03</option>
+                                                                          <option value="4">04</option>
+                                                                          <option value="5">05</option>
+                                                                          <option value="6">06</option>
+                                                                          <option value="7">07</option>
+                                                                          <option value="8">08</option>
+                                                                          <option value="9">09</option>
                                                                           <option value="10">10</option>
                                                                           <option value="11">11</option>
                                                                           <option value="12">12</option>
@@ -381,10 +356,27 @@
                                                                       <td valign="top"> </td>
                                                                       <td> </td>
                                                                       <td>
-                                                                        <span>
+                                                                        <span>                                                       
                                                                           <select id="lugar_de_residencia_pais" name="lugar_de_residencia_pais" disabled>
                                                                             <option value="0" selected></option>
-                                                                            <option value="Argentina">Argentina</option>
+                                                                            <option value="Argentina" id="cbf1364">Argentina</option>
+                                                                            <option value="Brasil" id="cbf1365">Brasil</option>
+                                                                            <option value="Bolivia" id="cbf1366">Bolivia</option>
+                                                                            <option value="Chile" id="cbf1367">Chile</option>
+                                                                            <option value="Colombia" id="cbf1368">Colombia</option>
+                                                                            <option value="Cuba" id="cbf1369">Cuba</option>
+                                                                            <option value="Costa Rica" id="cbf1370">Costa Rica</option>
+                                                                            <option value="Ecuador" id="cbf1371">Ecuador</option>
+                                                                            <option value="El Salvador" id="cbf1372">El Salvador</option>
+                                                                            <option value="España" id="cbf1373">España</option>
+                                                                            <option value="Honduras" id="cbf1374">Honduras</option>
+                                                                            <option value="Mexico" id="cbf1375">Mexico</option>
+                                                                            <option value="Panamá" id="cbf1376">Panamá</option>
+                                                                            <option value="Paraguay" id="cbf1377">Paraguay</option>
+                                                                            <option value="Perú" id="cbf1378">Perú</option>
+                                                                            <option value="Puerto Rico" id="cbf1379">Puerto Rico</option>
+                                                                            <option value="Uruguay" id="cbf1380">Uruguay</option>
+                                                                            <option value="Venezuela" id="cbf1381">Venezuela</option>
                                                                           </select>  *
                                                                         </span>
                                                                       </td>
@@ -400,20 +392,20 @@
                                                                           <select id="lugar_de_residencia_provincia" name="lugar_de_residencia_provincia" disabled>
                                                                             <option value="0" selected>Seleccione su provincia</option>
                                                                             <option value="Buenos Aires">Buenos Aires</option>
-                                                                          	<option value="C&amp;oacuterdoba">Córdoba</option>
+                                                                          	<option value="Córdoba">Córdoba</option>
                                                                           	<option value="Capital Federal">Capital Federal</option>
                                                                           	<option value="Catamarca">Catamarca</option>
                                                                           	<option value="Chaco">Chaco</option>
                                                                           	<option value="Chubut">Chubut</option>
                                                                           	<option value="Corrientes">Corrientes</option>
-                                                                          	<option value="Entre R&amp;iacuteos">Entre Ríos</option>
+                                                                          	<option value="Entre Ríos">Entre Ríos</option>
                                                                           	<option value="Formosa">Formosa</option>
                                                                           	<option value="Jujuy">Jujuy</option>
                                                                           	<option value="La Pampa">La Pampa</option>
                                                                           	<option value="La Rioja">La Rioja</option>
                                                                           	<option value="Mendoza">Mendoza</option>
                                                                           	<option value="Misiones">Misiones</option>
-                                                                          	<option value="Neuqu&amp;eacuten">Neuquén</option>
+                                                                          	<option value="Neuquén">Neuquén</option>
                                                                           	<option value="Rio Negro">Rio Negro</option>
                                                                           	<option value="Salta">Salta</option>
                                                                           	<option value="San Juan">San Juan</option>
@@ -455,97 +447,65 @@
                                                                       <td> </td>
                                                                       <td><span>
                                                                         <select id="institucion" name="institucion" disabled>
-                                                                          <option value="0" selected>Seleccione su Institucion</option>
-                                                                          	<option value="A.A.A.P.">A.A.A.P.</option>
-                                                                          	<option value="Austral de Rosario">Austral de Rosario</option>
-                                                                          	<option value="C.E.M.A.">C.E.M.A.</option>
-                                                                          	<option value="CAECE">CAECE</option>
-                                                                          	<option value="CENCAP">CENCAP</option>
-                                                                          	<option value="Escuela Argentina de Negocios">Escuela Argentina de Negocios</option>
-                                                                          	<option value="Escuela Superior de Hotelería">Escuela Superior de Hotelería</option>
-                                                                          	<option value="Escuela Superior Vatel">Escuela Superior Vatel</option>
-                                                                          	<option value="FLACSO">FLACSO</option>
-                                                                          	<option value="I.A.E.">I.A.E.</option>
-                                                                          	<option value="I.A.S.E">I.A.S.E</option>
-                                                                          	<option value="I.D.E.A.">I.D.E.A.</option>
-                                                                          	<option value="Institución Universitaria Gastón Dachary">Institución Universitaria Gastón Dachary</option>
-                                                                          	<option value="Instituto de Estudios Superiores Hernando A. Saavedra">Instituto de Estudios Superiores Hernando A. Saavedra</option>
-                                                                          	<option value="Instituto SAN PIO X">Instituto SAN PIO X</option>
-                                                                          	<option value="Instituto Superior A.R. Montoya">Instituto Superior A.R. Montoya</option>
-                                                                          	<option value="Instituto Superior Macedo Martínez">Instituto Superior Macedo Martínez</option>
-                                                                          	<option value="Instituto Superior Mariano Moreno">Instituto Superior Mariano Moreno</option>
-                                                                          	<option value="Instituto Superior Octubre">Instituto Superior Octubre</option>
-                                                                          	<option value="Instituto Superior UPCN">Instituto Superior UPCN</option>
-                                                                          	<option value="Instituto Tecnológico Buenos Aires (ITBA)">Instituto Tecnológico Buenos Aires (ITBA)</option>
-                                                                          	<option value="La Fundación de Altos Estudios en Ciencias Comerciales">La Fundación de Altos Estudios en Ciencias Comerciales</option>
-                                                                          	<option value="La Suisse">La Suisse</option>
-                                                                          	<option value="O.R.T.">O.R.T.</option>
-                                                                          	<option value="OTRA INSTITUCIÓN...(que no aparece en el listado)">OTRA INSTITUCIÓN...(que no aparece en el listado)</option>
-                                                                          	<option value="Ott College">Ott College</option>
-                                                                          	<option value="U.C.E.S.">U.C.E.S.</option>
-                                                                          	<option value="U.T.D.T.">U.T.D.T.</option>
-                                                                          	<option value="UCA de Rosario">UCA de Rosario</option>
-                                                                          	<option value="UCEL">UCEL</option>
-                                                                          	<option value="UESIGLO 21">UESIGLO 21</option>
-                                                                          	<option value="UMS">UMS</option>
-                                                                          	<option value="Universidad Abierta Interamericana (U.A.I.)">Universidad Abierta Interamericana (U.A.I.)</option>
-                                                                          	<option value="Universidad Argentina de la Empresa ( U.A.D.E.)">Universidad Argentina de la Empresa ( U.A.D.E.)</option>
-                                                                          	<option value="Universidad Argentina John F. Kennedy">Universidad Argentina John F. Kennedy</option>
-                                                                          	<option value="Universidad Austral">Universidad Austral</option>
-                                                                          	<option value="Universidad Blas Pascal">Universidad Blas Pascal</option>
-                                                                          	<option value="Universidad Catolica Argentina">Universidad Catolica Argentina</option>
-                                                                          	<option value="Universidad Catolica de Cordoba">Universidad Catolica de Cordoba</option>
-                                                                          	<option value="Universidad Católica de La Plata">Universidad Católica de La Plata</option>
-                                                                          	<option value="Universidad Católica de Mendoza">Universidad Católica de Mendoza</option>
-                                                                          	<option value="Universidad Católica de Salta">Universidad Católica de Salta</option>
-                                                                          	<option value="Universidad de Aconcagua">Universidad de Aconcagua</option>
-                                                                          	<option value="Universidad de Belgrano">Universidad de Belgrano</option>
-                                                                          	<option value="Universidad de Buenos Aires (U.B.A.)">Universidad de Buenos Aires (U.B.A.)</option>
-                                                                          	<option value="Universidad de Congreso">Universidad de Congreso</option>
-                                                                          	<option value="Universidad de la Marina Mercante">Universidad de la Marina Mercante</option>
-                                                                          	<option value="Universidad de La Matanza">Universidad de La Matanza</option>
-                                                                          	<option value="Universidad de Mendoza">Universidad de Mendoza</option>
-                                                                          	<option value="Universidad de Morón">Universidad de Morón</option>
-                                                                          	<option value="Universidad de Palermo">Universidad de Palermo</option>
-                                                                          	<option value="Universidad de San Andres">Universidad de San Andres</option>
-                                                                          	<option value="Universidad del Museo Social Argentino">Universidad del Museo Social Argentino</option>
-                                                                          	<option value="Universidad del Salvador">Universidad del Salvador</option>
-                                                                          	<option value="Universidad Favaloro">Universidad Favaloro</option>
-                                                                          	<option value="Universidad Maimonides">Universidad Maimonides</option>
-                                                                          	<option value="Universidad Nacional de Catamarca">Universidad Nacional de Catamarca</option>
-                                                                          	<option value="Universidad Nacional de Cordoba">Universidad Nacional de Cordoba</option>
-                                                                          	<option value="Universidad Nacional de Cuyo">Universidad Nacional de Cuyo</option>
-                                                                          	<option value="Universidad Nacional de Entre Rios">Universidad Nacional de Entre Rios</option>
-                                                                          	<option value="Universidad Nacional de Formosa">Universidad Nacional de Formosa</option>
-                                                                          	<option value="Universidad Nacional de General Sarmiento">Universidad Nacional de General Sarmiento</option>
-                                                                          	<option value="Universidad Nacional de Jujuy">Universidad Nacional de Jujuy</option>
-                                                                          	<option value="Universidad Nacional de La Pampa">Universidad Nacional de La Pampa</option>
-                                                                          	<option value="Universidad Nacional de la Patagonia Austral">Universidad Nacional de la Patagonia Austral</option>
-                                                                          	<option value="Universidad Nacional de la Patagonia San Juan Bosco">Universidad Nacional de la Patagonia San Juan Bosco</option>
-                                                                          	<option value="Universidad Nacional de La Plata">Universidad Nacional de La Plata</option>
-                                                                          	<option value="Universidad Nacional de La Rioja">Universidad Nacional de La Rioja</option>
-                                                                          	<option value="Universidad Nacional de Lanús">Universidad Nacional de Lanús</option>
-                                                                          	<option value="Universidad Nacional de Lomas de Zamora">Universidad Nacional de Lomas de Zamora</option>
-                                                                          	<option value="Universidad Nacional de Lujan">Universidad Nacional de Lujan</option>
-                                                                          	<option value="Universidad Nacional de Mar del Plata">Universidad Nacional de Mar del Plata</option>
-                                                                          	<option value="Universidad Nacional de Misiones">Universidad Nacional de Misiones</option>
-                                                                          	<option value="Universidad Nacional de Quilmes">Universidad Nacional de Quilmes</option>
-                                                                          	<option value="Universidad Nacional de Rio Cuarto">Universidad Nacional de Rio Cuarto</option>
-                                                                          	<option value="Universidad Nacional de Rosario">Universidad Nacional de Rosario</option>
-                                                                          	<option value="Universidad Nacional de Salta">Universidad Nacional de Salta</option>
-                                                                          	<option value="Universidad Nacional de San Juan">Universidad Nacional de San Juan</option>
-                                                                          	<option value="Universidad Nacional de San Luis">Universidad Nacional de San Luis</option>
-                                                                          	<option value="Universidad Nacional de Santiago del Estero">Universidad Nacional de Santiago del Estero</option>
-                                                                          	<option value="Universidad Nacional de Tucuman">Universidad Nacional de Tucuman</option>
-                                                                          	<option value="Universidad Nacional de Villa Maria">Universidad Nacional de Villa Maria</option>
-                                                                          	<option value="Universidad Nacional del Centro de la Prov. de Bs. As.">Universidad Nacional del Centro de la Prov. de Bs. As.</option>
-                                                                          	<option value="Universidad Nacional del Comahue">Universidad Nacional del Comahue</option>
-                                                                          	<option value="Universidad Nacional del Litoral">Universidad Nacional del Litoral</option>
-                                                                          	<option value="Universidad Nacional del Nordeste">Universidad Nacional del Nordeste</option>
-                                                                          	<option value="Universidad Nacional del Sur">Universidad Nacional del Sur</option>
-                                                                          	<option value="Universidad Nacional General San Martín">Universidad Nacional General San Martín</option>
-                                                                          	<option value="Universidad Tecnologica Nacional ( U.T.N.)">Universidad Tecnologica Nacional ( U.T.N.)</option>
-                                                                          	<option value="Universidad Virtual de Quilmes">Universidad Virtual de Quilmes</option>
+                                                                          <option value="0"> Seleccione Universidad </option>
+                                                                          <option value="Instituto Tecnológico De Buenos Aires" id="cbf2049">Instituto Tecnológico De Buenos Aires</option>
+                                                                          <option value="Universidad Argentina De La Empresa" id="cbf2050">Universidad Argentina De La Empresa</option>
+                                                                          <option value="Universidad Austral" id="cbf2051">Universidad Austral</option>
+                                                                          <option value="Universidad Católica Argentina (Sede Buenos Aires)" id="cbf2052">Universidad Católica Argentina (Sede Buenos Aires)</option>
+                                                                          <option value="Universidad Católica Argentina (Sede Rosario)" id="cbf2053">Universidad Católica Argentina (Sede Rosario)</option>
+                                                                          <option value="Universidad Católica De Córdoba" id="cbf2054">Universidad Católica De Córdoba</option>
+                                                                          <option value="Universidad Católica De Salta" id="cbf2055">Universidad Católica De Salta</option>
+                                                                          <option value="Universidad De Belgrano" id="cbf2056">Universidad De Belgrano</option>
+                                                                          <option value="Universidad De Buenos Aires" id="cbf2057">Universidad De Buenos Aires</option>
+                                                                          <option value="Universidad De La Marina Mercante" id="cbf2058">Universidad De La Marina Mercante</option>
+                                                                          <option value="Universidad De Mendoza" id="cbf2059">Universidad De Mendoza</option>
+                                                                          <option value="Universidad De Morón" id="cbf2060">Universidad De Morón</option>
+                                                                          <option value="Universidad De Palermo" id="cbf2061">Universidad De Palermo</option>
+                                                                          <option value="Universidad Del Norte Santo Tomás De Aquino (Tucumán)" id="cbf2062">Universidad Del Norte Santo Tomás De Aquino (Tucumán)</option>
+                                                                          <option value="Universidad Del Salvador" id="cbf2063">Universidad Del Salvador</option>
+                                                                          <option value="Universidad Frat. De Agrup. Santo Tomas De Aquino" id="cbf2064">Universidad Frat. De Agrup. Santo Tomas De Aquino</option>
+                                                                          <option value="Universidad Nacional De Córdoba" id="cbf2065">Universidad Nacional De Córdoba</option>
+                                                                          <option value="Universidad Nacional De Cuyo (Mendoza)" id="cbf2066">Universidad Nacional De Cuyo (Mendoza)</option>
+                                                                          <option value="Universidad Nacional De General Sarmiento (Los Polvorines)" id="cbf2067">Universidad Nacional De General Sarmiento (Los Polvorines)</option>
+                                                                          <option value="Universidad Nacional De Jujuy" id="cbf2068">Universidad Nacional De Jujuy</option>
+                                                                          <option value="Universidad Nacional De La Matanza" id="cbf2069">Universidad Nacional De La Matanza</option>
+                                                                          <option value="Universidad Nacional De La Patagonia (Comodoro Rivadavia)" id="cbf2070">Universidad Nacional De La Patagonia (Comodoro Rivadavia)</option>
+                                                                          <option value="Universidad Nacional De La Patagonia Austral (Caleta Olivia)" id="cbf2071">Universidad Nacional De La Patagonia Austral (Caleta Olivia)</option>
+                                                                          <option value="Universidad Nacional De La Plata" id="cbf2072">Universidad Nacional De La Plata</option>
+                                                                          <option value="Universidad Nacional De La Rioja" id="cbf2073">Universidad Nacional De La Rioja</option>
+                                                                          <option value="Universidad Nacional De Lomas De Zamora" id="cbf2074">Universidad Nacional De Lomas De Zamora</option>
+                                                                          <option value="Universidad Nacional De Luján" id="cbf2075">Universidad Nacional De Luján</option>
+                                                                          <option value="Universidad Nacional De Mar del Plata" id="cbf2076">Universidad Nacional De Mar del Plata</option>
+                                                                          <option value="Universidad Nacional De Misiones (Obera)" id="cbf2077">Universidad Nacional De Misiones (Obera)</option>
+                                                                          <option value="Universidad Nacional De Rosario" id="cbf2078">Universidad Nacional De Rosario</option>
+                                                                          <option value="Universidad Nacional De Salta" id="cbf2079">Universidad Nacional De Salta</option>
+                                                                          <option value="Universidad Nacional De San Juan" id="cbf2080">Universidad Nacional De San Juan</option>
+                                                                          <option value="Universidad Nacional De San Luís (Villa Mercedes)" id="cbf2081">Universidad Nacional De San Luís (Villa Mercedes)</option>
+                                                                          <option value="Universidad Nacional De Tucumán" id="cbf2082">Universidad Nacional De Tucumán</option>
+                                                                          <option value="Universidad Nacional Del Centro De La Pcia. De Bs. As." id="cbf2083">Universidad Nacional Del Centro De La Pcia. De Bs. As.</option>
+                                                                          <option value="Universidad Nacional del Chaco Austral" id="cbf2084">Universidad Nacional del Chaco Austral</option>
+                                                                          <option value="Universidad Nacional Del Litoral (Santa Fe)" id="cbf2085">Universidad Nacional Del Litoral (Santa Fe)</option>
+                                                                          <option value="Universidad Nacional Del Noroeste De La Pcia. De Bs. As. (Junin)" id="cbf2086">Universidad Nacional Del Noroeste De La Pcia. De Bs. As. (Junin)</option>
+                                                                          <option value="Universidad Nacional Del Sur (Bahía Blanca)" id="cbf2087">Universidad Nacional Del Sur (Bahía Blanca)</option>
+                                                                          <option value="UTN Facultad Regional Avellaneda" id="cbf2088">UTN Facultad Regional Avellaneda</option>
+                                                                          <option value="UTN Facultad Regional Bahía Blanca (LOI)" id="cbf2089">UTN Facultad Regional Bahía Blanca (LOI)</option>
+                                                                          <option value="UTN Facultad Regional Buenos Aires" id="cbf2090">UTN Facultad Regional Buenos Aires</option>
+                                                                          <option value="UTN Facultad Regional Concepción del Uruguay" id="cbf2091">UTN Facultad Regional Concepción del Uruguay</option>
+                                                                          <option value="UTN Facultad Regional Córdoba" id="cbf2092">UTN Facultad Regional Córdoba</option>
+                                                                          <option value="UTN Facultad Regional General Pacheco (LOI)" id="cbf2093">UTN Facultad Regional General Pacheco (LOI)</option>
+                                                                          <option value="UTN Facultad Regional Haedo" id="cbf2094">UTN Facultad Regional Haedo</option>
+                                                                          <option value="UTN Facultad Regional La Plata" id="cbf2095">UTN Facultad Regional La Plata</option>
+                                                                          <option value="UTN Facultad Regional La Rioja" id="cbf2096">UTN Facultad Regional La Rioja</option>
+                                                                          <option value="UTN Facultad Regional Rafaela" id="cbf2097">UTN Facultad Regional Rafaela</option>
+                                                                          <option value="UTN Facultad Regional Río Grande" id="cbf2098">UTN Facultad Regional Río Grande</option>
+                                                                          <option value="UTN Facultad Regional San Francisco (LOI)" id="cbf2099">UTN Facultad Regional San Francisco (LOI)</option>
+                                                                          <option value="UTN Facultad Regional San Nicolás" id="cbf2100">UTN Facultad Regional San Nicolás</option>
+                                                                          <option value="UTN Facultad Regional San Rafael" id="cbf2101">UTN Facultad Regional San Rafael</option>
+                                                                          <option value="UTN Facultad Regional Santa Fe" id="cbf2102">UTN Facultad Regional Santa Fe</option>
+                                                                          <option value="UTN Unidad Académica Chubut (LOI)" id="cbf2103">UTN Unidad Académica Chubut (LOI)</option>
+                                                                          <option value="UTN Unidad Académica Río Gallegos" id="cbf2104">UTN Unidad Académica Río Gallegos</option>
+                                                                          <option value="UTN Unidad Académica Trenque Lauquen" id="cbf2105">UTN Unidad Académica Trenque Lauquen</option>
+                                                                          <option value="Otra" id="cbf2106">Otra</option>
                                                                         </select>  *
                                                                       </span></td>
                                                                       <td valign="middle"> </td>
@@ -570,12 +530,12 @@
                                                                       <td><span>
                                                                         <select id="carrera" name="carrera" disabled>
                                                                           <option value="0" selected>Seleccione carrera</option>
-                                                                          <option value="Industrial">Ingenieria Industrial</option>
-                                                                          <option value="Alimentos">Ingenieria en Alimentos</option>
-                                                                          <option value="LicOrgIndustrial">Lic. en Org. Industrial</option>
-                                                                          <option value="Agroindustrial">Ingenieria Agroindustrial</option>
-                                                                          <option value="OtraIndustrial">Otra ingenieria</option>
-                                                                          <option value="Otra">Otra carrera</option>
+                                                                          <option value="Ingeniería Industrial">Ingeniería Industrial</option>
+                                                                          <option value="Ing. en Alimentos">Ing. en Alimentos</option>
+                                                                          <option value="Lic. en Org. Industrial">Lic. en Org. Industrial</option>
+                                                                          <option value="Ing. Agroindustrial">Ingeniería Agroindustrial</option>
+                                                                          <option value="Otra Ingeniería">Otra ingenieria</option>
+                                                                          <option value="Otra carrera">Otra carrera</option>
                                                                         </select>  *
                                                                       </span></td>
                                                                       <td valign="middle"> </td>
@@ -626,30 +586,9 @@
     </tbody>
 </table>
 
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
 
-            <script type="text/javascript">
-                    function callFunction(){
-                      document.getElementById("trabaja").disabled = false;
-                      document.getElementById("fecha_nacimiento_anio").disabled = false;
-                      document.getElementById("fecha_nacimiento_mes").disabled = false;
-                      document.getElementById("fecha_nacimiento_dia").disabled = false;
-                      document.getElementById("universidad").disabled = false;
-                      document.getElementById("institucion").disabled = false;
-                      document.getElementById("lugar_de_residencia_ciudad").disabled = false;
-                      document.getElementById("lugar_de_residencia_provincia").disabled = false;
-                      document.getElementById("lugar_de_residencia_pais").disabled = false;
-                      document.getElementById("telefono_celular").disabled = false;
-                      document.getElementById("numero_materias").disabled = false;
-                      document.getElementById("carrera").disabled = false;
-                      document.getElementById("confirme_contraseña").disabled = false;
-                      document.getElementById("contraseña").disabled = false;
-                      document.getElementById("direccion_de_residencia").disabled = false;
-                      document.getElementById("email").disabled = false;
-                      document.getElementById("confirme_email").disabled = false;
-                      document.getElementById("apellido").disabled = false;
-                      document.getElementById("nombre").disabled = false;
-                    }
-            </script>
+            <script type="text/javascript" src="../js/InscriptionBehavior.js"></script>
 
 </center>
 </br>
