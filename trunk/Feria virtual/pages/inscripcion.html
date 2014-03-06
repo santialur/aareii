@@ -3,7 +3,6 @@
 <head>
   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
   <link   rel=  "stylesheet"    href="../css/styles.css" type="text/css" />
-  <script type="text/javascript" src="../lib/bootsrap/js/bootsrap.min.js"></script>
 
 </head>
 
@@ -25,7 +24,7 @@
 <center>
 <br>
 
-<table width="70%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse">
+<table id="aareiiInscription" width="70%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse">
   <tbody><tr>
     <td bgcolor="#FFFFFF" width="755" style="border-style:solid;border-width:1">
 
@@ -63,7 +62,7 @@
           <td>
             <div align="left">
 
-            <form action="http://www.worktec.com.ar/formulario_registro/registro.php" method="post" name="0.1_inscripcion" target="_blank" onsubmit="return window.confirm(&quot;You are submitting information to an external page.\nAre you sure?&quot;);">
+            
               <table width="100%" border="0" cellspacing="10px" cellpadding="2">
                 <tbody>
                                                                     <tr>
@@ -91,7 +90,7 @@
                                                                       
                                                                       <td>
                                                                         <div align="left">
-                                                                          <input type="button" value="Crear nuevo" class="button2" onclick="javascript:callFunction()">
+                                                                          <input type="button" value="Crear nuevo" class="button2" onclick="javascript:createNewUser()">
                                                                         </div>
                                                                       </td>
                                                                     </tr>
@@ -213,16 +212,16 @@
                                                                       <td> </td>
                                                                       <td>
                                                                         <select id="fecha_nacimiento_dia" name="fecha_nacimiento_dia" disabled>
-                                                                          <option value="0" selected></option>
-                                                                          <option value="1">01</option>
-                                                                          <option value="2">02</option>
-                                                                          <option value="3">03</option>
-                                                                          <option value="4">04</option>
-                                                                          <option value="5">05</option>
-                                                                          <option value="6">06</option>
-                                                                          <option value="7">07</option>
-                                                                          <option value="8">08</option>
-                                                                          <option value="9">09</option>
+                                                                          <option value="0" selected>Dia</option>
+                                                                          <option value="01">01</option>
+                                                                          <option value="02">02</option>
+                                                                          <option value="03">03</option>
+                                                                          <option value="04">04</option>
+                                                                          <option value="05">05</option>
+                                                                          <option value="06">06</option>
+                                                                          <option value="07">07</option>
+                                                                          <option value="08">08</option>
+                                                                          <option value="09">09</option>
                                                                           <option value="10">10</option>
                                                                           <option value="11">11</option>
                                                                           <option value="12">12</option>
@@ -247,22 +246,22 @@
                                                                           <option value="31">31</option>
                                                                         </select>
                                                                         <select id="fecha_nacimiento_mes" name="fecha_nacimiento_mes" disabled>
-                                                                          <option value="0" selected></option>
-                                                                          <option value="1">01</option>
-                                                                          <option value="2">02</option>
-                                                                          <option value="3">03</option>
-                                                                          <option value="4">04</option>
-                                                                          <option value="5">05</option>
-                                                                          <option value="6">06</option>
-                                                                          <option value="7">07</option>
-                                                                          <option value="8">08</option>
-                                                                          <option value="9">09</option>
+                                                                          <option value="0" selected>Mes</option>
+                                                                          <option value="01">01</option>
+                                                                          <option value="02">02</option>
+                                                                          <option value="03">03</option>
+                                                                          <option value="04">04</option>
+                                                                          <option value="05">05</option>
+                                                                          <option value="06">06</option>
+                                                                          <option value="07">07</option>
+                                                                          <option value="08">08</option>
+                                                                          <option value="09">09</option>
                                                                           <option value="10">10</option>
                                                                           <option value="11">11</option>
                                                                           <option value="12">12</option>
                                                                         </select>
                                                                         <select id="fecha_nacimiento_anio" name="fecha_nacimiento_anio" disabled>
-                                                                          <option value="0" selected></option>
+                                                                          <option value="0" selected>Año</option>
                                                                           <option value="1997">1997</option>
                                                                           <option value="1996">1996</option>
                                                                           <option value="1995">1995</option>
@@ -358,7 +357,7 @@
                                                                       <td>
                                                                         <span>                                                       
                                                                           <select id="lugar_de_residencia_pais" name="lugar_de_residencia_pais" disabled>
-                                                                            <option value="0" selected></option>
+                                                                            <option value="0" selected>Seleccione pais</option>
                                                                             <option value="Argentina" id="cbf1364">Argentina</option>
                                                                             <option value="Brasil" id="cbf1365">Brasil</option>
                                                                             <option value="Bolivia" id="cbf1366">Bolivia</option>
@@ -567,9 +566,9 @@
                                                                 </tbody>
                                                             </table>
                                                             <div align="center">
-                                                              <input type="submit" value="Enviar" class="button">
+                                                              <input type="submit" value="Enviar" class="button" onclick="sendInformation()">
                                                             </div>
-                                                        </form>
+                                                     
                                                       <br>
                                                     </div>
                                                 </td>
@@ -586,10 +585,120 @@
     </tbody>
 </table>
 
+<table id="encontramasInscription" width="70%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse; display:none">
+  <tbody>
+    <tr>
+      <td bgcolor="#FFFFFF" width="755" style="border-style:solid;border-width:1">
+        <table width="100%" border="0" cellpadding="0" height="14" bgcolor="#FFFFFF" style="border-collapse:collapse" cellspacing="0">
+          <tbody>
+            <tr>
+              <td width="100%" height="197" valign="top" bgcolor="#FFFFFF" style="border-style:none;border-width:medium">
+                <blockquote>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div align="left">
+                            <table width="100%" border="0" cellpadding="0">
+                              <tbody>
+                                <tr>
+                                  <td width="75%">
+                                    <div align="center">
+                                      <div align="center">
+                                        <div align="left">Formulario de  inscripción encontra mas<br>
+                                          Eventos de Actualidad Laboral
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td width="25%"><img src="../features/images/AAREII-logo.png" width="80" height="120">
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <div align="justify">
+                              <span><strong>Inscribiendote estarás acreditado en forma gratuita a la Jornada.</strong>  Además a partir de este momento comenzarás a formar parte de la base de reclutamiento de las empresas participantes para cubrir futuras posiciones.</span><br>
+                              <br>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><hr size="1">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div align="left">
+                            <table width="100%" border="0" cellspacing="10px" cellpadding="2">
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <div align="right"><strong>Postgrados / Masters / Doctorado:</strong></div>
+                                  </td>
+                                  <td valign="top">&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td><span>
+                                    <select name="postgrado" disabled="">
+                                      <option value="0" selected="">Seleccione su Postgrado</option>
+                                      <option value="Doctorado">Doctorado</option>
+                                      <option value="Master / Especialización">Master / Especialización</option>
+                                      <option value="Posgrado">Posgrado</option>
+                                    </select>
+                                  </span></td>
+                                  <td valign="middle">&nbsp;</td>
+                                </tr>
+
+                                <tr>
+                                  <td><div align="right"><strong>Estado de Postgrado: </strong></div></td>
+                                  <td valign="top">&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>
+                                    <div align="left"><span>
+                                      <select name="estado_postgrado" disabled="">
+                                        <option value="0" selected="">Seleccione su nivel de postgrado</option>
+                                        <option value="Completo">Completo</option>
+                                        <option value="En curso">En curso</option>
+                                        <option value="Incompleto">Incompleto</option>
+                                      </select>
+                                    </span></div></td>
+                                  <td valign="middle">&nbsp;</td>
+                                </tr>
+
+                                <tr>
+                                  <td><div align="right"><strong>Título e Institución:</strong></div></td>
+                                  <td valign="top">&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td><span>
+                                    <input name="titulopostgrado" type="text" disabled="">
+                                  </span></td>
+                                  <td valign="middle">&nbsp;</td>
+                                </tr>
+  
+                              </tbody>
+                            </table>
+                            <div align="center">
+                              <input type="submit" value="Enviar" class="button" onclick="sendInformation()">
+                            </div>                           
+                            <br>
+                          </div>
+                        </td>
+                      </tr>        
+                    </tbody>
+                  </table>
+                </blockquote>             
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
             <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
 
             <script type="text/javascript" src="../js/InscriptionBehavior.js"></script>
-
 </center>
 </br>
 </div>
