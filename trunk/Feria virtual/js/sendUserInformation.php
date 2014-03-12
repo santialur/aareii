@@ -26,11 +26,16 @@
 		  die('Could not connect: ' . mysql_error($con));
 		  }
 		
-		$sql="SELECT * FROM jos_comprofiler WHERE dni = '".$dni."'";
-		$user = mysql_query($sql, $con);
+		$sqldni="SELECT * FROM jos_comprofiler WHERE dni = '".$dni."'";
+		$userdni = mysql_query($sqldni, $con);
 
-		if(mysql_num_rows($user) > 0){
+		$sqlemail = "SELECT * FROM jos_comprofiler WHERE mail = '".$email."'";
+		$useremail = mysql_query($sqlemail, $con);
+
+		if(mysql_num_rows($userdni) > 0){
 			echo "Ya existe un usuario registrado con el numero de documento";
+		}else if(mysql_num_rows($useremail) > 0){
+			echo "Ya existe un usuario registrado con la direccion de email";
 		}else{
 			if($work === 'Si'){
 			$work = true;
@@ -86,9 +91,9 @@
 			echo "Usuario modificado exitosamente";
 
 			
-			//echo $result;
-			mysql_close($con);
+			
 		}
-
+		//echo $result;
+		mysql_close($con);
     }
 ?>

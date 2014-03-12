@@ -46,8 +46,11 @@ function enableInputs(){
       document.getElementById("direction_row").style.display = 'table-row';
       document.getElementById("university_row").style.display = 'table-row';
       document.getElementById("otherUniversity_row").style.display = 'table-row';
+      document.getElementById("career_row").style.display = 'table-row';
+      document.getElementById("otherCareer_row").style.display = 'table-row';
       document.getElementById("approvedSubjects_row").style.display = 'table-row';
       document.getElementById("work_row").style.display = 'table-row';
+      document.getElementById("civil_status_row").style.display = 'table-row';
       document.getElementById("sendButton").style.display = 'block';
 
       document.getElementById("trabaja").disabled = false;
@@ -95,7 +98,7 @@ function enableInputs(){
                                     obj = JSON.parse(output);
                                     
                                     enableInputs();
-
+                                    document.getElementById("numero_de_documento").disabled = true;
                                     document.getElementsByName("confirme_contraseña")[0].style.display = 'none';
                                     document.getElementsByName("confirme_contraseña")[1].style.display = 'none';
 
@@ -124,8 +127,7 @@ function enableInputs(){
                                       document.getElementById("trabaja").value = "Si"
                                     }else{
                                       document.getElementById("trabaja").value = "No";
-                                    }
-                                                          
+                                    }                 
                                     newUser = false;
                                 }
                             }
@@ -137,6 +139,7 @@ function enableInputs(){
 
 function sendInformation(){
       if(newUser){
+        alert(newUser);
             if(document.getElementById("confirme_nueva_contraseña").value == document.getElementById("contraseña_nueva").value){
               if(document.getElementById("confirme_email").value == document.getElementById("email").value){
                 if(document.getElementById("numero_de_documento").value.match(/^\s*$/)){
@@ -183,17 +186,34 @@ function sendInformation(){
                   alert("Ingrese su direccion de residencia");
                   return;
                 }
-                if(document.getElementById("institucion").value == "0" && document.getElementById("institucion").value.match(/^\s*$/)){
+                if(document.getElementById("institucion").value == 0 && document.getElementById("universidad").value.match(/^\s*$/)){
                   alert("Ingrese institucion donde estudia");
                   return;
                 }
-                if(document.getElementById("carrera").value.value.match(/^\s*$/)){
+                if(document.getElementById("carrera").value == 0 &&  document.getElementById("otraCarrera").value.match(/^\s*$/)){
+                  alert(document.getElementById("carrera").value);
                   alert("Ingrese su carrera de estudio");
                   return;
                 }
-                if(document.getElementById("numero_materias").value.value.match(/^\s*$/)){
-                  alert("Ingrese su carrera de estudio");
+                if(document.getElementById("numero_materias").value.match(/^\s*$/)){
+                  alert("Ingrese el numero de materias aprobadas");
                   return;
+                }
+                if(document.getElementById("trabaja").value == 0){
+                  alert("Confirme si trabaja o no");
+                  return;
+                }
+                var institucion;
+                var carrera;
+                if(!document.getElementById("universidad").value.match(/^\s*$/)){
+                  institucion = document.getElementById("universidad").value;
+                }else{
+                  institucion = document.getElementById("institucion").value;
+                }
+                if(!document.getElementById("otraCarrera").value.match(/^\s*$/)){
+                  carrera = document.getElementById("otraCarrera").value;
+                }else{
+                  carrera = document.getElementById("carrera").value;
                 }
                 $.ajax({ url: '../js/sendUserInformation.php',
                      data: {user:               "newUser",
@@ -203,13 +223,13 @@ function sendInformation(){
                             email:              document.getElementById("confirme_email").value, 
                             residenceAddress:   document.getElementById("direccion_de_residencia").value,
                             password:           document.getElementById("confirme_nueva_contraseña").value,
-                            career:             document.getElementById("carrera").value,
+                            career:             carrera,
                             subjects_approved:  document.getElementById("numero_materias").value,
                             celPhone:           document.getElementById("telefono_celular").value,
                             countryOfResidence: document.getElementById("lugar_de_residencia_pais").value,
                             stateOfResidence:   document.getElementById("lugar_de_residencia_provincia").value,
                             cityOfResidence:    document.getElementById("lugar_de_residencia_ciudad").value,
-                            institution:        document.getElementById("institucion").value,
+                            institution:        institucion,
                             dayOfBorn:          document.getElementById("fecha_nacimiento_dia").value,
                             monthOfBorn:        document.getElementById("fecha_nacimiento_mes").value,
                             yearOfBorn:         document.getElementById("fecha_nacimiento_anio").value,
@@ -218,8 +238,12 @@ function sendInformation(){
                      type: 'POST',
                      success: function(output) {  
                             alert(output);
-                            document.getElementById("aareiiInscription").style.display = 'none';
-                            document.getElementById("encontramasInscription").style.display = 'inline-table';
+                            if(output == "Ya existe un usuario registrado con el numero de documento" || output == "Ya existe un usuario registrado con la direccion de email"){
+                              return;
+                            }else{
+                              document.getElementById("aareiiInscription").style.display = 'none';
+                              document.getElementById("encontramasInscription").style.display = 'inline-table';
+                            }    
                      }
                    });
               }else{
@@ -230,10 +254,79 @@ function sendInformation(){
                 alert("Las contraseñas no coinciden");
             }
             
-
       }else{
-        if(document.getElementById("contraseña_nueva").value == ""){
-           $.ajax({ url: '../js/sendUserInformation.php',
+        if(!document.getElementById("contraseña_nueva").value.match(/^\s*$/)){
+          if(document.getElementById("confirme_email").value == document.getElementById("email").value){
+                if(document.getElementById("numero_de_documento").value.match(/^\s*$/)){
+                  alert("Ingrese su numero de documento");
+                  return;
+                }
+                if(document.getElementById("nombre").value.match(/^\s*$/)){
+                  alert("Ingrese su nombre");
+                  return;
+                }
+                if(document.getElementById("apellido").value.match(/^\s*$/)){
+                  alert("Ingrese su apellido");
+                  return;
+                }
+                if(document.getElementById("confirme_email").value.match(/^\s*$/)){
+                  alert("Ingrese su direccion de email");
+                  return;
+                }
+                if(document.getElementById("telefono_celular").value.match(/^\s*$/)){
+                  alert("Ingrese su telefono de contacto");
+                  return;
+                }
+                if(document.getElementById("fecha_nacimiento_dia").value == "0" || document.getElementById("fecha_nacimiento_mes").value == "0" || document.getElementById("fecha_nacimiento_anio").value == "0"){
+                  alert("Ingrese una fecha de nacimiento correcta");
+                  return;
+                }
+                if(document.getElementById("lugar_de_residencia_pais").value == "0"){
+                  alert("Ingrese su pais de residencia");
+                  return;
+                }
+                if(document.getElementById("lugar_de_residencia_provincia").value == "0"){
+                  alert("Ingrese su provincia de residencia");
+                  return;
+                }
+                if(document.getElementById("lugar_de_residencia_ciudad").value.match(/^\s*$/)){
+                  alert("Ingrese su ciudad de residencia");
+                  return;
+                }
+                if(document.getElementById("direccion_de_residencia").value.match(/^\s*$/)){
+                  alert("Ingrese su direccion de residencia");
+                  return;
+                }
+                if(document.getElementById("institucion").value == 0 && document.getElementById("universidad").value.match(/^\s*$/)){
+                  alert("Ingrese institucion donde estudia");
+                  return;
+                }
+                if(document.getElementById("carrera").value == 0 &&  document.getElementById("otraCarrera").value.match(/^\s*$/)){
+                  alert(document.getElementById("carrera").value);
+                  alert("Ingrese su carrera de estudio");
+                  return;
+                }
+                if(document.getElementById("numero_materias").value.match(/^\s*$/)){
+                  alert("Ingrese el numero de materias aprobadas");
+                  return;
+                }
+                if(document.getElementById("trabaja").value == 0){
+                  alert("Confirme si trabaja o no");
+                  return;
+                }
+                var institucion;
+                var carrera;
+                if(!document.getElementById("universidad").value.match(/^\s*$/)){
+                  institucion = document.getElementById("universidad").value;
+                }else{
+                  institucion = document.getElementById("institucion").value;
+                }
+                if(!document.getElementById("otraCarrera").value.match(/^\s*$/)){
+                  carrera = document.getElementById("otraCarrera").value;
+                }else{
+                  carrera = document.getElementById("carrera").value;
+                }
+                $.ajax({ url: '../js/sendUserInformation.php',
                      data: {user:               "user",
                             dni:                document.getElementById("numero_de_documento").value,
                             name:               document.getElementById("nombre").value,
@@ -241,13 +334,13 @@ function sendInformation(){
                             email:              document.getElementById("confirme_email").value, 
                             residenceAddress:   document.getElementById("direccion_de_residencia").value,
                             password:           document.getElementById("contraseña_nueva").value,
-                            career:             document.getElementById("carrera").value,
+                            career:             carrera,
                             subjects_approved:  document.getElementById("numero_materias").value,
                             celPhone:           document.getElementById("telefono_celular").value,
                             countryOfResidence: document.getElementById("lugar_de_residencia_pais").value,
                             stateOfResidence:   document.getElementById("lugar_de_residencia_provincia").value,
                             cityOfResidence:    document.getElementById("lugar_de_residencia_ciudad").value,
-                            institution:        document.getElementById("institucion").value,
+                            institution:        institucion,
                             dayOfBorn:          document.getElementById("fecha_nacimiento_dia").value,
                             monthOfBorn:        document.getElementById("fecha_nacimiento_mes").value,
                             yearOfBorn:         document.getElementById("fecha_nacimiento_anio").value,
@@ -258,11 +351,19 @@ function sendInformation(){
                      success: function(output) {  
 
                             alert(output);
-                            document.getElementById("aareiiInscription").style.display = 'none';
-                            document.getElementById("encontramasInscription").style.display = 'inline-table';        
+                            if(output == "La contraseña ingresada no es correcta"){
+                              return;
+                            }else{
+                              document.getElementById("aareiiInscription").style.display = 'none';
+                              document.getElementById("encontramasInscription").style.display = 'inline-table';
+                            }
+                                    
 
                      }
                    });
+          }else{
+            alert("Las direcciones de e-mail no coinciden");
+          }
         }else{
             alert("Ingrese su contraseña");
         }
