@@ -34,71 +34,57 @@
 <td width="100%" height="197" valign="top" bgcolor="#FFFFFF" style="border-style:none;border-width:medium">
   <blockquote>
     <table width="100%" border="0" cellspacing="0" cellpadding="4">
-      <tbody>
-
-        <tr>
-          <td><div align="left">
-            <table width="100%" border="0" cellpadding="0">
-              <tbody><tr>
-                <td width="75%"><div align="center">
-                  <div align="center">
-                    <div align="left">Formulario de  inscripción<br>
-                      Eventos de Actualidad Laboral</div>
-                  </div>
-                </div></td>
-                <td width="25%"><img src="../features/images/AAREII-logo.png" width="80" height="120"></td>
-              </tr>
-            </tbody></table>
-            <div align="justify"><span><strong>Inscribiendote estarás acreditado en forma gratuita a la Jornada.</strong>  Además a partir de este momento comenzarás a formar parte de la base de reclutamiento de las empresas participantes para cubrir futuras posiciones.</span><br>
-              <br>
-		        </div>
-          </div></td>
-        </tr>
-
-        <tr>
-          <td><hr size="1"></td>
-        </tr>
-        <tr>
-          <td>
-            <div align="left">
-
-            
-              <table width="100%" border="0" cellspacing="10px" cellpadding="2">
-                <tbody>
+                                                    <tbody>
+                                                          <tr>
+                                                            <td>
+                                                              <div align="left">
+                                                                <table width="100%" border="0" cellpadding="0">
+                                                                  <tbody>
+                                                                    <tr>
+                                                                        <td width="75%">
+                                                                        <div align="center">
+                                                                          <div align="center">
+                                                                            <div align="left">Formulario de  inscripción<br>
+                                                                            Eventos de Actualidad Laboral</div>
+                                                                          </div>
+                                                                        </div>
+                                                                      </td>
+                                                                      <td width="25%"><img src="../features/images/AAREII-logo.png" width="80" height="120"></td>
+                                                                    </tr>
+                                                                  </tbody>                                            
+                                                                </table>
+                                                                <div align="justify"><span><strong>Inscribiendote estarás acreditado en forma gratuita a la Jornada.</strong>  Además a partir de este momento comenzarás a formar parte de la base de reclutamiento de las empresas participantes para cubrir futuras posiciones.</span><br>
+                                                                <br>
+		                                                            </div>
+                                                              </div>
+                                                            </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td><hr size="1"></td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>
+                                                              <div align="left">
+                                                                <table width="100%" border="0" cellspacing="10px" cellpadding="2">
+                                                                  <tbody>
                                                                     <tr>
                                                                       <td>
-                                                                        <div align="right"><strong>Nro. de Documento</strong>:</div>
+                                                                        <div align="right"><strong>Nro. de Documento</strong>:  *<br>
+                                                                        </div>
                                                                       </td>
                                                                       <td valign="top"> </td>
                                                                       <td> </td>
                                                                       <td>
                                                                         <div align="left">
-                                                                          <input id="numero_de_documento" name="numero_de_documento" type="text">  * 
+                                                                          <input id="numero_de_documento" name="numero_de_documento" type="text"> 
                                                                         </div>
                                                                       </td>
                                                                      
                                                                     </tr>
-
-                                                                    <tr>
-                                                                    <td></td>
-                                                                    <td></td>
-                                                                      <td>
-                                                                        <div align="right">
-                                                                          <input type="button" value="Verificar usuario" class="button2" onclick="checkUser()">
-                                                                        </div>
-                                                                      </td>
-                                                                      
-                                                                      <td>
-                                                                        <div align="left">
-                                                                          <input type="button" value="Crear nuevo" class="button2" onclick="javascript:createNewUser()">
-                                                                        </div>
-                                                                      </td>
-                                                                    </tr>
-
-                                                                    <tr bgcolor="#FFFFFF">
-
+                                                                    <tr id="password_row">
                                                                       <td width="32%" valign="top">
-                                                                        <div align="right"><strong>Nombre</strong>:
+                                                                        <div name= "contraseña" align="right"><strong>Contraseña</strong>:  *<br>
+                                                                          
                                                                         </div>
                                                                         <div align="right"></div>
                                                                       </td>
@@ -107,14 +93,46 @@
                                                                       <td width="1%"> </td>
                                                                       <td width="41%">
                                                                         <div align="left">
-                                                                          <input id="nombre" name="nombre" type="text" disabled>  *
+                                                                          <input id="contraseña" name="contraseña" type="password">
                                                                         </div>
                                                                       </td>
                                                                     </tr>
 
-                                                                    <tr>
+                                                                    <tr id="buttons">
+                                                                    <td></td>
+                                                                    <td></td>
                                                                       <td>
-                                                                        <div align="right"><span><strong>Apellido</strong>:</span>
+                                                                        <div align="right">
+                                                                          <input id="verify_button" type="button" value="Verificar usuario" class="button2" onclick="checkUser()">
+                                                                        </div>
+                                                                      </td>
+                                                                      
+                                                                      <td>
+                                                                        <div align="left">
+                                                                          <input id="create_button" type="button" value="Crear nuevo" class="button2" onclick="javascript:createNewUser()">
+                                                                        </div>
+                                                                      </td>
+                                                                    </tr>
+                                                                    
+                                                                    <tr id="name_row" style="display:none">
+                                                                      <td width="32%" valign="top">
+                                                                        <div align="right"><strong>Nombre</strong>:  *<br>
+                                                                        </div>
+                                                                        <div align="right"></div>
+                                                                      </td>
+                                                                      <td width="1%" valign="top"><div align="right"> </div>
+                                                                      </td>
+                                                                      <td width="1%"> </td>
+                                                                      <td width="41%">
+                                                                        <div align="left">
+                                                                          <input id="nombre" name="nombre" type="text">
+                                                                        </div>
+                                                                      </td>
+                                                                    </tr>
+
+                                                                    <tr id="surname_row" style="display:none">
+                                                                      <td>
+                                                                        <div align="right"><strong>Apellido</strong>:  *<br>
                                                                         </div>
                                                                       </td>
                                                                       <td valign="top">
@@ -122,15 +140,15 @@
                                                                       <td> </td>
                                                                       <td>
                                                                         <div align="left">
-                                                                          <input id="apellido" name="apellido" type="text" disabled>  *
+                                                                          <input id="apellido" name="apellido" type="text">
                                                                         </div>
                                                                       </td> 
                                                                     </tr>
-
-                                                                    <tr>
+                                                                    
+                                                                    <tr id="email_row" style="display:none">
                                                                       <td>
                                                                         <div align="right">
-                                                                          <p><strong>Direccion de e-mail:</strong><br>
+                                                                          <p><strong>Direccion de e-mail</strong>:  *<br>
                                                                           </p>
                                                                         </div>
                                                                       </td>
@@ -138,24 +156,27 @@
                                                                       <td> </td>
                                                                       <td>
                                                                         <div align="left">
-                                                                          <input id="email" name="email" type="text" disabled>  *
+                                                                          <input id="email" name="email" type="text">
                                                                         </div>
                                                                       </td>
                                                                     </tr>
 
-                                                                    <tr>
-                                                                      <td><div align="right"><strong>Confirme direccion de e-mail</strong>:</div></td>
+                                                                    <tr id="email_confirmation_row" style="display:none">
+                                                                      <td>
+                                                                        <div name="confirme_email" align="right"><strong>Confirme direccion de e-mail</strong>:  *<br>
+                                                                        </div>
+                                                                      </td>
                                                                       <td> </td>
                                                                       <td> </td>
                                                                       <td>
-                                                                        <input id="confirme_email" name="confirme_email" type="text" disabled>  *
+                                                                        <input id="confirme_email" name="confirme_email" type="text"> 
                                                                       </td>
                                                                       <td valign="middle"> </td>
                                                                     </tr>
 
-                                                                    <tr bgcolor="#FFFFFF">
+                                                                    <tr id="new_password_row" style="display:none">
                                                                       <td width="32%" valign="top">
-                                                                        <div align="right"><strong>Contraseña</strong>:<br>
+                                                                        <div name= "contraseña_nueva" align="right"><strong>Contraseña</strong>:  *<br>
                                                                           
                                                                         </div>
                                                                         <div align="right"></div>
@@ -165,14 +186,14 @@
                                                                       <td width="1%"> </td>
                                                                       <td width="41%">
                                                                         <div align="left">
-                                                                          <input id="contraseña" name="contraseña" type="password" disabled>  *
+                                                                          <input id="contraseña_nueva" name="contraseña_nueva" type="password">
                                                                         </div>
                                                                       </td>
                                                                     </tr>
 
-                                                                    <tr bgcolor="#FFFFFF">
+                                                                    <tr id="password_confirmation_row" style="display:none">
                                                                       <td width="32%" valign="top">
-                                                                        <div name="confirme_contraseña" align="right"><strong>Confirmar contraseña</strong>:<br>
+                                                                        <div name="confirme_contraseña" align="right"><strong>Confirmar contraseña</strong>:  *<br>
                                                                           
                                                                         </div>
                                                                         <div align="right"></div>
@@ -182,36 +203,37 @@
                                                                       <td width="1%"> </td>
                                                                       <td width="41%">
                                                                         <div align="left">
-                                                                          <input id="confirme_contraseña" name="confirme_contraseña" type="password" disabled> 
+                                                                          <input id="confirme_nueva_contraseña" name="confirme_contraseña" type="password"> 
                                                                         </div>
                                                                       </td>
                                                                     </tr>
 
-                                                                    <tr>
+                                                                    <tr id="phone_row" style="display:none">
                                                                       <td>
-                                                                        <div align="right"><strong>Teléfono</strong>:<br></div>
+                                                                        <div align="right"><strong>Teléfono</strong>:  *<br>
+                                                                        </div>
                                                                         <div align="right"></div>
                                                                       </td>
                                                                       <td valign="top"><div align="right"> </div></td>
                                                                       <td> </td>
                                                                       <td>
                                                                         <div align="left">
-                                                                          <input id="telefono_celular" name="telefono_celular" type="text" disabled>  *
+                                                                          <input id="telefono_celular" name="telefono_celular" type="text">
                                                                         </div>
                                                                       </td>
                                                                       <td valign="middle"> </td>
                                                                     </tr>
    
-                                                                    <tr>
+                                                                    <tr id="birthday_row" style="display:none">
                                                                       <td>
-                                                                        <div align="right"><strong>Fecha de Nacimiento</strong>:
+                                                                        <div align="right"><strong>Fecha de Nacimiento</strong>:  *<br>
                                                                         </div>
                                                                       </td>
                                                                       <td valign="top"><div align="right"> <br>
                                                                       </div></td>
                                                                       <td> </td>
                                                                       <td>
-                                                                        <select id="fecha_nacimiento_dia" name="fecha_nacimiento_dia" disabled>
+                                                                        <select id="fecha_nacimiento_dia" name="fecha_nacimiento_dia">
                                                                           <option value="0" selected>Dia</option>
                                                                           <option value="01">01</option>
                                                                           <option value="02">02</option>
@@ -245,7 +267,7 @@
                                                                           <option value="30">30</option>
                                                                           <option value="31">31</option>
                                                                         </select>
-                                                                        <select id="fecha_nacimiento_mes" name="fecha_nacimiento_mes" disabled>
+                                                                        <select id="fecha_nacimiento_mes" name="fecha_nacimiento_mes">
                                                                           <option value="0" selected>Mes</option>
                                                                           <option value="01">01</option>
                                                                           <option value="02">02</option>
@@ -260,7 +282,7 @@
                                                                           <option value="11">11</option>
                                                                           <option value="12">12</option>
                                                                         </select>
-                                                                        <select id="fecha_nacimiento_anio" name="fecha_nacimiento_anio" disabled>
+                                                                        <select id="fecha_nacimiento_anio" name="fecha_nacimiento_anio">
                                                                           <option value="0" selected>Año</option>
                                                                           <option value="1997">1997</option>
                                                                           <option value="1996">1996</option>
@@ -345,18 +367,21 @@
                                                                           <option value="1917">1917</option>
                                                                           <option value="1916">1916</option>
                                                                           <option value="1915">1915</option>
-                                                                        </select>  *
+                                                                        </select>
                                                                       </td>  
                                                                       <td valign="middle"> </td>
                                                                     </tr>
 
-                                                                    <tr>
-                                                                      <td><div align="right"><strong>País</strong>:</div></td>
+                                                                    <tr id="country_row" style="display:none">
+                                                                      <td>
+                                                                        <div align="right"><strong>País</strong>:  *<br>
+                                                                        </div>
+                                                                      </td>
                                                                       <td valign="top"> </td>
                                                                       <td> </td>
                                                                       <td>
                                                                         <span>                                                       
-                                                                          <select id="lugar_de_residencia_pais" name="lugar_de_residencia_pais" disabled>
+                                                                          <select id="lugar_de_residencia_pais" name="lugar_de_residencia_pais">
                                                                             <option value="0" selected>Seleccione pais</option>
                                                                             <option value="Argentina" id="cbf1364">Argentina</option>
                                                                             <option value="Brasil" id="cbf1365">Brasil</option>
@@ -376,19 +401,22 @@
                                                                             <option value="Puerto Rico" id="cbf1379">Puerto Rico</option>
                                                                             <option value="Uruguay" id="cbf1380">Uruguay</option>
                                                                             <option value="Venezuela" id="cbf1381">Venezuela</option>
-                                                                          </select>  *
+                                                                          </select>
                                                                         </span>
                                                                       </td>
                                                                       <td valign="middle"> </td>
                                                                     </tr>
 
-                                                                    <tr>
-                                                                      <td><div align="right"><strong>Provincia</strong>:</div></td>
+                                                                    <tr id="state_row" style="display:none">
+                                                                      <td>
+                                                                        <div align="right"><strong>Provincia</strong>:  *<br>
+                                                                        </div>
+                                                                      </td>
                                                                       <td valign="top"> </td>
                                                                       <td> </td>
                                                                       <td>
                                                                         <span>
-                                                                          <select id="lugar_de_residencia_provincia" name="lugar_de_residencia_provincia" disabled>
+                                                                          <select id="lugar_de_residencia_provincia" name="lugar_de_residencia_provincia">
                                                                             <option value="0" selected>Seleccione su provincia</option>
                                                                             <option value="Buenos Aires">Buenos Aires</option>
                                                                           	<option value="Córdoba">Córdoba</option>
@@ -414,38 +442,47 @@
                                                                           	<option value="Santiago del Estero">Santiago del Estero</option>
                                                                           	<option value="Tierra del Fuego">Tierra del Fuego</option>
                                                                           	<option value="Tucuman">Tucuman</option>
-                                                                          </select>  *
+                                                                          </select>
                                                                         </span>
                                                                       </td>
                                                                       <td valign="middle"> </td>
                                                                     </tr>
 
-                                                                    <tr>
-                                                                      <td><div align="right"><strong>Ciudad/Localidad</strong>:</div></td>
+                                                                    <tr id="city_row" style="display:none">
+                                                                      <td>
+                                                                        <div align="right"><strong>Ciudad/Localidad</strong>:  *<br>
+                                                                        </div>
+                                                                      </td>
                                                                       <td valign="top"> </td>
                                                                       <td> </td>
                                                                       <td><span>
-                                                                        <input id="lugar_de_residencia_ciudad" name="lugar_de_residencia_ciudad" type="text" disabled>  *
+                                                                        <input id="lugar_de_residencia_ciudad" name="lugar_de_residencia_ciudad" type="text">
                                                                       </span></td>
                                                                       <td valign="middle"> </td>
                                                                     </tr>
 
-                                                                    <tr>
-                                                                      <td><div align="right"><strong>Direccion</strong>:</div></td>
+                                                                    <tr id="direction_row" style="display:none">
+                                                                      <td>
+                                                                        <div align="right"><strong>Direccion</strong>:  *<br>
+                                                                        </div>
+                                                                      </td>
                                                                       <td valign="top"> </td>
                                                                       <td> </td>
                                                                       <td><span>
-                                                                        <input id="direccion_de_residencia" name="direccion_de_residencia" type="text" disabled>  *
+                                                                        <input id="direccion_de_residencia" name="direccion_de_residencia" type="text">
                                                                       </span></td>
                                                                       <td valign="middle"> </td>
                                                                     </tr>
 
-                                                                    <tr>
-                                                                      <td><div align="right"><strong>Universidad</strong>:</div></td>
+                                                                    <tr id="university_row" style="display:none">
+                                                                      <td>
+                                                                        <div align="right"><strong>Universidad</strong>:  *<br>
+                                                                        </div>
+                                                                      </td>
                                                                       <td valign="top"> </td>
                                                                       <td> </td>
                                                                       <td><span>
-                                                                        <select id="institucion" name="institucion" disabled>
+                                                                        <select id="institucion" name="institucion">
                                                                           <option value="0"> Seleccione Universidad </option>
                                                                           <option value="Instituto Tecnológico De Buenos Aires" id="cbf2049">Instituto Tecnológico De Buenos Aires</option>
                                                                           <option value="Universidad Argentina De La Empresa" id="cbf2050">Universidad Argentina De La Empresa</option>
@@ -505,29 +542,35 @@
                                                                           <option value="UTN Unidad Académica Río Gallegos" id="cbf2104">UTN Unidad Académica Río Gallegos</option>
                                                                           <option value="UTN Unidad Académica Trenque Lauquen" id="cbf2105">UTN Unidad Académica Trenque Lauquen</option>
                                                                           <option value="Otra" id="cbf2106">Otra</option>
-                                                                        </select>  *
+                                                                        </select>
                                                                       </span></td>
                                                                       <td valign="middle"> </td>
                                                                     </tr>
 
-                                                                     <tr>
-                                                                        <td><div align="right"><strong>Otra universidad</strong>:</div></td>
+                                                                     <tr id="otherUniversity_row" style="display:none">
+                                                                        <td>
+                                                                          <div align="right"><strong>Otra universidad</strong>:  *<br>
+                                                                          </div>
+                                                                        </td>
                                                                         <td valign="top"> </td>
                                                                         <td> </td>
                                                                         <td>
                                                                           <span>
-                                                                            <input id="universidad" name="universidad" type="text" disabled>  *
+                                                                            <input id="universidad" name="universidad" type="text">
                                                                           </span>
                                                                         </td>
                                                                         <td valign="middle"> </td>
                                                                      </tr>
 
-                                                                     <tr>
-                                                                      <td><div align="right"><strong>Carrera</strong>:</div></td>
+                                                                     <tr id="career_row" style="display:none">
+                                                                      <td>
+                                                                        <div align="right"><strong>Carrera</strong>:  *<br>
+                                                                        </div>
+                                                                      </td>
                                                                       <td valign="top"> </td>
                                                                       <td> </td>
                                                                       <td><span>
-                                                                        <select id="carrera" name="carrera" disabled>
+                                                                        <select id="carrera" name="carrera">
                                                                           <option value="0" selected>Seleccione carrera</option>
                                                                           <option value="Ingeniería Industrial">Ingeniería Industrial</option>
                                                                           <option value="Ing. en Alimentos">Ing. en Alimentos</option>
@@ -535,37 +578,43 @@
                                                                           <option value="Ing. Agroindustrial">Ingeniería Agroindustrial</option>
                                                                           <option value="Otra Ingeniería">Otra ingenieria</option>
                                                                           <option value="Otra carrera">Otra carrera</option>
-                                                                        </select>  *
+                                                                        </select>
                                                                       </span></td>
                                                                       <td valign="middle"> </td>
                                                                     </tr>
 
-                                                                    <tr>
-                                                                      <td><div align="right"><strong>Numero de materias aprobadas</strong>:</div></td>
+                                                                    <tr id="approvedSubjects_row" style="display:none">
+                                                                      <td>
+                                                                        <div align="right"><strong>Numero de materias aprobadas</strong>:  *<br>
+                                                                        </div>
+                                                                      </td>
                                                                       <td valign="top"> </td>
                                                                       <td> </td>
                                                                       <td><span>
-                                                                        <input id="numero_materias" name="numero_materias" type="text" disabled>  *
+                                                                        <input id="numero_materias" name="numero_materias" type="text">
                                                                       </span></td>
                                                                       <td valign="middle"> </td>
                                                                     </tr>
 
-                                                                    <tr>
-                                                                      <td><div align="right"><strong>Trabaja</strong>:</div></td>
+                                                                    <tr id="work_row" style="display:none">
+                                                                      <td>
+                                                                        <div align="right"><strong>Trabaja</strong>:  *<br>
+                                                                        </div>
+                                                                      </td>
                                                                       <td valign="top"> </td>
                                                                       <td> </td>
                                                                       <td><span>
-                                                                        <select id="trabaja" name="trabaja" disabled>
+                                                                        <select id="trabaja" name="trabaja">
                                                                           <option value="0" selected></option>
                                                                           <option value="Si">Si</option>
                                                                           <option value="No">No</option>
-                                                                        </select>  *
+                                                                        </select>
                                                                       </span></td>
                                                                       <td valign="middle"> </td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
-                                                            <div align="center">
+                                                            <div align="center" id="sendButton" style="display:none">
                                                               <input type="submit" value="Enviar" class="button" onclick="sendInformation()">
                                                             </div>
                                                      
@@ -639,7 +688,7 @@
                                   <td valign="top">&nbsp;</td>
                                   <td>&nbsp;</td>
                                   <td><span>
-                                    <select name="postgrado" disabled="">
+                                    <select name="postgrado">
                                       <option value="0" selected="">Seleccione su Postgrado</option>
                                       <option value="Doctorado">Doctorado</option>
                                       <option value="Master / Especialización">Master / Especialización</option>
@@ -655,7 +704,7 @@
                                   <td>&nbsp;</td>
                                   <td>
                                     <div align="left"><span>
-                                      <select name="estado_postgrado" disabled="">
+                                      <select name="estado_postgrado">
                                         <option value="0" selected="">Seleccione su nivel de postgrado</option>
                                         <option value="Completo">Completo</option>
                                         <option value="En curso">En curso</option>
@@ -666,15 +715,1196 @@
                                 </tr>
 
                                 <tr>
-                                  <td><div align="right"><strong>Título e Institución:</strong></div></td>
+                                  <td><div align="right"><strong>Título:</strong></div></td>
                                   <td valign="top">&nbsp;</td>
                                   <td>&nbsp;</td>
                                   <td><span>
-                                    <input name="titulopostgrado" type="text" disabled="">
+                                    <input name="titulo" type="text">
                                   </span></td>
                                   <td valign="middle">&nbsp;</td>
                                 </tr>
-  
+                                <tr>
+                                  <td><div align="right"><strong>Institución:</strong></div></td>
+                                  <td valign="top">&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td><span>
+                                    <input name="institucion" type="text">
+                                  </span></td>
+                                  <td valign="middle">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td><span><strong>Antecedentes Laborales</strong></span></td>
+                                  <td valign="top">&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td valign="middle">&nbsp;</td>
+                                </tr>
+
+                                <tr>
+                                  <td><div align="right"><strong>1.</strong></div></td>
+                                  <td valign="top">&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td valign="middle">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td><div align="right"><strong>Empresa:</strong></div></td>
+                                  <td rowspan="2" valign="top">&nbsp;</td>
+                                  <td rowspan="2">&nbsp;</td>
+                                  <td><span>
+                                    <input name="empresa_1" type="text">
+                                  </span></td>
+                                  <td rowspan="2" valign="middle">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td><div align="right"><strong>Tipo de empresa:</strong> </div></td>
+                                  <td><span>
+                                    <select name="tipo_empresa_1">
+                                      <option value="0" selected="">Seleccione el tipo de empresa</option>
+                                      <option value="Agro">Agro</option>
+                                      <option value="Automotriz">Automotriz</option>
+                                      <option value="Consultora">Consultora</option>
+                                      <option value="Consumo Masivo">Consumo Masivo</option>
+                                      <option value="Financiero / Bancario / Seguros">Financiero / Bancario / Seguros</option>
+                                      <option value="Holding - otras actividades">Holding - otras actividades</option>
+                                      <option value="Industrial">Industrial</option>
+                                      <option value="Petrolera / Sector Energético">Petrolera / Sector Energético</option>
+                                      <option value="Salud / Laboratorio / Farmacéutica">Salud / Laboratorio / Farmacéutica</option>
+                                      <option value="Servicios / Distribución / Comercialización">Servicios / Distribución / Comercialización</option>
+                                      <option value="Sistemas / Tecnología">Sistemas / Tecnología</option>
+                                      <option value="Telecomunicaciones">Telecomunicaciones</option>
+                                      <option value="otra">Otra</option>
+                                    </select>
+                                  </span></td>
+                                </tr>
+                                <tr>
+                                  <td><div align="right"><strong>Puesto / Tarea:</strong></div></td>
+                                  <td rowspan="3" valign="top">&nbsp;</td>
+                                  <td rowspan="3">&nbsp;</td>
+                                  <td><span>
+                                    <input name="puesto_1" type="text">
+                                  </span></td>
+                                  <td rowspan="3" valign="middle">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td><div align="right"><strong>Area del puesto: </strong></div></td>
+                                  <td><span>
+                                    <select name="area_puesto_1">
+                                      <option value="0" selected="">Seleccione el area del puesto</option>
+                                      <option value="Administración">Administración</option>
+                                      <option value="Gerencia General">Gerencia General</option>
+                                      <option value="Investigación y Desarrollo">Investigación y Desarrollo</option>
+                                      <option value="Marketing - Relaciones Institucionales">Marketing - Relaciones Institucionales</option>
+                                      <option value="Producción">Producción</option>
+                                      <option value="Recursos Humanos">Recursos Humanos</option>
+                                      <option value="Salud - Servicios Médicos">Salud - Servicios Médicos</option>
+                                      <option value="Sistemas">Sistemas</option>
+                                      <option value="Ventas - Comercial">Ventas - Comercial</option>
+                                      <option value="otra">Otra </option>
+                                    </select>
+                                  </span></td>
+                                </tr>
+                                <tr>
+                                <td><div align="right"><strong>Señority:</strong></div></td>
+                                <td><span>
+                                  <select name="seniority_1">
+                                    <option value="0" selected="">Seleccione el señority</option>
+                                    <option value="director">Director</option>
+                                    <option value="gerente">Gerente</option>
+                                    <option value="senior">Senior</option>
+                                    <option value="semi-senior">Semi-senior</option>
+                                    <option value="junior">Junior</option>
+                                  </select>
+                                </span></td>
+                              </tr>
+                              <tr>
+                                <td><div align="right"><strong>Desde:</strong></div></td>
+                                <td valign="top">&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td><select name="mesdesde1">
+                                    <option value="1" selected="">Enero</option>
+                                    <option value="2">Febrero</option>
+                                    <option value="3">Marzo</option>
+                                    <option value="4">Abril</option>
+                                    <option value="5">Mayo</option>
+                                    <option value="6">Junio</option>
+                                    <option value="7">Julio</option>
+                                    <option value="8">Agosto</option>
+                                    <option value="9">Septiembre</option>
+                                    <option value="10">Octubre</option>
+                                    <option value="11">Noviembre</option>
+                                    <option value="12">Diciembre</option>
+                                  </select>
+                                  <select name="añodesde1">
+                                    <option value="2013" selected="">2013</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2011">2011</option>
+                                    <option value="2010">2010</option>
+                                    <option value="2009">2009</option>
+                                    <option value="2008">2008</option>
+                                    <option value="2007">2007</option>
+                                    <option value="2006">2006</option>
+                                    <option value="2005">2005</option>
+                                    <option value="2004">2004</option>
+                                    <option value="2003">2003</option>
+                                    <option value="2002">2002</option>
+                                    <option value="2001">2001</option>
+                                    <option value="2000">2000</option>
+                                    <option value="1999">1999</option>
+                                    <option value="1998">1998</option>
+                                    <option value="1997">1997</option>
+                                    <option value="1996">1996</option>
+                                    <option value="1995">1995</option>
+                                    <option value="1994">1994</option>
+                                    <option value="1993">1993</option>
+                                    <option value="1992">1992</option>
+                                    <option value="1991">1991</option>
+                                    <option value="1990">1990</option>
+                                    <option value="1989">1989</option>
+                                    <option value="1988">1988</option>
+                                    <option value="1987">1987</option>
+                                    <option value="1986">1986</option>
+                                    <option value="1985">1985</option>
+                                    <option value="1984">1984</option>
+                                    <option value="1983">1983</option>
+                                    <option value="1982">1982</option>
+                                    <option value="1981">1981</option>
+                                    <option value="1980">1980</option>
+                                    <option value="1979">1979</option>
+                                    <option value="1978">1978</option>
+                                    <option value="1977">1977</option>
+                                    <option value="1976">1976</option>
+                                    <option value="1975">1975</option>
+                                    <option value="1974">1974</option>
+                                    <option value="1973">1973</option>
+                                    <option value="1972">1972</option>
+                                    <option value="1971">1971</option>
+                                    <option value="1970">1970</option>
+                                    <option value="1969">1969</option>
+                                    <option value="1968">1968</option>
+                                    <option value="1967">1967</option>
+                                    <option value="1966">1966</option>
+                                    <option value="1965">1965</option>
+                                    <option value="1964">1964</option>
+                                    <option value="1963">1963</option>
+                                    <option value="1962">1962</option>
+                                    <option value="1961">1961</option>
+                                    <option value="1960">1960</option>
+                                    <option value="1959">1959</option>
+                                    <option value="1958">1958</option>
+                                    <option value="1957">1957</option>
+                                    <option value="1956">1956</option>
+                                    <option value="1955">1955</option>
+                                    <option value="1954">1954</option>
+                                    <option value="1953">1953</option>
+                                    <option value="1952">1952</option>
+                                    <option value="1951">1951</option>
+                                    <option value="1950">1950</option>
+                                    <option value="1949">1949</option>
+                                    <option value="1948">1948</option>
+                                    <option value="1947">1947</option>
+                                    <option value="1946">1946</option>
+                                    <option value="1945">1945</option>
+                                    <option value="1944">1944</option>
+                                    <option value="1943">1943</option>
+                                    <option value="1942">1942</option>
+                                    <option value="1941">1941</option>
+                                    <option value="1940">1940</option>
+                                    <option value="1939">1939</option>
+                                    <option value="1938">1938</option>
+                                    <option value="1937">1937</option>
+                                    <option value="1936">1936</option>
+                                    <option value="1935">1935</option>
+                                    <option value="1934">1934</option>
+                                    <option value="1933">1933</option>
+                                    <option value="1932">1932</option>
+                                    <option value="1931">1931</option>
+                                    <option value="1930">1930</option>
+                                    <option value="1929">1929</option>
+                                    <option value="1928">1928</option>
+                                    <option value="1927">1927</option>
+                                    <option value="1926">1926</option>
+                                    <option value="1925">1925</option>
+                                    <option value="1924">1924</option>
+                                    <option value="1923">1923</option>
+                                    <option value="1922">1922</option>
+                                    <option value="1921">1921</option>
+                                    <option value="1920">1920</option>
+                                    <option value="1919">1919</option>
+                                    <option value="1918">1918</option>
+                                    <option value="1917">1917</option>
+                                    <option value="1916">1916</option>
+                                    <option value="1915">1915</option>
+                                  </select></td>
+                                <td valign="middle">&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <td><div align="right"><strong>Hasta:</strong></div></td>
+                                <td valign="top">&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td><select name="meshasta1">
+                                    <option value="1" selected="">Enero</option>
+                                    <option value="2">Febrero</option>
+                                    <option value="3">Marzo</option>
+                                    <option value="4">Abril</option>
+                                    <option value="5">Mayo</option>
+                                    <option value="6">Junio</option>
+                                    <option value="7">Julio</option>
+                                    <option value="8">Agosto</option>
+                                    <option value="9">Septiembre</option>
+                                    <option value="10">Octubre</option>
+                                    <option value="11">Noviembre</option>
+                                    <option value="12">Diciembre</option>
+                                  </select>
+                                  <select name="añohasta1">
+                                    <option value="2013" selected="">2013</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2011">2011</option>
+                                    <option value="2010">2010</option>
+                                    <option value="2009">2009</option>
+                                    <option value="2008">2008</option>
+                                    <option value="2007">2007</option>
+                                    <option value="2006">2006</option>
+                                    <option value="2005">2005</option>
+                                    <option value="2004">2004</option>
+                                    <option value="2003">2003</option>
+                                    <option value="2002">2002</option>
+                                    <option value="2001">2001</option>
+                                    <option value="2000">2000</option>
+                                    <option value="1999">1999</option>
+                                    <option value="1998">1998</option>
+                                    <option value="1997">1997</option>
+                                    <option value="1996">1996</option>
+                                    <option value="1995">1995</option>
+                                    <option value="1994">1994</option>
+                                    <option value="1993">1993</option>
+                                    <option value="1992">1992</option>
+                                    <option value="1991">1991</option>
+                                    <option value="1990">1990</option>
+                                    <option value="1989">1989</option>
+                                    <option value="1988">1988</option>
+                                    <option value="1987">1987</option>
+                                    <option value="1986">1986</option>
+                                    <option value="1985">1985</option>
+                                    <option value="1984">1984</option>
+                                    <option value="1983">1983</option>
+                                    <option value="1982">1982</option>
+                                    <option value="1981">1981</option>
+                                    <option value="1980">1980</option>
+                                    <option value="1979">1979</option>
+                                    <option value="1978">1978</option>
+                                    <option value="1977">1977</option>
+                                    <option value="1976">1976</option>
+                                    <option value="1975">1975</option>
+                                    <option value="1974">1974</option>
+                                    <option value="1973">1973</option>
+                                    <option value="1972">1972</option>
+                                    <option value="1971">1971</option>
+                                    <option value="1970">1970</option>
+                                    <option value="1969">1969</option>
+                                    <option value="1968">1968</option>
+                                    <option value="1967">1967</option>
+                                    <option value="1966">1966</option>
+                                    <option value="1965">1965</option>
+                                    <option value="1964">1964</option>
+                                    <option value="1963">1963</option>
+                                    <option value="1962">1962</option>
+                                    <option value="1961">1961</option>
+                                    <option value="1960">1960</option>
+                                    <option value="1959">1959</option>
+                                    <option value="1958">1958</option>
+                                    <option value="1957">1957</option>
+                                    <option value="1956">1956</option>
+                                    <option value="1955">1955</option>
+                                    <option value="1954">1954</option>
+                                    <option value="1953">1953</option>
+                                    <option value="1952">1952</option>
+                                    <option value="1951">1951</option>
+                                    <option value="1950">1950</option>
+                                    <option value="1949">1949</option>
+                                    <option value="1948">1948</option>
+                                    <option value="1947">1947</option>
+                                    <option value="1946">1946</option>
+                                    <option value="1945">1945</option>
+                                    <option value="1944">1944</option>
+                                    <option value="1943">1943</option>
+                                    <option value="1942">1942</option>
+                                    <option value="1941">1941</option>
+                                    <option value="1940">1940</option>
+                                    <option value="1939">1939</option>
+                                    <option value="1938">1938</option>
+                                    <option value="1937">1937</option>
+                                    <option value="1936">1936</option>
+                                    <option value="1935">1935</option>
+                                    <option value="1934">1934</option>
+                                    <option value="1933">1933</option>
+                                    <option value="1932">1932</option>
+                                    <option value="1931">1931</option>
+                                    <option value="1930">1930</option>
+                                    <option value="1929">1929</option>
+                                    <option value="1928">1928</option>
+                                    <option value="1927">1927</option>
+                                    <option value="1926">1926</option>
+                                    <option value="1925">1925</option>
+                                    <option value="1924">1924</option>
+                                    <option value="1923">1923</option>
+                                    <option value="1922">1922</option>
+                                    <option value="1921">1921</option>
+                                    <option value="1920">1920</option>
+                                    <option value="1919">1919</option>
+                                    <option value="1918">1918</option>
+                                    <option value="1917">1917</option>
+                                    <option value="1916">1916</option>
+                                    <option value="1915">1915</option>
+                                  </select></td>
+                                <td valign="middle">&nbsp;</td>
+                              </tr>
+
+
+                              <tr>
+                                <td><div align="right"><strong>2.</strong></div></td>
+                                <td valign="top">&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td valign="middle">&nbsp;</td>
+                              </tr>
+                              <tr>
+                                  <td><div align="right"><strong>Empresa:</strong></div></td>
+                                  <td rowspan="2" valign="top">&nbsp;</td>
+                                  <td rowspan="2">&nbsp;</td>
+                                  <td><span>
+                                    <input name="empresa_2" type="text">
+                                  </span></td>
+                                  <td rowspan="2" valign="middle">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td><div align="right"><strong>Tipo de empresa:</strong> </div></td>
+                                  <td><span>
+                                    <select name="tipo_empresa_2">
+                                      <option value="0" selected="">Seleccione el tipo de empresa</option>
+                                      <option value="Agro">Agro</option>
+                                      <option value="Automotriz">Automotriz</option>
+                                      <option value="Consultora">Consultora</option>
+                                      <option value="Consumo Masivo">Consumo Masivo</option>
+                                      <option value="Financiero / Bancario / Seguros">Financiero / Bancario / Seguros</option>
+                                      <option value="Holding - otras actividades">Holding - otras actividades</option>
+                                      <option value="Industrial">Industrial</option>
+                                      <option value="Petrolera / Sector Energético">Petrolera / Sector Energético</option>
+                                      <option value="Salud / Laboratorio / Farmacéutica">Salud / Laboratorio / Farmacéutica</option>
+                                      <option value="Servicios / Distribución / Comercialización">Servicios / Distribución / Comercialización</option>
+                                      <option value="Sistemas / Tecnología">Sistemas / Tecnología</option>
+                                      <option value="Telecomunicaciones">Telecomunicaciones</option>
+                                      <option value="otra">Otra</option>
+                                    </select>
+                                  </span></td>
+                                </tr>
+                                <tr>
+                                  <td><div align="right"><strong>Puesto / Tarea:</strong></div></td>
+                                  <td rowspan="3" valign="top">&nbsp;</td>
+                                  <td rowspan="3">&nbsp;</td>
+                                  <td><span>
+                                    <input name="puesto_2" type="text">
+                                  </span></td>
+                                  <td rowspan="3" valign="middle">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td><div align="right"><strong>Area del puesto: </strong></div></td>
+                                  <td><span>
+                                    <select name="area_puesto_2">
+                                      <option value="0" selected="">Seleccione el area del puesto</option>
+                                      <option value="Administración">Administración</option>
+                                      <option value="Gerencia General">Gerencia General</option>
+                                      <option value="Investigación y Desarrollo">Investigación y Desarrollo</option>
+                                      <option value="Marketing - Relaciones Institucionales">Marketing - Relaciones Institucionales</option>
+                                      <option value="Producción">Producción</option>
+                                      <option value="Recursos Humanos">Recursos Humanos</option>
+                                      <option value="Salud - Servicios Médicos">Salud - Servicios Médicos</option>
+                                      <option value="Sistemas">Sistemas</option>
+                                      <option value="Ventas - Comercial">Ventas - Comercial</option>
+                                      <option value="otra">Otra </option>
+                                    </select>
+                                  </span></td>
+                                </tr>
+                                <tr>
+                                <td><div align="right"><strong>Señority:</strong></div></td>
+                                <td><span>
+                                  <select name="seniority_2">
+                                    <option value="0" selected="">Seleccione el señority</option>
+                                    <option value="director">Director</option>
+                                    <option value="gerente">Gerente</option>
+                                    <option value="senior">Senior</option>
+                                    <option value="semi-senior">Semi-senior</option>
+                                    <option value="junior">Junior</option>
+                                  </select>
+                                </span></td>
+                              </tr>
+                              <tr>
+                                <td><div align="right"><strong>Desde:</strong></div></td>
+                                <td valign="top">&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td><select name="mesdesde2">
+                                    <option value="1" selected="">Enero</option>
+                                    <option value="2">Febrero</option>
+                                    <option value="3">Marzo</option>
+                                    <option value="4">Abril</option>
+                                    <option value="5">Mayo</option>
+                                    <option value="6">Junio</option>
+                                    <option value="7">Julio</option>
+                                    <option value="8">Agosto</option>
+                                    <option value="9">Septiembre</option>
+                                    <option value="10">Octubre</option>
+                                    <option value="11">Noviembre</option>
+                                    <option value="12">Diciembre</option>
+                                  </select>
+                                  <select name="añodesde2">
+                                    <option value="2013" selected="">2013</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2011">2011</option>
+                                    <option value="2010">2010</option>
+                                    <option value="2009">2009</option>
+                                    <option value="2008">2008</option>
+                                    <option value="2007">2007</option>
+                                    <option value="2006">2006</option>
+                                    <option value="2005">2005</option>
+                                    <option value="2004">2004</option>
+                                    <option value="2003">2003</option>
+                                    <option value="2002">2002</option>
+                                    <option value="2001">2001</option>
+                                    <option value="2000">2000</option>
+                                    <option value="1999">1999</option>
+                                    <option value="1998">1998</option>
+                                    <option value="1997">1997</option>
+                                    <option value="1996">1996</option>
+                                    <option value="1995">1995</option>
+                                    <option value="1994">1994</option>
+                                    <option value="1993">1993</option>
+                                    <option value="1992">1992</option>
+                                    <option value="1991">1991</option>
+                                    <option value="1990">1990</option>
+                                    <option value="1989">1989</option>
+                                    <option value="1988">1988</option>
+                                    <option value="1987">1987</option>
+                                    <option value="1986">1986</option>
+                                    <option value="1985">1985</option>
+                                    <option value="1984">1984</option>
+                                    <option value="1983">1983</option>
+                                    <option value="1982">1982</option>
+                                    <option value="1981">1981</option>
+                                    <option value="1980">1980</option>
+                                    <option value="1979">1979</option>
+                                    <option value="1978">1978</option>
+                                    <option value="1977">1977</option>
+                                    <option value="1976">1976</option>
+                                    <option value="1975">1975</option>
+                                    <option value="1974">1974</option>
+                                    <option value="1973">1973</option>
+                                    <option value="1972">1972</option>
+                                    <option value="1971">1971</option>
+                                    <option value="1970">1970</option>
+                                    <option value="1969">1969</option>
+                                    <option value="1968">1968</option>
+                                    <option value="1967">1967</option>
+                                    <option value="1966">1966</option>
+                                    <option value="1965">1965</option>
+                                    <option value="1964">1964</option>
+                                    <option value="1963">1963</option>
+                                    <option value="1962">1962</option>
+                                    <option value="1961">1961</option>
+                                    <option value="1960">1960</option>
+                                    <option value="1959">1959</option>
+                                    <option value="1958">1958</option>
+                                    <option value="1957">1957</option>
+                                    <option value="1956">1956</option>
+                                    <option value="1955">1955</option>
+                                    <option value="1954">1954</option>
+                                    <option value="1953">1953</option>
+                                    <option value="1952">1952</option>
+                                    <option value="1951">1951</option>
+                                    <option value="1950">1950</option>
+                                    <option value="1949">1949</option>
+                                    <option value="1948">1948</option>
+                                    <option value="1947">1947</option>
+                                    <option value="1946">1946</option>
+                                    <option value="1945">1945</option>
+                                    <option value="1944">1944</option>
+                                    <option value="1943">1943</option>
+                                    <option value="1942">1942</option>
+                                    <option value="1941">1941</option>
+                                    <option value="1940">1940</option>
+                                    <option value="1939">1939</option>
+                                    <option value="1938">1938</option>
+                                    <option value="1937">1937</option>
+                                    <option value="1936">1936</option>
+                                    <option value="1935">1935</option>
+                                    <option value="1934">1934</option>
+                                    <option value="1933">1933</option>
+                                    <option value="1932">1932</option>
+                                    <option value="1931">1931</option>
+                                    <option value="1930">1930</option>
+                                    <option value="1929">1929</option>
+                                    <option value="1928">1928</option>
+                                    <option value="1927">1927</option>
+                                    <option value="1926">1926</option>
+                                    <option value="1925">1925</option>
+                                    <option value="1924">1924</option>
+                                    <option value="1923">1923</option>
+                                    <option value="1922">1922</option>
+                                    <option value="1921">1921</option>
+                                    <option value="1920">1920</option>
+                                    <option value="1919">1919</option>
+                                    <option value="1918">1918</option>
+                                    <option value="1917">1917</option>
+                                    <option value="1916">1916</option>
+                                    <option value="1915">1915</option>
+                                  </select></td>
+                                <td valign="middle">&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <td><div align="right"><strong>Hasta:</strong></div></td>
+                                <td valign="top">&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td><select name="meshasta2">
+                                    <option value="1" selected="">Enero</option>
+                                    <option value="2">Febrero</option>
+                                    <option value="3">Marzo</option>
+                                    <option value="4">Abril</option>
+                                    <option value="5">Mayo</option>
+                                    <option value="6">Junio</option>
+                                    <option value="7">Julio</option>
+                                    <option value="8">Agosto</option>
+                                    <option value="9">Septiembre</option>
+                                    <option value="10">Octubre</option>
+                                    <option value="11">Noviembre</option>
+                                    <option value="12">Diciembre</option>
+                                  </select>
+                                  <select name="añohasta2">
+                                    <option value="2013" selected="">2013</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2011">2011</option>
+                                    <option value="2010">2010</option>
+                                    <option value="2009">2009</option>
+                                    <option value="2008">2008</option>
+                                    <option value="2007">2007</option>
+                                    <option value="2006">2006</option>
+                                    <option value="2005">2005</option>
+                                    <option value="2004">2004</option>
+                                    <option value="2003">2003</option>
+                                    <option value="2002">2002</option>
+                                    <option value="2001">2001</option>
+                                    <option value="2000">2000</option>
+                                    <option value="1999">1999</option>
+                                    <option value="1998">1998</option>
+                                    <option value="1997">1997</option>
+                                    <option value="1996">1996</option>
+                                    <option value="1995">1995</option>
+                                    <option value="1994">1994</option>
+                                    <option value="1993">1993</option>
+                                    <option value="1992">1992</option>
+                                    <option value="1991">1991</option>
+                                    <option value="1990">1990</option>
+                                    <option value="1989">1989</option>
+                                    <option value="1988">1988</option>
+                                    <option value="1987">1987</option>
+                                    <option value="1986">1986</option>
+                                    <option value="1985">1985</option>
+                                    <option value="1984">1984</option>
+                                    <option value="1983">1983</option>
+                                    <option value="1982">1982</option>
+                                    <option value="1981">1981</option>
+                                    <option value="1980">1980</option>
+                                    <option value="1979">1979</option>
+                                    <option value="1978">1978</option>
+                                    <option value="1977">1977</option>
+                                    <option value="1976">1976</option>
+                                    <option value="1975">1975</option>
+                                    <option value="1974">1974</option>
+                                    <option value="1973">1973</option>
+                                    <option value="1972">1972</option>
+                                    <option value="1971">1971</option>
+                                    <option value="1970">1970</option>
+                                    <option value="1969">1969</option>
+                                    <option value="1968">1968</option>
+                                    <option value="1967">1967</option>
+                                    <option value="1966">1966</option>
+                                    <option value="1965">1965</option>
+                                    <option value="1964">1964</option>
+                                    <option value="1963">1963</option>
+                                    <option value="1962">1962</option>
+                                    <option value="1961">1961</option>
+                                    <option value="1960">1960</option>
+                                    <option value="1959">1959</option>
+                                    <option value="1958">1958</option>
+                                    <option value="1957">1957</option>
+                                    <option value="1956">1956</option>
+                                    <option value="1955">1955</option>
+                                    <option value="1954">1954</option>
+                                    <option value="1953">1953</option>
+                                    <option value="1952">1952</option>
+                                    <option value="1951">1951</option>
+                                    <option value="1950">1950</option>
+                                    <option value="1949">1949</option>
+                                    <option value="1948">1948</option>
+                                    <option value="1947">1947</option>
+                                    <option value="1946">1946</option>
+                                    <option value="1945">1945</option>
+                                    <option value="1944">1944</option>
+                                    <option value="1943">1943</option>
+                                    <option value="1942">1942</option>
+                                    <option value="1941">1941</option>
+                                    <option value="1940">1940</option>
+                                    <option value="1939">1939</option>
+                                    <option value="1938">1938</option>
+                                    <option value="1937">1937</option>
+                                    <option value="1936">1936</option>
+                                    <option value="1935">1935</option>
+                                    <option value="1934">1934</option>
+                                    <option value="1933">1933</option>
+                                    <option value="1932">1932</option>
+                                    <option value="1931">1931</option>
+                                    <option value="1930">1930</option>
+                                    <option value="1929">1929</option>
+                                    <option value="1928">1928</option>
+                                    <option value="1927">1927</option>
+                                    <option value="1926">1926</option>
+                                    <option value="1925">1925</option>
+                                    <option value="1924">1924</option>
+                                    <option value="1923">1923</option>
+                                    <option value="1922">1922</option>
+                                    <option value="1921">1921</option>
+                                    <option value="1920">1920</option>
+                                    <option value="1919">1919</option>
+                                    <option value="1918">1918</option>
+                                    <option value="1917">1917</option>
+                                    <option value="1916">1916</option>
+                                    <option value="1915">1915</option>
+                                  </select></td>
+                                <td valign="middle">&nbsp;</td>
+                              </tr>
+
+                              <tr>
+                                <td><div align="right"><strong>3.</strong></div></td>
+                                <td valign="top">&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td valign="middle">&nbsp;</td>
+                              </tr>
+                              <tr>
+                                  <td><div align="right"><strong>Empresa:</strong></div></td>
+                                  <td rowspan="2" valign="top">&nbsp;</td>
+                                  <td rowspan="2">&nbsp;</td>
+                                  <td><span>
+                                    <input name="empresa_3" type="text">
+                                  </span></td>
+                                  <td rowspan="2" valign="middle">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td><div align="right"><strong>Tipo de empresa:</strong> </div></td>
+                                  <td><span>
+                                    <select name="tipo_empresa_3">
+                                      <option value="0" selected="">Seleccione el tipo de empresa</option>
+                                      <option value="Agro">Agro</option>
+                                      <option value="Automotriz">Automotriz</option>
+                                      <option value="Consultora">Consultora</option>
+                                      <option value="Consumo Masivo">Consumo Masivo</option>
+                                      <option value="Financiero / Bancario / Seguros">Financiero / Bancario / Seguros</option>
+                                      <option value="Holding - otras actividades">Holding - otras actividades</option>
+                                      <option value="Industrial">Industrial</option>
+                                      <option value="Petrolera / Sector Energético">Petrolera / Sector Energético</option>
+                                      <option value="Salud / Laboratorio / Farmacéutica">Salud / Laboratorio / Farmacéutica</option>
+                                      <option value="Servicios / Distribución / Comercialización">Servicios / Distribución / Comercialización</option>
+                                      <option value="Sistemas / Tecnología">Sistemas / Tecnología</option>
+                                      <option value="Telecomunicaciones">Telecomunicaciones</option>
+                                      <option value="otra">Otra</option>
+                                    </select>
+                                  </span></td>
+                                </tr>
+                                <tr>
+                                  <td><div align="right"><strong>Puesto / Tarea:</strong></div></td>
+                                  <td rowspan="3" valign="top">&nbsp;</td>
+                                  <td rowspan="3">&nbsp;</td>
+                                  <td><span>
+                                    <input name="puesto_3" type="text">
+                                  </span></td>
+                                  <td rowspan="3" valign="middle">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td><div align="right"><strong>Area del puesto: </strong></div></td>
+                                  <td><span>
+                                    <select name="area_puesto_3">
+                                      <option value="0" selected="">Seleccione el area del puesto</option>
+                                      <option value="Administración">Administración</option>
+                                      <option value="Gerencia General">Gerencia General</option>
+                                      <option value="Investigación y Desarrollo">Investigación y Desarrollo</option>
+                                      <option value="Marketing - Relaciones Institucionales">Marketing - Relaciones Institucionales</option>
+                                      <option value="Producción">Producción</option>
+                                      <option value="Recursos Humanos">Recursos Humanos</option>
+                                      <option value="Salud - Servicios Médicos">Salud - Servicios Médicos</option>
+                                      <option value="Sistemas">Sistemas</option>
+                                      <option value="Ventas - Comercial">Ventas - Comercial</option>
+                                      <option value="otra">Otra </option>
+                                    </select>
+                                  </span></td>
+                                </tr>
+                                <tr>
+                                <td><div align="right"><strong>Señority:</strong></div></td>
+                                <td><span>
+                                  <select name="seniority_3">
+                                    <option value="0" selected="">Seleccione el señority</option>
+                                    <option value="director">Director</option>
+                                    <option value="gerente">Gerente</option>
+                                    <option value="senior">Senior</option>
+                                    <option value="semi-senior">Semi-senior</option>
+                                    <option value="junior">Junior</option>
+                                  </select>
+                                </span></td>
+                              </tr>
+                              <tr>
+                                <td><div align="right"><strong>Desde:</strong></div></td>
+                                <td valign="top">&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td><select name="mesdesde3">
+                                    <option value="1" selected="">Enero</option>
+                                    <option value="2">Febrero</option>
+                                    <option value="3">Marzo</option>
+                                    <option value="4">Abril</option>
+                                    <option value="5">Mayo</option>
+                                    <option value="6">Junio</option>
+                                    <option value="7">Julio</option>
+                                    <option value="8">Agosto</option>
+                                    <option value="9">Septiembre</option>
+                                    <option value="10">Octubre</option>
+                                    <option value="11">Noviembre</option>
+                                    <option value="12">Diciembre</option>
+                                  </select>
+                                  <select name="añodesde3">
+                                    <option value="2013" selected="">2013</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2011">2011</option>
+                                    <option value="2010">2010</option>
+                                    <option value="2009">2009</option>
+                                    <option value="2008">2008</option>
+                                    <option value="2007">2007</option>
+                                    <option value="2006">2006</option>
+                                    <option value="2005">2005</option>
+                                    <option value="2004">2004</option>
+                                    <option value="2003">2003</option>
+                                    <option value="2002">2002</option>
+                                    <option value="2001">2001</option>
+                                    <option value="2000">2000</option>
+                                    <option value="1999">1999</option>
+                                    <option value="1998">1998</option>
+                                    <option value="1997">1997</option>
+                                    <option value="1996">1996</option>
+                                    <option value="1995">1995</option>
+                                    <option value="1994">1994</option>
+                                    <option value="1993">1993</option>
+                                    <option value="1992">1992</option>
+                                    <option value="1991">1991</option>
+                                    <option value="1990">1990</option>
+                                    <option value="1989">1989</option>
+                                    <option value="1988">1988</option>
+                                    <option value="1987">1987</option>
+                                    <option value="1986">1986</option>
+                                    <option value="1985">1985</option>
+                                    <option value="1984">1984</option>
+                                    <option value="1983">1983</option>
+                                    <option value="1982">1982</option>
+                                    <option value="1981">1981</option>
+                                    <option value="1980">1980</option>
+                                    <option value="1979">1979</option>
+                                    <option value="1978">1978</option>
+                                    <option value="1977">1977</option>
+                                    <option value="1976">1976</option>
+                                    <option value="1975">1975</option>
+                                    <option value="1974">1974</option>
+                                    <option value="1973">1973</option>
+                                    <option value="1972">1972</option>
+                                    <option value="1971">1971</option>
+                                    <option value="1970">1970</option>
+                                    <option value="1969">1969</option>
+                                    <option value="1968">1968</option>
+                                    <option value="1967">1967</option>
+                                    <option value="1966">1966</option>
+                                    <option value="1965">1965</option>
+                                    <option value="1964">1964</option>
+                                    <option value="1963">1963</option>
+                                    <option value="1962">1962</option>
+                                    <option value="1961">1961</option>
+                                    <option value="1960">1960</option>
+                                    <option value="1959">1959</option>
+                                    <option value="1958">1958</option>
+                                    <option value="1957">1957</option>
+                                    <option value="1956">1956</option>
+                                    <option value="1955">1955</option>
+                                    <option value="1954">1954</option>
+                                    <option value="1953">1953</option>
+                                    <option value="1952">1952</option>
+                                    <option value="1951">1951</option>
+                                    <option value="1950">1950</option>
+                                    <option value="1949">1949</option>
+                                    <option value="1948">1948</option>
+                                    <option value="1947">1947</option>
+                                    <option value="1946">1946</option>
+                                    <option value="1945">1945</option>
+                                    <option value="1944">1944</option>
+                                    <option value="1943">1943</option>
+                                    <option value="1942">1942</option>
+                                    <option value="1941">1941</option>
+                                    <option value="1940">1940</option>
+                                    <option value="1939">1939</option>
+                                    <option value="1938">1938</option>
+                                    <option value="1937">1937</option>
+                                    <option value="1936">1936</option>
+                                    <option value="1935">1935</option>
+                                    <option value="1934">1934</option>
+                                    <option value="1933">1933</option>
+                                    <option value="1932">1932</option>
+                                    <option value="1931">1931</option>
+                                    <option value="1930">1930</option>
+                                    <option value="1929">1929</option>
+                                    <option value="1928">1928</option>
+                                    <option value="1927">1927</option>
+                                    <option value="1926">1926</option>
+                                    <option value="1925">1925</option>
+                                    <option value="1924">1924</option>
+                                    <option value="1923">1923</option>
+                                    <option value="1922">1922</option>
+                                    <option value="1921">1921</option>
+                                    <option value="1920">1920</option>
+                                    <option value="1919">1919</option>
+                                    <option value="1918">1918</option>
+                                    <option value="1917">1917</option>
+                                    <option value="1916">1916</option>
+                                    <option value="1915">1915</option>
+                                  </select></td>
+                                <td valign="middle">&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <td><div align="right"><strong>Hasta:</strong></div></td>
+                                <td valign="top">&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td><select name="meshasta3">
+                                    <option value="1" selected="">Enero</option>
+                                    <option value="2">Febrero</option>
+                                    <option value="3">Marzo</option>
+                                    <option value="4">Abril</option>
+                                    <option value="5">Mayo</option>
+                                    <option value="6">Junio</option>
+                                    <option value="7">Julio</option>
+                                    <option value="8">Agosto</option>
+                                    <option value="9">Septiembre</option>
+                                    <option value="10">Octubre</option>
+                                    <option value="11">Noviembre</option>
+                                    <option value="12">Diciembre</option>
+                                  </select>
+                                  <select name="añohasta3">
+                                    <option value="2013" selected="">2013</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2011">2011</option>
+                                    <option value="2010">2010</option>
+                                    <option value="2009">2009</option>
+                                    <option value="2008">2008</option>
+                                    <option value="2007">2007</option>
+                                    <option value="2006">2006</option>
+                                    <option value="2005">2005</option>
+                                    <option value="2004">2004</option>
+                                    <option value="2003">2003</option>
+                                    <option value="2002">2002</option>
+                                    <option value="2001">2001</option>
+                                    <option value="2000">2000</option>
+                                    <option value="1999">1999</option>
+                                    <option value="1998">1998</option>
+                                    <option value="1997">1997</option>
+                                    <option value="1996">1996</option>
+                                    <option value="1995">1995</option>
+                                    <option value="1994">1994</option>
+                                    <option value="1993">1993</option>
+                                    <option value="1992">1992</option>
+                                    <option value="1991">1991</option>
+                                    <option value="1990">1990</option>
+                                    <option value="1989">1989</option>
+                                    <option value="1988">1988</option>
+                                    <option value="1987">1987</option>
+                                    <option value="1986">1986</option>
+                                    <option value="1985">1985</option>
+                                    <option value="1984">1984</option>
+                                    <option value="1983">1983</option>
+                                    <option value="1982">1982</option>
+                                    <option value="1981">1981</option>
+                                    <option value="1980">1980</option>
+                                    <option value="1979">1979</option>
+                                    <option value="1978">1978</option>
+                                    <option value="1977">1977</option>
+                                    <option value="1976">1976</option>
+                                    <option value="1975">1975</option>
+                                    <option value="1974">1974</option>
+                                    <option value="1973">1973</option>
+                                    <option value="1972">1972</option>
+                                    <option value="1971">1971</option>
+                                    <option value="1970">1970</option>
+                                    <option value="1969">1969</option>
+                                    <option value="1968">1968</option>
+                                    <option value="1967">1967</option>
+                                    <option value="1966">1966</option>
+                                    <option value="1965">1965</option>
+                                    <option value="1964">1964</option>
+                                    <option value="1963">1963</option>
+                                    <option value="1962">1962</option>
+                                    <option value="1961">1961</option>
+                                    <option value="1960">1960</option>
+                                    <option value="1959">1959</option>
+                                    <option value="1958">1958</option>
+                                    <option value="1957">1957</option>
+                                    <option value="1956">1956</option>
+                                    <option value="1955">1955</option>
+                                    <option value="1954">1954</option>
+                                    <option value="1953">1953</option>
+                                    <option value="1952">1952</option>
+                                    <option value="1951">1951</option>
+                                    <option value="1950">1950</option>
+                                    <option value="1949">1949</option>
+                                    <option value="1948">1948</option>
+                                    <option value="1947">1947</option>
+                                    <option value="1946">1946</option>
+                                    <option value="1945">1945</option>
+                                    <option value="1944">1944</option>
+                                    <option value="1943">1943</option>
+                                    <option value="1942">1942</option>
+                                    <option value="1941">1941</option>
+                                    <option value="1940">1940</option>
+                                    <option value="1939">1939</option>
+                                    <option value="1938">1938</option>
+                                    <option value="1937">1937</option>
+                                    <option value="1936">1936</option>
+                                    <option value="1935">1935</option>
+                                    <option value="1934">1934</option>
+                                    <option value="1933">1933</option>
+                                    <option value="1932">1932</option>
+                                    <option value="1931">1931</option>
+                                    <option value="1930">1930</option>
+                                    <option value="1929">1929</option>
+                                    <option value="1928">1928</option>
+                                    <option value="1927">1927</option>
+                                    <option value="1926">1926</option>
+                                    <option value="1925">1925</option>
+                                    <option value="1924">1924</option>
+                                    <option value="1923">1923</option>
+                                    <option value="1922">1922</option>
+                                    <option value="1921">1921</option>
+                                    <option value="1920">1920</option>
+                                    <option value="1919">1919</option>
+                                    <option value="1918">1918</option>
+                                    <option value="1917">1917</option>
+                                    <option value="1916">1916</option>
+                                    <option value="1915">1915</option>
+                                  </select></td>
+                                <td valign="middle">&nbsp;</td>
+                              </tr>
+
+                              <tr>
+                                <td><span><strong>Idiomas</strong></span></td>
+                                <td valign="top">&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td valign="middle">&nbsp;</td>
+                              </tr>
+
+                              <tr>
+                                <td><div align="right"><strong>1.</strong></div></td>
+                                <td valign="top">&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td><span>
+                                  <label><strong>Ingles</strong></label>
+                                </span></td>
+                                <td valign="middle">&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <td><div align="right"><strong>Nivel:</strong></div></td>
+                                <td valign="top">&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td><span>
+                                  <select name="nivel_idioma_Ingles" >
+                                    <option value="0" selected="">Seleccione su nivel</option>
+                                    <option value="Nativo">Nativo</option>
+                                    <option value="Bilingue">Bilingue</option>
+                                    <option value="Avanzado">Avanzado</option>
+                                    <option value="Intermedio">Intermedio</option>
+                                    <option value="Basico">Básico</option>
+                                    <option value="Nada">Nada</option>
+                                  </select>
+                                </span></td>
+                                <td valign="middle">&nbsp;</td>
+                              </tr>
+
+                              <tr>
+                                <td><div align="right"><strong>2.</strong></div></td>
+                                <td valign="top">&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td><span>
+                                  <label><strong>Portugués</strong></label>
+                                </span></td>
+                                <td valign="middle">&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <td><div align="right"><strong>Nivel:</strong></div></td>
+                                <td valign="top">&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td><span>
+                                  <select name="nivel_idioma_Portugues" >
+                                    <option value="0" selected="">Seleccione su nivel</option>
+                                    <option value="Nativo">Nativo</option>
+                                    <option value="Bilingue">Bilingue</option>
+                                    <option value="Avanzado">Avanzado</option>
+                                    <option value="Intermedio">Intermedio</option>
+                                    <option value="Basico">Básico</option>
+                                    <option value="Nada">Nada</option>
+                                  </select>
+                                </span></td>
+                                <td valign="middle">&nbsp;</td>
+                              </tr>
+
+                              <tr>
+                                <td><div align="right"><strong>3.</strong></div></td>
+                                <td valign="top">&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td><span>
+                                  <label><strong>Francés</strong></label>
+                                </span></td>
+                                <td valign="middle">&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <td><div align="right"><strong>Nivel:</strong></div></td>
+                                <td valign="top">&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td><span>
+                                  <select name="nivel_idioma_Frances" >
+                                    <option value="0" selected="">Seleccione su nivel</option>
+                                    <option value="Nativo">Nativo</option>
+                                    <option value="Bilingue">Bilingue</option>
+                                    <option value="Avanzado">Avanzado</option>
+                                    <option value="Intermedio">Intermedio</option>
+                                    <option value="Basico">Básico</option>
+                                    <option value="Nada">Nada</option>
+                                  </select>
+                                </span></td>
+                                <td valign="middle">&nbsp;</td>
+                              </tr>
+
+                              <tr>
+                                <td><div align="right"><strong>4.</strong></div></td>
+                                <td valign="top">&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td><span>
+                                  <label><strong>Italiano</strong></label>
+                                </span></td>
+                                <td valign="middle">&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <td><div align="right"><strong>Nivel:</strong></div></td>
+                                <td valign="top">&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td><span>
+                                  <select name="nivel_idioma_Italiano" >
+                                    <option value="0" selected="">Seleccione su nivel</option>
+                                    <option value="Nativo">Nativo</option>
+                                    <option value="Bilingue">Bilingue</option>
+                                    <option value="Avanzado">Avanzado</option>
+                                    <option value="Intermedio">Intermedio</option>
+                                    <option value="Basico">Básico</option>
+                                    <option value="Nada">Nada</option>
+                                  </select>
+                                </span></td>
+                                <td valign="middle">&nbsp;</td>
+                              </tr>
+
+                              <tr>
+                                <td><div align="right"><strong>5.</strong></div></td>
+                                <td valign="top">&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td><span>
+                                  <label><strong>Alemán</strong></label>
+                                </span></td>
+                                <td valign="middle">&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <td><div align="right"><strong>Nivel:</strong></div></td>
+                                <td valign="top">&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td><span>
+                                  <select name="nivel_idioma_Aleman" >
+                                    <option value="0" selected="">Seleccione su nivel</option>
+                                    <option value="Nativo">Nativo</option>
+                                    <option value="Bilingue">Bilingue</option>
+                                    <option value="Avanzado">Avanzado</option>
+                                    <option value="Intermedio">Intermedio</option>
+                                    <option value="Basico">Básico</option>
+                                    <option value="Nada">Nada</option>
+                                  </select>
+                                </span></td>
+                                <td valign="middle">&nbsp;</td>
+                              </tr>
+
+                              <tr>
+                                <td><div align="right"><strong>6.</strong></div></td>
+                                <td valign="top">&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td><span>
+                                  <label><strong>Otros idiomas</strong></label>
+                                </span></td>
+                                
+                                <td valign="middle">&nbsp;</td>
+                                
+                              </tr>
+                               <tr>
+                                <td><div align="right"><strong></strong></div></td>
+                                <td valign="top">&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>
+                                    <span>
+                                      <input name="idioma_3" type="text">
+                                    </span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><div align="right"><strong>Nivel:</strong></div></td>
+                                <td valign="top">&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td><span>
+                                  <select name="nivel_idioma_otro">
+                                    <option value="0" selected="">Seleccione su nivel</option>
+                                      <option value="Nativo">Nativo</option>
+                                      <option value="Bilingue">Bilingue</option>
+                                      <option value="Avanzado">Avanzado</option>
+                                      <option value="Intermedio">Intermedio</option>
+                                      <option value="B&amp;aacutesico">Básico</option>
+                                  </select>
+                                </span></td>
+                                <td valign="middle">&nbsp;</td>
+                              </tr>
+
+                              <tr>
+                                <td>
+                                  <form action="<?php print $PHP_SELF?>" enctype="multipart/form-data" method="post">
+                                      class notes:<br /> <input type="file" name="classnotes" value="" /><br />
+                                  </form>
+
+                                    <?php
+                                     define ("filesplace","./");
+
+                                     if (is_uploaded_file($_FILES['classnotes']['tmp_name'])) {
+
+                                     if ($_FILES['classnotes']['type'] != "application/pdf") {
+                                     echo "<p>Class notes must be uploaded in PDF format.</p>";
+                                     } else {
+                                     $name = $_POST['name'];
+                                     $result = move_uploaded_file($_FILES['classnotes']['tmp_name'], filesplace."/$name.pdf");
+                                     if ($result == 1) echo "<p>Upload done .</p>";
+                                     else echo "<p>Sorry, Error happened while uploading . </p>";
+                                    } #endIF
+                                     } #endIF
+                                    ?>
+                                </td>
+                              </tr>
                               </tbody>
                             </table>
                             <div align="center">
