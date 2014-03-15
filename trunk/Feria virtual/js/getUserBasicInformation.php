@@ -3,7 +3,7 @@
 	$password = $_GET['password'];
 
 	$con = mysql_connect('localhost','root','');
-	mysql_select_db('feriavirtual',$con);
+	mysql_select_db('encontramas',$con);
 	
 	if (!$con)
 	  {
@@ -41,13 +41,12 @@
 			  $desc["career"] = utf8_encode($row["career"]);
 			  $desc["subjects_approved"] = utf8_encode($row["subjects_approved"]);
 			  $desc["work"] = $row["work"];
-
+			  $desc["civil_status"] = $row["civil_status"];
+			  
 		  }
-
-	echo json_encode($desc);
+		  echo json_encode($desc);
+	
 	}
 
-	
-	
 	mysql_close($con);
 ?>
