@@ -113,7 +113,7 @@ function enableInputs(){
                                     document.getElementById("fecha_nacimiento_mes").value = obj.birthday.substring(5,7);
                                     document.getElementById("fecha_nacimiento_dia").value = obj.birthday.substring(8,10);
 
-                                    document.getElementById("carrera").value = obj.career;
+                                    
                                     document.getElementById("numero_materias").value = obj.subjects_approved;
                                     document.getElementById("telefono_celular").value = obj.phone;
                                     document.getElementById("lugar_de_residencia_pais").value = obj.country;
@@ -121,7 +121,14 @@ function enableInputs(){
                                     document.getElementById("lugar_de_residencia_ciudad").value = obj.city;
                                     document.getElementById("institucion").value = obj.university;
                                     if(document.getElementById("institucion").value === ""){
+                                      document.getElementById("institucion").value = "0";
                                       document.getElementById("universidad").value = obj.university;
+                                    }
+
+                                    document.getElementById("carrera").value = obj.career;
+                                    if(document.getElementById("carrera").value === ""){
+                                      document.getElementById("carrera").value = "0";
+                                      document.getElementById("otraCarrera").value = obj.career;
                                     }
 
                                     if(obj.work == 1){
