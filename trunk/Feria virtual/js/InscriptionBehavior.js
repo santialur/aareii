@@ -77,7 +77,16 @@ function enableInputs(){
 
  function checkUser(){
 
-    if(document.getElementById("numero_de_documento").value == ""){
+    $.ajax({ url: '../js/getCompanyJobOffers.php',
+           data: {companyid: 1,},
+           type: 'GET',
+           success: function(output) {       
+                                  
+                                  alert(output);
+           }
+    });
+
+    /*if(document.getElementById("numero_de_documento").value == ""){
       alert("Ingrese su numero de documento");
     }else if(document.getElementById("contraseña").value == ""){
       alert("Contraseña invalida");
@@ -142,7 +151,7 @@ function enableInputs(){
                             }
                                   
       });
-    }
+    }*/
       
 }
 
