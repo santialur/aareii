@@ -36,7 +36,7 @@ function fillAgenda(events)
 					$(this).addClass('date_has_event'); 		//
 					$(this).append("<div class='events'><ul id='eventsList"+i+"''></ul></div>");
 				}
-				var list = $('#eventsList'+i).append("<li><span class='title'>"+ events[j].title +"</span><span class='desc'	>"+ events[j].description +"</span></li>");
+				var list = $('#eventsList'+i).append("<li><span class='title'>"+ events[j].title +"</span><span class='desc'>"+ events[j].description +"</span></li>");
 			}
 		}
 		i++;
