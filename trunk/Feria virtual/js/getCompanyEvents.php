@@ -4,7 +4,7 @@
 	$con = mysql_connect('localhost','root','');
 	mysql_select_db('encontramas',$con);
 	mysql_query("SET NAMES 'utf8'", $con);
-	
+
 	if (!$con)
 	{
 	  	die('Could not connect: ' . mysql_error($con));
@@ -19,7 +19,6 @@
 	{
 	    $row_array["date"] = utf8_encode($row["date"]);
 	    $row_array["description"] =  utf8_encode($row["description"]);
-
 	    array_push($desc,$row_array);
 	}
 
