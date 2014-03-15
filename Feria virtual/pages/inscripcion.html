@@ -1,9 +1,8 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link   rel=  "stylesheet"    href="../css/styles.css" type="text/css" />
-
 </head>
 
 <body>
@@ -1917,29 +1916,7 @@
                                 <td valign="middle">&nbsp;</td>
                               </tr>
 
-                              <tr>
-                                <td>
-                                  <form action="<?php print $PHP_SELF?>" enctype="multipart/form-data" method="post">
-                                      class notes:<br /> <input type="file" name="classnotes" value="" /><br />
-                                  </form>
-
-                                    <?php
-                                     define ("filesplace","./");
-
-                                     if (is_uploaded_file($_FILES['classnotes']['tmp_name'])) {
-
-                                     if ($_FILES['classnotes']['type'] != "application/pdf") {
-                                     echo "<p>Class notes must be uploaded in PDF format.</p>";
-                                     } else {
-                                     $name = $_POST['name'];
-                                     $result = move_uploaded_file($_FILES['classnotes']['tmp_name'], filesplace."/$name.pdf");
-                                     if ($result == 1) echo "<p>Upload done .</p>";
-                                     else echo "<p>Sorry, Error happened while uploading . </p>";
-                                    } #endIF
-                                     } #endIF
-                                    ?>
-                                </td>
-                              </tr>
+                              
                               </tbody>
                             </table>
                             <div align="center">

@@ -76,6 +76,7 @@ function enableInputs(){
 }
 
  function checkUser(){
+
     if(document.getElementById("numero_de_documento").value == ""){
       alert("Ingrese su numero de documento");
     }else if(document.getElementById("contraseña").value == ""){
@@ -127,7 +128,8 @@ function enableInputs(){
                                       document.getElementById("trabaja").value = "Si"
                                     }else{
                                       document.getElementById("trabaja").value = "No";
-                                    }                 
+                                    }  
+                                    document.getElementById("estado_civil").value = obj.civil_status;        
                                     newUser = false;
                                 }
                             }
@@ -139,7 +141,6 @@ function enableInputs(){
 
 function sendInformation(){
       if(newUser){
-        alert(newUser);
             if(document.getElementById("confirme_nueva_contraseña").value == document.getElementById("contraseña_nueva").value){
               if(document.getElementById("confirme_email").value == document.getElementById("email").value){
                 if(document.getElementById("numero_de_documento").value.match(/^\s*$/)){
@@ -191,7 +192,6 @@ function sendInformation(){
                   return;
                 }
                 if(document.getElementById("carrera").value == 0 &&  document.getElementById("otraCarrera").value.match(/^\s*$/)){
-                  alert(document.getElementById("carrera").value);
                   alert("Ingrese su carrera de estudio");
                   return;
                 }
@@ -234,6 +234,7 @@ function sendInformation(){
                             monthOfBorn:        document.getElementById("fecha_nacimiento_mes").value,
                             yearOfBorn:         document.getElementById("fecha_nacimiento_anio").value,
                             work:               document.getElementById("trabaja").value,
+                            civil_status:       document.getElementById("estado_civil").value,
                             },
                      type: 'POST',
                      success: function(output) {  
@@ -302,7 +303,6 @@ function sendInformation(){
                   return;
                 }
                 if(document.getElementById("carrera").value == 0 &&  document.getElementById("otraCarrera").value.match(/^\s*$/)){
-                  alert(document.getElementById("carrera").value);
                   alert("Ingrese su carrera de estudio");
                   return;
                 }
@@ -345,7 +345,7 @@ function sendInformation(){
                             monthOfBorn:        document.getElementById("fecha_nacimiento_mes").value,
                             yearOfBorn:         document.getElementById("fecha_nacimiento_anio").value,
                             work:               document.getElementById("trabaja").value,
-
+                            civil_status:       document.getElementById("estado_civil").value,
                             },
                      type: 'POST',
                      success: function(output) {  
