@@ -20,7 +20,7 @@
     	//echo $dni. " - " .$name." - ". $surname." - ".$email." - ".$residenceAddress." - ".$password." - ".$career." - ".$subjects_approved." - ".$celPhone." - ".$countryOfResidence." - ".$stateOfResidence." - ".$cityOfResidence." - ".$institution." - ".$dayOfBorn." - ".$monthOfBorn." - ".$yearOfBorn." - ".$work;
 		$con = mysql_connect('localhost','root','');
 		mysql_select_db('encontramas',$con);
-		
+		mysql_query("SET NAMES 'utf8'", $con);
 		if (!$con)
 		  {
 		  die('Could not connect: ' . mysql_error($con));
@@ -49,7 +49,6 @@
 		    			VALUES ('$dni', '$name', '$surname', '$email', '$password', $birthday, '$countryOfResidence', '$stateOfResidence', '$cityOfResidence', '$residenceAddress', '$celPhone', '$institution', '$career', $subjects_approved, $work, '$civil_status') ";	
 
 			$result = mysql_query($sql, $con);
-			<
 			echo $result;
 		}
 

@@ -15,7 +15,6 @@ function completeAgenda()
   			events = JSON.parse(output);
   		}
   	});
-
 	var i = 0;
 
 	$('#tableCalendar > td').each(function(){

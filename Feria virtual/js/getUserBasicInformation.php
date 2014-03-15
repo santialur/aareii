@@ -4,7 +4,7 @@
 
 	$con = mysql_connect('localhost','root','');
 	mysql_select_db('encontramas',$con);
-	
+	mysql_query("SET NAMES 'utf8'", $con);
 	if (!$con)
 	  {
 	  die('Could not connect: ' . mysql_error($con));
