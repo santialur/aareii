@@ -449,3 +449,220 @@ function sendInformation_encontramas(){
     }
   });
 }
+
+
+function fillMonths(target)
+{
+  $(target).html(''+
+    '<option value="1" selected="">  Enero       </option>'+
+    '<option value="2">              Febrero     </option>'+
+    '<option value="3">              Marzo       </option>'+
+    '<option value="4">              Abril       </option>'+
+    '<option value="5">              Mayo        </option>'+
+    '<option value="6">              Junio       </option>'+
+    '<option value="7">              Julio       </option>'+
+    '<option value="8">              Agosto      </option>'+
+    '<option value="9">              Septiembre  </option>'+
+    '<option value="10">             Octubre     </option>'+
+    '<option value="11">             Noviembre   </option>'+
+    '<option value="12">             Diciembre   </option>');
+}
+
+
+function fillYears(target, x, y)
+{
+  var aux;
+  //2013-1934
+  for(var i=x; i>y; i--)
+      aux = aux + '<option value="'+ parseFloat(i) +'">'+ parseFloat(i) +'</option>';
+
+  $(target).html(''+
+    '<option value="2014" selected="">2014</option>' + aux);
+}
+
+function fillCountries(target)
+{
+  $(target).html(''+
+    '<option value="0" selected>Seleccione pais</option>'+
+    '<option value="Argentina"   id="cbf1364">Argentina  </option>'+
+    '<option value="Brasil"      id="cbf1365">Brasil     </option>'+
+    '<option value="Bolivia"     id="cbf1366">Bolivia    </option>'+
+    '<option value="Chile"       id="cbf1367">Chile      </option>'+
+    '<option value="Colombia"    id="cbf1368">Colombia   </option>'+
+    '<option value="Cuba"        id="cbf1369">Cuba       </option>'+
+    '<option value="Costa Rica"  id="cbf1370">Costa Rica </option>'+
+    '<option value="Ecuador"     id="cbf1371">Ecuador    </option>'+
+    '<option value="El Salvador" id="cbf1372">El Salvador</option>'+
+    '<option value="España"      id="cbf1373">España     </option>'+
+    '<option value="Honduras"    id="cbf1374">Honduras   </option>'+
+    '<option value="Mexico"      id="cbf1375">Mexico     </option>'+
+    '<option value="Panamá"      id="cbf1376">Panamá     </option>'+
+    '<option value="Paraguay"    id="cbf1377">Paraguay   </option>'+
+    '<option value="Perú"        id="cbf1378">Perú       </option>'+
+    '<option value="Puerto Rico" id="cbf1379">Puerto Rico</option>'+
+    '<option value="Uruguay"     id="cbf1380">Uruguay    </option>'+
+    '<option value="Venezuela"   id="cbf1381">Venezuela  </option>');
+}
+
+function fillStates(target)
+{
+  $(target).html(''+
+    '<option value="0" selected>Seleccione su provincia      </option>'+
+    '<option value="Buenos Aires">       Buenos Aires        </option>'+
+    '<option value="Córdoba">            Córdoba             </option>'+
+    '<option value="Capital Federal">    Capital Federal     </option>'+
+    '<option value="Catamarca">          Catamarca           </option>'+
+    '<option value="Chaco">              Chaco               </option>'+
+    '<option value="Chubut">             Chubut              </option>'+
+    '<option value="Corrientes">         Corrientes          </option>'+
+    '<option value="Entre Ríos">         Entre Ríos          </option>'+
+    '<option value="Formosa">            Formosa             </option>'+
+    '<option value="Jujuy">              Jujuy               </option>'+
+    '<option value="La Pampa">           La Pampa            </option>'+
+    '<option value="La Rioja">           La Rioja            </option>'+
+    '<option value="Mendoza">            Mendoza             </option>'+
+    '<option value="Misiones">           Misiones            </option>'+
+    '<option value="Neuquén">            Neuquén             </option>'+
+    '<option value="Rio Negro">          Rio Negro           </option>'+
+    '<option value="Salta">              Salta               </option>'+
+    '<option value="San Juan">           San Juan            </option>'+
+    '<option value="San Luis">           San Luis            </option>'+
+    '<option value="Santa Cruz">         Santa Cruz          </option>'+
+    '<option value="Santa Fé">           Santa Fé            </option>'+
+    '<option value="Santiago del Estero">Santiago del Estero </option>'+
+    '<option value="Tierra del Fuego">   Tierra del Fuego    </option>'+
+    '<option value="Tucuman">            Tucuman             </option>');
+}
+
+function fillSeniority(target)
+{
+  $(target).html(''+
+    '<option value="0" selected="">  Seleccione su seniority </option>'+
+    '<option value="director">       Director                </option>'+
+    '<option value="gerente">        Gerente                 </option>'+
+    '<option value="senior">         Senior                  </option>'+
+    '<option value="semi-senior">    Semi-senior             </option>'+
+    '<option value="junior">         Junior                  </option>');
+}
+
+function fillUniversities(target)
+{
+  $(target).html(''+
+    '<option value="0"> Seleccione Universidad </option>'+
+    '<option value="Instituto Tecnológico De Buenos Aires"                               id="cbf2049">Instituto Tecnológico De Buenos Aires                              </option>'+
+    '<option value="Universidad Argentina De La Empresa"                                 id="cbf2050">Universidad Argentina De La Empresa                                </option>'+
+    '<option value="Universidad Austral"                                                 id="cbf2051">Universidad Austral                                                </option>'+
+    '<option value="Universidad Católica Argentina (Sede Buenos Aires)"                  id="cbf2052">Universidad Católica Argentina (Sede Buenos Aires)                 </option>'+
+    '<option value="Universidad Católica Argentina (Sede Rosario)"                       id="cbf2053">Universidad Católica Argentina (Sede Rosario)                      </option>'+
+    '<option value="Universidad Católica De Córdoba"                                     id="cbf2054">Universidad Católica De Córdoba                                    </option>'+
+    '<option value="Universidad Católica De Salta"                                       id="cbf2055">Universidad Católica De Salta                                      </option>'+
+    '<option value="Universidad De Belgrano"                                             id="cbf2056">Universidad De Belgrano                                            </option>'+
+    '<option value="Universidad De Buenos Aires"                                         id="cbf2057">Universidad De Buenos Aires                                        </option>'+
+    '<option value="Universidad De La Marina Mercante"                                   id="cbf2058">Universidad De La Marina Mercante                                  </option>'+
+    '<option value="Universidad De Mendoza"                                              id="cbf2059">Universidad De Mendoza                                             </option>'+
+    '<option value="Universidad De Morón"                                                id="cbf2060">Universidad De Morón                                               </option>'+
+    '<option value="Universidad De Palermo"                                              id="cbf2061">Universidad De Palermo                                             </option>'+
+    '<option value="Universidad Del Norte Santo Tomás De Aquino (Tucumán)"               id="cbf2062">Universidad Del Norte Santo Tomás De Aquino (Tucumán)              </option>'+
+    '<option value="Universidad Del Salvador"                                            id="cbf2063">Universidad Del Salvador                                           </option>'+
+    '<option value="Universidad Frat. De Agrup. Santo Tomas De Aquino"                   id="cbf2064">Universidad Frat. De Agrup. Santo Tomas De Aquino                  </option>'+
+    '<option value="Universidad Nacional De Córdoba"                                     id="cbf2065">Universidad Nacional De Córdoba                                    </option>'+
+    '<option value="Universidad Nacional De Cuyo (Mendoza)"                              id="cbf2066">Universidad Nacional De Cuyo (Mendoza)                             </option>'+
+    '<option value="Universidad Nacional De General Sarmiento (Los Polvorines)"          id="cbf2067">Universidad Nacional De General Sarmiento (Los Polvorines)         </option>'+
+    '<option value="Universidad Nacional De Jujuy"                                       id="cbf2068">Universidad Nacional De Jujuy                                      </option>'+
+    '<option value="Universidad Nacional De La Matanza"                                  id="cbf2069">Universidad Nacional De La Matanza                                 </option>'+
+    '<option value="Universidad Nacional De La Patagonia (Comodoro Rivadavia)"           id="cbf2070">Universidad Nacional De La Patagonia (Comodoro Rivadavia)          </option>'+
+    '<option value="Universidad Nacional De La Patagonia Austral (Caleta Olivia)"        id="cbf2071">Universidad Nacional De La Patagonia Austral (Caleta Olivia)       </option>'+
+    '<option value="Universidad Nacional De La Plata"                                    id="cbf2072">Universidad Nacional De La Plata                                   </option>'+
+    '<option value="Universidad Nacional De La Rioja"                                    id="cbf2073">Universidad Nacional De La Rioja                                   </option>'+
+    '<option value="Universidad Nacional De Lomas De Zamora"                             id="cbf2074">Universidad Nacional De Lomas De Zamora                            </option>'+
+    '<option value="Universidad Nacional De Luján"                                       id="cbf2075">Universidad Nacional De Luján                                      </option>'+
+    '<option value="Universidad Nacional De Mar del Plata"                               id="cbf2076">Universidad Nacional De Mar del Plata                              </option>'+
+    '<option value="Universidad Nacional De Misiones (Obera)"                            id="cbf2077">Universidad Nacional De Misiones (Obera)                           </option>'+
+    '<option value="Universidad Nacional De Rosario"                                     id="cbf2078">Universidad Nacional De Rosario                                    </option>'+
+    '<option value="Universidad Nacional De Salta"                                       id="cbf2079">Universidad Nacional De Salta                                      </option>'+
+    '<option value="Universidad Nacional De San Juan"                                    id="cbf2080">Universidad Nacional De San Juan                                   </option>'+
+    '<option value="Universidad Nacional De San Luís (Villa Mercedes)"                   id="cbf2081">Universidad Nacional De San Luís (Villa Mercedes)                  </option>'+
+    '<option value="Universidad Nacional De Tucumán"                                     id="cbf2082">Universidad Nacional De Tucumán                                    </option>'+
+    '<option value="Universidad Nacional Del Centro De La Pcia. De Bs. As."              id="cbf2083">Universidad Nacional Del Centro De La Pcia. De Bs. As.             </option>'+
+    '<option value="Universidad Nacional del Chaco Austral"                              id="cbf2084">Universidad Nacional del Chaco Austral                             </option>'+
+    '<option value="Universidad Nacional Del Litoral (Santa Fe)"                         id="cbf2085">Universidad Nacional Del Litoral (Santa Fe)                        </option>'+
+    '<option value="Universidad Nacional Del Noroeste De La Pcia. De Bs. As. (Junin)"    id="cbf2086">Universidad Nacional Del Noroeste De La Pcia. De Bs. As. (Junin)   </option>'+
+    '<option value="Universidad Nacional Del Sur (Bahía Blanca)"                         id="cbf2087">Universidad Nacional Del Sur (Bahía Blanca)                        </option>'+
+    '<option value="UTN Facultad Regional Avellaneda"                                    id="cbf2088">UTN Facultad Regional Avellaneda                                   </option>'+
+    '<option value="UTN Facultad Regional Bahía Blanca (LOI)"                            id="cbf2089">UTN Facultad Regional Bahía Blanca (LOI)                           </option>'+
+    '<option value="UTN Facultad Regional Buenos Aires"                                  id="cbf2090">UTN Facultad Regional Buenos Aires                                 </option>'+
+    '<option value="UTN Facultad Regional Concepción del Uruguay"                        id="cbf2091">UTN Facultad Regional Concepción del Uruguay                       </option>'+
+    '<option value="UTN Facultad Regional Córdoba"                                       id="cbf2092">UTN Facultad Regional Córdoba                                      </option>'+
+    '<option value="UTN Facultad Regional General Pacheco (LOI)"                         id="cbf2093">UTN Facultad Regional General Pacheco (LOI)                        </option>'+
+    '<option value="UTN Facultad Regional Haedo"                                         id="cbf2094">UTN Facultad Regional Haedo                                        </option>'+
+    '<option value="UTN Facultad Regional La Plata"                                      id="cbf2095">UTN Facultad Regional La Plata                                     </option>'+
+    '<option value="UTN Facultad Regional La Rioja"                                      id="cbf2096">UTN Facultad Regional La Rioja                                     </option>'+
+    '<option value="UTN Facultad Regional Rafaela"                                       id="cbf2097">UTN Facultad Regional Rafaela                                      </option>'+
+    '<option value="UTN Facultad Regional Río Grande"                                    id="cbf2098">UTN Facultad Regional Río Grande                                   </option>'+
+    '<option value="UTN Facultad Regional San Francisco (LOI)"                           id="cbf2099">UTN Facultad Regional San Francisco (LOI)                          </option>'+
+    '<option value="UTN Facultad Regional San Nicolás"                                   id="cbf2100">UTN Facultad Regional San Nicolás                                  </option>'+
+    '<option value="UTN Facultad Regional San Rafael"                                    id="cbf2101">UTN Facultad Regional San Rafael                                   </option>'+
+    '<option value="UTN Facultad Regional Santa Fe"                                      id="cbf2102">UTN Facultad Regional Santa Fe                                     </option>'+
+    '<option value="UTN Unidad Académica Chubut (LOI)"                                   id="cbf2103">UTN Unidad Académica Chubut (LOI)                                  </option>'+
+    '<option value="UTN Unidad Académica Río Gallegos"                                   id="cbf2104">UTN Unidad Académica Río Gallegos                                  </option>'+
+    '<option value="UTN Unidad Académica Trenque Lauquen"                                id="cbf2105">UTN Unidad Académica Trenque Lauquen                               </option>'+
+    '<option value="Otra" id="cbf2106">Otra</option>');
+}
+
+function fillDegrees(target)
+{
+  $(target).html(''+
+    '<option value="0" selected>               Seleccione carrera        </option>'+
+    '<option value="Ingeniería Industrial">    Ingeniería Industrial     </option>'+
+    '<option value="Ing. en Alimentos">        Ing. en Alimentos         </option>'+
+    '<option value="Lic. en Org. Industrial">  Lic. en Org. Industrial   </option>'+
+    '<option value="Ing. Agroindustrial">      Ingeniería Agroindustrial </option>'+
+    '<option value="Otra Ingeniería">          Otra ingenieria           </option>'+
+    '<option value="Otra carrera">             Otra carrera              </option>');
+};
+
+function fillCivilStatus(target)
+{
+  $(target).html(''+
+    '<option value="0" selected>           </option>'+
+    '<option value="Casado">     Casado    </option>'+
+    '<option value="Soltero">    Soltero   </option>'+
+    '<option value="Divorciado"> Divorciado</option>'+
+    '<option value="Viudo">      Viudo     </option>'+
+    '<option value="Otro">       Otro      </option>');
+};
+
+function fillCompanyType(target)
+{
+  $(target).html(''+
+    '<option value="0" selected="">                              Seleccione el tipo de empresa               </option>'+
+    '<option value="Agro">                                       Agro                                        </option>'+
+    '<option value="Automotriz">                                 Automotriz                                  </option>'+
+    '<option value="Consultora">                                 Consultora                                  </option>'+
+    '<option value="Consumo Masivo">                             Consumo Masivo                              </option>'+
+    '<option value="Financiero / Bancario / Seguros">            Financiero / Bancario / Seguros             </option>'+
+    '<option value="Holding - otras actividades">                Holding - otras actividades                 </option>'+
+    '<option value="Industrial">                                 Industrial                                  </option>'+
+    '<option value="Petrolera / Sector Energético">              Petrolera / Sector Energético               </option>'+
+    '<option value="Salud / Laboratorio / Farmacéutica">         Salud / Laboratorio / Farmacéutica          </option>'+
+    '<option value="Servicios / Distribución / Comercialización">Servicios / Distribución / Comercialización </option>'+
+    '<option value="Sistemas / Tecnología">                      Sistemas / Tecnología                       </option>'+
+    '<option value="Telecomunicaciones">                         Telecomunicaciones                          </option>'+
+    '<option value="otra">                                       Otra                                        </option>');
+};
+
+function fillAreaType(target)
+{
+  $(target).html(''+
+    '<option value="0" selected="">                          Seleccione el area del puesto           </option>'+
+    '<option value="Administración">                         Administración                          </option>'+
+    '<option value="Gerencia General">                       Gerencia General                        </option>'+
+    '<option value="Investigación y Desarrollo">             Investigación y Desarrollo              </option>'+
+    '<option value="Marketing - Relaciones Institucionales"> Marketing - Relaciones Institucionales  </option>'+
+    '<option value="Producción">                             Producción                              </option>'+
+    '<option value="Recursos Humanos">                       Recursos Humanos                        </option>'+
+    '<option value="Salud - Servicios Médicos">              Salud - Servicios Médicos               </option>'+
+    '<option value="Sistemas">                               Sistemas                                </option>'+
+    '<option value="Ventas - Comercial">                     Ventas - Comercial                      </option>'+
+    '<option value="otra">                                   Otra                                    </option>');
+};
