@@ -2,50 +2,48 @@
 <html ng-app="AdminApp">
 	<head>
 	<jdoc:include type="head" />
-		<meta name="viewport" content="width=device-width, user-scalable=false ">
-		<link 	rel=	"stylesheet" 		href="../css/styles.css" type="text/css" />
-		<link 	rel=	"stylesheet" 		href="../css/SlidesJS.css" type="text/css" />
-		<link 	rel=	"stylesheet" 		href="../css/marquee.css" type="text/css" />
+		<meta 	name="viewport" content="width=device-width, user-scalable=false ">
+		<link 	rel=	"stylesheet" 		href="../css/styles.css" 	type="text/css" 	/>
+		<link 	rel=	"stylesheet" 		href="../css/SlidesJS.css" 	type="text/css" 	/>
+		<link 	rel=	"stylesheet" 		href="../css/marquee.css" 	type="text/css" 	/>
 		
-		<!--- Pop up --> 		
+		<!--- POP UP --> 		
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
 		<script type="text/javascript">
-			$(function() {
+			$(function(){
 				var moveLeft = 20;
 				var moveDown = 10;
         
-        			$('#trigger').hover(function(e) {
-        				$('div#pop-up').show();
- 	  		 	}, function() {
-					$('div#pop-up').hide();
-        			});
+        		$('#trigger').hover(function(e){
+        			$('div#pop-up').show();
+ 	  		 	}, 
+ 	  		 function() {
+				$('div#pop-up').hide();
+        	});
         
-        			$('#trigger').mousemove(function(e) {
-			        	$("div#pop-up").css('top', e.pageY + moveDown).css('left', e.pageX + moveLeft);
-		        	});
-        
-      			});
+        	$('#trigger').mousemove(function(e){
+			   	$("div#pop-up").css('top', e.pageY + moveDown).css('left', e.pageX + moveLeft);
+		      	});
+      		});
     	</script>
 
 		<!-- FANCYBOX --> 
-		<link 	rel="stylesheet" href="../features/fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
-		<script type="text/javascript" src="../features/fancybox/source/jquery.fancybox.pack.js"></script>
+		<link 	type="text/css"			rel="stylesheet" href="../features/fancybox/source/jquery.fancybox.css"  media="screen"/>
+		<script type="text/javascript" 	src="../features/fancybox/source/jquery.fancybox.pack.js"></script>
 				
 		<script language="javascript" type="text/javascript">
 			$(document).ready(function(){
 				$(".ifancybox").fancybox({
-					'width' : 		'100%',
-		 			'height' : 		'120%',
-		 			'autoScale' : 		'none',
-		 			'transitionIn' : 	'none',
+					'width'			: 	'100%',
+		 			'height'		: 	'120%',
+		 			'autoScale'		: 	'none',
+		 			'transitionIn'	: 	'none',
 		 			'transitionOut' : 	'none',
-		 			'type' : 		'iframe'
+		 			'type' 			: 	'iframe'
 				});
 			});
 		</script>
 		
-		
-
 		<script type="text/javascript" src="../lib/bootsrap/js/bootsrap.min.js"></script>
 
 		<!-- SLIDES JS --> 
@@ -53,28 +51,27 @@
 	  	<script src="../lib/SlidesJS-3/jquery.slides.min.js"></script>
 
 	  	<script>
-	    	$(function() {
+	    	$(function(){
 	      		$('#slides').slidesjs({
-	        	width: 	840,
-        		height: 540,
-        		play: {
-          			active: false,
-          			auto: true,
-          			interval: 5000,
-          			effect: 'fade',
-          			swap: true,
-          			restartDelay: 2500
-        		},
-        		navigation: {
-        			active: false
-        		}
+	        		width: 	840,
+        			height: 540,
+        			play: {
+	          			active: false,
+	          			auto: true,
+	          			interval: 5000,
+	          			effect: 'fade',
+	          			swap: true,
+	          			restartDelay: 2500
+        			},
+        			navigation: {
+        				active: false
+        			}
 	      		});
 	    	});
 	  	</script>
 
 	  	<!-- MARQUESINA --> 
 	  	<script type="text/javascript" src="../js/itemMarquee.js"></script>
-
 
 	  	<script src="../lib/angular/angular.min.js"></script>
   		<script src="../js/controllers.js"></script>
@@ -85,14 +82,14 @@
 	<body >
 			<!-- MENU --> 
 			<div id="nav">
-					<ul class="nav-bar">	
-						<li><a href="http://www.encontramas.com.ar/">Encontra +</a></li>
-						<li><a href="../index.html">Exterior</a></li>
-						<li><a href="interior.html">Interior</a></li>
-						<li><a href="empresas.html">Empresas</a></li>
-						<li><a href="ofertaLaboral.html">Ofertas laborales</a></li>
-						<li> <a href="inscripcion.html">Inscribirse</a></li>
-					</ul>
+				<ul class="nav-bar">	
+					<li><a href="http://www.encontramas.com.ar/">Encontra +</a></li>
+					<li><a href="../index.html">Exterior</a></li>
+					<li><a href="interior.html">Interior</a></li>
+					<li><a href="empresas.html">Empresas</a></li>
+					<li><a href="ofertaLaboral.html">Ofertas laborales</a></li>
+					<li> <a href="inscripcion.html">Inscribirse</a></li>
+				</ul>
 			</div>
 
 			<!-- CONTENIDO -->
@@ -100,7 +97,18 @@
 				<div id="content" class="box" style="height: 110%">
 					
 					<!-- BLOQUE IZQUIERDO --> 
-					<div id="bloqueIzquierdo" style="float: left; width: 70%; height:100%">
+					<div id="bloqueIzquierdo" class="leftSide" style="width: 70%; height:100%">
+
+						<!-- MARQUESINA -->
+						<div style="margin-bottom: 5%">
+							<ul class="itemMarquee">
+							  	<li><img src="../features/images/avon.gif"/>	</li>
+							  	<li><img src="../features/images/adecco.jpg"/>	</li>
+						  		<li><img src="../features/images/arcor.png"/>	</li>
+							</ul>
+						</div>
+
+						<!-- CROQUIS --> 
 						<div align="center" style="position: relative;">
 							<img src="../features/images/fondo.png" id="imgMap" width="100%"/>
 
@@ -119,79 +127,75 @@
 							</div>
 						</div>
 
-						<div>
-							<ul class="itemMarquee">
-							  	<li><img src="../features/images/avon.gif"/></li>
-							  	<li><img src="../features/images/adecco.jpg"/></li>
-						  		<li><img src="../features/images/arcor.png"/></li>
-							</ul>
-						</div>
 					</div>
 
 					<!-- BLOQUE DERECHO --> 
-					<div id="bloqueDerecho" style="float: right; width: 28%">
-						<div class="container">
-						    <div id="slides" style="top: 20px">
-						      <img src="../features/images/avon.gif">
-						      <img src="../features/images/adecco.jpg">
-						      <img src="../features/images/arcor.png">
-						      <img src="../features/images/Quilmes.png">
-						    </div>
-						</div>	
+					<div id="bloqueDerecho" class="rightSide" style="width: 28%">
 
-						<hr>
+						<!-- ENCUESTA --> 
+						<hr><br>
 						<div ng-controller="NewsCtrl">
 							<div ng-repeat="new in newspaper.news">
-								<h4>{{new.title}}</h4>
-								<br>
-								<h5>{{new.body}}</h5>
-								<hr>
+								<h4>{{new.title}}</h4>	<br>
+								<h5>{{new.body}}</h5>	<hr>
 							</div>
 						</div>
 						
 						<div ng-controller="PollCtrl" style="text-align:left">	
-    						<h4 style="text-align:center">{{poll.title}}</h4>
-    							<br>
-    							<div ng-repeat="value in poll.values">
-    								<input type="radio" name="Q1" >
-    								<label >{{value}}
-    								</label>
-						     		<br>
-						    	</div>
-						    	<br>
-    						</div>
-    						<button class="button" style="position:static; top:50%">Votar</button>
-    						<br>
-    						<br>
-						<hr>
+    						<h4 style="text-align:center">{{poll.title}}</h4>	<br>
+							<div ng-repeat="value in poll.values">
+								<input type="radio" name="Q1">
+								<label >{{value}}</label>	<br>
+					    	</div>
+					    	<br>
+    					</div>
+						
+						<button class="button" style="position:static; top:50%">Votar</button>	<br><br><hr><br>
 
-						<div>
-							<h4 style="text-align:center">Compartir</h4>
-							<br>
-							<div class="Social">
-								<!-- Facebook -->
-								<a href="http://www.facebook.com/sharer.php?u=http://www.encontramas.com.ar/virtual/pages/interior" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" /></a>
-								<!-- Twitter -->
-								<a href="http://twitter.com/share?url=http://www.encontramas.com.ar&text=Encontra +" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter"/></a>
-								<!-- Google+ -->
-								<a href="https://plus.google.com/share?url=http://www.encontramas.com.ar" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/google.png" alt="Google" /></a>
-								<!-- LinkedIn -->
-								<a href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.simplesharebuttons.com" target="_blank">
-								<img src="http://www.simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" /></a>
-								<!-- Pinterest -->
-								<a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img src="http://www.simplesharebuttons.com/images/somacro/pinterest.png" alt="Pinterest"/></a>
-							</div>
+						<!-- COMPARTIR --> 
+						<h4 style="text-align:center">Compartir</h4>	<br>
+						<div class="Social">
+							<!-- Facebook -->
+							<a href="http://www.facebook.com/sharer.php?u=http://www.encontramas.com.ar/virtual/pages/interior" target="_blank">
+								<img src="http://www.simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+							</a>
+							<!-- Twitter -->
+							<a href="http://twitter.com/share?url=http://www.encontramas.com.ar&text=Encontra+" target="_blank">
+								<img src="http://www.simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter"/>
+							</a>
+							<!-- Google+ -->
+							<a href="https://plus.google.com/share?url=http://www.encontramas.com.ar" target="_blank">
+								<img src="http://www.simplesharebuttons.com/images/somacro/google.png" alt="Google" />
+							</a>
+							<!-- LinkedIn -->
+							<a href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.simplesharebuttons.com" target="_blank">
+								<img src="http://www.simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+							</a>
+							<!-- Pinterest -->
+							<a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());">
+								<img src="http://www.simplesharebuttons.com/images/somacro/pinterest.png" alt="Pinterest"/>
+							</a>
 						</div>
+
 					</div>
+
+
+					<!-- SLIDES EMPRESAS --> 
+					<div class="container">
+					    <div id="slides" style="margin-top: 48%">
+					      <img src="../features/images/avon.gif"	>
+					      <img src="../features/images/adecco.jpg"	>
+					      <img src="../features/images/arcor.png"	>
+					      <img src="../features/images/Quilmes.png"	>
+					    </div>
+					</div>	
 					
 				</div>
 				
 			</div>
 			<div id="footer" class="box centered" >
-					<p>
-						Copyright 2013  AArEII    <br />
-    					Todos los derechos reservados.
-					</p>
+					<p>	Copyright 2013  AArEII    <br>
+						Todos los derechos reservados.
 			</div>
 	</body>
 </html>
