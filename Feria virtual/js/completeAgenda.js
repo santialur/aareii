@@ -1,10 +1,8 @@
 $(window).load(	
 	function getEvents()
 	{
+		updateDay();
 		var events;
-
-		alert("get events");
-
 		$.ajax({ 
 			url: '../js/getCompanyEvents.php',
 	 	 	data: 
@@ -20,6 +18,19 @@ $(window).load(
 	  	});
 	}
 );
+
+function updateDay()
+{
+	var today = new Date(); 
+	today = today.getDate();
+	$('#tableCalendar td').each(function(){
+		if($(this).html() == today)	
+			$(this).addClass('today');
+		else
+			if($(this).hasClass('today'))
+				$(this).removeClass('today');
+	});
+}
 
 function fillAgenda(events)
 {
@@ -41,14 +52,12 @@ function fillAgenda(events)
 		}
 		i++;
 	});
-	alert("Huevo AGENDA");
 	coda();
 }
 
 
 function coda() 
 {
-	alert("Huevo CODA");
 	$('.date_has_event').each(function () {
 		// options
 		var distance = 10;
