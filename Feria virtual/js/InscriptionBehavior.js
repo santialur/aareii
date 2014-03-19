@@ -77,16 +77,7 @@ function enableInputs(){
 
  function checkUser(){
 
-    $.ajax({ url: '../js/getCompanyJobOffers.php',
-           data: {companyid: 1,},
-           type: 'GET',
-           success: function(output) {       
-                                  
-                                  alert(output);
-           }
-    });
-
-    /*if(document.getElementById("numero_de_documento").value == ""){
+    if(document.getElementById("numero_de_documento").value == ""){
       alert("Ingrese su numero de documento");
     }else if(document.getElementById("contraseña").value == ""){
       alert("Contraseña invalida");
@@ -151,7 +142,7 @@ function enableInputs(){
                             }
                                   
       });
-    }*/
+    }
       
 }
 
@@ -385,4 +376,93 @@ function sendInformation(){
         }
       }
 
+}
+
+// Variable to store your files
+var files;
+ 
+// Add events
+$('input[type=file]').on('change', prepareUpload);
+ 
+// Grab the files and set them to our variable
+function prepareUpload(event)
+{
+  alert("prepareUpload calleds")
+  files = event.target.files;
+}
+
+$('form').on('submit', uploadFiles);
+ 
+// Catch the form submit and upload the files
+function uploadFiles(event)
+{
+  event.stopPropagation(); // Stop stuff happening
+    event.preventDefault(); // Totally stop stuff happening
+ 
+    // START A LOADING SPINNER HERE
+ 
+    // Create a formdata object and add the files
+  var data = new FormData();
+  $.each(files, function(key, value)
+  {
+    data.append(key, value);
+  });
+    alert("uploadFiles called");
+    $.ajax({
+        url: '../js/submit.php?files',
+        type: 'POST',
+        data: data,
+        cache: false,
+        dataType: 'json',
+        processData: false, // Don't process the files
+        contentType: false, // Set content type to false as jQuery will tell the server its a query string request
+        success: function(data, textStatus, jqXHR)
+        {
+          alert(data);
+          if(typeof data.error === 'undefined')
+          {
+            // Success so call function to process the form
+            submitForm(event, data);
+          }
+          else
+          {
+            // Handle errors here
+            console.log('ERRORS: ' + data.error);
+          }
+        },
+        error: function(jqXHR, textStatus, errorThrown)
+        {
+          // Handle errors here
+          console.log('ERRORS: ' + textStatus);
+          // STOP LOADING SPINNER
+        }
+    });
+}
+
+
+
+function sendInformation_encontramas(){
+  alert(document.getElementById("userfile").value);
+
+  $.ajax({ url: '../js/sendUserEncontramasInformation.php',
+                     data: {user:               "newUser",
+                            dni:                        document.getElementById("numero_de_documento").value,
+                            password:                   document.getElementById("confirme_nueva_contraseña").value,
+                            postgraduate_type:          document.getElementById("postgrado").value,
+                            postgraduate_status:        document.getElementById("estado_postgrado").value,
+                            postgraduate_title:         document.getElementById("titulo").value,
+                            postgraduate_institution:   document.getElementById("institucion_postgrado").value,
+                            userfile:                   document.getElementById("userfile").value,
+                            },
+                     type: 'POST',
+                     success: function(output) {  
+                            alert(output);
+                            if(output == "Ya existe un usuario registrado con el numero de documento" || output == "Ya existe un usuario registrado con la direccion de email"){
+                              return;
+                            }else{
+                              document.getElementById("aareiiInscription").style.display = 'none';
+                              document.getElementById("encontramasInscription").style.display = 'inline-table';
+                            }    
+                     }
+                   });
 }
