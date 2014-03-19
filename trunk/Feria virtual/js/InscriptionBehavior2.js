@@ -377,12 +377,12 @@ $('form').on('submit', uploadFiles);
 // Catch the form submit and upload the files
 function uploadFiles(event)
 {
-  event.stopPropagation(); // Stop stuff happening
-    event.preventDefault(); // Totally stop stuff happening
+  event.stopPropagation();  // Stop stuff happening
+  event.preventDefault();   // Totally stop stuff happening
  
-    // START A LOADING SPINNER HERE
+  // START A LOADING SPINNER HERE
  
-    // Create a formdata object and add the files
+  // Create a formdata object and add the files
   var data = new FormData();
   $.each(files, function(key, value)
   {
@@ -426,24 +426,26 @@ function sendInformation_encontramas(){
   alert(document.getElementById("userfile").value);
 
   $.ajax({ url: '../js/sendUserEncontramasInformation.php',
-                     data: {user:               "newUser",
-                            dni:                        document.getElementById("numero_de_documento").value,
-                            password:                   document.getElementById("confirme_nueva_contraseña").value,
-                            postgraduate_type:          document.getElementById("postgrado").value,
-                            postgraduate_status:        document.getElementById("estado_postgrado").value,
-                            postgraduate_title:         document.getElementById("titulo").value,
-                            postgraduate_institution:   document.getElementById("institucion_postgrado").value,
-                            userfile:                   document.getElementById("userfile").value,
-                            },
-                     type: 'POST',
-                     success: function(output) {  
-                            alert(output);
-                            if(output == "Ya existe un usuario registrado con el numero de documento" || output == "Ya existe un usuario registrado con la direccion de email"){
-                              return;
-                            }else{
-                              document.getElementById("aareiiInscription").style.display = 'none';
-                              document.getElementById("encontramasInscription").style.display = 'inline-table';
-                            }    
-                     }
-                   });
+    data: {
+      user:                       "newUser",
+      dni:                        document.getElementById("numero_de_documento").value,
+      password:                   document.getElementById("confirme_nueva_contraseña").value,
+      postgraduate_type:          document.getElementById("postgrado").value,
+      postgraduate_status:        document.getElementById("estado_postgrado").value,
+      postgraduate_title:         document.getElementById("titulo").value,
+      postgraduate_institution:   document.getElementById("institucion_postgrado").value,
+      userfile:                   document.getElementById("userfile").value,
+    },
+    type: 'POST',
+    success: function(output) {  
+          alert(output);
+          if(output == "Ya existe un usuario registrado con el numero de documento" || output == "Ya existe un usuario registrado con la direccion de email"){
+            return;
+          }
+          else{
+            document.getElementById("aareiiInscription").style.display = 'none';
+            document.getElementById("encontramasInscription").style.display = 'block';
+          }    
+    }
+  });
 }
