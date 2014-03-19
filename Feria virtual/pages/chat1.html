@@ -17,8 +17,6 @@
 	</head>
 
 	<body style="background-color: #B10B0B">
-        
-
     	<div id="wrapper">
     		<div id="header">
     			<img id="aareiiLogo" src="../features/images/AAREII-logo.png" border="0"  height="90" width="60">
@@ -35,18 +33,49 @@
  				</ul>
     		</div>
 
-    		<div id="content">
-    			<div style="margin: 0 auto; padding: 20px 50px">
-	     			<center>
-	     				<script>var __v='barc-user-federico.90';</script>
-						<script type="text/javascript"> 
-						  (function(d) { 
-						    var b = d.createElement("script"); b.type = "text/javascript"; b.async = true; 
-						    b.src = ("https:" == d.location.protocol ? "https" : "http") + "://barc.com/js/libs/barc/barc.js"; 
-						    var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(b, s); 
-						  })(document); 
-						</script>
-	     			</center>
+    		<div id="content" style="height:450px;">
+    			<div style="margin: 0 auto; position: absolute; left: -100;">
+
+    				<script id="sid0020000056189548579">
+    				(function()
+    				{
+    					function async_load()
+    					{
+    						s.id="cid0020000056189548579";
+    						s.src='http://st.chatango.com/js/gz/emb.js';
+    						s.style.cssText="width:600px;height:350px;";
+    						s.async=true;
+    						s.text='{"handle":"aareii","arch":"js","styles":{"a":"B10B0B","b":100,"c":"FFFFFF","d":"FFFFFF","k":"B10B0B","l":"B10B0B","m":"B10B0B","n":"FFFFFF","q":"B10B0B","r":100,"cvbg":"CC0000","cvw":75,"cvh":40}}';
+    						var ss = document.getElementsByTagName('script');
+    						for (var i=0, l=ss.length; i < l; i++)
+    						{
+    							if (ss[i].id=='sid0020000056189548579')
+    							{
+    								ss[i].id +='_';
+    								ss[i].parentNode.insertBefore(s, ss[i]);
+    								break;
+    							}
+    						}
+    					}
+    					var s=document.createElement('script');
+    					if (s.async==undefined)
+    					{
+    						if (window.addEventListener)
+    						{
+    							addEventListener('load',async_load,false);
+    						}
+    						else if (window.attachEvent) 
+    						{
+    							attachEvent('onload',async_load);
+    						}
+    					}
+    					else 
+    					{
+    						async_load();
+    					}
+    				})();
+    				</script>
+     				
     			</div>
     		</div>
     		<div id="footer">
@@ -66,3 +95,17 @@
 	    }
 	</script>
 </html>
+<!-- testferiavirtual / feriavirtual
+
+<script>var __v='barc-user-federico.90';</script>
+					<script type="text/javascript"> 
+					  (function(d){ 
+					    var b = d.createElement("script"); b.type = "text/javascript"; b.async = true; 
+
+					    b.src = ("https:" == d.location.protocol ? "https" : "http") + "://barc.com/js/libs/barc/barc.js"; 
+
+					    var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(b, s); 
+					  })(document); 
+					</script>
+
+-->
