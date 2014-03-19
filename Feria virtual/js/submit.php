@@ -1,13 +1,13 @@
 <?php // You need to add server side validation and better error handling here
  
 $data = array();
-
+echo "called";
 if(isset($_GET['files']))
 {  
 	$error = false;
 	$files = array();
  
-	$uploaddir = '/';
+	$uploaddir = '/uploads/';
 	foreach($_FILES as $file)
 	{
 		if(move_uploaded_file($file['tmp_name'], $uploaddir .basename($file['name'])))
@@ -25,7 +25,7 @@ else
 {
 	$data = array('success' => 'Form was submitted', 'formData' => $_POST);
 }
-
+ 
 echo json_encode($data);
  
 ?>
