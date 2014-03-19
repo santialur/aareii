@@ -14,7 +14,7 @@
 		                   _this.wrap('<div class="slide_container"></div>')
 		                        .height(_this.height())
 		                       .hover(function(){if($(this).data('marquee').stop){$(this).stop(true,false);}},
-		                              function(){if($(this).data('marquee').stop){$(this).marquee('slide');}})
+		                              function(){if($(this).data('marquee').stop){$(this).marquee('itemMarquee');}})
 		                        .parent()
 		                        .css({position:'relative',overflow:'hidden','height':$('>li',_this).height()})
 		                        .find('>ul')
@@ -25,10 +25,10 @@
 		                     _this.append(_li.clone());
 		                   } 
 		             
-		               _this.marquee('slide');});
+		               _this.marquee('itemMarquee');});
 		         },
 		      
-		         slide:function()
+		         itemMarquee:function()
 		         {
 		           var $this=this;
 		           $this.animate({'left':$('>li',$this).width()*-1},
@@ -37,7 +37,7 @@
 		                         function()
 		                         {
 		                           $this.css('left',0).append($('>li:first',$this));
-		                           $this.delay($this.data('marquee').delay).marquee('slide');
+		                           $this.delay($this.data('marquee').delay).marquee('itemMarquee');
 		             
 		                         }
 		                        );
@@ -73,5 +73,5 @@
 		 
 		 //call
 		 $(document).ready(
-		   function(){$('.slide').marquee({delay:3000});}
+		   function(){$('.itemMarquee').marquee({delay:3000});}
 		 );
