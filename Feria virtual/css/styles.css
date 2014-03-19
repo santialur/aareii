@@ -181,19 +181,22 @@ a
 #subscriptionContent
 {
 		margin: 			3% auto;
-		width:				50%;
+		width:				80%;
 }
 
 
 .red{
 	color: 					red;
 }
+
 .ribbon{
 	background-color:		#F0F0F0;
 	padding-top:			30px;
 	padding-bottom:     	10px;
 	width:					100%;
 }
+
+
 .button {
 	box-shadow: 			1px 1px 2px Black;
 	background:				-moz-linear-gradient(top, #B10B0B, #D00000);
@@ -204,9 +207,10 @@ a
 	color:					#ffffff;
 	height:					33px;
 	line-height:			33px;
-	width:					90px;
+	padding-bottom:			3%;
+	padding-left:			3%;
+	padding-right:			3%;
 	text-decoration:		none;
-	text-align:				center;
 	text-shadow:			1px 2px 0px #810e05;
 }
 .button:hover {

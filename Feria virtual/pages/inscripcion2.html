@@ -1,0 +1,1518 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link   rel=  "stylesheet"    href="../css/styles.css" type="text/css" />
+</head>
+
+<body>
+    <div id="nav">
+        
+          <ul class="nav-bar">  
+            <li><a href="http://www.encontramas.com.ar/">Encontra +</a></li>
+            <li><a href="../index.html">Exterior</a></li>
+            <li><a href="interior.html">Interior</a></li>
+            <li><a href="empresas.html">Empresas</a></li>
+            <li><a href="ofertaLaboral.html">Ofertas laborales</a></li>
+            <li> <a href="inscripcion.html">Inscribirse</a></li>
+          </ul>
+        
+    </div>
+    </br>
+
+    <div class="wrapperSmall">
+      <div id="content" class="box">
+
+        <!-- HEADER SUBSCRIPTION --> 
+        <div class="leftSide">
+          <h3> Formulario de  inscripción     <h3>  <br>
+          <h5> Eventos de Actualidad laboral  <h5>
+        </div>
+
+        <div class="rightSide">
+          <img src="../features/images/AAREII-logo.png" width="65" height="100">
+        </div>
+        
+        <div style="margin: 15% 0 2% 0; text-align: justify">
+          <strong>Inscribiendote estarás acreditado en forma gratuita a la Jornada.</strong>  Además a partir de este momento comenzarás a formar parte de la base de reclutamiento de las empresas participantes para cubrir futuras posiciones.
+        </div>
+
+        <hr>
+
+        <!-- CONTENT SUBSCRIPTION -->
+
+        <div id="subscriptionContent">
+
+          <div id="ID_row">
+            <span class="leftSide">
+              <strong>Nro. de Documento</strong>:   
+              <span class="red">*</span>
+            </span>
+            <input type="text" id="numero_de_documento" name="numero_de_documento" class="rightSide">
+            <br><br>
+          </div>
+
+          <div id="password_row">
+            <span class="leftSide">
+              <strong>Contraseña</strong>:          
+              <span class="red">*</span>
+            </span> 
+            <input type="password" id="contraseña" name="contraseña" class="rightSide">
+            <br><br>
+          </div>
+
+          <div id="buttons" style="text-align: center">
+            <input type="button" id="verify_button" value="Verificar usuario" class="button" onclick="checkUser()" style="margin-right:3%">
+            <input type="button" id="create_button" value="Crear nuevo" class="button" onclick="createNewUser()" style="margin-left:3%">
+          </div>
+
+          <div id="formFields" style="display:none">
+
+            <!--NOMBRE--> 
+            <span class="leftSide">
+              <strong>Nombre</strong>:   
+              <span class="red">*</span>
+            </span>
+            <input type="text" id="nombre" name="nombre" class="rightSide"> <br><br>
+
+            <!--APELLIDO--> 
+            <span class="leftSide">
+              <strong>Apellido</strong>:   
+              <span class="red">*</span>
+            </span>
+            <input type="text" id="apellido" name="apellido" class="rightSide"> <br><br>
+
+            <!--EMAIL--> 
+            <span class="leftSide">
+              <strong>Direccion de E-mail</strong>:   
+              <span class="red">*</span>
+            </span>
+            <input type="text" id="email" name="email" class="rightSide"> <br><br>
+
+            <!--CONFIRMACION EMAIL--> 
+            <span class="leftSide">
+              <strong>Confirme direccion de e-mail</strong>:   
+              <span class="red">*</span>
+            </span>
+            <input type="text" id="confirme_email" name="confirme_email" class="rightSide"> <br><br>
+
+            <!--CONTRASEÑA--> 
+            <span class="leftSide">
+              <strong>Contraseña</strong>:   
+              <span class="red">*</span>
+            </span>
+            <input type="password" id="contraseña_nueva" name="contraseña_nueva" class="rightSide"> <br><br>
+
+            <!--CONFIRMACION CONTRASEÑA--> 
+            <span class="leftSide">
+              <strong>Confirmar contraseña</strong>:   
+              <span class="red">*</span>
+            </span>
+            <input type="password" id="confirme_nueva_contraseña" name="confirme_nueva_contraseña" class="rightSide"> <br><br>
+
+            <!--TELEFONO--> 
+            <span class="leftSide">
+              <strong>Teléfono</strong>:   
+              <span class="red">*</span>
+            </span>
+            <input type="text" id="telefono_celular" name="telefono_celular" class="rightSide"> <br><br>
+
+            <!--FECHA NACIMIENTO-->
+            <span class="leftSide">
+              <strong>Fecha de Nacimiento</strong>:   
+              <span class="red">*</span>
+            </span>  
+
+            <div class="rightSide">
+              <select id="fecha_nacimiento_dia" name="fecha_nacimiento_dia">
+                <option value="0" selected>Dia</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+              </select>
+              <select id="fecha_nacimiento_mes" name="fecha_nacimiento_mes">
+                <option value="0" selected>Mes</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+              <select id="fecha_nacimiento_anio" name="fecha_nacimiento_anio">
+                <option value="0" selected>Año</option>
+                <option value="1997">1997</option>
+                <option value="1996">1996</option>
+                <option value="1995">1995</option>
+                <option value="1994">1994</option>
+                <option value="1993">1993</option>
+                <option value="1992">1992</option>
+                <option value="1991">1991</option>
+                <option value="1990">1990</option>
+                <option value="1989">1989</option>
+                <option value="1988">1988</option>
+                <option value="1987">1987</option>
+                <option value="1986">1986</option>
+                <option value="1985">1985</option>
+                <option value="1984">1984</option>
+                <option value="1983">1983</option>
+                <option value="1982">1982</option>
+                <option value="1981">1981</option>
+                <option value="1980">1980</option>
+                <option value="1979">1979</option>
+                <option value="1978">1978</option>
+                <option value="1977">1977</option>
+                <option value="1976">1976</option>
+                <option value="1975">1975</option>
+                <option value="1974">1974</option>
+                <option value="1973">1973</option>
+                <option value="1972">1972</option>
+                <option value="1971">1971</option>
+                <option value="1970">1970</option>
+                <option value="1969">1969</option>
+                <option value="1968">1968</option>
+                <option value="1967">1967</option>
+                <option value="1966">1966</option>
+                <option value="1965">1965</option>
+                <option value="1964">1964</option>
+                <option value="1963">1963</option>
+                <option value="1962">1962</option>
+                <option value="1961">1961</option>
+                <option value="1960">1960</option>
+                <option value="1959">1959</option>
+                <option value="1958">1958</option>
+                <option value="1957">1957</option>
+                <option value="1956">1956</option>
+                <option value="1955">1955</option>
+                <option value="1954">1954</option>
+                <option value="1953">1953</option>
+                <option value="1952">1952</option>
+                <option value="1951">1951</option>
+                <option value="1950">1950</option>
+                <option value="1949">1949</option>
+                <option value="1948">1948</option>
+                <option value="1947">1947</option>
+                <option value="1946">1946</option>
+                <option value="1945">1945</option>
+                <option value="1944">1944</option>
+                <option value="1943">1943</option>
+                <option value="1942">1942</option>
+                <option value="1941">1941</option>
+                <option value="1940">1940</option>
+                <option value="1939">1939</option>
+                <option value="1938">1938</option>
+                <option value="1937">1937</option>
+                <option value="1936">1936</option>
+                <option value="1935">1935</option>
+                <option value="1934">1934</option>
+                <option value="1933">1933</option>
+                <option value="1932">1932</option>
+                <option value="1931">1931</option>
+                <option value="1930">1930</option>
+                <option value="1929">1929</option>
+                <option value="1928">1928</option>
+                <option value="1927">1927</option>
+                <option value="1926">1926</option>
+                <option value="1925">1925</option>
+                <option value="1924">1924</option>
+                <option value="1923">1923</option>
+                <option value="1922">1922</option>
+                <option value="1921">1921</option>
+                <option value="1920">1920</option>
+              </select>
+            </div>  <br><br>
+
+            <!--PAIS-->
+            <span class="leftSide">
+              <strong>País</strong>:   
+              <span class="red">*</span>
+            </span>        
+
+            <div class="rightSide">
+              <select id="lugar_de_residencia_pais" name="lugar_de_residencia_pais" style="float: right; width:156%">
+                <option value="0" selected>Seleccione pais</option>
+                <option value="Argentina"   id="cbf1364">Argentina  </option>
+                <option value="Brasil"      id="cbf1365">Brasil     </option>
+                <option value="Bolivia"     id="cbf1366">Bolivia    </option>
+                <option value="Chile"       id="cbf1367">Chile      </option>
+                <option value="Colombia"    id="cbf1368">Colombia   </option>
+                <option value="Cuba"        id="cbf1369">Cuba       </option>
+                <option value="Costa Rica"  id="cbf1370">Costa Rica </option>
+                <option value="Ecuador"     id="cbf1371">Ecuador    </option>
+                <option value="El Salvador" id="cbf1372">El Salvador</option>
+                <option value="España"      id="cbf1373">España     </option>
+                <option value="Honduras"    id="cbf1374">Honduras   </option>
+                <option value="Mexico"      id="cbf1375">Mexico     </option>
+                <option value="Panamá"      id="cbf1376">Panamá     </option>
+                <option value="Paraguay"    id="cbf1377">Paraguay   </option>
+                <option value="Perú"        id="cbf1378">Perú       </option>
+                <option value="Puerto Rico" id="cbf1379">Puerto Rico</option>
+                <option value="Uruguay"     id="cbf1380">Uruguay    </option>
+                <option value="Venezuela"   id="cbf1381">Venezuela  </option>
+              </select>
+            </div>  <br><br>
+
+            <!--PROVINCIA-->
+            <span class="leftSide">
+              <strong>Provincia</strong>:   
+              <span class="red">*</span>
+            </span> 
+
+            <div class="rightSide">
+              <select id="lugar_de_residencia_provincia" name="lugar_de_residencia_provincia" style="float: right; width:110%">
+                <option value="0" selected>Seleccione su provincia      </option>
+                <option value="Buenos Aires">       Buenos Aires        </option>
+                <option value="Córdoba">            Córdoba             </option>
+                <option value="Capital Federal">    Capital Federal     </option>
+                <option value="Catamarca">          Catamarca           </option>
+                <option value="Chaco">              Chaco               </option>
+                <option value="Chubut">             Chubut              </option>
+                <option value="Corrientes">         Corrientes          </option>
+                <option value="Entre Ríos">         Entre Ríos          </option>
+                <option value="Formosa">            Formosa             </option>
+                <option value="Jujuy">              Jujuy               </option>
+                <option value="La Pampa">           La Pampa            </option>
+                <option value="La Rioja">           La Rioja            </option>
+                <option value="Mendoza">            Mendoza             </option>
+                <option value="Misiones">           Misiones            </option>
+                <option value="Neuquén">            Neuquén             </option>
+                <option value="Rio Negro">          Rio Negro           </option>
+                <option value="Salta">              Salta               </option>
+                <option value="San Juan">           San Juan            </option>
+                <option value="San Luis">           San Luis            </option>
+                <option value="Santa Cruz">         Santa Cruz          </option>
+                <option value="Santa Fé">           Santa Fé            </option>
+                <option value="Santiago del Estero">Santiago del Estero </option>
+                <option value="Tierra del Fuego">   Tierra del Fuego    </option>
+                <option value="Tucuman">            Tucuman             </option>
+              </select>
+            </div>  <br><br>
+
+            <!--CIUDAD O LOCALIDAD-->
+            <span class="leftSide">
+              <strong>Ciudad/Localidad</strong>:   
+              <span class="red">*</span>
+            </span>
+            <input type="text" id="lugar_de_residencia_ciudad" name="lugar_de_residencia_ciudad" class="rightSide"> <br><br>
+
+            <!--DIRECCION-->
+            <span class="leftSide">
+              <strong>Dirección</strong>:   
+              <span class="red">*</span>
+            </span>
+            <input type="text" id="direccion_de_residencia" name="direccion_de_residencia" class="rightSide"> <br><br>
+
+            <!--UNIVERSIDAD-->
+            <span class="leftSide">
+              <strong>Universidad</strong>:   
+              <span class="red">*</span>
+            </span>
+
+            <div class="rightSide">
+              <select id="institucion" name="institucion" style="float: right; width:45%">
+                <option value="0"> Seleccione Universidad </option>
+                <option value="Instituto Tecnológico De Buenos Aires" id="cbf2049">Instituto Tecnológico De Buenos Aires</option>
+                <option value="Universidad Argentina De La Empresa" id="cbf2050">Universidad Argentina De La Empresa</option>
+                <option value="Universidad Austral" id="cbf2051">Universidad Austral</option>
+                <option value="Universidad Católica Argentina (Sede Buenos Aires)" id="cbf2052">Universidad Católica Argentina (Sede Buenos Aires)</option>
+                <option value="Universidad Católica Argentina (Sede Rosario)" id="cbf2053">Universidad Católica Argentina (Sede Rosario)</option>
+                <option value="Universidad Católica De Córdoba" id="cbf2054">Universidad Católica De Córdoba</option>
+                <option value="Universidad Católica De Salta" id="cbf2055">Universidad Católica De Salta</option>
+                <option value="Universidad De Belgrano" id="cbf2056">Universidad De Belgrano</option>
+                <option value="Universidad De Buenos Aires" id="cbf2057">Universidad De Buenos Aires</option>
+                <option value="Universidad De La Marina Mercante" id="cbf2058">Universidad De La Marina Mercante</option>
+                <option value="Universidad De Mendoza" id="cbf2059">Universidad De Mendoza</option>
+                <option value="Universidad De Morón" id="cbf2060">Universidad De Morón</option>
+                <option value="Universidad De Palermo" id="cbf2061">Universidad De Palermo</option>
+                <option value="Universidad Del Norte Santo Tomás De Aquino (Tucumán)" id="cbf2062">Universidad Del Norte Santo Tomás De Aquino (Tucumán)</option>
+                <option value="Universidad Del Salvador" id="cbf2063">Universidad Del Salvador</option>
+                <option value="Universidad Frat. De Agrup. Santo Tomas De Aquino" id="cbf2064">Universidad Frat. De Agrup. Santo Tomas De Aquino</option>
+                <option value="Universidad Nacional De Córdoba" id="cbf2065">Universidad Nacional De Córdoba</option>
+                <option value="Universidad Nacional De Cuyo (Mendoza)" id="cbf2066">Universidad Nacional De Cuyo (Mendoza)</option>
+                <option value="Universidad Nacional De General Sarmiento (Los Polvorines)" id="cbf2067">Universidad Nacional De General Sarmiento (Los Polvorines)</option>
+                <option value="Universidad Nacional De Jujuy" id="cbf2068">Universidad Nacional De Jujuy</option>
+                <option value="Universidad Nacional De La Matanza" id="cbf2069">Universidad Nacional De La Matanza</option>
+                <option value="Universidad Nacional De La Patagonia (Comodoro Rivadavia)" id="cbf2070">Universidad Nacional De La Patagonia (Comodoro Rivadavia)</option>
+                <option value="Universidad Nacional De La Patagonia Austral (Caleta Olivia)" id="cbf2071">Universidad Nacional De La Patagonia Austral (Caleta Olivia)</option>
+                <option value="Universidad Nacional De La Plata" id="cbf2072">Universidad Nacional De La Plata</option>
+                <option value="Universidad Nacional De La Rioja" id="cbf2073">Universidad Nacional De La Rioja</option>
+                <option value="Universidad Nacional De Lomas De Zamora" id="cbf2074">Universidad Nacional De Lomas De Zamora</option>
+                <option value="Universidad Nacional De Luján" id="cbf2075">Universidad Nacional De Luján</option>
+                <option value="Universidad Nacional De Mar del Plata" id="cbf2076">Universidad Nacional De Mar del Plata</option>
+                <option value="Universidad Nacional De Misiones (Obera)" id="cbf2077">Universidad Nacional De Misiones (Obera)</option>
+                <option value="Universidad Nacional De Rosario" id="cbf2078">Universidad Nacional De Rosario</option>
+                <option value="Universidad Nacional De Salta" id="cbf2079">Universidad Nacional De Salta</option>
+                <option value="Universidad Nacional De San Juan" id="cbf2080">Universidad Nacional De San Juan</option>
+                <option value="Universidad Nacional De San Luís (Villa Mercedes)" id="cbf2081">Universidad Nacional De San Luís (Villa Mercedes)</option>
+                <option value="Universidad Nacional De Tucumán" id="cbf2082">Universidad Nacional De Tucumán</option>
+                <option value="Universidad Nacional Del Centro De La Pcia. De Bs. As." id="cbf2083">Universidad Nacional Del Centro De La Pcia. De Bs. As.</option>
+                <option value="Universidad Nacional del Chaco Austral" id="cbf2084">Universidad Nacional del Chaco Austral</option>
+                <option value="Universidad Nacional Del Litoral (Santa Fe)" id="cbf2085">Universidad Nacional Del Litoral (Santa Fe)</option>
+                <option value="Universidad Nacional Del Noroeste De La Pcia. De Bs. As. (Junin)" id="cbf2086">Universidad Nacional Del Noroeste De La Pcia. De Bs. As. (Junin)</option>
+                <option value="Universidad Nacional Del Sur (Bahía Blanca)" id="cbf2087">Universidad Nacional Del Sur (Bahía Blanca)</option>
+                <option value="UTN Facultad Regional Avellaneda" id="cbf2088">UTN Facultad Regional Avellaneda</option>
+                <option value="UTN Facultad Regional Bahía Blanca (LOI)" id="cbf2089">UTN Facultad Regional Bahía Blanca (LOI)</option>
+                <option value="UTN Facultad Regional Buenos Aires" id="cbf2090">UTN Facultad Regional Buenos Aires</option>
+                <option value="UTN Facultad Regional Concepción del Uruguay" id="cbf2091">UTN Facultad Regional Concepción del Uruguay</option>
+                <option value="UTN Facultad Regional Córdoba" id="cbf2092">UTN Facultad Regional Córdoba</option>
+                <option value="UTN Facultad Regional General Pacheco (LOI)" id="cbf2093">UTN Facultad Regional General Pacheco (LOI)</option>
+                <option value="UTN Facultad Regional Haedo" id="cbf2094">UTN Facultad Regional Haedo</option>
+                <option value="UTN Facultad Regional La Plata" id="cbf2095">UTN Facultad Regional La Plata</option>
+                <option value="UTN Facultad Regional La Rioja" id="cbf2096">UTN Facultad Regional La Rioja</option>
+                <option value="UTN Facultad Regional Rafaela" id="cbf2097">UTN Facultad Regional Rafaela</option>
+                <option value="UTN Facultad Regional Río Grande" id="cbf2098">UTN Facultad Regional Río Grande</option>
+                <option value="UTN Facultad Regional San Francisco (LOI)" id="cbf2099">UTN Facultad Regional San Francisco (LOI)</option>
+                <option value="UTN Facultad Regional San Nicolás" id="cbf2100">UTN Facultad Regional San Nicolás</option>
+                <option value="UTN Facultad Regional San Rafael" id="cbf2101">UTN Facultad Regional San Rafael</option>
+                <option value="UTN Facultad Regional Santa Fe" id="cbf2102">UTN Facultad Regional Santa Fe</option>
+                <option value="UTN Unidad Académica Chubut (LOI)" id="cbf2103">UTN Unidad Académica Chubut (LOI)</option>
+                <option value="UTN Unidad Académica Río Gallegos" id="cbf2104">UTN Unidad Académica Río Gallegos</option>
+                <option value="UTN Unidad Académica Trenque Lauquen" id="cbf2105">UTN Unidad Académica Trenque Lauquen</option>
+                <option value="Otra" id="cbf2106">Otra</option>
+              </select>
+            </div>  <br><br>
+
+            <!--OTRA UNIVERSIDAD-->
+            <span class="leftSide">
+              <strong>Otra universidad</strong>:   
+            </span>
+            <input type="text" id="universidad" name="universidad" class="rightSide"> <br><br>
+
+            <!--CARRERA-->
+            <span class="leftSide">
+              <strong>Carrera</strong>: 
+              <span class="red">*</span>  
+            </span>
+            
+            <div class="rightSide">
+              <select id="carrera" name="carrera" style="float: right; width:105%">
+                <option value="0" selected>               Seleccione carrera        </option>
+                <option value="Ingeniería Industrial">    Ingeniería Industrial     </option>
+                <option value="Ing. en Alimentos">        Ing. en Alimentos         </option>
+                <option value="Lic. en Org. Industrial">  Lic. en Org. Industrial   </option>
+                <option value="Ing. Agroindustrial">      Ingeniería Agroindustrial </option>
+                <option value="Otra Ingeniería">          Otra ingenieria           </option>
+                <option value="Otra carrera">             Otra carrera              </option>
+              </select>
+            </div>  <br><br>
+
+            <!--OTRA CARRERA-->
+            <span class="leftSide">
+              <strong>Otra carrera</strong>:   
+            </span>
+            <input type="text" id="otraCarrera" name="otraCarrera" class="rightSide"> <br><br>
+
+            <!--MATERIAS APROBADAS-->
+            <span class="leftSide">
+              <strong>Numero de materias aprobadas</strong>: 
+              <span class="red">*</span>  
+            </span>
+            <input type="text" id="numero_materias" name="numero_materias" class="rightSide"> <br><br>
+
+            <!--TRABAJO-->
+            <span class="leftSide">
+              <strong>Trabaja?</strong>:
+              <span class="red">*</span>   
+            </span>
+            
+            <div class="rightSide">
+              <select id="trabaja" name="trabaja">
+                <option value="0" selected> </option>
+                <option value="Si">Si       </option>
+                <option value="No">No       </option>
+              </select>
+            </div>  <br><br>
+
+            <!--ESTADO CIVIL-->
+            <span class="leftSide">
+              <strong>Estado Civil</strong>:  
+              <span class="red">*</span> 
+            </span>
+            
+            <div class="rightSide">
+              <select id="estado_civil" name="estado_civil">
+                <option value="0" selected>           </option>
+                <option value="Casado">     Casado    </option>
+                <option value="Soltero">    Soltero   </option>
+                <option value="Divorciado"> Divorciado</option>
+                <option value="Viudo">      Viudo     </option>
+                <option value="Otro">       Otro      </option>
+              </select>
+            </div>  <br><br>
+
+          <!--FIN CAMPOS-->
+          </div>
+
+          <div align="center" id="sendButton" style="display:none">
+            <input type="submit" value="Enviar" class="button" onclick="sendInformation()">
+          </div>
+
+
+          <div id="encontramasInscription" style="display:none">
+
+            <!--NIVELES SUPERIORES--> 
+            <span class="leftSide">
+              <strong>Postgrados / Masters / Doctorado</strong>:   
+              <span class="red">*</span>
+            </span>
+            
+            <div class="rightSide">
+              <select id="postgrado" name="postgrado">
+                <option value="0" selected="">Seleccione su Postgrado</option>
+                <option value="Doctorado">Doctorado</option>
+                <option value="Master / Especialización">Master / Especialización</option>
+                <option value="Posgrado">Posgrado</option>
+              </select>
+            </div>  <br><br>
+
+            <!--POSTGRADO--> 
+            <span class="leftSide">
+              <strong>Estado de Postgrado</strong>:   
+              <span class="red">*</span>
+            </span>
+
+            <div class="rightSide">
+              <select id="estado_postgrado" name="estado_postgrado">
+                <option value="0" selected="">Seleccione su nivel de postgrado</option>
+                <option value="Completo">Completo</option>
+                <option value="En curso">En curso</option>
+                <option value="Incompleto">Incompleto</option>
+              </select>
+            </div>  <br><br>                             
+
+            <!--TITULO--> 
+            <span class="leftSide">
+              <strong>Título</strong>:   
+              <span class="red">*</span>
+            </span>
+            <input type="text" id="titulo" name="titulo" class="rightSide"> <br><br>
+
+            <!--INSTITUCION--> 
+            <span class="leftSide">
+              <strong>Institución</strong>:   
+              <span class="red">*</span>
+            </span>
+            <input type="text" id="institucion_postgrado" name="institucion_postgrado" class="rightSide"> <br><br>
+
+            <!--EXPERIENCIA LABORAL--> 
+            <h3> Experiencia Laboral <h3> <br><br>
+
+            <span class="leftSide">
+              <strong>1 </strong>   
+            </span>
+
+            <!--EMPRESA-->
+            <span class="leftSide">
+              <strong>Empresa</strong>:   
+              <span class="red">*</span>
+            </span>
+            <input type="text" id="empresa_1" name="empresa_1" class="rightSide"> <br><br>
+
+            <!--TIPO EMPRESA--> 
+            <span class="leftSide">
+              <strong>Tipo de empresa</strong>:   
+              <span class="red">*</span>
+            </span>
+
+            <div class="rightSide">
+              <select id="tipo_empresa_1" name="tipo_empresa_1">
+                <option value="0" selected="">Seleccione el tipo de empresa</option>
+                <option value="0" selected="">Seleccione el tipo de empresa</option>
+                <option value="Agro">Agro</option>
+                <option value="Automotriz">Automotriz</option>
+                <option value="Consultora">Consultora</option>
+                <option value="Consumo Masivo">Consumo Masivo</option>
+                <option value="Financiero / Bancario / Seguros">Financiero / Bancario / Seguros</option>
+                <option value="Holding - otras actividades">Holding - otras actividades</option>
+                <option value="Industrial">Industrial</option>
+                <option value="Petrolera / Sector Energético">Petrolera / Sector Energético</option>
+                <option value="Salud / Laboratorio / Farmacéutica">Salud / Laboratorio / Farmacéutica</option>
+                <option value="Servicios / Distribución / Comercialización">Servicios / Distribución / Comercialización</option>
+                <option value="Sistemas / Tecnología">Sistemas / Tecnología</option>
+                <option value="Telecomunicaciones">Telecomunicaciones</option>
+                <option value="otra">Otra</option>
+              </select>
+            </div>  <br><br> 
+
+            <!--ACTIVIDAD-->
+            <span class="leftSide">
+              <strong>Puesto / Tarea</strong>:   
+              <span class="red">*</span>
+            </span>
+            <input type="text" id="puesto_1" name="puesto_1" class="rightSide"> <br><br>
+
+            <!--AREA-->
+            <span class="leftSide">
+              <strong>Area del puesto</strong>:   
+              <span class="red">*</span>
+            </span>
+
+            <div class="rightSide">
+              <select id="area_puesto_1" name="area_puesto_1">
+                <option value="0" selected="">Seleccione el area del puesto</option>
+                <option value="Administración">Administración</option>
+                <option value="Gerencia General">Gerencia General</option>
+                <option value="Investigación y Desarrollo">Investigación y Desarrollo</option>
+                <option value="Marketing - Relaciones Institucionales">Marketing - Relaciones Institucionales</option>
+                <option value="Producción">Producción</option>
+                <option value="Recursos Humanos">Recursos Humanos</option>
+                <option value="Salud - Servicios Médicos">Salud - Servicios Médicos</option>
+                <option value="Sistemas">Sistemas</option>
+                <option value="Ventas - Comercial">Ventas - Comercial</option>
+                <option value="otra">Otra </option>
+              </select>
+            </div>  <br><br> 
+
+            <!--SENIORITY-->
+            <span class="leftSide">
+              <strong>Seniority</strong>:   
+              <span class="red">*</span>
+            </span>
+
+            <div class="rightSide">
+              <select name="seniority_1">
+                <option value="0" selected="">Seleccione el señority</option>
+                <option value="director">Director</option>
+                <option value="gerente">Gerente</option>
+                <option value="senior">Senior</option>
+                <option value="semi-senior">Semi-senior</option>
+                <option value="junior">Junior</option>
+              </select>
+            </div>  <br><br> 
+
+            <!--DESDE-->
+            <span class="leftSide">
+              <strong>Desde</strong>:   
+              <span class="red">*</span>
+            </span>
+
+            <div class="rightSide">
+              <select name="mesdesde1">
+                <option value="1" selected="">Enero</option>
+                <option value="2">Febrero</option>
+                <option value="3">Marzo</option>
+                <option value="4">Abril</option>
+                <option value="5">Mayo</option>
+                <option value="6">Junio</option>
+                <option value="7">Julio</option>
+                <option value="8">Agosto</option>
+                <option value="9">Septiembre</option>
+                <option value="10">Octubre</option>
+                <option value="11">Noviembre</option>
+                <option value="12">Diciembre</option>
+              </select>
+
+              <select name="añodesde1">
+                <option value="2013" selected="">2013</option>
+                <option value="2012">2012</option>
+                <option value="2011">2011</option>
+                <option value="2010">2010</option>
+                <option value="2009">2009</option>
+                <option value="2008">2008</option>
+                <option value="2007">2007</option>
+                <option value="2006">2006</option>
+                <option value="2005">2005</option>
+                <option value="2004">2004</option>
+                <option value="2003">2003</option>
+                <option value="2002">2002</option>
+                <option value="2001">2001</option>
+                <option value="2000">2000</option>
+                <option value="1999">1999</option>
+                <option value="1998">1998</option>
+                <option value="1997">1997</option>
+                <option value="1996">1996</option>
+                <option value="1995">1995</option>
+                <option value="1994">1994</option>
+                <option value="1993">1993</option>
+                <option value="1992">1992</option>
+                <option value="1991">1991</option>
+                <option value="1990">1990</option>
+                <option value="1989">1989</option>
+                <option value="1988">1988</option>
+                <option value="1987">1987</option>
+                <option value="1986">1986</option>
+                <option value="1985">1985</option>
+                <option value="1984">1984</option>
+                <option value="1983">1983</option>
+                <option value="1982">1982</option>
+                <option value="1981">1981</option>
+                <option value="1980">1980</option>
+                <option value="1979">1979</option>
+                <option value="1978">1978</option>
+                <option value="1977">1977</option>
+                <option value="1976">1976</option>
+                <option value="1975">1975</option>
+                <option value="1974">1974</option>
+                <option value="1973">1973</option>
+                <option value="1972">1972</option>
+                <option value="1971">1971</option>
+                <option value="1970">1970</option>
+                <option value="1969">1969</option>
+                <option value="1968">1968</option>
+                <option value="1967">1967</option>
+                <option value="1966">1966</option>
+                <option value="1965">1965</option>
+                <option value="1964">1964</option>
+                <option value="1963">1963</option>
+                <option value="1962">1962</option>
+                <option value="1961">1961</option>
+                <option value="1960">1960</option>
+                <option value="1959">1959</option>
+                <option value="1958">1958</option>
+                <option value="1957">1957</option>
+                <option value="1956">1956</option>
+                <option value="1955">1955</option>
+                <option value="1954">1954</option>
+                <option value="1953">1953</option>
+                <option value="1952">1952</option>
+                <option value="1951">1951</option>
+                <option value="1950">1950</option>
+                <option value="1949">1949</option>
+                <option value="1948">1948</option>
+                <option value="1947">1947</option>
+                <option value="1946">1946</option>
+                <option value="1945">1945</option>
+                <option value="1944">1944</option>
+                <option value="1943">1943</option>
+                <option value="1942">1942</option>
+                <option value="1941">1941</option>
+                <option value="1940">1940</option>
+                <option value="1939">1939</option>
+                <option value="1938">1938</option>
+                <option value="1937">1937</option>
+                <option value="1936">1936</option>
+                <option value="1935">1935</option>
+              </select>
+            </div>  <br><br> 
+
+            <!--HASTA-->
+            <span class="leftSide">
+              <strong>Hasta</strong>:   
+              <span class="red">*</span>
+            </span>
+
+            <div class="rightSide">
+              <select name="meshasta1">
+                <option value="1" selected="">Enero</option>
+                <option value="2">Febrero</option>
+                <option value="3">Marzo</option>
+                <option value="4">Abril</option>
+                <option value="5">Mayo</option>
+                <option value="6">Junio</option>
+                <option value="7">Julio</option>
+                <option value="8">Agosto</option>
+                <option value="9">Septiembre</option>
+                <option value="10">Octubre</option>
+                <option value="11">Noviembre</option>
+                <option value="12">Diciembre</option>
+              </select>
+
+              <select name="añohasta1">
+                <option value="2014" selected="">2014</option>
+                <option value="2013">2013</option>
+                <option value="2012">2012</option>
+                <option value="2011">2011</option>
+                <option value="2010">2010</option>
+                <option value="2009">2009</option>
+                <option value="2008">2008</option>
+                <option value="2007">2007</option>
+                <option value="2006">2006</option>
+                <option value="2005">2005</option>
+                <option value="2004">2004</option>
+                <option value="2003">2003</option>
+                <option value="2002">2002</option>
+                <option value="2001">2001</option>
+                <option value="2000">2000</option>
+                <option value="1999">1999</option>
+                <option value="1998">1998</option>
+                <option value="1997">1997</option>
+                <option value="1996">1996</option>
+                <option value="1995">1995</option>
+                <option value="1994">1994</option>
+                <option value="1993">1993</option>
+                <option value="1992">1992</option>
+                <option value="1991">1991</option>
+                <option value="1990">1990</option>
+                <option value="1989">1989</option>
+                <option value="1988">1988</option>
+                <option value="1987">1987</option>
+                <option value="1986">1986</option>
+                <option value="1985">1985</option>
+                <option value="1984">1984</option>
+                <option value="1983">1983</option>
+                <option value="1982">1982</option>
+                <option value="1981">1981</option>
+                <option value="1980">1980</option>
+                <option value="1979">1979</option>
+                <option value="1978">1978</option>
+                <option value="1977">1977</option>
+                <option value="1976">1976</option>
+                <option value="1975">1975</option>
+                <option value="1974">1974</option>
+                <option value="1973">1973</option>
+                <option value="1972">1972</option>
+                <option value="1971">1971</option>
+                <option value="1970">1970</option>
+                <option value="1969">1969</option>
+                <option value="1968">1968</option>
+                <option value="1967">1967</option>
+                <option value="1966">1966</option>
+                <option value="1965">1965</option>
+                <option value="1964">1964</option>
+                <option value="1963">1963</option>
+                <option value="1962">1962</option>
+                <option value="1961">1961</option>
+                <option value="1960">1960</option>
+                <option value="1959">1959</option>
+                <option value="1958">1958</option>
+                <option value="1957">1957</option>
+                <option value="1956">1956</option>
+                <option value="1955">1955</option>
+                <option value="1954">1954</option>
+                <option value="1953">1953</option>
+                <option value="1952">1952</option>
+                <option value="1951">1951</option>
+                <option value="1950">1950</option>
+                <option value="1949">1949</option>
+                <option value="1948">1948</option>
+                <option value="1947">1947</option>
+                <option value="1946">1946</option>
+                <option value="1945">1945</option>
+                <option value="1944">1944</option>
+                <option value="1943">1943</option>
+                <option value="1942">1942</option>
+                <option value="1941">1941</option>
+                <option value="1940">1940</option>
+                <option value="1939">1939</option>
+                <option value="1938">1938</option>
+                <option value="1937">1937</option>
+                <option value="1936">1936</option>
+                <option value="1935">1935</option>
+              </select>
+            </div>  <br><br> 
+
+
+            <span class="leftSide">
+              <strong>2 </strong>   
+            </span>
+
+            <!--EMPRESA2-->
+            <span class="leftSide">
+              <strong>Empresa</strong>:   
+              <span class="red">*</span>
+            </span>
+            <input type="text" id="empresa_2" name="empresa_2" class="rightSide"> <br><br>
+
+            <!--TIPO EMPRESA2--> 
+            <span class="leftSide">
+              <strong>Tipo de empresa</strong>:   
+              <span class="red">*</span>
+            </span>
+
+            <div class="rightSide">
+              <select id="tipo_empresa_2" name="tipo_empresa_2">
+                <option value="0" selected="">Seleccione el tipo de empresa</option>
+                <option value="0" selected="">Seleccione el tipo de empresa</option>
+                <option value="Agro">Agro</option>
+                <option value="Automotriz">Automotriz</option>
+                <option value="Consultora">Consultora</option>
+                <option value="Consumo Masivo">Consumo Masivo</option>
+                <option value="Financiero / Bancario / Seguros">Financiero / Bancario / Seguros</option>
+                <option value="Holding - otras actividades">Holding - otras actividades</option>
+                <option value="Industrial">Industrial</option>
+                <option value="Petrolera / Sector Energético">Petrolera / Sector Energético</option>
+                <option value="Salud / Laboratorio / Farmacéutica">Salud / Laboratorio / Farmacéutica</option>
+                <option value="Servicios / Distribución / Comercialización">Servicios / Distribución / Comercialización</option>
+                <option value="Sistemas / Tecnología">Sistemas / Tecnología</option>
+                <option value="Telecomunicaciones">Telecomunicaciones</option>
+                <option value="otra">Otra</option>
+              </select>
+            </div>  <br><br> 
+
+            <!--ACTIVIDAD-->
+            <span class="leftSide">
+              <strong>Puesto / Tarea</strong>:   
+              <span class="red">*</span>
+            </span>
+            <input type="text" id="puesto_2" name="puesto_2" class="rightSide"> <br><br>
+
+            <!--AREA-->
+            <span class="leftSide">
+              <strong>Area del puesto</strong>:   
+              <span class="red">*</span>
+            </span>
+
+            <div class="rightSide">
+              <select id="area_puesto_2" name="area_puesto_2">
+                <option value="0" selected="">Seleccione el area del puesto</option>
+                <option value="Administración">Administración</option>
+                <option value="Gerencia General">Gerencia General</option>
+                <option value="Investigación y Desarrollo">Investigación y Desarrollo</option>
+                <option value="Marketing - Relaciones Institucionales">Marketing - Relaciones Institucionales</option>
+                <option value="Producción">Producción</option>
+                <option value="Recursos Humanos">Recursos Humanos</option>
+                <option value="Salud - Servicios Médicos">Salud - Servicios Médicos</option>
+                <option value="Sistemas">Sistemas</option>
+                <option value="Ventas - Comercial">Ventas - Comercial</option>
+                <option value="otra">Otra </option>
+              </select>
+            </div>  <br><br> 
+
+            <!--SENIORITY-->
+            <span class="leftSide">
+              <strong>Seniority</strong>:   
+              <span class="red">*</span>
+            </span>
+
+            <div class="rightSide">
+              <select name="seniority_2">
+                <option value="0" selected="">Seleccione el señority</option>
+                <option value="director">Director</option>
+                <option value="gerente">Gerente</option>
+                <option value="senior">Senior</option>
+                <option value="semi-senior">Semi-senior</option>
+                <option value="junior">Junior</option>
+              </select>
+            </div>  <br><br> 
+
+            <!--DESDE-->
+            <span class="leftSide">
+              <strong>Desde</strong>:   
+              <span class="red">*</span>
+            </span>
+
+            <div class="rightSide">
+              <select name="mesdesde2">
+                <option value="1" selected="">Enero</option>
+                <option value="2">Febrero</option>
+                <option value="3">Marzo</option>
+                <option value="4">Abril</option>
+                <option value="5">Mayo</option>
+                <option value="6">Junio</option>
+                <option value="7">Julio</option>
+                <option value="8">Agosto</option>
+                <option value="9">Septiembre</option>
+                <option value="10">Octubre</option>
+                <option value="11">Noviembre</option>
+                <option value="12">Diciembre</option>
+              </select>
+
+              <select name="añodesde2">
+                <option value="2013" selected="">2013</option>
+                <option value="2012">2012</option>
+                <option value="2011">2011</option>
+                <option value="2010">2010</option>
+                <option value="2009">2009</option>
+                <option value="2008">2008</option>
+                <option value="2007">2007</option>
+                <option value="2006">2006</option>
+                <option value="2005">2005</option>
+                <option value="2004">2004</option>
+                <option value="2003">2003</option>
+                <option value="2002">2002</option>
+                <option value="2001">2001</option>
+                <option value="2000">2000</option>
+                <option value="1999">1999</option>
+                <option value="1998">1998</option>
+                <option value="1997">1997</option>
+                <option value="1996">1996</option>
+                <option value="1995">1995</option>
+                <option value="1994">1994</option>
+                <option value="1993">1993</option>
+                <option value="1992">1992</option>
+                <option value="1991">1991</option>
+                <option value="1990">1990</option>
+                <option value="1989">1989</option>
+                <option value="1988">1988</option>
+                <option value="1987">1987</option>
+                <option value="1986">1986</option>
+                <option value="1985">1985</option>
+                <option value="1984">1984</option>
+                <option value="1983">1983</option>
+                <option value="1982">1982</option>
+                <option value="1981">1981</option>
+                <option value="1980">1980</option>
+                <option value="1979">1979</option>
+                <option value="1978">1978</option>
+                <option value="1977">1977</option>
+                <option value="1976">1976</option>
+                <option value="1975">1975</option>
+                <option value="1974">1974</option>
+                <option value="1973">1973</option>
+                <option value="1972">1972</option>
+                <option value="1971">1971</option>
+                <option value="1970">1970</option>
+                <option value="1969">1969</option>
+                <option value="1968">1968</option>
+                <option value="1967">1967</option>
+                <option value="1966">1966</option>
+                <option value="1965">1965</option>
+                <option value="1964">1964</option>
+                <option value="1963">1963</option>
+                <option value="1962">1962</option>
+                <option value="1961">1961</option>
+                <option value="1960">1960</option>
+                <option value="1959">1959</option>
+                <option value="1958">1958</option>
+                <option value="1957">1957</option>
+                <option value="1956">1956</option>
+                <option value="1955">1955</option>
+                <option value="1954">1954</option>
+                <option value="1953">1953</option>
+                <option value="1952">1952</option>
+                <option value="1951">1951</option>
+                <option value="1950">1950</option>
+                <option value="1949">1949</option>
+                <option value="1948">1948</option>
+                <option value="1947">1947</option>
+                <option value="1946">1946</option>
+                <option value="1945">1945</option>
+                <option value="1944">1944</option>
+                <option value="1943">1943</option>
+                <option value="1942">1942</option>
+                <option value="1941">1941</option>
+                <option value="1940">1940</option>
+                <option value="1939">1939</option>
+                <option value="1938">1938</option>
+                <option value="1937">1937</option>
+                <option value="1936">1936</option>
+                <option value="1935">1935</option>
+              </select>
+            </div>  <br><br> 
+
+            <!--HASTA-->
+            <span class="leftSide">
+              <strong>Hasta</strong>:   
+              <span class="red">*</span>
+            </span>
+
+            <div class="rightSide">
+              <select name="meshasta2">
+                <option value="1" selected="">Enero</option>
+                <option value="2">Febrero</option>
+                <option value="3">Marzo</option>
+                <option value="4">Abril</option>
+                <option value="5">Mayo</option>
+                <option value="6">Junio</option>
+                <option value="7">Julio</option>
+                <option value="8">Agosto</option>
+                <option value="9">Septiembre</option>
+                <option value="10">Octubre</option>
+                <option value="11">Noviembre</option>
+                <option value="12">Diciembre</option>
+              </select>
+
+              <select name="añohasta2">
+                <option value="2014" selected="">2014</option>
+                <option value="2013">2013</option>
+                <option value="2012">2012</option>
+                <option value="2011">2011</option>
+                <option value="2010">2010</option>
+                <option value="2009">2009</option>
+                <option value="2008">2008</option>
+                <option value="2007">2007</option>
+                <option value="2006">2006</option>
+                <option value="2005">2005</option>
+                <option value="2004">2004</option>
+                <option value="2003">2003</option>
+                <option value="2002">2002</option>
+                <option value="2001">2001</option>
+                <option value="2000">2000</option>
+                <option value="1999">1999</option>
+                <option value="1998">1998</option>
+                <option value="1997">1997</option>
+                <option value="1996">1996</option>
+                <option value="1995">1995</option>
+                <option value="1994">1994</option>
+                <option value="1993">1993</option>
+                <option value="1992">1992</option>
+                <option value="1991">1991</option>
+                <option value="1990">1990</option>
+                <option value="1989">1989</option>
+                <option value="1988">1988</option>
+                <option value="1987">1987</option>
+                <option value="1986">1986</option>
+                <option value="1985">1985</option>
+                <option value="1984">1984</option>
+                <option value="1983">1983</option>
+                <option value="1982">1982</option>
+                <option value="1981">1981</option>
+                <option value="1980">1980</option>
+                <option value="1979">1979</option>
+                <option value="1978">1978</option>
+                <option value="1977">1977</option>
+                <option value="1976">1976</option>
+                <option value="1975">1975</option>
+                <option value="1974">1974</option>
+                <option value="1973">1973</option>
+                <option value="1972">1972</option>
+                <option value="1971">1971</option>
+                <option value="1970">1970</option>
+                <option value="1969">1969</option>
+                <option value="1968">1968</option>
+                <option value="1967">1967</option>
+                <option value="1966">1966</option>
+                <option value="1965">1965</option>
+                <option value="1964">1964</option>
+                <option value="1963">1963</option>
+                <option value="1962">1962</option>
+                <option value="1961">1961</option>
+                <option value="1960">1960</option>
+                <option value="1959">1959</option>
+                <option value="1958">1958</option>
+                <option value="1957">1957</option>
+                <option value="1956">1956</option>
+                <option value="1955">1955</option>
+                <option value="1954">1954</option>
+                <option value="1953">1953</option>
+                <option value="1952">1952</option>
+                <option value="1951">1951</option>
+                <option value="1950">1950</option>
+                <option value="1949">1949</option>
+                <option value="1948">1948</option>
+                <option value="1947">1947</option>
+                <option value="1946">1946</option>
+                <option value="1945">1945</option>
+                <option value="1944">1944</option>
+                <option value="1943">1943</option>
+                <option value="1942">1942</option>
+                <option value="1941">1941</option>
+                <option value="1940">1940</option>
+                <option value="1939">1939</option>
+                <option value="1938">1938</option>
+                <option value="1937">1937</option>
+                <option value="1936">1936</option>
+                <option value="1935">1935</option>
+              </select>
+            </div>  <br><br> 
+
+            
+            <span class="leftSide">
+              <strong>3</strong>   
+            </span>
+
+            <!--EMPRESA3-->
+            <span class="leftSide">
+              <strong>Empresa</strong>:   
+              <span class="red">*</span>
+            </span>
+            <input type="text" id="empresa_3" name="empresa_3" class="rightSide"> <br><br>
+
+            <!--TIPO EMPRESA3--> 
+            <span class="leftSide">
+              <strong>Tipo de empresa</strong>:   
+              <span class="red">*</span>
+            </span>
+
+            <div class="rightSide">
+              <select id="tipo_empresa_3" name="tipo_empresa_3">
+                <option value="0" selected="">Seleccione el tipo de empresa</option>
+                <option value="0" selected="">Seleccione el tipo de empresa</option>
+                <option value="Agro">Agro</option>
+                <option value="Automotriz">Automotriz</option>
+                <option value="Consultora">Consultora</option>
+                <option value="Consumo Masivo">Consumo Masivo</option>
+                <option value="Financiero / Bancario / Seguros">Financiero / Bancario / Seguros</option>
+                <option value="Holding - otras actividades">Holding - otras actividades</option>
+                <option value="Industrial">Industrial</option>
+                <option value="Petrolera / Sector Energético">Petrolera / Sector Energético</option>
+                <option value="Salud / Laboratorio / Farmacéutica">Salud / Laboratorio / Farmacéutica</option>
+                <option value="Servicios / Distribución / Comercialización">Servicios / Distribución / Comercialización</option>
+                <option value="Sistemas / Tecnología">Sistemas / Tecnología</option>
+                <option value="Telecomunicaciones">Telecomunicaciones</option>
+                <option value="otra">Otra</option>
+              </select>
+            </div>  <br><br> 
+
+            <!--ACTIVIDAD-->
+            <span class="leftSide">
+              <strong>Puesto / Tarea</strong>:   
+              <span class="red">*</span>
+            </span>
+            <input type="text" id="puesto_3" name="puesto_3" class="rightSide"> <br><br>
+
+            <!--AREA-->
+            <span class="leftSide">
+              <strong>Area del puesto</strong>:   
+              <span class="red">*</span>
+            </span>
+
+            <div class="rightSide">
+              <select id="area_puesto_3" name="area_puesto_3">
+                <option value="0" selected="">Seleccione el area del puesto</option>
+                <option value="Administración">Administración</option>
+                <option value="Gerencia General">Gerencia General</option>
+                <option value="Investigación y Desarrollo">Investigación y Desarrollo</option>
+                <option value="Marketing - Relaciones Institucionales">Marketing - Relaciones Institucionales</option>
+                <option value="Producción">Producción</option>
+                <option value="Recursos Humanos">Recursos Humanos</option>
+                <option value="Salud - Servicios Médicos">Salud - Servicios Médicos</option>
+                <option value="Sistemas">Sistemas</option>
+                <option value="Ventas - Comercial">Ventas - Comercial</option>
+                <option value="otra">Otra </option>
+              </select>
+            </div>  <br><br> 
+
+            <!--SENIORITY-->
+            <span class="leftSide">
+              <strong>Seniority</strong>:   
+              <span class="red">*</span>
+            </span>
+
+            <div class="rightSide">
+              <select name="seniority_3">
+                <option value="0" selected="">Seleccione el señority</option>
+                <option value="director">Director</option>
+                <option value="gerente">Gerente</option>
+                <option value="senior">Senior</option>
+                <option value="semi-senior">Semi-senior</option>
+                <option value="junior">Junior</option>
+              </select>
+            </div>  <br><br> 
+
+            <!--DESDE-->
+            <span class="leftSide">
+              <strong>Desde</strong>:   
+              <span class="red">*</span>
+            </span>
+
+            <div class="rightSide">
+              <select name="mesdesde3">
+                <option value="1" selected="">Enero</option>
+                <option value="2">Febrero</option>
+                <option value="3">Marzo</option>
+                <option value="4">Abril</option>
+                <option value="5">Mayo</option>
+                <option value="6">Junio</option>
+                <option value="7">Julio</option>
+                <option value="8">Agosto</option>
+                <option value="9">Septiembre</option>
+                <option value="10">Octubre</option>
+                <option value="11">Noviembre</option>
+                <option value="12">Diciembre</option>
+              </select>
+
+              <select name="añodesde3">
+                <option value="2013" selected="">2013</option>
+                <option value="2012">2012</option>
+                <option value="2011">2011</option>
+                <option value="2010">2010</option>
+                <option value="2009">2009</option>
+                <option value="2008">2008</option>
+                <option value="2007">2007</option>
+                <option value="2006">2006</option>
+                <option value="2005">2005</option>
+                <option value="2004">2004</option>
+                <option value="2003">2003</option>
+                <option value="2002">2002</option>
+                <option value="2001">2001</option>
+                <option value="2000">2000</option>
+                <option value="1999">1999</option>
+                <option value="1998">1998</option>
+                <option value="1997">1997</option>
+                <option value="1996">1996</option>
+                <option value="1995">1995</option>
+                <option value="1994">1994</option>
+                <option value="1993">1993</option>
+                <option value="1992">1992</option>
+                <option value="1991">1991</option>
+                <option value="1990">1990</option>
+                <option value="1989">1989</option>
+                <option value="1988">1988</option>
+                <option value="1987">1987</option>
+                <option value="1986">1986</option>
+                <option value="1985">1985</option>
+                <option value="1984">1984</option>
+                <option value="1983">1983</option>
+                <option value="1982">1982</option>
+                <option value="1981">1981</option>
+                <option value="1980">1980</option>
+                <option value="1979">1979</option>
+                <option value="1978">1978</option>
+                <option value="1977">1977</option>
+                <option value="1976">1976</option>
+                <option value="1975">1975</option>
+                <option value="1974">1974</option>
+                <option value="1973">1973</option>
+                <option value="1972">1972</option>
+                <option value="1971">1971</option>
+                <option value="1970">1970</option>
+                <option value="1969">1969</option>
+                <option value="1968">1968</option>
+                <option value="1967">1967</option>
+                <option value="1966">1966</option>
+                <option value="1965">1965</option>
+                <option value="1964">1964</option>
+                <option value="1963">1963</option>
+                <option value="1962">1962</option>
+                <option value="1961">1961</option>
+                <option value="1960">1960</option>
+                <option value="1959">1959</option>
+                <option value="1958">1958</option>
+                <option value="1957">1957</option>
+                <option value="1956">1956</option>
+                <option value="1955">1955</option>
+                <option value="1954">1954</option>
+                <option value="1953">1953</option>
+                <option value="1952">1952</option>
+                <option value="1951">1951</option>
+                <option value="1950">1950</option>
+                <option value="1949">1949</option>
+                <option value="1948">1948</option>
+                <option value="1947">1947</option>
+                <option value="1946">1946</option>
+                <option value="1945">1945</option>
+                <option value="1944">1944</option>
+                <option value="1943">1943</option>
+                <option value="1942">1942</option>
+                <option value="1941">1941</option>
+                <option value="1940">1940</option>
+                <option value="1939">1939</option>
+                <option value="1938">1938</option>
+                <option value="1937">1937</option>
+                <option value="1936">1936</option>
+                <option value="1935">1935</option>
+              </select>
+            </div>  <br><br> 
+
+            <!--HASTA-->
+            <span class="leftSide">
+              <strong>Hasta</strong>:   
+              <span class="red">*</span>
+            </span>
+
+            <div class="rightSide">
+              <select name="meshasta3">
+                <option value="1" selected="">Enero</option>
+                <option value="2">Febrero</option>
+                <option value="3">Marzo</option>
+                <option value="4">Abril</option>
+                <option value="5">Mayo</option>
+                <option value="6">Junio</option>
+                <option value="7">Julio</option>
+                <option value="8">Agosto</option>
+                <option value="9">Septiembre</option>
+                <option value="10">Octubre</option>
+                <option value="11">Noviembre</option>
+                <option value="12">Diciembre</option>
+              </select>
+
+              <select name="añohasta3">
+                <option value="2014" selected="">2014</option>
+                <option value="2013">2013</option>
+                <option value="2012">2012</option>
+                <option value="2011">2011</option>
+                <option value="2010">2010</option>
+                <option value="2009">2009</option>
+                <option value="2008">2008</option>
+                <option value="2007">2007</option>
+                <option value="2006">2006</option>
+                <option value="2005">2005</option>
+                <option value="2004">2004</option>
+                <option value="2003">2003</option>
+                <option value="2002">2002</option>
+                <option value="2001">2001</option>
+                <option value="2000">2000</option>
+                <option value="1999">1999</option>
+                <option value="1998">1998</option>
+                <option value="1997">1997</option>
+                <option value="1996">1996</option>
+                <option value="1995">1995</option>
+                <option value="1994">1994</option>
+                <option value="1993">1993</option>
+                <option value="1992">1992</option>
+                <option value="1991">1991</option>
+                <option value="1990">1990</option>
+                <option value="1989">1989</option>
+                <option value="1988">1988</option>
+                <option value="1987">1987</option>
+                <option value="1986">1986</option>
+                <option value="1985">1985</option>
+                <option value="1984">1984</option>
+                <option value="1983">1983</option>
+                <option value="1982">1982</option>
+                <option value="1981">1981</option>
+                <option value="1980">1980</option>
+                <option value="1979">1979</option>
+                <option value="1978">1978</option>
+                <option value="1977">1977</option>
+                <option value="1976">1976</option>
+                <option value="1975">1975</option>
+                <option value="1974">1974</option>
+                <option value="1973">1973</option>
+                <option value="1972">1972</option>
+                <option value="1971">1971</option>
+                <option value="1970">1970</option>
+                <option value="1969">1969</option>
+                <option value="1968">1968</option>
+                <option value="1967">1967</option>
+                <option value="1966">1966</option>
+                <option value="1965">1965</option>
+                <option value="1964">1964</option>
+                <option value="1963">1963</option>
+                <option value="1962">1962</option>
+                <option value="1961">1961</option>
+                <option value="1960">1960</option>
+                <option value="1959">1959</option>
+                <option value="1958">1958</option>
+                <option value="1957">1957</option>
+                <option value="1956">1956</option>
+                <option value="1955">1955</option>
+                <option value="1954">1954</option>
+                <option value="1953">1953</option>
+                <option value="1952">1952</option>
+                <option value="1951">1951</option>
+                <option value="1950">1950</option>
+                <option value="1949">1949</option>
+                <option value="1948">1948</option>
+                <option value="1947">1947</option>
+                <option value="1946">1946</option>
+                <option value="1945">1945</option>
+                <option value="1944">1944</option>
+                <option value="1943">1943</option>
+                <option value="1942">1942</option>
+                <option value="1941">1941</option>
+                <option value="1940">1940</option>
+                <option value="1939">1939</option>
+                <option value="1938">1938</option>
+                <option value="1937">1937</option>
+                <option value="1936">1936</option>
+                <option value="1935">1935</option>
+              </select>
+            </div>  <br><br> 
+
+            <table cellspacing="10">
+              <thead>
+                <tr>
+                  <th></th><th>Nativo</th><th>Bilingüe</th><th>Avanzado</th>
+                  <th>Intermedio</th><th>Basico</th><th>Nada</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> Español</td>
+                  <td><div align="center"><input type="radio" name="español" value="españolNativo"></div></td>
+                  <td><div align="center"><input type="radio" name="español" value="españolBilingue"></div></td>
+                  <td><div align="center"><input type="radio" name="español" value="españolAvanzado"></div></td>
+                  <td><div align="center"><input type="radio" name="español" value="españolIntermedio"></div></td>
+                  <td><div align="center"><input type="radio" name="español" value="españolBasico"></div></td>
+                  <td><div align="center"><input type="radio" name="español" value="españolNada"></div></td>
+                </tr>
+                <tr>
+                  <td> Ingles</td>
+                  <td><div align="center"><input type="radio" name="ingles" value="inglesNativo"></div></td>
+                  <td><div align="center"><input type="radio" name="ingles" value="inglesBilingue"></div></td>
+                  <td><div align="center"><input type="radio" name="ingles" value="inglesAvanzado"></div></td>
+                  <td><div align="center"><input type="radio" name="ingles" value="inglesIntermedio"></div></td>
+                  <td><div align="center"><input type="radio" name="ingles" value="inglesBasico"></div></td>
+                  <td><div align="center"><input type="radio" name="ingles" value="inglesNada"></div></td>
+                </tr>
+                <tr>
+                  <td> Portugues</td>
+                  <td><div align="center"><input type="radio" name="portugues" value="portuguesNativo"></div></td>
+                  <td><div align="center"><input type="radio" name="portugues" value="portuguesBilingue"></div></td>
+                  <td><div align="center"><input type="radio" name="portugues" value="portuguesAvanzado"></div></td>
+                  <td><div align="center"><input type="radio" name="portugues" value="portuguesIntermedio"></div></td>
+                  <td><div align="center"><input type="radio" name="portugues" value="portuguesBasico"></div></td>
+                  <td><div align="center"><input type="radio" name="portugues" value="portuguesNada"></div></td>
+                </tr>
+                <tr>
+                  <td> Aleman</td>
+                  <td><div align="center"><input type="radio" name="aleman" value="alemanNativo"></div></td>
+                  <td><div align="center"><input type="radio" name="aleman" value="alemanBilingue"></div></td>
+                  <td><div align="center"><input type="radio" name="aleman" value="alemanAvanzado"></div></td>
+                  <td><div align="center"><input type="radio" name="aleman" value="alemanIntermedio"></div></td>
+                  <td><div align="center"><input type="radio" name="aleman" value="alemanBasico"></div></td>
+                  <td><div align="center"><input type="radio" name="aleman" value="alemanNada"></div></td>
+                </tr>
+                <tr>
+                  <td> Italiano</td>
+                  <td><div align="center"><input type="radio" name="italiano" value="italianoNativo"></div></td>
+                  <td><div align="center"><input type="radio" name="italiano" value="italianoBilingue"></div></td>
+                  <td><div align="center"><input type="radio" name="italiano" value="italianoAvanzado"></div></td>
+                  <td><div align="center"><input type="radio" name="italiano" value="italianoIntermedio"></div></td>
+                  <td><div align="center"><input type="radio" name="italiano" value="italianoBasico"></div></td>
+                  <td><div align="center"><input type="radio" name="italiano" value="italianoNada"></div></td>
+                </tr>
+
+              </tbody>
+            </table>
+          <!--FIN INSCRIPTION-->
+
+            <div align="center">
+              <table cellspacing="10">
+                <form action="#" enctype="multipart/form-data" method="post">
+                  <ul>
+                    <li>
+                      <label for="name">Name:</label>
+                      <input type="text" name="name" id="name" multiple>
+                    </li>
+
+                    <li>
+                      <label for="file_upload">File:</label>
+                      <input type="file" name="file_upload" id="file_upload" multiple>
+                    </li>
+
+                    <li><input class="button green" type="submit" name="submit" value="Submit Content"></li>
+                  </ul>
+                </form>
+              </table>
+            </div>
+
+            <div align="center">
+              <input type="submit" value="Enviar" class="button" onclick="sendInformation_encontramas()">
+            </div>        
+
+          </div> 
+
+          <!--FIN CONTENT-->
+        </div>
+      </div>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/InscriptionBehavior2.js"></script>
+    
+
+    <div id="footer" class="box centered" >
+        <p>
+          Copyright 2013  AArEII    <br />
+            Todos los derechos reservados.
+        </p>
+    </div>
+
+</body>
