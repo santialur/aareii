@@ -5,7 +5,7 @@
   <link   rel=  "stylesheet"    href="../css/styles.css" type="text/css" />
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script type="text/javascript" src="../js/InscriptionBehavior2.js"></script>
+  <script type="text/javascript" src="../js/InscriptionBehavior2.js"></script>
 
 </head>
 
@@ -66,8 +66,8 @@
           </div>
 
           <div id="buttons" style="text-align: center">
-            <input type="button" id="verify_button" value="Verificar usuario" class="button" onclick="checkUser()" style="margin-right:3%">
-            <input type="button" id="create_button" value="Crear nuevo" class="button" onclick="createNewUser()" style="margin-left:3%">
+            <input type="button" id="verify_button" value="Verificar usuario" class="button" onclick="checkUser()"      style="margin-right:  3%">
+            <input type="button" id="create_button" value="Crear nuevo"       class="button" onclick="createNewUser()"  style="margin-left:   3%">
           </div>
 
           <div id="formFields" style="display:none">
@@ -128,59 +128,16 @@
             </span>  
 
             <div class="rightSide">
-              <select id="fecha_nacimiento_dia" name="fecha_nacimiento_dia">
-                <option value="0" selected>Dia</option>
-                <option value="01">01</option>
-                <option value="02">02</option>
-                <option value="03">03</option>
-                <option value="04">04</option>
-                <option value="05">05</option>
-                <option value="06">06</option>
-                <option value="07">07</option>
-                <option value="08">08</option>
-                <option value="09">09</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-                <option value="16">16</option>
-                <option value="17">17</option>
-                <option value="18">18</option>
-                <option value="19">19</option>
-                <option value="20">20</option>
-                <option value="21">21</option>
-                <option value="22">22</option>
-                <option value="23">23</option>
-                <option value="24">24</option>
-                <option value="25">25</option>
-                <option value="26">26</option>
-                <option value="27">27</option>
-                <option value="28">28</option>
-                <option value="29">29</option>
-                <option value="30">30</option>
-                <option value="31">31</option>
-              </select>
-              <select id="fecha_nacimiento_mes" name="fecha_nacimiento_mes">
-                <option value="0" selected>Mes</option>
-                <option value="01">01</option>
-                <option value="02">02</option>
-                <option value="03">03</option>
-                <option value="04">04</option>
-                <option value="05">05</option>
-                <option value="06">06</option>
-                <option value="07">07</option>
-                <option value="08">08</option>
-                <option value="09">09</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-              </select>
+              <select id="fecha_nacimiento_dia" name="fecha_nacimiento_dia"></select>
+              <select id="fecha_nacimiento_mes" name="fecha_nacimiento_mes"></select>
+              
+              <script>
+                $(fillBirthDate);
+              </script>
 
               <select id="fecha_nacimiento_anio" name="fecha_nacimiento_anio">
                 <script>
-                    fillYears($('select[name=añohasta3]'),1997,1919);
+                    fillYears($('select[name=fecha_nacimiento_anio]'),1997,1919);
                 </script> 
               </select>
             </div>  <br><br>
@@ -309,6 +266,7 @@
             <input type="submit" value="Enviar" class="button" onclick="sendInformation()">
           </div>
 
+          <!-- --------------------------------------------------------------------------------------- -->
 
           <div id="encontramasInscription" style="display">
 
@@ -358,6 +316,8 @@
 
             <!--EXPERIENCIA LABORAL--> 
             <h3> Experiencia Laboral </h3> <br><br>
+
+            <!-- --------------------------------------------------------------------------------------- -->
 
             <!---- NUMERO 1 ---->
             <strong>1</strong>  
@@ -435,7 +395,7 @@
 
               <select name="añodesde1">
                 <script>
-                    fillYears($('select[name=añodesde1]'),2013,1934);
+                    fillYears($('select[name=añodesde1]'),2014,1934);
                 </script> 
               </select>
             </div>  <br><br> 
@@ -455,10 +415,12 @@
 
               <select name="añohasta1">
                 <script>
-                    fillYears($('select[name=añohasta1]'),2013,1934);
+                    fillYears($('select[name=añohasta1]'),2014,1934);
                 </script> 
               </select>
             </div>  <br><br> 
+
+            <!-- --------------------------------------------------------------------------------------- -->
 
             <!---- NUMERO 2 ---->
             <br>
@@ -536,7 +498,7 @@
 
               <select name="añodesde2">
                 <script>
-                    fillYears($('select[name=añodesde2]'),2013,1934);
+                    fillYears($('select[name=añodesde2]'),2014,1934);
                 </script> 
               </select>
             </div>  <br><br> 
@@ -556,7 +518,7 @@
 
               <select name="añohasta2">
                 <script>
-                    fillYears($('select[name=añohasta2]'),2013,1934);
+                    fillYears($('select[name=añohasta2]'),2014,1934);
                 </script> 
               </select>
             </div>  <br><br> 
@@ -565,6 +527,8 @@
             <br>
             <strong>3</strong>
             <hr><br> 
+
+            <!-- --------------------------------------------------------------------------------------- -->
 
             <!--EMPRESA3-->
             <span class="leftSide">
@@ -637,7 +601,7 @@
 
               <select name="añodesde3">
                 <script>
-                    fillYears($('select[name=añodesde3]'),2013,1934);
+                    fillYears($('select[name=añodesde3]'),2014,1934);
                 </script>                
               </select>
             </div>  <br><br> 
@@ -657,7 +621,7 @@
 
               <select name="añohasta3">
                 <script>
-                    fillYears($('select[name=añohasta3]'),2013,1934);
+                    fillYears($('select[name=añohasta3]'),2014,1934);
                 </script> 
               </select>
             </div>  <br><br><hr>
@@ -672,50 +636,49 @@
               <tbody>
                 <tr>
                   <td> Español</td>
-                  <td><div align="center"><input type="radio" name="español" value="españolNativo"></div></td>
-                  <td><div align="center"><input type="radio" name="español" value="españolBilingue"></div></td>
-                  <td><div align="center"><input type="radio" name="español" value="españolAvanzado"></div></td>
-                  <td><div align="center"><input type="radio" name="español" value="españolIntermedio"></div></td>
-                  <td><div align="center"><input type="radio" name="español" value="españolBasico"></div></td>
-                  <td><div align="center"><input type="radio" name="español" value="españolNada"></div></td>
+                  <td><div align="center"><input type="radio" name="español" value="españolNativo">         </div></td>
+                  <td><div align="center"><input type="radio" name="español" value="españolBilingue">       </div></td>
+                  <td><div align="center"><input type="radio" name="español" value="españolAvanzado">       </div></td>
+                  <td><div align="center"><input type="radio" name="español" value="españolIntermedio">     </div></td>
+                  <td><div align="center"><input type="radio" name="español" value="españolBasico">         </div></td>
+                  <td><div align="center"><input type="radio" name="español" value="españolNada">           </div></td>
                 </tr>
                 <tr>
                   <td> Ingles</td>
-                  <td><div align="center"><input type="radio" name="ingles" value="inglesNativo"></div></td>
-                  <td><div align="center"><input type="radio" name="ingles" value="inglesBilingue"></div></td>
-                  <td><div align="center"><input type="radio" name="ingles" value="inglesAvanzado"></div></td>
-                  <td><div align="center"><input type="radio" name="ingles" value="inglesIntermedio"></div></td>
-                  <td><div align="center"><input type="radio" name="ingles" value="inglesBasico"></div></td>
-                  <td><div align="center"><input type="radio" name="ingles" value="inglesNada"></div></td>
+                  <td><div align="center"><input type="radio" name="ingles" value="inglesNativo">           </div></td>
+                  <td><div align="center"><input type="radio" name="ingles" value="inglesBilingue">         </div></td>
+                  <td><div align="center"><input type="radio" name="ingles" value="inglesAvanzado">         </div></td>
+                  <td><div align="center"><input type="radio" name="ingles" value="inglesIntermedio">       </div></td>
+                  <td><div align="center"><input type="radio" name="ingles" value="inglesBasico">           </div></td>
+                  <td><div align="center"><input type="radio" name="ingles" value="inglesNada">             </div></td>
                 </tr>
                 <tr>
                   <td> Portugues</td>
-                  <td><div align="center"><input type="radio" name="portugues" value="portuguesNativo"></div></td>
-                  <td><div align="center"><input type="radio" name="portugues" value="portuguesBilingue"></div></td>
-                  <td><div align="center"><input type="radio" name="portugues" value="portuguesAvanzado"></div></td>
-                  <td><div align="center"><input type="radio" name="portugues" value="portuguesIntermedio"></div></td>
-                  <td><div align="center"><input type="radio" name="portugues" value="portuguesBasico"></div></td>
-                  <td><div align="center"><input type="radio" name="portugues" value="portuguesNada"></div></td>
+                  <td><div align="center"><input type="radio" name="portugues" value="portuguesNativo">     </div></td>
+                  <td><div align="center"><input type="radio" name="portugues" value="portuguesBilingue">   </div></td>
+                  <td><div align="center"><input type="radio" name="portugues" value="portuguesAvanzado">   </div></td>
+                  <td><div align="center"><input type="radio" name="portugues" value="portuguesIntermedio"> </div></td>
+                  <td><div align="center"><input type="radio" name="portugues" value="portuguesBasico">     </div></td>
+                  <td><div align="center"><input type="radio" name="portugues" value="portuguesNada">       </div></td>
                 </tr>
                 <tr>
                   <td> Aleman</td>
-                  <td><div align="center"><input type="radio" name="aleman" value="alemanNativo"></div></td>
-                  <td><div align="center"><input type="radio" name="aleman" value="alemanBilingue"></div></td>
-                  <td><div align="center"><input type="radio" name="aleman" value="alemanAvanzado"></div></td>
-                  <td><div align="center"><input type="radio" name="aleman" value="alemanIntermedio"></div></td>
-                  <td><div align="center"><input type="radio" name="aleman" value="alemanBasico"></div></td>
-                  <td><div align="center"><input type="radio" name="aleman" value="alemanNada"></div></td>
+                  <td><div align="center"><input type="radio" name="aleman" value="alemanNativo">           </div></td>
+                  <td><div align="center"><input type="radio" name="aleman" value="alemanBilingue">         </div></td>
+                  <td><div align="center"><input type="radio" name="aleman" value="alemanAvanzado">         </div></td>
+                  <td><div align="center"><input type="radio" name="aleman" value="alemanIntermedio">       </div></td>
+                  <td><div align="center"><input type="radio" name="aleman" value="alemanBasico">           </div></td>
+                  <td><div align="center"><input type="radio" name="aleman" value="alemanNada">             </div></td>
                 </tr>
                 <tr>
                   <td> Italiano</td>
-                  <td><div align="center"><input type="radio" name="italiano" value="italianoNativo"></div></td>
-                  <td><div align="center"><input type="radio" name="italiano" value="italianoBilingue"></div></td>
-                  <td><div align="center"><input type="radio" name="italiano" value="italianoAvanzado"></div></td>
-                  <td><div align="center"><input type="radio" name="italiano" value="italianoIntermedio"></div></td>
-                  <td><div align="center"><input type="radio" name="italiano" value="italianoBasico"></div></td>
-                  <td><div align="center"><input type="radio" name="italiano" value="italianoNada"></div></td>
+                  <td><div align="center"><input type="radio" name="italiano" value="italianoNativo">       </div></td>
+                  <td><div align="center"><input type="radio" name="italiano" value="italianoBilingue">     </div></td>
+                  <td><div align="center"><input type="radio" name="italiano" value="italianoAvanzado">     </div></td>
+                  <td><div align="center"><input type="radio" name="italiano" value="italianoIntermedio">   </div></td>
+                  <td><div align="center"><input type="radio" name="italiano" value="italianoBasico">       </div></td>
+                  <td><div align="center"><input type="radio" name="italiano" value="italianoNada">         </div></td>
                 </tr>
-
               </tbody>
             </table>    <br>
 
@@ -761,3 +724,4 @@
     </div>
 
 </body>
+</html>

@@ -476,8 +476,7 @@ function fillYears(target, x, y)
   for(var i=x; i>y; i--)
       aux = aux + '<option value="'+ parseFloat(i) +'">'+ parseFloat(i) +'</option>';
 
-  $(target).html(''+
-    '<option value="2014" selected="">2014</option>' + aux);
+  $(target).html(''+aux);
 }
 
 function fillCountries(target)
@@ -508,6 +507,7 @@ function fillStates(target)
 {
   $(target).html(''+
     '<option value="0" selected>Seleccione su provincia      </option>'+
+    '<option value="No Aplica">          No Aplica           </option>'+
     '<option value="Buenos Aires">       Buenos Aires        </option>'+
     '<option value="Córdoba">            Córdoba             </option>'+
     '<option value="Capital Federal">    Capital Federal     </option>'+
@@ -549,6 +549,7 @@ function fillUniversities(target)
 {
   $(target).html(''+
     '<option value="0"> Seleccione Universidad </option>'+
+    '<option value="No Aplica">                                                          id="cfg2048">No Aplica                                                          </option>'+
     '<option value="Instituto Tecnológico De Buenos Aires"                               id="cbf2049">Instituto Tecnológico De Buenos Aires                              </option>'+
     '<option value="Universidad Argentina De La Empresa"                                 id="cbf2050">Universidad Argentina De La Empresa                                </option>'+
     '<option value="Universidad Austral"                                                 id="cbf2051">Universidad Austral                                                </option>'+
@@ -665,4 +666,34 @@ function fillAreaType(target)
     '<option value="Sistemas">                               Sistemas                                </option>'+
     '<option value="Ventas - Comercial">                     Ventas - Comercial                      </option>'+
     '<option value="otra">                                   Otra                                    </option>');
-};
+}
+
+function fillBirthDate()
+{
+  for (i = 1; i < 13; i++)
+  {
+    $('#fecha_nacimiento_mes').append($('<option />').val(i).html(i));
+  }
+  updateNumberOfDays(); 
+
+  $('#fecha_nacimiento_anio, #fecha_nacimiento_mes').change(function(){
+    updateNumberOfDays(); 
+  });
+}
+
+function updateNumberOfDays()
+{
+  $('#fecha_nacimiento_dia').html('');
+  month =$('#fecha_nacimiento_mes').val();
+  year  =$('#fecha_nacimiento_anio').val();
+  days  =daysInMonth(month, year);
+
+  for(i=1; i < days+1 ; i++){
+    $('#fecha_nacimiento_dia').append($('<option />').val(i).html(i));
+  }
+}
+
+function daysInMonth(month, year)
+{
+    return new Date(year, month, 0).getDate();
+}
