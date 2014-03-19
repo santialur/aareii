@@ -75,14 +75,14 @@ body{
 	background-image:       url(../features/images/texture1.png);
 }
 
-#wrapper{
-	box-shadow: 			5px 5px 35px #000000;
+.wrapperMedium{
+	box-shadow: 			5px 5px 30px #000000;
 	background-color: 		#CCCCCC;
 	margin:					auto; 
 	min-height: 			100%;
 	height:					auto !important;
 	height: 				100%;
-	width:					950px; 
+	width:					75%; 
 }
 
 #content{
