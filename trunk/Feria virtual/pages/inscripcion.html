@@ -722,7 +722,7 @@
                                   <td valign="top">&nbsp;</td>
                                   <td>&nbsp;</td>
                                   <td><span>
-                                    <select name="postgrado">
+                                    <select id="postgrado" name="postgrado">
                                       <option value="0" selected="">Seleccione su Postgrado</option>
                                       <option value="Doctorado">Doctorado</option>
                                       <option value="Master / Especialización">Master / Especialización</option>
@@ -738,7 +738,7 @@
                                   <td>&nbsp;</td>
                                   <td>
                                     <div align="left"><span>
-                                      <select name="estado_postgrado">
+                                      <select id="estado_postgrado" name="estado_postgrado">
                                         <option value="0" selected="">Seleccione su nivel de postgrado</option>
                                         <option value="Completo">Completo</option>
                                         <option value="En curso">En curso</option>
@@ -753,7 +753,7 @@
                                   <td valign="top">&nbsp;</td>
                                   <td>&nbsp;</td>
                                   <td><span>
-                                    <input name="titulo" type="text">
+                                    <input id="titulo" name="titulo" type="text">
                                   </span></td>
                                   <td valign="middle">&nbsp;</td>
                                 </tr>
@@ -762,7 +762,7 @@
                                   <td valign="top">&nbsp;</td>
                                   <td>&nbsp;</td>
                                   <td><span>
-                                    <input name="institucion" type="text">
+                                    <input id="institucion_postgrado" name="institucion_postgrado" type="text">
                                   </span></td>
                                   <td valign="middle">&nbsp;</td>
                                 </tr>
@@ -1802,9 +1802,28 @@
 
                                 </tbody>
                               </table>
-                            </div>    
+                            </div>
                             <div align="center">
-                              <input type="submit" value="Enviar" class="button" onclick="sendInformation()">
+                              <table cellspacing="10">
+                                <form action="#" enctype="multipart/form-data" method="post">
+                                  <ul>
+                                    <li>
+                                      <label for="name">Name:</label>
+                                      <input type="text" name="name" id="name" multiple>
+                                    </li>
+
+                                    <li>
+                                      <label for="file_upload">File:</label>
+                                      <input type="file" name="file_upload" id="file_upload" multiple>
+                                    </li>
+
+                                    <li><input class="button green" type="submit" name="submit" value="Submit Content"></li>
+                                  </ul>
+                                </form>
+                              </table>
+                            </div>
+                            <div align="center">
+                              <input type="submit" value="Enviar" class="button" onclick="sendInformation_encontramas()">
                             </div>                           
                             <br>
                           </div>
@@ -1822,7 +1841,7 @@
   </tbody>
 </table>
 
-            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
             <script type="text/javascript" src="../js/InscriptionBehavior.js"></script>
 </center>
