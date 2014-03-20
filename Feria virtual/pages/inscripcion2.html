@@ -70,7 +70,7 @@
             <input type="button" id="create_button" value="Crear nuevo"       class="button" onclick="createNewUser()"  style="margin-left:   3%">
           </div>
 
-          <div id="formFields" style="display:none">
+          <div id="personalInformation" style="display:none">
 
             <!--NOMBRE--> 
             <span class="leftSide">
@@ -142,6 +142,20 @@
               </select>
             </div>  <br><br>
 
+            <!--ESTADO CIVIL-->
+            <span class="leftSide">
+              <strong>Estado Civil</strong>:  
+              <span class="red">*</span> 
+            </span>
+            
+            <div class="rightSide">
+              <select id="estado_civil" name="estado_civil">
+                <script>
+                    fillCivilStatus($('#estado_civil'));
+                </script>
+              </select>
+            </div>  <br><br>
+
             <!--PAIS-->
             <span class="leftSide">
               <strong>País</strong>:   
@@ -177,12 +191,11 @@
             </span>
             <input type="text" id="lugar_de_residencia_ciudad" name="lugar_de_residencia_ciudad" class="rightSide"> <br><br>
 
-            <!--DIRECCION-->
-            <span class="leftSide">
-              <strong>Dirección</strong>:   
-              <span class="red">*</span>
-            </span>
-            <input type="text" id="direccion_de_residencia" name="direccion_de_residencia" class="rightSide"> <br><br>
+          </div>
+            <!-- --------------------------------------------------------------------------------------- -->
+
+          <div id="academicInformation">
+            <!--DATOS ACADEMICOS-->
 
             <!--UNIVERSIDAD-->
             <span class="leftSide">
@@ -227,49 +240,94 @@
             <!--MATERIAS APROBADAS-->
             <span class="leftSide">
               <strong>Numero de materias aprobadas</strong>: 
-              <span class="red">*</span>  
             </span>
             <input type="text" id="numero_materias" name="numero_materias" class="rightSide"> <br><br>
 
-            <!--TRABAJO-->
+            <!--MATERIAS TOTALES-->
             <span class="leftSide">
-              <strong>Trabaja?</strong>:
-              <span class="red">*</span>   
+              <strong>Numero de materias en total</strong>: 
             </span>
-            
+            <input type="text" id="numero_materias_total" name="numero_materias_total" class="rightSide"> <br><br>
+
+            <!--GRADO--> 
+            <span class="leftSide">
+              <strong>Estado de Carrera</strong>:   
+              <span class="red">*</span>
+            </span>
+
             <div class="rightSide">
-              <select id="trabaja" name="trabaja">
-                <option value="0" selected> </option>
-                <option value="Si">Si       </option>
-                <option value="No">No       </option>
+              <select id="estado_carrera" name="estado_carrera">
+                <option value="0" selected="">                                      </option>
+                <option value="Completo">       Completa                            </option>
+                <option value="En curso">       En curso                            </option>
+                <option value="Incompleto">     Incompleta                          </option>
               </select>
             </div>  <br><br>
 
-            <!--ESTADO CIVIL-->
+            <!--PROMEDIO-->
             <span class="leftSide">
-              <strong>Estado Civil</strong>:  
-              <span class="red">*</span> 
+              <strong>Promedio General</strong>: 
+              <span class="red">*</span>
             </span>
+            <input type="text" id="promedio" name="promedio" class="rightSide"> <br><br>    
+
+            <!--IDIOMAS-->
+            <table cellspacing="10" style="font-size: 85%">
+              <thead>
+                <tr>
+                  <th></th><th>Nativo</th><th>Bilingüe</th><th>Avanzado</th>
+                  <th>Intermedio</th><th>Basico</th><th>Nada</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> Español</td>
+                  <td><div align="center"><input type="radio" name="español" value="españolNativo">         </div></td>
+                  <td><div align="center"><input type="radio" name="español" value="españolBilingue">       </div></td>
+                  <td><div align="center"><input type="radio" name="español" value="españolAvanzado">       </div></td>
+                  <td><div align="center"><input type="radio" name="español" value="españolIntermedio">     </div></td>
+                  <td><div align="center"><input type="radio" name="español" value="españolBasico">         </div></td>
+                  <td><div align="center"><input type="radio" name="español" value="españolNada">           </div></td>
+                </tr>
+                <tr>
+                  <td> Ingles</td>
+                  <td><div align="center"><input type="radio" name="ingles" value="inglesNativo">           </div></td>
+                  <td><div align="center"><input type="radio" name="ingles" value="inglesBilingue">         </div></td>
+                  <td><div align="center"><input type="radio" name="ingles" value="inglesAvanzado">         </div></td>
+                  <td><div align="center"><input type="radio" name="ingles" value="inglesIntermedio">       </div></td>
+                  <td><div align="center"><input type="radio" name="ingles" value="inglesBasico">           </div></td>
+                  <td><div align="center"><input type="radio" name="ingles" value="inglesNada">             </div></td>
+                </tr>
+                <tr>
+                  <td> Portugues</td>
+                  <td><div align="center"><input type="radio" name="portugues" value="portuguesNativo">     </div></td>
+                  <td><div align="center"><input type="radio" name="portugues" value="portuguesBilingue">   </div></td>
+                  <td><div align="center"><input type="radio" name="portugues" value="portuguesAvanzado">   </div></td>
+                  <td><div align="center"><input type="radio" name="portugues" value="portuguesIntermedio"> </div></td>
+                  <td><div align="center"><input type="radio" name="portugues" value="portuguesBasico">     </div></td>
+                  <td><div align="center"><input type="radio" name="portugues" value="portuguesNada">       </div></td>
+                </tr>
+                <tr>
+                  <td> Aleman</td>
+                  <td><div align="center"><input type="radio" name="aleman" value="alemanNativo">           </div></td>
+                  <td><div align="center"><input type="radio" name="aleman" value="alemanBilingue">         </div></td>
+                  <td><div align="center"><input type="radio" name="aleman" value="alemanAvanzado">         </div></td>
+                  <td><div align="center"><input type="radio" name="aleman" value="alemanIntermedio">       </div></td>
+                  <td><div align="center"><input type="radio" name="aleman" value="alemanBasico">           </div></td>
+                  <td><div align="center"><input type="radio" name="aleman" value="alemanNada">             </div></td>
+                </tr>
+                <tr>
+                  <td> Italiano</td>
+                  <td><div align="center"><input type="radio" name="italiano" value="italianoNativo">       </div></td>
+                  <td><div align="center"><input type="radio" name="italiano" value="italianoBilingue">     </div></td>
+                  <td><div align="center"><input type="radio" name="italiano" value="italianoAvanzado">     </div></td>
+                  <td><div align="center"><input type="radio" name="italiano" value="italianoIntermedio">   </div></td>
+                  <td><div align="center"><input type="radio" name="italiano" value="italianoBasico">       </div></td>
+                  <td><div align="center"><input type="radio" name="italiano" value="italianoNada">         </div></td>
+                </tr>
+              </tbody>
+            </table>    <br>
             
-            <div class="rightSide">
-              <select id="estado_civil" name="estado_civil">
-                <script>
-                    fillCivilStatus($('#estado_civil'));
-                </script>
-              </select>
-            </div>  <br><br>
-
-          <!--FIN CAMPOS-->
-          </div>
-
-          <div align="center" id="sendButton" style="display:none">
-            <input type="submit" value="Enviar" class="button" onclick="sendInformation()">
-          </div>
-
-          <!-- --------------------------------------------------------------------------------------- -->
-
-          <div id="encontramasInscription" style="display:none">
-
             <!--NIVELES SUPERIORES--> 
             <span class="leftSide">
               <strong>Postgrados / Masters / Doctorado</strong>:   
@@ -279,6 +337,7 @@
             <div class="rightSide">
               <select id="postgrado" name="postgrado">
                 <option value="0" selected="">              Seleccione su Postgrado     </option>
+                <option value="Doctorado">                  Ninguno                     </option>
                 <option value="Doctorado">                  Doctorado                   </option>
                 <option value="Master / Especialización">   Master / Especialización    </option>
                 <option value="Posgrado">                   Posgrado                    </option>
@@ -313,6 +372,30 @@
               <span class="red">*</span>
             </span>
             <input type="text" id="institucion_postgrado" name="institucion_postgrado" class="rightSide"> <br><br>
+
+
+          <!--FIN INFO ACADEMICA-->
+          </div>
+
+          <div align="center" id="sendButton" style="display:none">
+            <input type="submit" value="Enviar" class="button" onclick="sendInformation()">
+          </div>
+
+
+          <div id="jobInformation" style="display:none">
+
+            <!--TRABAJO-->
+            <span class="leftSide">
+              <strong>Trabaja?</strong>:
+              <span class="red">*</span>   
+            </span>
+            <div class="rightSide">
+              <select id="trabaja" name="trabaja">
+                <option value="0" selected> </option>
+                <option value="Si">Si       </option>
+                <option value="No">No       </option>
+              </select>
+            </div>  <br><br>
 
             <!--EXPERIENCIA LABORAL--> 
             <h3> Experiencia Laboral </h3> <br><br>
@@ -523,12 +606,12 @@
               </select>
             </div>  <br><br> 
 
+            <!-- --------------------------------------------------------------------------------------- -->
+
             <!---- NUMERO 3 ---->
             <br>
             <strong>3</strong>
             <hr><br> 
-
-            <!-- --------------------------------------------------------------------------------------- -->
 
             <!--EMPRESA3-->
             <span class="leftSide">
@@ -624,63 +707,7 @@
                     fillYears($('select[name=añohasta3]'),2014,1934);
                 </script> 
               </select>
-            </div>  <br><br><hr>
-
-            <table cellspacing="10" style="font-size: 85%">
-              <thead>
-                <tr>
-                  <th></th><th>Nativo</th><th>Bilingüe</th><th>Avanzado</th>
-                  <th>Intermedio</th><th>Basico</th><th>Nada</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td> Español</td>
-                  <td><div align="center"><input type="radio" name="español" value="españolNativo">         </div></td>
-                  <td><div align="center"><input type="radio" name="español" value="españolBilingue">       </div></td>
-                  <td><div align="center"><input type="radio" name="español" value="españolAvanzado">       </div></td>
-                  <td><div align="center"><input type="radio" name="español" value="españolIntermedio">     </div></td>
-                  <td><div align="center"><input type="radio" name="español" value="españolBasico">         </div></td>
-                  <td><div align="center"><input type="radio" name="español" value="españolNada">           </div></td>
-                </tr>
-                <tr>
-                  <td> Ingles</td>
-                  <td><div align="center"><input type="radio" name="ingles" value="inglesNativo">           </div></td>
-                  <td><div align="center"><input type="radio" name="ingles" value="inglesBilingue">         </div></td>
-                  <td><div align="center"><input type="radio" name="ingles" value="inglesAvanzado">         </div></td>
-                  <td><div align="center"><input type="radio" name="ingles" value="inglesIntermedio">       </div></td>
-                  <td><div align="center"><input type="radio" name="ingles" value="inglesBasico">           </div></td>
-                  <td><div align="center"><input type="radio" name="ingles" value="inglesNada">             </div></td>
-                </tr>
-                <tr>
-                  <td> Portugues</td>
-                  <td><div align="center"><input type="radio" name="portugues" value="portuguesNativo">     </div></td>
-                  <td><div align="center"><input type="radio" name="portugues" value="portuguesBilingue">   </div></td>
-                  <td><div align="center"><input type="radio" name="portugues" value="portuguesAvanzado">   </div></td>
-                  <td><div align="center"><input type="radio" name="portugues" value="portuguesIntermedio"> </div></td>
-                  <td><div align="center"><input type="radio" name="portugues" value="portuguesBasico">     </div></td>
-                  <td><div align="center"><input type="radio" name="portugues" value="portuguesNada">       </div></td>
-                </tr>
-                <tr>
-                  <td> Aleman</td>
-                  <td><div align="center"><input type="radio" name="aleman" value="alemanNativo">           </div></td>
-                  <td><div align="center"><input type="radio" name="aleman" value="alemanBilingue">         </div></td>
-                  <td><div align="center"><input type="radio" name="aleman" value="alemanAvanzado">         </div></td>
-                  <td><div align="center"><input type="radio" name="aleman" value="alemanIntermedio">       </div></td>
-                  <td><div align="center"><input type="radio" name="aleman" value="alemanBasico">           </div></td>
-                  <td><div align="center"><input type="radio" name="aleman" value="alemanNada">             </div></td>
-                </tr>
-                <tr>
-                  <td> Italiano</td>
-                  <td><div align="center"><input type="radio" name="italiano" value="italianoNativo">       </div></td>
-                  <td><div align="center"><input type="radio" name="italiano" value="italianoBilingue">     </div></td>
-                  <td><div align="center"><input type="radio" name="italiano" value="italianoAvanzado">     </div></td>
-                  <td><div align="center"><input type="radio" name="italiano" value="italianoIntermedio">   </div></td>
-                  <td><div align="center"><input type="radio" name="italiano" value="italianoBasico">       </div></td>
-                  <td><div align="center"><input type="radio" name="italiano" value="italianoNada">         </div></td>
-                </tr>
-              </tbody>
-            </table>    <br>
+            </div>  <br><br>
 
             <hr><br>
             <form action="#" enctype="multipart/form-data" method="post" style="text-align: center">

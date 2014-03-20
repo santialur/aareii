@@ -507,7 +507,7 @@ function fillStates(target)
 {
   $(target).html(''+
     '<option value="0" selected>Seleccione su provincia      </option>'+
-    '<option value="No Aplica">          No Aplica           </option>'+
+    '<option value="No Aplica">          N/A                 </option>'+
     '<option value="Buenos Aires">       Buenos Aires        </option>'+
     '<option value="Córdoba">            Córdoba             </option>'+
     '<option value="Capital Federal">    Capital Federal     </option>'+
@@ -549,7 +549,7 @@ function fillUniversities(target)
 {
   $(target).html(''+
     '<option value="0"> Seleccione Universidad </option>'+
-    '<option value="No Aplica">                                                          id="cfg2048">No Aplica                                                          </option>'+
+    '<option value="No Aplica"                                                           id="cfg2048">N/A                                                                </option>'+
     '<option value="Instituto Tecnológico De Buenos Aires"                               id="cbf2049">Instituto Tecnológico De Buenos Aires                              </option>'+
     '<option value="Universidad Argentina De La Empresa"                                 id="cbf2050">Universidad Argentina De La Empresa                                </option>'+
     '<option value="Universidad Austral"                                                 id="cbf2051">Universidad Austral                                                </option>'+
