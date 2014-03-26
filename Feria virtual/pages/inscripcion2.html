@@ -69,7 +69,7 @@
             <input type="button" id="create_button" value="Crear nuevo"       class="button" onclick="createNewUser()"  style="margin-left:   3%">
           </div>
 
-          <div id="personalInformation" style="display:">
+          <div id="personalInformation" style="display: none">
 
             <!--NOMBRE--> 
             <span class="leftSide">
@@ -194,7 +194,7 @@
           </div>
             <!-- --------------------------------------------------------------------------------------- -->
 
-          <div id="academicInformation" style="display: ">
+          <div id="academicInformation" style="display: none">
             <!--DATOS ACADEMICOS-->
 
             <!--UNIVERSIDAD-->
@@ -262,8 +262,8 @@
             <div class="rightSide">
               <select id="estado_carrera" name="estado_carrera" onChange="checkCareerLevel();">
                 <option value="0" selected="">                </option>
-                <option value="Avanzado">       Avanzada      </option>
                 <option value="Completo">       Completa      </option>
+                <option value="Avanzado">       Avanzada      </option>
                 <option value="En curso">       En curso      </option>
                 <option value="Interrumpido">   Interrumpida  </option>
               </select>
@@ -396,7 +396,7 @@
             <input type="submit" value="Enviar" class="button" onclick="sendInformation()">
           </div>
 
-          <div id="jobInformation" style="display:">
+          <div id="jobInformation" style="display: none">
 
             <!--TRABAJO-->
             <span class="leftSide">
