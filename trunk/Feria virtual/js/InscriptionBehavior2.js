@@ -57,77 +57,91 @@ function enableInputs(){
 }
 
  function checkUser(){
-
-    if(document.getElementById("numero_de_documento").value == ""){
+    if(document.getElementById("numero_de_documento").value == "")
+    {
       alert("Ingrese su numero de documento");
-    }else if(document.getElementById("contraseña").value == ""){
+    }
+    else if(document.getElementById("contraseña").value == "")
+    {
       alert("Contraseña invalida");
-    }else{
+    }
+    else{
       $.ajax({ url: '../js/getUserBasicInformation.php',
            data: {dni: document.getElementById("numero_de_documento").value,
                   password: document.getElementById("contraseña").value},
            type: 'GET',
-           success: function(output) {       
-                                  if(output == "Baddni"){
+           success: function(output) 
+           {       
+              if(output == "Baddni")
+              {
+                alert("El usuario no existe, cree uno nuevo");
+                createNewUser();
 
-                                    alert("El usuario no existe, cree uno nuevo");
-                                    createNewUser();
+              }
+              else if(output == "Badpass")
+              {
+                alert("La contraña ingresada no es correcta");
+              }
+              else
+              {
+                obj = JSON.parse(output);
+                
+                enableInputs();
+                document.getElementById("numero_de_documento").disabled = true;
+                document.getElementsByName("confirme_contraseña")[0].style.display = 'none';
+                document.getElementsByName("confirme_contraseña")[1].style.display = 'none';
 
-                                  }else if(output == "Badpass"){
-                                    alert("La contraña ingresada no es correcta");
-                                  }else{
+                document.getElementById("nombre").value = obj.name;
+                document.getElementById("apellido").value = obj.surname;
+                document.getElementById("email").value = obj.mail;
+                document.getElementById("confirme_email").value = obj.mail;
+                document.getElementById("direccion_de_residencia").value = obj.address;
 
-                                    obj = JSON.parse(output);
-                                    
-                                    enableInputs();
-                                    document.getElementById("numero_de_documento").disabled = true;
-                                    document.getElementsByName("confirme_contraseña")[0].style.display = 'none';
-                                    document.getElementsByName("confirme_contraseña")[1].style.display = 'none';
+                document.getElementById("fecha_nacimiento_anio").value = obj.birthday.substring(0,4);
+                document.getElementById("fecha_nacimiento_mes").value = obj.birthday.substring(5,7);
+                document.getElementById("fecha_nacimiento_dia").value = obj.birthday.substring(8,10);
 
-                                    document.getElementById("nombre").value = obj.name;
-                                    document.getElementById("apellido").value = obj.surname;
-                                    document.getElementById("email").value = obj.mail;
-                                    document.getElementById("confirme_email").value = obj.mail;
-                                    document.getElementById("direccion_de_residencia").value = obj.address;
+                document.getElementById("numero_materias").value = obj.subjects_approved;
+                document.getElementById("telefono_celular").value = obj.phone;
+                document.getElementById("lugar_de_residencia_pais").value = obj.country;
+                document.getElementById("lugar_de_residencia_provincia").value = obj.state;
+                document.getElementById("lugar_de_residencia_ciudad").value = obj.city;
+                document.getElementById("institucion").value = obj.university;
+                
+                if(document.getElementById("institucion").value === "")
+                {
+                  document.getElementById("institucion").value = "0";
+                  document.getElementById("universidad").value = obj.university;
+                }
 
-                                    document.getElementById("fecha_nacimiento_anio").value = obj.birthday.substring(0,4);
-                                    document.getElementById("fecha_nacimiento_mes").value = obj.birthday.substring(5,7);
-                                    document.getElementById("fecha_nacimiento_dia").value = obj.birthday.substring(8,10);
+                document.getElementById("carrera").value = obj.career;
+                
+                if(document.getElementById("carrera").value === "")
+                {
+                  document.getElementById("carrera").value = "0";
+                  document.getElementById("otraCarrera").value = obj.career;
+                }
 
-                                    
-                                    document.getElementById("numero_materias").value = obj.subjects_approved;
-                                    document.getElementById("telefono_celular").value = obj.phone;
-                                    document.getElementById("lugar_de_residencia_pais").value = obj.country;
-                                    document.getElementById("lugar_de_residencia_provincia").value = obj.state;
-                                    document.getElementById("lugar_de_residencia_ciudad").value = obj.city;
-                                    document.getElementById("institucion").value = obj.university;
-                                    if(document.getElementById("institucion").value === ""){
-                                      document.getElementById("institucion").value = "0";
-                                      document.getElementById("universidad").value = obj.university;
-                                    }
-
-                                    document.getElementById("carrera").value = obj.career;
-                                    if(document.getElementById("carrera").value === ""){
-                                      document.getElementById("carrera").value = "0";
-                                      document.getElementById("otraCarrera").value = obj.career;
-                                    }
-
-                                    if(obj.work == 1){
-                                      document.getElementById("trabaja").value = "Si"
-                                    }else{
-                                      document.getElementById("trabaja").value = "No";
-                                    }  
-                                    document.getElementById("estado_civil").value = obj.civil_status;        
-                                    newUser = false;
-                                }
-                            }
-                                  
+                if(obj.work == 1)
+                {
+                  document.getElementById("trabaja").value = "Si"
+                }
+                else
+                {
+                  document.getElementById("trabaja").value = "No";
+                }  
+                document.getElementById("estado_civil").value = obj.civil_status;        
+                newUser = false;
+            }
+        }
+              
       });
     }
       
 }
 
-function sendInformation(){
+function sendInformation()
+{
       if(newUser){
             if(document.getElementById("confirme_nueva_contraseña").value == document.getElementById("contraseña_nueva").value){
               if(document.getElementById("confirme_email").value == document.getElementById("email").value){
@@ -359,6 +373,11 @@ function sendInformation(){
 
 }
 
+
+/****************************************************************************************** 
+ * GUARDAR DOCUMENTO
+ ******************************************************************************************/
+
 // Variable to store your files
 var files;
  
@@ -421,6 +440,9 @@ function uploadFiles(event)
 }
 
 
+/****************************************************************************************** 
+ * ENVIAR DOCUMENTO 
+ ******************************************************************************************/
 
 function sendInformation_encontramas(){
   alert(document.getElementById("userfile").value);
@@ -450,6 +472,86 @@ function sendInformation_encontramas(){
   });
 }
 
+/****************************************************************************************** 
+ * CONTROLAR CAMPOS 
+ ******************************************************************************************/
+var previous        = "";
+var previous2       = "";
+var previousTarget  = "";
+
+function checkNumeric(target)
+{
+  if(target.value.length > 0 && isNaN(target.value))
+  {
+    alert("Este campo no admite letras, sólo números");
+    if(previousTarget != target)
+      previous = "";
+    target.value = previous;
+  }
+  else
+  {
+    previous = target.value;
+    previousTarget = target;
+  }
+}
+
+function checkBounds(target, val)
+{
+  if(target.value > val)
+  {
+    alert("Este campo no admite valores mayores a " + val);
+    target.value = previous2;
+  }
+  else
+    previous2 = target.value;
+}
+
+function checkAnotherUniversity()
+{
+  if($('#institucion').val() == "Otra")
+  {
+    $('#otra_universidad').css("display","inline");
+  }
+  else
+  {
+    $('#otra_universidad').css("display","none");
+  }
+}
+
+function checkAnotherCareer()
+{
+  if($('#carrera').val() == "Otra")
+    $('#otra_carrera').css("display","inline");
+
+  else
+      $('#otra_carrera').css("display","none");
+}
+
+function checkCareerLevel()
+{
+  if($('#estado_carrera').val() == "Completo")
+    $('#areaPosgrados').css("display","inline");
+  else
+    $('#areaPosgrados').css("display","none");
+}
+
+function stillWorkHere(target, target2, target3)
+{
+  if($(target).prop( "checked" ))
+  { 
+    $(target2).prop('disabled', true);
+    $(target3).prop('disabled', true);
+  }
+  else
+  {
+    $(target2).prop('disabled', false);
+    $(target3).prop('disabled', false);
+  }
+}
+
+/****************************************************************************************** 
+ * RELLENAR CONTENIDOS 
+ ******************************************************************************************/
 
 function fillMonths(target)
 {
@@ -476,7 +578,7 @@ function fillYears(target, x, y)
   for(var i=x; i>y; i--)
       aux = aux + '<option value="'+ parseFloat(i) +'">'+ parseFloat(i) +'</option>';
 
-  $(target).html(''+aux);
+  $(target).append(''+aux);
 }
 
 function fillCountries(target)
@@ -501,113 +603,154 @@ function fillCountries(target)
     '<option value="Puerto Rico" id="cbf1379">Puerto Rico</option>'+
     '<option value="Uruguay"     id="cbf1380">Uruguay    </option>'+
     '<option value="Venezuela"   id="cbf1381">Venezuela  </option>');
-}
 
-function fillStates(target)
-{
-  $(target).html(''+
+  $('#lugar_de_residencia_provincia').html(''+
     '<option value="0" selected>Seleccione su provincia      </option>'+
-    '<option value="No Aplica">          N/A                 </option>'+
-    '<option value="Buenos Aires">       Buenos Aires        </option>'+
-    '<option value="Córdoba">            Córdoba             </option>'+
-    '<option value="Capital Federal">    Capital Federal     </option>'+
-    '<option value="Catamarca">          Catamarca           </option>'+
-    '<option value="Chaco">              Chaco               </option>'+
-    '<option value="Chubut">             Chubut              </option>'+
-    '<option value="Corrientes">         Corrientes          </option>'+
-    '<option value="Entre Ríos">         Entre Ríos          </option>'+
-    '<option value="Formosa">            Formosa             </option>'+
-    '<option value="Jujuy">              Jujuy               </option>'+
-    '<option value="La Pampa">           La Pampa            </option>'+
-    '<option value="La Rioja">           La Rioja            </option>'+
-    '<option value="Mendoza">            Mendoza             </option>'+
-    '<option value="Misiones">           Misiones            </option>'+
-    '<option value="Neuquén">            Neuquén             </option>'+
-    '<option value="Rio Negro">          Rio Negro           </option>'+
-    '<option value="Salta">              Salta               </option>'+
-    '<option value="San Juan">           San Juan            </option>'+
-    '<option value="San Luis">           San Luis            </option>'+
-    '<option value="Santa Cruz">         Santa Cruz          </option>'+
-    '<option value="Santa Fé">           Santa Fé            </option>'+
-    '<option value="Santiago del Estero">Santiago del Estero </option>'+
-    '<option value="Tierra del Fuego">   Tierra del Fuego    </option>'+
-    '<option value="Tucuman">            Tucuman             </option>');
+    '<option value="No Aplica">          N/A                 </option>');
+
+  $('#institucion').html(''+
+    '<option value="0" selected>              Seleccione Universidad  </option>'+
+    '<option value="No Aplica" id="cfg2048">  N/A                     </option>');
 }
 
-function fillSeniority(target)
+function checkCountry()
 {
-  $(target).html(''+
-    '<option value="0" selected="">  Seleccione su seniority </option>'+
-    '<option value="director">       Director                </option>'+
-    '<option value="gerente">        Gerente                 </option>'+
-    '<option value="senior">         Senior                  </option>'+
-    '<option value="semi-senior">    Semi-senior             </option>'+
-    '<option value="junior">         Junior                  </option>');
+  if($('#lugar_de_residencia_pais').val() == "Argentina")
+  {
+    fillStates($('#lugar_de_residencia_provincia'), 1);
+    fillUniversities($('#institucion'), 1);
+  }
+  else
+  {
+    fillStates($('#lugar_de_residencia_provincia'), 0);
+    fillUniversities($('#institucion'), 0);
+  }
 }
 
-function fillUniversities(target)
+function fillStates(target, flag)
+{
+  if(flag)
+  {
+    $(target).html(''+
+      '<option value="0" selected>Seleccione su provincia      </option>'+
+      '<option value="Buenos Aires">       Buenos Aires        </option>'+
+      '<option value="Córdoba">            Córdoba             </option>'+
+      '<option value="Capital Federal">    Capital Federal     </option>'+
+      '<option value="Catamarca">          Catamarca           </option>'+
+      '<option value="Chaco">              Chaco               </option>'+
+      '<option value="Chubut">             Chubut              </option>'+
+      '<option value="Corrientes">         Corrientes          </option>'+
+      '<option value="Entre Ríos">         Entre Ríos          </option>'+
+      '<option value="Formosa">            Formosa             </option>'+
+      '<option value="Jujuy">              Jujuy               </option>'+
+      '<option value="La Pampa">           La Pampa            </option>'+
+      '<option value="La Rioja">           La Rioja            </option>'+
+      '<option value="Mendoza">            Mendoza             </option>'+
+      '<option value="Misiones">           Misiones            </option>'+
+      '<option value="Neuquén">            Neuquén             </option>'+
+      '<option value="Rio Negro">          Rio Negro           </option>'+
+      '<option value="Salta">              Salta               </option>'+
+      '<option value="San Juan">           San Juan            </option>'+
+      '<option value="San Luis">           San Luis            </option>'+
+      '<option value="Santa Cruz">         Santa Cruz          </option>'+
+      '<option value="Santa Fé">           Santa Fé            </option>'+
+      '<option value="Santiago del Estero">Santiago del Estero </option>'+
+      '<option value="Tierra del Fuego">   Tierra del Fuego    </option>'+
+      '<option value="Tucuman">            Tucuman             </option>');
+  }
+  else
+  {
+      $(target).html(''+
+    '<option value="0" selected>  Seleccione su provincia </option>'+
+    '<option value="No Aplica">   N/A                     </option>');
+  }
+}
+
+function fillRango(target)
 {
   $(target).html(''+
-    '<option value="0"> Seleccione Universidad </option>'+
-    '<option value="No Aplica"                                                           id="cfg2048">N/A                                                                </option>'+
-    '<option value="Instituto Tecnológico De Buenos Aires"                               id="cbf2049">Instituto Tecnológico De Buenos Aires                              </option>'+
-    '<option value="Universidad Argentina De La Empresa"                                 id="cbf2050">Universidad Argentina De La Empresa                                </option>'+
-    '<option value="Universidad Austral"                                                 id="cbf2051">Universidad Austral                                                </option>'+
-    '<option value="Universidad Católica Argentina (Sede Buenos Aires)"                  id="cbf2052">Universidad Católica Argentina (Sede Buenos Aires)                 </option>'+
-    '<option value="Universidad Católica Argentina (Sede Rosario)"                       id="cbf2053">Universidad Católica Argentina (Sede Rosario)                      </option>'+
-    '<option value="Universidad Católica De Córdoba"                                     id="cbf2054">Universidad Católica De Córdoba                                    </option>'+
-    '<option value="Universidad Católica De Salta"                                       id="cbf2055">Universidad Católica De Salta                                      </option>'+
-    '<option value="Universidad De Belgrano"                                             id="cbf2056">Universidad De Belgrano                                            </option>'+
-    '<option value="Universidad De Buenos Aires"                                         id="cbf2057">Universidad De Buenos Aires                                        </option>'+
-    '<option value="Universidad De La Marina Mercante"                                   id="cbf2058">Universidad De La Marina Mercante                                  </option>'+
-    '<option value="Universidad De Mendoza"                                              id="cbf2059">Universidad De Mendoza                                             </option>'+
-    '<option value="Universidad De Morón"                                                id="cbf2060">Universidad De Morón                                               </option>'+
-    '<option value="Universidad De Palermo"                                              id="cbf2061">Universidad De Palermo                                             </option>'+
-    '<option value="Universidad Del Norte Santo Tomás De Aquino (Tucumán)"               id="cbf2062">Universidad Del Norte Santo Tomás De Aquino (Tucumán)              </option>'+
-    '<option value="Universidad Del Salvador"                                            id="cbf2063">Universidad Del Salvador                                           </option>'+
-    '<option value="Universidad Frat. De Agrup. Santo Tomas De Aquino"                   id="cbf2064">Universidad Frat. De Agrup. Santo Tomas De Aquino                  </option>'+
-    '<option value="Universidad Nacional De Córdoba"                                     id="cbf2065">Universidad Nacional De Córdoba                                    </option>'+
-    '<option value="Universidad Nacional De Cuyo (Mendoza)"                              id="cbf2066">Universidad Nacional De Cuyo (Mendoza)                             </option>'+
-    '<option value="Universidad Nacional De General Sarmiento (Los Polvorines)"          id="cbf2067">Universidad Nacional De General Sarmiento (Los Polvorines)         </option>'+
-    '<option value="Universidad Nacional De Jujuy"                                       id="cbf2068">Universidad Nacional De Jujuy                                      </option>'+
-    '<option value="Universidad Nacional De La Matanza"                                  id="cbf2069">Universidad Nacional De La Matanza                                 </option>'+
-    '<option value="Universidad Nacional De La Patagonia (Comodoro Rivadavia)"           id="cbf2070">Universidad Nacional De La Patagonia (Comodoro Rivadavia)          </option>'+
-    '<option value="Universidad Nacional De La Patagonia Austral (Caleta Olivia)"        id="cbf2071">Universidad Nacional De La Patagonia Austral (Caleta Olivia)       </option>'+
-    '<option value="Universidad Nacional De La Plata"                                    id="cbf2072">Universidad Nacional De La Plata                                   </option>'+
-    '<option value="Universidad Nacional De La Rioja"                                    id="cbf2073">Universidad Nacional De La Rioja                                   </option>'+
-    '<option value="Universidad Nacional De Lomas De Zamora"                             id="cbf2074">Universidad Nacional De Lomas De Zamora                            </option>'+
-    '<option value="Universidad Nacional De Luján"                                       id="cbf2075">Universidad Nacional De Luján                                      </option>'+
-    '<option value="Universidad Nacional De Mar del Plata"                               id="cbf2076">Universidad Nacional De Mar del Plata                              </option>'+
-    '<option value="Universidad Nacional De Misiones (Obera)"                            id="cbf2077">Universidad Nacional De Misiones (Obera)                           </option>'+
-    '<option value="Universidad Nacional De Rosario"                                     id="cbf2078">Universidad Nacional De Rosario                                    </option>'+
-    '<option value="Universidad Nacional De Salta"                                       id="cbf2079">Universidad Nacional De Salta                                      </option>'+
-    '<option value="Universidad Nacional De San Juan"                                    id="cbf2080">Universidad Nacional De San Juan                                   </option>'+
-    '<option value="Universidad Nacional De San Luís (Villa Mercedes)"                   id="cbf2081">Universidad Nacional De San Luís (Villa Mercedes)                  </option>'+
-    '<option value="Universidad Nacional De Tucumán"                                     id="cbf2082">Universidad Nacional De Tucumán                                    </option>'+
-    '<option value="Universidad Nacional Del Centro De La Pcia. De Bs. As."              id="cbf2083">Universidad Nacional Del Centro De La Pcia. De Bs. As.             </option>'+
-    '<option value="Universidad Nacional del Chaco Austral"                              id="cbf2084">Universidad Nacional del Chaco Austral                             </option>'+
-    '<option value="Universidad Nacional Del Litoral (Santa Fe)"                         id="cbf2085">Universidad Nacional Del Litoral (Santa Fe)                        </option>'+
-    '<option value="Universidad Nacional Del Noroeste De La Pcia. De Bs. As. (Junin)"    id="cbf2086">Universidad Nacional Del Noroeste De La Pcia. De Bs. As. (Junin)   </option>'+
-    '<option value="Universidad Nacional Del Sur (Bahía Blanca)"                         id="cbf2087">Universidad Nacional Del Sur (Bahía Blanca)                        </option>'+
-    '<option value="UTN Facultad Regional Avellaneda"                                    id="cbf2088">UTN Facultad Regional Avellaneda                                   </option>'+
-    '<option value="UTN Facultad Regional Bahía Blanca (LOI)"                            id="cbf2089">UTN Facultad Regional Bahía Blanca (LOI)                           </option>'+
-    '<option value="UTN Facultad Regional Buenos Aires"                                  id="cbf2090">UTN Facultad Regional Buenos Aires                                 </option>'+
-    '<option value="UTN Facultad Regional Concepción del Uruguay"                        id="cbf2091">UTN Facultad Regional Concepción del Uruguay                       </option>'+
-    '<option value="UTN Facultad Regional Córdoba"                                       id="cbf2092">UTN Facultad Regional Córdoba                                      </option>'+
-    '<option value="UTN Facultad Regional General Pacheco (LOI)"                         id="cbf2093">UTN Facultad Regional General Pacheco (LOI)                        </option>'+
-    '<option value="UTN Facultad Regional Haedo"                                         id="cbf2094">UTN Facultad Regional Haedo                                        </option>'+
-    '<option value="UTN Facultad Regional La Plata"                                      id="cbf2095">UTN Facultad Regional La Plata                                     </option>'+
-    '<option value="UTN Facultad Regional La Rioja"                                      id="cbf2096">UTN Facultad Regional La Rioja                                     </option>'+
-    '<option value="UTN Facultad Regional Rafaela"                                       id="cbf2097">UTN Facultad Regional Rafaela                                      </option>'+
-    '<option value="UTN Facultad Regional Río Grande"                                    id="cbf2098">UTN Facultad Regional Río Grande                                   </option>'+
-    '<option value="UTN Facultad Regional San Francisco (LOI)"                           id="cbf2099">UTN Facultad Regional San Francisco (LOI)                          </option>'+
-    '<option value="UTN Facultad Regional San Nicolás"                                   id="cbf2100">UTN Facultad Regional San Nicolás                                  </option>'+
-    '<option value="UTN Facultad Regional San Rafael"                                    id="cbf2101">UTN Facultad Regional San Rafael                                   </option>'+
-    '<option value="UTN Facultad Regional Santa Fe"                                      id="cbf2102">UTN Facultad Regional Santa Fe                                     </option>'+
-    '<option value="UTN Unidad Académica Chubut (LOI)"                                   id="cbf2103">UTN Unidad Académica Chubut (LOI)                                  </option>'+
-    '<option value="UTN Unidad Académica Río Gallegos"                                   id="cbf2104">UTN Unidad Académica Río Gallegos                                  </option>'+
-    '<option value="UTN Unidad Académica Trenque Lauquen"                                id="cbf2105">UTN Unidad Académica Trenque Lauquen                               </option>'+
-    '<option value="Otra" id="cbf2106">Otra</option>');
+    '<option value="0" selected="">  Seleccione su Rango     </option>'+
+    '<option value="director">       Directorio              </option>'+
+    '<option value="gerente">        Gerencia                </option>'+
+    '<option value="supervisor">     Supervisor/Coordinador  </option>'+
+    '<option value="junior">         Junior                  </option>'+
+    '<option value="pasante">        Pasante                 </option>'+
+    '<option value="efectivo">       Efectivo                </option>'+
+    '<option value="independiente">  Independiente           </option>'+
+    '<option value="otro">           Otro                    </option>');
+}
+
+function fillUniversities(target, flag)
+{
+  if(flag)
+  {
+    $(target).html(''+
+      '<option value="0"> Seleccione Universidad </option>'+
+      '<option value="Instituto Tecnológico De Buenos Aires"                               id="cbf2049">Instituto Tecnológico De Buenos Aires                              </option>'+
+      '<option value="Universidad Argentina De La Empresa"                                 id="cbf2050">Universidad Argentina De La Empresa                                </option>'+
+      '<option value="Universidad Austral"                                                 id="cbf2051">Universidad Austral                                                </option>'+
+      '<option value="Universidad Católica Argentina (Sede Buenos Aires)"                  id="cbf2052">Universidad Católica Argentina (Sede Buenos Aires)                 </option>'+
+      '<option value="Universidad Católica Argentina (Sede Rosario)"                       id="cbf2053">Universidad Católica Argentina (Sede Rosario)                      </option>'+
+      '<option value="Universidad Católica De Córdoba"                                     id="cbf2054">Universidad Católica De Córdoba                                    </option>'+
+      '<option value="Universidad Católica De Salta"                                       id="cbf2055">Universidad Católica De Salta                                      </option>'+
+      '<option value="Universidad De Belgrano"                                             id="cbf2056">Universidad De Belgrano                                            </option>'+
+      '<option value="Universidad De Buenos Aires"                                         id="cbf2057">Universidad De Buenos Aires                                        </option>'+
+      '<option value="Universidad De La Marina Mercante"                                   id="cbf2058">Universidad De La Marina Mercante                                  </option>'+
+      '<option value="Universidad De Mendoza"                                              id="cbf2059">Universidad De Mendoza                                             </option>'+
+      '<option value="Universidad De Morón"                                                id="cbf2060">Universidad De Morón                                               </option>'+
+      '<option value="Universidad De Palermo"                                              id="cbf2061">Universidad De Palermo                                             </option>'+
+      '<option value="Universidad Del Norte Santo Tomás De Aquino (Tucumán)"               id="cbf2062">Universidad Del Norte Santo Tomás De Aquino (Tucumán)              </option>'+
+      '<option value="Universidad Del Salvador"                                            id="cbf2063">Universidad Del Salvador                                           </option>'+
+      '<option value="Universidad Frat. De Agrup. Santo Tomas De Aquino"                   id="cbf2064">Universidad Frat. De Agrup. Santo Tomas De Aquino                  </option>'+
+      '<option value="Universidad Nacional De Córdoba"                                     id="cbf2065">Universidad Nacional De Córdoba                                    </option>'+
+      '<option value="Universidad Nacional De Cuyo (Mendoza)"                              id="cbf2066">Universidad Nacional De Cuyo (Mendoza)                             </option>'+
+      '<option value="Universidad Nacional De General Sarmiento (Los Polvorines)"          id="cbf2067">Universidad Nacional De General Sarmiento (Los Polvorines)         </option>'+
+      '<option value="Universidad Nacional De Jujuy"                                       id="cbf2068">Universidad Nacional De Jujuy                                      </option>'+
+      '<option value="Universidad Nacional De La Matanza"                                  id="cbf2069">Universidad Nacional De La Matanza                                 </option>'+
+      '<option value="Universidad Nacional De La Patagonia (Comodoro Rivadavia)"           id="cbf2070">Universidad Nacional De La Patagonia (Comodoro Rivadavia)          </option>'+
+      '<option value="Universidad Nacional De La Patagonia Austral (Caleta Olivia)"        id="cbf2071">Universidad Nacional De La Patagonia Austral (Caleta Olivia)       </option>'+
+      '<option value="Universidad Nacional De La Plata"                                    id="cbf2072">Universidad Nacional De La Plata                                   </option>'+
+      '<option value="Universidad Nacional De La Rioja"                                    id="cbf2073">Universidad Nacional De La Rioja                                   </option>'+
+      '<option value="Universidad Nacional De Lomas De Zamora"                             id="cbf2074">Universidad Nacional De Lomas De Zamora                            </option>'+
+      '<option value="Universidad Nacional De Luján"                                       id="cbf2075">Universidad Nacional De Luján                                      </option>'+
+      '<option value="Universidad Nacional De Mar del Plata"                               id="cbf2076">Universidad Nacional De Mar del Plata                              </option>'+
+      '<option value="Universidad Nacional De Misiones (Obera)"                            id="cbf2077">Universidad Nacional De Misiones (Obera)                           </option>'+
+      '<option value="Universidad Nacional De Rosario"                                     id="cbf2078">Universidad Nacional De Rosario                                    </option>'+
+      '<option value="Universidad Nacional De Salta"                                       id="cbf2079">Universidad Nacional De Salta                                      </option>'+
+      '<option value="Universidad Nacional De San Juan"                                    id="cbf2080">Universidad Nacional De San Juan                                   </option>'+
+      '<option value="Universidad Nacional De San Luís (Villa Mercedes)"                   id="cbf2081">Universidad Nacional De San Luís (Villa Mercedes)                  </option>'+
+      '<option value="Universidad Nacional De Tucumán"                                     id="cbf2082">Universidad Nacional De Tucumán                                    </option>'+
+      '<option value="Universidad Nacional Del Centro De La Pcia. De Bs. As."              id="cbf2083">Universidad Nacional Del Centro De La Pcia. De Bs. As.             </option>'+
+      '<option value="Universidad Nacional del Chaco Austral"                              id="cbf2084">Universidad Nacional del Chaco Austral                             </option>'+
+      '<option value="Universidad Nacional Del Litoral (Santa Fe)"                         id="cbf2085">Universidad Nacional Del Litoral (Santa Fe)                        </option>'+
+      '<option value="Universidad Nacional Del Noroeste De La Pcia. De Bs. As. (Junin)"    id="cbf2086">Universidad Nacional Del Noroeste De La Pcia. De Bs. As. (Junin)   </option>'+
+      '<option value="Universidad Nacional Del Sur (Bahía Blanca)"                         id="cbf2087">Universidad Nacional Del Sur (Bahía Blanca)                        </option>'+
+      '<option value="UTN Facultad Regional Avellaneda"                                    id="cbf2088">UTN Facultad Regional Avellaneda                                   </option>'+
+      '<option value="UTN Facultad Regional Bahía Blanca (LOI)"                            id="cbf2089">UTN Facultad Regional Bahía Blanca (LOI)                           </option>'+
+      '<option value="UTN Facultad Regional Buenos Aires"                                  id="cbf2090">UTN Facultad Regional Buenos Aires                                 </option>'+
+      '<option value="UTN Facultad Regional Concepción del Uruguay"                        id="cbf2091">UTN Facultad Regional Concepción del Uruguay                       </option>'+
+      '<option value="UTN Facultad Regional Córdoba"                                       id="cbf2092">UTN Facultad Regional Córdoba                                      </option>'+
+      '<option value="UTN Facultad Regional General Pacheco (LOI)"                         id="cbf2093">UTN Facultad Regional General Pacheco (LOI)                        </option>'+
+      '<option value="UTN Facultad Regional Haedo"                                         id="cbf2094">UTN Facultad Regional Haedo                                        </option>'+
+      '<option value="UTN Facultad Regional La Plata"                                      id="cbf2095">UTN Facultad Regional La Plata                                     </option>'+
+      '<option value="UTN Facultad Regional La Rioja"                                      id="cbf2096">UTN Facultad Regional La Rioja                                     </option>'+
+      '<option value="UTN Facultad Regional Rafaela"                                       id="cbf2097">UTN Facultad Regional Rafaela                                      </option>'+
+      '<option value="UTN Facultad Regional Río Grande"                                    id="cbf2098">UTN Facultad Regional Río Grande                                   </option>'+
+      '<option value="UTN Facultad Regional San Francisco (LOI)"                           id="cbf2099">UTN Facultad Regional San Francisco (LOI)                          </option>'+
+      '<option value="UTN Facultad Regional San Nicolás"                                   id="cbf2100">UTN Facultad Regional San Nicolás                                  </option>'+
+      '<option value="UTN Facultad Regional San Rafael"                                    id="cbf2101">UTN Facultad Regional San Rafael                                   </option>'+
+      '<option value="UTN Facultad Regional Santa Fe"                                      id="cbf2102">UTN Facultad Regional Santa Fe                                     </option>'+
+      '<option value="UTN Unidad Académica Chubut (LOI)"                                   id="cbf2103">UTN Unidad Académica Chubut (LOI)                                  </option>'+
+      '<option value="UTN Unidad Académica Río Gallegos"                                   id="cbf2104">UTN Unidad Académica Río Gallegos                                  </option>'+
+      '<option value="UTN Unidad Académica Trenque Lauquen"                                id="cbf2105">UTN Unidad Académica Trenque Lauquen                               </option>'+
+      '<option value="Otra"                                                                            >Otra</option>');
+    }
+    else
+    {
+      $(target).html(''+
+        '<option value="0" selected>  Seleccione Universidad  </option>'+
+        '<option value="Otra">        Otra                    </option>');
+    }
 }
 
 function fillDegrees(target)
@@ -619,7 +762,7 @@ function fillDegrees(target)
     '<option value="Lic. en Org. Industrial">  Lic. en Org. Industrial   </option>'+
     '<option value="Ing. Agroindustrial">      Ingeniería Agroindustrial </option>'+
     '<option value="Otra Ingeniería">          Otra ingenieria           </option>'+
-    '<option value="Otra carrera">             Otra carrera              </option>');
+    '<option value="Otra">                     Otra carrera              </option>');
 };
 
 function fillCivilStatus(target)
@@ -660,6 +803,7 @@ function fillAreaType(target)
     '<option value="Gerencia General">                       Gerencia General                        </option>'+
     '<option value="Investigación y Desarrollo">             Investigación y Desarrollo              </option>'+
     '<option value="Marketing - Relaciones Institucionales"> Marketing - Relaciones Institucionales  </option>'+
+    '<option value="Mantenimiento">                          Mantenimiento                           </option>'+
     '<option value="Producción">                             Producción                              </option>'+
     '<option value="Recursos Humanos">                       Recursos Humanos                        </option>'+
     '<option value="Salud - Servicios Médicos">              Salud - Servicios Médicos               </option>'+
@@ -670,6 +814,7 @@ function fillAreaType(target)
 
 function fillBirthDate()
 {
+  $('#fecha_nacimiento_mes').append($('<option />').val(1).html("Mes"));
   for (i = 1; i < 13; i++)
   {
     $('#fecha_nacimiento_mes').append($('<option />').val(i).html(i));
@@ -684,9 +829,11 @@ function fillBirthDate()
 function updateNumberOfDays()
 {
   $('#fecha_nacimiento_dia').html('');
-  month =$('#fecha_nacimiento_mes').val();
-  year  =$('#fecha_nacimiento_anio').val();
-  days  =daysInMonth(month, year);
+  month = $('#fecha_nacimiento_mes').val();
+  year  = $('#fecha_nacimiento_anio').val();
+  days  = daysInMonth(month, year);
+
+  $('#fecha_nacimiento_dia').append($('<option />').val(1).html("Día"));
 
   for(i=1; i < days+1 ; i++){
     $('#fecha_nacimiento_dia').append($('<option />').val(i).html(i));
