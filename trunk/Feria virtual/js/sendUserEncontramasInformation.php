@@ -1,13 +1,20 @@
 <?php
 	if($_POST['user'] == "newUser"){
 		insertUserEncontramas($_POST['dni'], $_POST['password'], $_POST['postgraduate_type'], $_POST['postgraduate_status'], $_POST['postgraduate_title'],
-				   $_POST['postgraduate_institution'], $_POST['nivelEspañol'], $_POST['nivelIngles'], $_POST['nivelPortugues'], $_POST['nivelAleman'], $_POST['nivelItaliano']);
+				   $_POST['postgraduate_institution'], $_POST['nivelEspañol'], $_POST['nivelIngles'], $_POST['nivelPortugues'], $_POST['nivelAleman'], $_POST['nivelItaliano'],
+				   $_POST['company1_name'], $_POST['company1_type'], $_POST['job1'], $_POST['jobArea1'], $_POST['seniority1'], $_POST['fromMonth_job1'], $_POST['fromYear_job1'], $_POST['toMonth_job1'], $_POST['toYear_job1'],
+				   $_POST['company2_name'], $_POST['company2_type'], $_POST['job2'], $_POST['jobArea2'], $_POST['seniority2'], $_POST['fromMonth_job2'], $_POST['fromYear_job2'], $_POST['toMonth_job2'], $_POST['toYear_job2'],
+				   $_POST['company3_name'], $_POST['company3_type'], $_POST['job3'], $_POST['jobArea3'], $_POST['seniority3'], $_POST['fromMonth_job3'], $_POST['fromYear_job3'], $_POST['toMonth_job3'], $_POST['toYear_job3']);          
+
 	}else{
 		updateUserEncontramas($_POST['dni'], $_POST['password']);
 	}
 
 
-	function insertUserEncontramas($dni, $password, $postgraduate_type, $postgraduate_status, $postgraduate_title, $postgraduate_institution, $nivelEspañol, $nivelIngles, $nivelPortugues, $nivelAleman, $nivelItaliano){
+	function insertUserEncontramas($dni, $password, $postgraduate_type, $postgraduate_status, $postgraduate_title, $postgraduate_institution, $nivelEspañol, $nivelIngles, $nivelPortugues, $nivelAleman, $nivelItaliano,
+									$company1_name, $company1_type, $job1, $jobArea1, $seniority1, $fromMonth_job1, $fromYear_job1, $toMonth_job1, $toYear_job1,
+									$company2_name, $company2_type, $job2, $jobArea2, $seniority2, $fromMonth_job2, $fromYear_job2, $toMonth_job2, $toYear_job2,
+									$company3_name, $company3_type, $job3, $jobArea3, $seniority3, $fromMonth_job3, $fromYear_job3, $toMonth_job3, $toYear_job3){
     	//echo $dni. " - " .$name." - ". $surname." - ".$email." - ".$residenceAddress." - ".$password." - ".$career." - ".$subjects_approved." - ".$celPhone." - ".$countryOfResidence." - ".$stateOfResidence." - ".$cityOfResidence." - ".$institution." - ".$dayOfBorn." - ".$monthOfBorn." - ".$yearOfBorn." - ".$work;
 		$con = mysql_connect('localhost','root','');
 		mysql_select_db('encontramas',$con);
@@ -80,8 +87,7 @@
 		/////////////////////////////////////////
 
 		
-
-		echo $result;
+		echo $company1_name;
 
 		
 		//echo $result;
