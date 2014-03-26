@@ -19,7 +19,6 @@ function createNewUser(){
       document.getElementById("carrera").value = "0";
       document.getElementById("confirme_nueva_contraseña").value = "";
       document.getElementById("contraseña_nueva").value = "";
-      document.getElementById("direccion_de_residencia").value = "";
       document.getElementById("email").value = "";
       document.getElementById("confirme_email").value = "";
       document.getElementById("apellido").value = "";
@@ -43,7 +42,6 @@ function enableInputs(){
       document.getElementById("country_row").style.display = 'table-row';
       document.getElementById("state_row").style.display = 'table-row';
       document.getElementById("city_row").style.display = 'table-row';
-      document.getElementById("direction_row").style.display = 'table-row';
       document.getElementById("university_row").style.display = 'table-row';
       document.getElementById("otherUniversity_row").style.display = 'table-row';
       document.getElementById("career_row").style.display = 'table-row';
@@ -65,7 +63,6 @@ function enableInputs(){
       document.getElementById("telefono_celular").disabled = false;
       document.getElementById("numero_materias").disabled = false;
       document.getElementById("carrera").disabled = false;
-      document.getElementById("direccion_de_residencia").disabled = false;
       document.getElementById("email").disabled = false;
       document.getElementById("confirme_email").disabled = false;
       document.getElementById("apellido").disabled = false;
@@ -390,6 +387,37 @@ function sendInformation_encontramas(){
                             postgraduate_status:        document.getElementById("estado_postgrado").value,
                             postgraduate_title:         document.getElementById("titulo").value,
                             postgraduate_institution:   document.getElementById("institucion_postgrado").value,
+                            
+                            company1_name:              document.getElementById("empresa_1").value,
+                            company1_type:              document.getElementById("tipo_empresa_1").value,
+                            job1:                       document.getElementById("puesto_1").value,
+                            jobArea1:                   document.getElementById("area_puesto_1").value,
+                            seniority1:                 document.getElementById("seniority_1").value,
+                            fromMonth_job1:             document.getElementById("mesdesde1").value,
+                            fromYear_job1:              document.getElementById("añodesde1").value,
+                            toMonth_job1:               document.getElementById("meshasta1").value,
+                            toYear_job1:                document.getElementById("añohasta1").value,
+
+                            company2_name:              document.getElementById("empresa_2").value,
+                            company2_type:              document.getElementById("tipo_empresa_2").value,
+                            job2:                       document.getElementById("puesto_2").value,
+                            jobArea2:                   document.getElementById("area_puesto_2").value,
+                            seniority2:                 document.getElementById("seniority_2").value,
+                            fromMonth_job2:             document.getElementById("mesdesde2").value,
+                            fromYear_job2:              document.getElementById("añodesde2").value,
+                            toMonth_job2:               document.getElementById("meshasta2").value,
+                            toYear_job2:                document.getElementById("añohasta2").value,
+                            
+                            company3_name:              document.getElementById("empresa_3").value,
+                            company3_type:              document.getElementById("tipo_empresa_3").value,
+                            job3:                       document.getElementById("puesto_3").value,
+                            jobArea3:                   document.getElementById("area_puesto_3").value,
+                            seniority3:                 document.getElementById("seniority_3").value,
+                            fromMonth_job3:             document.getElementById("mesdesde3").value,
+                            fromYear_job3:              document.getElementById("añodesde3").value,
+                            toMonth_job3:               document.getElementById("meshasta3").value,
+                            toYear_job3:                document.getElementById("añohasta3").value,
+
                             nivelEspañol:               $('input[name="español"]:checked').val(),
                             nivelIngles:                $('input[name="ingles"]:checked').val(),
                             nivelPortugues:             $('input[name="portugues"]:checked').val(),
