@@ -1,12 +1,28 @@
 var newUser;
 function checkUser(){
+    $.ajax({
+            url:'../js/getUserInformation.php',
+            data: {
+                    dni:                      document.getElementById("numero_de_documento").value,
+                    password:                 document.getElementById("contraseña").value,
+            },
+            type: 'post',
+            success: function(output){
+                                      alert(output);
+            }
 
+
+    });
+
+    newUser = false;
 }
+
 
 function createNewUser(){
     document.getElementById("personalInformation").style.display='inline';
     document.getElementById("password_div").style.display='none';
     document.getElementById("buttons").style.display='none';
+    document.getElementById("olvido_contraseña").style.display='none';
     newUser = true;
 }
 
@@ -63,7 +79,7 @@ function sendPersonalInformation(){
                             sex:                    document.getElementById("sexo").value,
                             email:                  document.getElementById("confirme_email").value, 
                             password:               document.getElementById("confirme_nueva_contraseña").value,
-                            celPhone:               document.getElementById("telefono_celular").value,
+                            celPhone:               document.getElementById("telefono_codigo_area").value +"-"+document.getElementById("telefono_celular").value,
                             dayOfBorn:              document.getElementById("fecha_nacimiento_dia").value,
                             monthOfBorn:            document.getElementById("fecha_nacimiento_mes").value,
                             yearOfBorn:             document.getElementById("fecha_nacimiento_anio").value,
@@ -111,7 +127,7 @@ function sendAcademicInformation(){
         alert("Ingrese la carrera que estudia");
         return;
     }
-    if(document.getElementById("carrera_estado").value.match(/^\s*$/)){
+    if(document.getElementById("estado_carrera").value.match(/^\s*$/)){
         alert("Ingrese el estado de su carrera");
         return;
     }
@@ -127,7 +143,7 @@ function sendAcademicInformation(){
                     university:                  institucion,
                     career_area:                 document.getElementById("carrera_area").value, 
                     career_title:                document.getElementById("carrera_titulo").value, 
-                    career_status:               document.getElementById("carrera_estado").value,
+                    career_status:               document.getElementById("estado_carrera").value,
                     approved_subjects:           document.getElementById("carrera_materiasAprobadas").value,
                     career_average:              document.getElementById("carrera_promedio").value,
                     career_totalSubjects:        document.getElementById("carrera_totalMaterias").value,
@@ -193,6 +209,87 @@ function sendLaboralInformation(){
 }
 
 
+/****************************************************************************************** 
+ * CONTROLAR CAMPOS 
+ ******************************************************************************************/
+var previous        = "";
+var previous2       = "";
+var previousTarget  = "";
+
+function checkNumeric(target)
+{
+  if(target.value.length > 0 && isNaN(target.value))
+  {
+    alert("Este campo no admite letras, sólo números");
+    if(previousTarget != target)
+      previous = "";
+    target.value = previous;
+  }
+  else
+  {
+    previous = target.value;
+    previousTarget = target;
+  }
+}
+
+function checkBounds(target, val)
+{
+  if(target.value > val)
+  {
+    alert("Este campo no admite valores mayores a " + val);
+    target.value = previous2;
+  }
+  else
+    previous2 = target.value;
+}
+
+function checkAnotherUniversity()
+{
+  if($('#institucion').val() == "Otra")
+  {
+    $('#otra_universidad').css("display","inline");
+  }
+  else
+  {
+    $('#otra_universidad').css("display","none");
+  }
+}
+
+function checkAnotherCareer()
+{
+  if($('#carrera').val() == "Otra")
+    $('#otra_carrera').css("display","inline");
+
+  else
+      $('#otra_carrera').css("display","none");
+}
+
+function checkCareerLevel()
+{
+  if($('#estado_carrera').val() == "Completo")
+    $('#areaPosgrados').css("display","inline");
+  else
+    $('#areaPosgrados').css("display","none");
+}
+
+function stillWorkHere(target, target2, target3)
+{
+  if($(target).prop( "checked" ))
+  { 
+    $(target2).prop('disabled', true);
+    $(target3).prop('disabled', true);
+  }
+  else
+  {
+    $(target2).prop('disabled', false);
+    $(target3).prop('disabled', false);
+  }
+}
+
+/****************************************************************************************** 
+ * RELLENAR CONTENIDOS 
+ ******************************************************************************************/
+
 function fillMonths(target)
 {
   $(target).html(''+
@@ -218,7 +315,7 @@ function fillYears(target, x, y)
   for(var i=x; i>y; i--)
       aux = aux + '<option value="'+ parseFloat(i) +'">'+ parseFloat(i) +'</option>';
 
-  $(target).html(''+aux);
+  $(target).append(''+aux);
 }
 
 function fillCountries(target)
@@ -243,54 +340,89 @@ function fillCountries(target)
     '<option value="Puerto Rico" id="cbf1379">Puerto Rico</option>'+
     '<option value="Uruguay"     id="cbf1380">Uruguay    </option>'+
     '<option value="Venezuela"   id="cbf1381">Venezuela  </option>');
-}
 
-function fillStates(target)
-{
-  $(target).html(''+
+  $('#lugar_de_residencia_provincia').html(''+
     '<option value="0" selected>Seleccione su provincia      </option>'+
-    '<option value="No Aplica">          N/A                 </option>'+
-    '<option value="Buenos Aires">       Buenos Aires        </option>'+
-    '<option value="Córdoba">            Córdoba             </option>'+
-    '<option value="Capital Federal">    Capital Federal     </option>'+
-    '<option value="Catamarca">          Catamarca           </option>'+
-    '<option value="Chaco">              Chaco               </option>'+
-    '<option value="Chubut">             Chubut              </option>'+
-    '<option value="Corrientes">         Corrientes          </option>'+
-    '<option value="Entre Ríos">         Entre Ríos          </option>'+
-    '<option value="Formosa">            Formosa             </option>'+
-    '<option value="Jujuy">              Jujuy               </option>'+
-    '<option value="La Pampa">           La Pampa            </option>'+
-    '<option value="La Rioja">           La Rioja            </option>'+
-    '<option value="Mendoza">            Mendoza             </option>'+
-    '<option value="Misiones">           Misiones            </option>'+
-    '<option value="Neuquén">            Neuquén             </option>'+
-    '<option value="Rio Negro">          Rio Negro           </option>'+
-    '<option value="Salta">              Salta               </option>'+
-    '<option value="San Juan">           San Juan            </option>'+
-    '<option value="San Luis">           San Luis            </option>'+
-    '<option value="Santa Cruz">         Santa Cruz          </option>'+
-    '<option value="Santa Fé">           Santa Fé            </option>'+
-    '<option value="Santiago del Estero">Santiago del Estero </option>'+
-    '<option value="Tierra del Fuego">   Tierra del Fuego    </option>'+
-    '<option value="Tucuman">            Tucuman             </option>');
+    '<option value="No Aplica">          N/A                 </option>');
+
+  $('#institucion').html(''+
+    '<option value="0" selected>              Seleccione Universidad  </option>'+
+    '<option value="No Aplica" id="cfg2048">  N/A                     </option>');
 }
 
-function fillSeniority(target)
+function checkCountry()
 {
-  $(target).html(''+
-    '<option value="0" selected="">  Seleccione su seniority </option>'+
-    '<option value="director">       Director                </option>'+
-    '<option value="gerente">        Gerente                 </option>'+
-    '<option value="senior">         Senior                  </option>'+
-    '<option value="semi-senior">    Semi-senior             </option>'+
-    '<option value="junior">         Junior                  </option>');
+  if($('#lugar_de_residencia_pais').val() == "Argentina")
+  {
+    fillStates($('#lugar_de_residencia_provincia'), 1);
+    fillUniversities($('#institucion'), 1);
+  }
+  else
+  {
+    fillStates($('#lugar_de_residencia_provincia'), 0);
+    fillUniversities($('#institucion'), 0);
+  }
 }
 
-function fillUniversities(target)
+function fillStates(target, flag)
+{
+  if(flag)
+  {
+    $(target).html(''+
+      '<option value="0" selected>Seleccione su provincia      </option>'+
+      '<option value="Buenos Aires">       Buenos Aires        </option>'+
+      '<option value="Córdoba">            Córdoba             </option>'+
+      '<option value="Capital Federal">    Capital Federal     </option>'+
+      '<option value="Catamarca">          Catamarca           </option>'+
+      '<option value="Chaco">              Chaco               </option>'+
+      '<option value="Chubut">             Chubut              </option>'+
+      '<option value="Corrientes">         Corrientes          </option>'+
+      '<option value="Entre Ríos">         Entre Ríos          </option>'+
+      '<option value="Formosa">            Formosa             </option>'+
+      '<option value="Jujuy">              Jujuy               </option>'+
+      '<option value="La Pampa">           La Pampa            </option>'+
+      '<option value="La Rioja">           La Rioja            </option>'+
+      '<option value="Mendoza">            Mendoza             </option>'+
+      '<option value="Misiones">           Misiones            </option>'+
+      '<option value="Neuquén">            Neuquén             </option>'+
+      '<option value="Rio Negro">          Rio Negro           </option>'+
+      '<option value="Salta">              Salta               </option>'+
+      '<option value="San Juan">           San Juan            </option>'+
+      '<option value="San Luis">           San Luis            </option>'+
+      '<option value="Santa Cruz">         Santa Cruz          </option>'+
+      '<option value="Santa Fé">           Santa Fé            </option>'+
+      '<option value="Santiago del Estero">Santiago del Estero </option>'+
+      '<option value="Tierra del Fuego">   Tierra del Fuego    </option>'+
+      '<option value="Tucuman">            Tucuman             </option>');
+  }
+  else
+  {
+      $(target).html(''+
+    '<option value="0" selected>  Seleccione su provincia </option>'+
+    '<option value="No Aplica">   N/A                     </option>');
+  }
+}
+
+function fillRango(target)
 {
   $(target).html(''+
-    '<option value="0"> Seleccione Universidad </option>'+
+    '<option value="0" selected="">  Seleccione su Rango     </option>'+
+    '<option value="director">       Directorio              </option>'+
+    '<option value="gerente">        Gerencia                </option>'+
+    '<option value="supervisor">     Supervisor/Coordinador  </option>'+
+    '<option value="junior">         Junior                  </option>'+
+    '<option value="pasante">        Pasante                 </option>'+
+    '<option value="efectivo">       Efectivo                </option>'+
+    '<option value="independiente">  Independiente           </option>'+
+    '<option value="otro">           Otro                    </option>');
+}
+
+function fillUniversities(target, flag)
+{
+  if(flag)
+  {
+    $(target).html(''+
+          '<option value="0"> Seleccione Universidad </option>'+
     '<option value="No Aplica">                                                          N/A                                                                             </option>'+
     '<option value="Centro de Altos Estudios en Ciencias Exactas">                       Centro de Altos Estudios en Ciencias Exactas (CAECE)                            </option>'+
     '<option value="Colegio Universitario IES Siglo 21">                                 Colegio Universitario IES Siglo 21                                              </option>'+
@@ -392,22 +524,26 @@ function fillUniversities(target)
     '<option value="UTN Unidad Academica Rio Gallegos">                                  UTN Unidad Académica Río Gallegos                                               </option>'+
     '<option value="UTN Unidad Academica Trenque Lauquen">                               UTN Unidad Académica Trenque Lauquen                                            </option>'+
     '<option value="Otra">                                                               otra                                                                            </option>');
+    }
+    else
+    {
+      $(target).html(''+
+        '<option value="0" selected>  Seleccione Universidad  </option>'+
+        '<option value="Otra">        Otra                    </option>');
+    }
 }
 
 function fillDegrees(target)
 {
   $(target).html(''+
-    '<option value="0">                              Seleccioná uno                          </option>'+   
+   '<option value="0">                              Seleccioná uno                          </option>'+   
     '<optgroup label="Diseño y Arquitectura">'                                                        +
     '<option value="Arquitectura">                  Arquitectura                            </option>'+
     '<option value="Dibujo tecnico">                Dibujo Técnico                          </option>'+
-    '<option value="Diseño de imagen y sonido">     Diseño de Imagen y Sonido               </option>'+
-    '<option value="Diseño de vestuario">           Diseño de Vestuario/Textil/Modas        </option>'+
     '<option value="Diseño grafico">                Diseño Gráfico                          </option>'+
     '<option value="Diseño industrial">             Diseño industrial                       </option>'+
     '<option value="Diseño multimedial">            Diseño multimedial                      </option>'+
     '<option value="Diseño web">                    Diseño Web                              </option>'+
-    '<option value="Paisajismo">                    Paisajismo                              </option>'+
     '</optgroup>'                                                                                     +
     '<optgroup label="Economicas">'                                                                   +                                  
     '<option value="Actuario">                      Actuario                                </option>'+
@@ -428,21 +564,12 @@ function fillDegrees(target)
     '<option value="Acuicultura">                   Acuicultura                             </option>'+
     '<option value="Agrimensor">                    Agrimensor                              </option>'+
     '<option value="Arqueologia">                   Arqueología                             </option>'+
-    '<option value="Astronomia">                    Astronomía                              </option>'+
-    '<option value="Biofisica">                     Biofísica                               </option>'+
     '<option value="Bioingenieria">                 Bioingeniería                           </option>'+
-    '<option value="Biologia">                      Biología                                </option>'+
     '<option value="Bioquimica">                    Bioquímica                              </option>'+
     '<option value="Cartografia">                   Cartografía                             </option>'+
     '<option value="Ciencias fisicas">              Ciencias Físicas                        </option>'+
-    '<option value="Ecologia">                      Ecología                                </option>'+
-    '<option value="Enologia">                      Enología                                </option>'+
     '<option value="Geofisica">                     Geofísica                               </option>'+
-    '<option value="Geografia">                     Geografía                               </option>'+
     '<option value="Geologia">                      Geología / Geomensura / Topografía      </option>'+
-    '<option value="Matematicas">                   Matemáticas                             </option>'+
-    '<option value="Medio ambiente">                Medio Ambiente                          </option>'+
-    '<option value="Oceanografia">                  Oceanografía                            </option>'+
     '<option value="Quimica">                       Química                                 </option>'+
     '<option value="Tecnologia de alimentos">       Tecnología de Alimentos                 </option>'+
     '</optgroup>'                                                                                     +
@@ -506,7 +633,7 @@ function fillCivilStatus(target)
 function fillCompanyType(target)
 {
   $(target).html(''+
-    '<option value="0">                                         Seleccioná uno                              </option>'+
+   '<option value="0">                                         Seleccioná uno                              </option>'+
     '<option value="Aeronavegacion">                            Aeronavegación                              </option>'+
     '<option value="AFJP">                                      AFJP                                        </option>'+
     '<option value="Agricultura y Ganaderia">                   Agricultura y Ganadería                     </option>'+
@@ -638,6 +765,7 @@ function fillAreaType(target)
 
 function fillBirthDate()
 {
+  $('#fecha_nacimiento_mes').append($('<option />').val(1).html("Mes"));
   for (i = 1; i < 13; i++)
   {
     $('#fecha_nacimiento_mes').append($('<option />').val(i).html(i));
@@ -652,9 +780,11 @@ function fillBirthDate()
 function updateNumberOfDays()
 {
   $('#fecha_nacimiento_dia').html('');
-  month =$('#fecha_nacimiento_mes').val();
-  year  =$('#fecha_nacimiento_anio').val();
-  days  =daysInMonth(month, year);
+  month = $('#fecha_nacimiento_mes').val();
+  year  = $('#fecha_nacimiento_anio').val();
+  days  = daysInMonth(month, year);
+
+  $('#fecha_nacimiento_dia').append($('<option />').val(1).html("Día"));
 
   for(i=1; i < days+1 ; i++){
     $('#fecha_nacimiento_dia').append($('<option />').val(i).html(i));

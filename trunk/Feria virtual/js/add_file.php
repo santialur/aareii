@@ -4,7 +4,7 @@ if(isset($_FILES['file_upload']) & isset($_POST['dni'])) {
     // Make sure the file was sent without errors
     if($_FILES['file_upload']['error'] == 0) {
         // Connect to the database
-        $dbLink = new mysqli('localhost', 'root', '', 'encontramas');
+        $dbLink = new mysqli('localhost', 'root', '', 'encontramas_test');
         if(mysqli_connect_errno()) {
             die("MySQL connection failed: ". mysqli_connect_error());
         }

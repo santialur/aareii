@@ -16,7 +16,7 @@
 		$cityOfResidence, $civil_status){
 
 		$con = mysql_connect('localhost','root','');
-		mysql_select_db('encontramas',$con);
+		mysql_select_db('encontramas_test',$con);
 		mysql_query("SET NAMES 'utf8'", $con);
 		if (!$con)
 		  {
@@ -27,7 +27,7 @@
 		$encrypt = md5($password.$salt);
 		$encriptedPass = $encrypt.':'.$salt;
 
-		$sqldni="SELECT * FROM ems_user WHERE username = '".$dni."'";
+		$sqldni = "SELECT * FROM ems_user WHERE username = '".$dni."'";
 		$userdni = mysql_query($sqldni, $con);
 
 		$sqlemail = "SELECT * FROM ems_user WHERE email = '".$email."'";
