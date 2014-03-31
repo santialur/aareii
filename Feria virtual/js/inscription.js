@@ -1,28 +1,24 @@
 var newUser;
+
 function checkUser(){
-    $.ajax({
-            url:'../js/getUserInformation.php',
-            data: {
-                    dni:                      document.getElementById("numero_de_documento").value,
-                    password:                 document.getElementById("contraseña").value,
-            },
-            type: 'post',
+
+   $.ajax({ url: '../js/getUserInformation.php',
+            data: {dni:                    document.getElementById("numero_de_documento").value,
+                   password:               document.getElementById("contraseña").value,
+                 },
+            type: 'POST',
             success: function(output){
-                                      alert(output);
+              alert(output);
             }
-
-
     });
 
-    newUser = false;
 }
-
 
 function createNewUser(){
     document.getElementById("personalInformation").style.display='inline';
     document.getElementById("password_div").style.display='none';
     document.getElementById("buttons").style.display='none';
-    document.getElementById("olvido_contraseña").style.display='none';
+    //document.getElementById("olvido_contraseña").style.display='none';
     newUser = true;
 }
 
@@ -91,6 +87,7 @@ function sendPersonalInformation(){
                      type: 'POST',
                      success: function(output) {
                             if(output == "Ya existe un usuario registrado con el numero de documento" || output == "Ya existe un usuario registrado con la direccion de email"){
+                              alert(output);
                               return;
                             }else{
                               document.getElementById("personalInformation").style.display = 'none';
@@ -203,6 +200,8 @@ function sendLaboralInformation(){
                    },
                     type: 'POST',
                     success: function(output) {
+                    		alert(output);
+                            //alert("El usuario a sido regitrado exitosamente, por favor envie su curriculum");
                             document.getElementById("curriculum_div").style.display = 'inline-table';    
                     }
             });
