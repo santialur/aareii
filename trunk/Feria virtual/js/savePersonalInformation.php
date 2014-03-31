@@ -42,10 +42,11 @@
 			$birthday = "'".$yearOfBorn."-".$monthOfBorn."-".$dayOfBorn."'";
 			$completeName = "'".$name." ".$lastname."'";
 
+			$date = date('Y-m-d H:i:s');
 
 			//Insert values into ems_user
-			$sql= " INSERT INTO ems_user (name, username, email, password)
-		    			VALUES ($completeName, '$dni' ,'$email', '$encriptedPass') ";	
+			$sql= " INSERT INTO ems_user (name, username, email, password, registerDate)
+		    			VALUES ($completeName, '$dni' ,'$email', '$encriptedPass',$date) ";	
 			$result = mysql_query($sql, $con);
 			//echo $result;
 
