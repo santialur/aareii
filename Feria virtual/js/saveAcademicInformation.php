@@ -12,7 +12,7 @@
 		$portugueseLevel){
 
 		$con = mysql_connect('localhost','root','');
-		mysql_select_db('encontramas',$con);
+		mysql_select_db('encontramas_test',$con);
 		mysql_query("SET NAMES 'utf8'", $con);
 		if (!$con)
 		  {
