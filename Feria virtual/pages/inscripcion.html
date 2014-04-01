@@ -109,26 +109,29 @@
             <input type="text" id="email" name="email" class="rightSide" placeholder="ejemplo@gmail.com"> <br><br>
 
             <!--CONFIRMACION EMAIL--> 
-            <span class="leftSide">
-              <strong>Confirme direccion de e-mail</strong>:   
-              <span class="red">*</span>
-            </span>
-            <input type="text" id="confirme_email" name="confirme_email" class="rightSide" placeholder="ejemplo@gmail.com"> <br><br>
+            <div id="div_confirme_email">
+              <span class="leftSide">
+                <strong>Confirme direccion de e-mail</strong>:   
+                <span class="red">*</span>
+              </span>
+              <input type="text" id="confirme_email" name="confirme_email" class="rightSide" placeholder="ejemplo@gmail.com"> <br><br>
+            </div>
 
-            <!--CONTRASEÑA--> 
-            <span class="leftSide">
-              <strong>Contraseña</strong>:   
-              <span class="red">*</span>
-            </span>
-            <input type="password" id="contraseña_nueva" name="contraseña_nueva" class="rightSide" placeholder="*********"> <br><br>
+            <div id="div_password">
+              <!--CONTRASEÑA--> 
+              <span class="leftSide">
+                <strong>Contraseña</strong>:   
+                <span class="red">*</span>
+              </span>
+              <input type="password" id="contraseña_nueva" name="contraseña_nueva" class="rightSide" placeholder="*********"> <br><br>
 
-            <!--CONFIRMACION CONTRASEÑA--> 
-            <span class="leftSide">
-              <strong>Confirmar contraseña</strong>:   
-              <span class="red">*</span>
-            </span>
-            <input type="password" id="confirme_nueva_contraseña" name="confirme_nueva_contraseña" class="rightSide" placeholder="*********"> <br><br>
-
+              <!--CONFIRMACION CONTRASEÑA--> 
+              <span class="leftSide">
+                <strong>Confirmar contraseña</strong>:   
+                <span class="red">*</span>
+              </span>
+              <input type="password" id="confirme_nueva_contraseña" name="confirme_nueva_contraseña" class="rightSide" placeholder="*********"> <br><br>
+            </div>
             <!--TELEFONO--> 
             <span class="leftSide">
               <strong>Teléfono</strong>:   
@@ -377,7 +380,6 @@
               <div class="rightSide">
                 <select id="postgrado_tipo" name="postgrado">
                   <option value="0" selected="">              Seleccione su Postgrado     </option>
-                  <option value="Doctorado">                  Ninguno                     </option>
                   <option value="Doctorado">                  Doctorado                   </option>
                   <option value="Master / Especialización">   Master / Especialización    </option>
                   <option value="Posgrado">                   Posgrado                    </option>

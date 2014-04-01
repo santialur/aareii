@@ -1,290 +1,3 @@
-var newUser;
-
-function checkUser(){
-
-   $.ajax({ url: '../js/getUserInformation.php',
-            data: {dni:                    document.getElementById("numero_de_documento").value,
-                   password:               document.getElementById("contraseña").value,
-                 },
-            type: 'POST',
-            success: function(output){
-              alert(output);
-            }
-    });
-
-}
-
-function createNewUser(){
-    document.getElementById("personalInformation").style.display='inline';
-    document.getElementById("password_div").style.display='none';
-    document.getElementById("buttons").style.display='none';
-    //document.getElementById("olvido_contraseña").style.display='none';
-    newUser = true;
-}
-
-function sendPersonalInformation(){
-    if(newUser){
-            if(document.getElementById("confirme_nueva_contraseña").value == document.getElementById("contraseña_nueva").value){
-              if(document.getElementById("confirme_email").value == document.getElementById("email").value){
-                if(document.getElementById("numero_de_documento").value.match(/^\s*$/)){
-                  alert("Ingrese su numero de documento");
-                  return;
-                }
-                if(document.getElementById("nombre").value.match(/^\s*$/)){
-                  alert("Ingrese su nombre");
-                  return;
-                }
-                if(document.getElementById("apellido").value.match(/^\s*$/)){
-                  alert("Ingrese su apellido");
-                  return;
-                }
-                if(document.getElementById("confirme_email").value.match(/^\s*$/)){
-                  alert("Ingrese su direccion de email");
-                  return;
-                }
-                if(document.getElementById("contraseña_nueva").value.match(/^\s*$/)){
-                  alert("Ingrese su contraseña");
-                  return;
-                }
-                if(document.getElementById("telefono_celular").value.match(/^\s*$/)){
-                  alert("Ingrese su telefono de contacto");
-                  return;
-                }
-                if(document.getElementById("fecha_nacimiento_dia").value == "0" || document.getElementById("fecha_nacimiento_mes").value == "0" || document.getElementById("fecha_nacimiento_anio").value == "0"){
-                  alert("Ingrese una fecha de nacimiento correcta");
-                  return;
-                }
-                if(document.getElementById("lugar_de_residencia_pais").value == "0"){
-                  alert("Ingrese su pais de residencia");
-                  return;
-                }
-                if(document.getElementById("lugar_de_residencia_provincia").value == "0"){
-                  alert("Ingrese su provincia de residencia");
-                  return;
-                }
-                if(document.getElementById("lugar_de_residencia_ciudad").value.match(/^\s*$/)){
-                  alert("Ingrese su ciudad de residencia");
-                  return;
-                }
-                
-                $.ajax({ url: '../js/savePersonalInformation.php',
-                     data: {user:                   "newUser",
-                            dni:                    document.getElementById("numero_de_documento").value,
-                            name:                   document.getElementById("nombre").value,
-                            lastname:               document.getElementById("apellido").value, 
-                            sex:                    document.getElementById("sexo").value,
-                            email:                  document.getElementById("confirme_email").value, 
-                            password:               document.getElementById("confirme_nueva_contraseña").value,
-                            celPhone:               document.getElementById("telefono_codigo_area").value +"-"+document.getElementById("telefono_celular").value,
-                            dayOfBorn:              document.getElementById("fecha_nacimiento_dia").value,
-                            monthOfBorn:            document.getElementById("fecha_nacimiento_mes").value,
-                            yearOfBorn:             document.getElementById("fecha_nacimiento_anio").value,
-                            countryOfResidence:     document.getElementById("lugar_de_residencia_pais").value,
-                            stateOfResidence:       document.getElementById("lugar_de_residencia_provincia").value,
-                            cityOfResidence:        document.getElementById("lugar_de_residencia_ciudad").value,
-                            civil_status:           document.getElementById("estado_civil").value,
-                            },
-                     type: 'POST',
-                     success: function(output) {
-                            if(output == "Ya existe un usuario registrado con el numero de documento" || output == "Ya existe un usuario registrado con la direccion de email"){
-                              alert(output);
-                              return;
-                            }else{
-                              document.getElementById("personalInformation").style.display = 'none';
-                              document.getElementById("numero_de_documento").style.display = 'none';
-                              document.getElementById("academicInformation").style.display = 'inline';
-                              document.getElementById("ID_div").style.display='none';
-                              document.getElementById("dni").value = document.getElementById("numero_de_documento").value;
-                            }    
-                     }
-                   });
-              }else{
-                alert("Las direcciones de e-mail no coinciden");
-              }
-              
-            }else{
-                alert("Las contraseñas no coinciden");
-            }
-            
-    }
-}
-
-function sendAcademicInformation(){
-    var institucion;
-    if(!document.getElementById("universidad").value.match(/^\s*$/)){
-        institucion = document.getElementById("universidad").value;
-    }else{
-        institucion = document.getElementById("institucion").value;
-    }
-    if(document.getElementById("carrera_area").value.match(/^\s*$/)){
-        alert("Ingrese su area de estudio");
-        return;
-    }
-    if(document.getElementById("carrera_titulo").value.match(/^\s*$/)){
-        alert("Ingrese la carrera que estudia");
-        return;
-    }
-    if(document.getElementById("estado_carrera").value.match(/^\s*$/)){
-        alert("Ingrese el estado de su carrera");
-        return;
-    }
-
-    if( $('input[name="nivel_ingles"]:checked').val() == undefined || $('input[name="nivel_español"]:checked').val() == undefined|| 
-        $('input[name="nivel_portugues"]:checked').val() == undefined || $('input[name="nivel_aleman"]:checked').val() == undefined ||
-        $('input[name="nivel_italiano"]:checked').val() == undefined){
-        alert("Seleccione su nivel en todos los idiomas");
-        return;
-    }  
-    $.ajax({url: '../js/saveAcademicInformation.php',
-            data:  {dni:                         document.getElementById("numero_de_documento").value,
-                    university:                  institucion,
-                    career_area:                 document.getElementById("carrera_area").value, 
-                    career_title:                document.getElementById("carrera_titulo").value, 
-                    career_status:               document.getElementById("estado_carrera").value,
-                    approved_subjects:           document.getElementById("carrera_materiasAprobadas").value,
-                    career_average:              document.getElementById("carrera_promedio").value,
-                    career_totalSubjects:        document.getElementById("carrera_totalMaterias").value,
-                    postgraduate_type:           document.getElementById("postgrado_tipo").value,
-                    postgraduate_status:         document.getElementById("postgrado_estado").value,
-                    postgraduate_title:          document.getElementById("postgrado_titulo").value,
-                    postgraduate_institution:    document.getElementById("postgrado_institucion").value,
-                    englishLevel:                $('input[name="nivel_ingles"]:checked').val(),
-                    spanishLevel:                $('input[name="nivel_español"]:checked').val(),
-                    portugueseLevel:             $('input[name="nivel_portugues"]:checked').val(),
-                    germanLevel:                 $('input[name="nivel_aleman"]:checked').val(),
-                    italianLevel:                $('input[name="nivel_italiano"]:checked').val(),
-                   },
-            type: 'POST',
-            success: function(output) {  
-                    document.getElementById("academicInformation").style.display = 'none';
-                    document.getElementById("jobInformation").style.display = 'inline';
-            }
-    });
-}
-
-
-function sendLaboralInformation(){
-    if(document.getElementById("trabaja").value == "0"){
-        alert("Ingrese si actualmente trabaja o no");
-        return;
-    }
-    
-     $.ajax({ url: '../js/saveLaboralInformation.php',
-            data:  {dni:                         document.getElementById("numero_de_documento").value,
-                    still_works:                 document.getElementById("trabaja").value,
-                    
-                    company_1_name:              document.getElementById("empresa_1_nombre").value,
-                    company_1_type:              document.getElementById("empresa_1_tipo").value,
-                    job_1_description:           document.getElementById("trabajo_1_descripcion").value,
-                    job_1_area:                  document.getElementById("trabajo_1_area").value,
-                    job_1_senior:                document.getElementById("trabajo_1_senior").value,
-                    job_1_from:                  document.getElementById("trabajo_1_mes_desde").value + "-" + document.getElementById("trabajo_1_año_desde").value,
-                    job_1_to:                    document.getElementById("trabajo_1_mes_hasta").value + "-" + document.getElementById("trabajo_1_año_hasta").value,
-
-                    company_2_name:              document.getElementById("empresa_2_nombre").value,
-                    company_2_type:              document.getElementById("empresa_2_tipo").value,
-                    job_2_description:           document.getElementById("trabajo_2_descripcion").value,
-                    job_2_area:                  document.getElementById("trabajo_2_area").value,
-                    job_2_senior:                document.getElementById("trabajo_2_senior").value,
-                    job_2_from:                  document.getElementById("trabajo_2_mes_desde").value + "-" + document.getElementById("trabajo_2_año_desde").value,
-                    job_2_to:                    document.getElementById("trabajo_2_mes_hasta").value + "-" + document.getElementById("trabajo_2_año_hasta").value,
-
-                    company_3_name:              document.getElementById("empresa_3_nombre").value,
-                    company_3_type:              document.getElementById("empresa_3_tipo").value,
-                    job_3_description:           document.getElementById("trabajo_3_descripcion").value,
-                    job_3_area:                  document.getElementById("trabajo_3_area").value,
-                    job_3_senior:                document.getElementById("trabajo_3_senior").value,
-                    job_3_from:                  document.getElementById("trabajo_3_mes_desde").value + "-" + document.getElementById("trabajo_3_año_desde").value,
-                    job_3_to:                    document.getElementById("trabajo_3_mes_hasta").value + "-" + document.getElementById("trabajo_3_año_hasta").value,
-
-                   },
-                    type: 'POST',
-                    success: function(output) {
-                    		alert(output);
-                            //alert("El usuario a sido regitrado exitosamente, por favor envie su curriculum");
-                            document.getElementById("curriculum_div").style.display = 'inline-table';    
-                    }
-            });
-}
-
-
-/****************************************************************************************** 
- * CONTROLAR CAMPOS 
- ******************************************************************************************/
-var previous        = "";
-var previous2       = "";
-var previousTarget  = "";
-
-function checkNumeric(target)
-{
-  if(target.value.length > 0 && isNaN(target.value))
-  {
-    alert("Este campo no admite letras, sólo números");
-    if(previousTarget != target)
-      previous = "";
-    target.value = previous;
-  }
-  else
-  {
-    previous = target.value;
-    previousTarget = target;
-  }
-}
-
-function checkBounds(target, val)
-{
-  if(target.value > val)
-  {
-    alert("Este campo no admite valores mayores a " + val);
-    target.value = previous2;
-  }
-  else
-    previous2 = target.value;
-}
-
-function checkAnotherUniversity()
-{
-  if($('#institucion').val() == "Otra")
-  {
-    $('#otra_universidad').css("display","inline");
-  }
-  else
-  {
-    $('#otra_universidad').css("display","none");
-  }
-}
-
-function checkAnotherCareer()
-{
-  if($('#carrera').val() == "Otra")
-    $('#otra_carrera').css("display","inline");
-
-  else
-      $('#otra_carrera').css("display","none");
-}
-
-function checkCareerLevel()
-{
-  if($('#estado_carrera').val() == "Completo")
-    $('#areaPosgrados').css("display","inline");
-  else
-    $('#areaPosgrados').css("display","none");
-}
-
-function stillWorkHere(target, target2, target3)
-{
-  if($(target).prop( "checked" ))
-  { 
-    $(target2).prop('disabled', true);
-    $(target3).prop('disabled', true);
-  }
-  else
-  {
-    $(target2).prop('disabled', false);
-    $(target3).prop('disabled', false);
-  }
-}
-
 /****************************************************************************************** 
  * RELLENAR CONTENIDOS 
  ******************************************************************************************/
@@ -292,15 +5,15 @@ function stillWorkHere(target, target2, target3)
 function fillMonths(target)
 {
   $(target).html(''+
-    '<option value="1" selected="">  Enero       </option>'+
-    '<option value="2">              Febrero     </option>'+
-    '<option value="3">              Marzo       </option>'+
-    '<option value="4">              Abril       </option>'+
-    '<option value="5">              Mayo        </option>'+
-    '<option value="6">              Junio       </option>'+
-    '<option value="7">              Julio       </option>'+
-    '<option value="8">              Agosto      </option>'+
-    '<option value="9">              Septiembre  </option>'+
+    '<option value="01" selected="">  Enero       </option>'+
+    '<option value="02">              Febrero     </option>'+
+    '<option value="03">              Marzo       </option>'+
+    '<option value="04">              Abril       </option>'+
+    '<option value="05">              Mayo        </option>'+
+    '<option value="06">              Junio       </option>'+
+    '<option value="07">              Julio       </option>'+
+    '<option value="08">              Agosto      </option>'+
+    '<option value="09">              Septiembre  </option>'+
     '<option value="10">             Octubre     </option>'+
     '<option value="11">             Noviembre   </option>'+
     '<option value="12">             Diciembre   </option>');
@@ -421,8 +134,7 @@ function fillUniversities(target, flag)
   if(flag)
   {
     $(target).html(''+
-          '<option value="0"> Seleccione Universidad </option>'+
-    '<option value="No Aplica">                                                          N/A                                                                             </option>'+
+    '<option value="0"> Seleccione Universidad </option>'+
     '<option value="Centro de Altos Estudios en Ciencias Exactas">                       Centro de Altos Estudios en Ciencias Exactas (CAECE)                            </option>'+
     '<option value="Colegio Universitario IES Siglo 21">                                 Colegio Universitario IES Siglo 21                                              </option>'+
     '<option value="Escuela Argentina de Negocios">                                      Escuela Argentina de Negocios                                                   </option>'+
@@ -522,7 +234,7 @@ function fillUniversities(target, flag)
     '<option value="UTN Unidad Academica Chubut (LOI)">                                  UTN Unidad Académica Chubut (LOI)                                               </option>'+
     '<option value="UTN Unidad Academica Rio Gallegos">                                  UTN Unidad Académica Río Gallegos                                               </option>'+
     '<option value="UTN Unidad Academica Trenque Lauquen">                               UTN Unidad Académica Trenque Lauquen                                            </option>'+
-    '<option value="Otra">                                                               otra                                                                            </option>');
+    '<option value="Otra">                                                               Otra                                                                            </option>');
     }
     else
     {
@@ -764,10 +476,15 @@ function fillAreaType(target)
 
 function fillBirthDate()
 {
-  $('#fecha_nacimiento_mes').append($('<option />').val(1).html("Mes"));
+  $('#fecha_nacimiento_mes').append($('<option />').val(0).html("Mes"));
   for (i = 1; i < 13; i++)
   {
-    $('#fecha_nacimiento_mes').append($('<option />').val(i).html(i));
+    if(i<10){
+      $('#fecha_nacimiento_mes').append($('<option />').val("0"+i).html(i));
+    }else{
+      $('#fecha_nacimiento_mes').append($('<option />').val(i).html(i));
+    }
+    
   }
   updateNumberOfDays(); 
 
@@ -783,10 +500,15 @@ function updateNumberOfDays()
   year  = $('#fecha_nacimiento_anio').val();
   days  = daysInMonth(month, year);
 
-  $('#fecha_nacimiento_dia').append($('<option />').val(1).html("Día"));
+  $('#fecha_nacimiento_dia').append($('<option />').val(0).html("Día"));
 
   for(i=1; i < days+1 ; i++){
-    $('#fecha_nacimiento_dia').append($('<option />').val(i).html(i));
+    if(i<10){
+      $('#fecha_nacimiento_dia').append($('<option />').val("0"+i).html(i));
+    }else{
+      $('#fecha_nacimiento_dia').append($('<option />').val(i).html(i));
+    }
+    
   }
 }
 
@@ -794,3 +516,585 @@ function daysInMonth(month, year)
 {
     return new Date(year, month, 0).getDate();
 }
+/****************************************************************************************** 
+ * CONTROLAR CAMPOS 
+ ******************************************************************************************/
+var previous        = "";
+var previous2       = "";
+var previousTarget  = "";
+
+function checkNumeric(target)
+{
+  if(target.value.length > 0 && isNaN(target.value))
+  {
+    alert("Este campo no admite letras, sólo números");
+    if(previousTarget != target)
+      previous = "";
+    target.value = previous;
+  }
+  else
+  {
+    previous = target.value;
+    previousTarget = target;
+  }
+}
+
+function checkBounds(target, val)
+{
+  if(target.value > val)
+  {
+    alert("Este campo no admite valores mayores a " + val);
+    target.value = previous2;
+  }
+  else
+    previous2 = target.value;
+}
+
+function checkAnotherUniversity()
+{
+  if($('#institucion').val() == "Otra")
+  {
+    $('#otra_universidad').css("display","inline");
+  }
+  else
+  {
+    $('#otra_universidad').css("display","none");
+  }
+}
+
+function checkAnotherCareer()
+{
+  if($('#carrera_area').val() == "Otra carrera")
+    $('#otra_carrera').css("display","inline");
+
+  else
+      $('#otra_carrera').css("display","none");
+}
+
+function checkCareerLevel()
+{
+  if($('#estado_carrera').val() == "Completo"){
+    $('#areaPosgrados').css("display","inline");
+  }
+  else{
+    $('#areaPosgrados').css("display","none");
+    document.getElementById('postgrado_tipo').value = "0";
+    document.getElementById('postgrado_estado').value = "0";
+    document.getElementById('postgrado_titulo').value = "";
+    document.getElementById('postgrado_institucion').value = "";
+  }
+}
+
+function stillWorkHere(target, target2, target3)
+{
+  if($(target).prop( "checked" ))
+  { 
+    $(target2).prop('disabled', true);
+    $(target3).prop('disabled', true);
+  }
+  else
+  {
+    $(target2).prop('disabled', false);
+    $(target3).prop('disabled', false);
+  }
+}
+
+
+var newUser;
+
+function checkUser(){
+   if(document.getElementById("numero_de_documento").value.match(/^\s*$/)){
+      alert("Ingrese su numero de documento");
+      return;
+   }
+   if(document.getElementById("contraseña").value.match(/^\s*$/)){
+      alert("Ingrese su contraseña");
+      return;
+   }
+   $.ajax({ url: '../js/getUserInformation.php',
+            data: {dni:                    document.getElementById("numero_de_documento").value,
+                   password:               document.getElementById("contraseña").value,
+                 },
+            type: 'POST',
+            success: function(output){
+              alert(output);
+              var obj = JSON.parse(output);
+              document.getElementById("numero_de_documento").value              = obj.dni;
+              document.getElementById("numero_de_documento").disabled = true;
+              document.getElementById("nombre").value                           = obj.name;
+              document.getElementById("apellido").value                         = obj.lastname; 
+              document.getElementById("sexo").value                             = obj. sex;
+              document.getElementById("email").value                            = obj.email; 
+              document.getElementById("div_confirme_email").style.display       = 'none';
+              document.getElementById("div_password").style.display       = 'none';
+              document.getElementById("telefono_codigo_area").value             = obj.celPhone.split("-")[0];
+              document.getElementById("telefono_celular").value                 = obj.celPhone.split("-")[1];
+              document.getElementById("fecha_nacimiento_anio").value            = obj.bornDate.split("-")[0];
+              document.getElementById("fecha_nacimiento_mes").value             = obj.bornDate.split("-")[1];
+              document.getElementById("fecha_nacimiento_dia").value             = obj.bornDate.split("-")[2];
+              document.getElementById("lugar_de_residencia_pais").value         = obj.country;
+              document.getElementById("lugar_de_residencia_pais").onchange();
+              document.getElementById("lugar_de_residencia_provincia").value    = obj.state;
+              document.getElementById("lugar_de_residencia_ciudad").value       = obj.city;
+              document.getElementById("estado_civil").value                     = obj.civilStatus;
+
+              if(0 != $('#institucion option[value='+"'"+obj.university+"'"+']').length ){
+                  document.getElementById("institucion").value                  = obj.university;
+              }else{
+                  document.getElementById("universidad").value                  = obj.university;
+              }
+              if(0 != $('#carrera_area option[value='+"'"+obj.careerArea+"'"+']').length ){
+                  document.getElementById("carrera_area").value                 = obj.careerArea;
+              }else{
+                  document.getElementById("otraCarrera").value                  = obj.carreerArea;
+              }
+              document.getElementById("carrera_area").value                     = obj.careerArea;
+              document.getElementById("carrera_titulo").value                   = obj.title; 
+              document.getElementById("estado_carrera").value                   = obj.careerStatus;
+              document.getElementById("estado_carrera").onchange();
+              document.getElementById("carrera_materiasAprobadas").value        = obj.subjectsApproved;
+              document.getElementById("carrera_promedio").value                 = obj.careerAverage;
+              document.getElementById("carrera_totalMaterias").value            = obj.totalSubjects;
+              document.getElementById("postgrado_tipo").value                   = obj.postgraduate_type;
+              document.getElementById("postgrado_estado").value                 = obj.postgraduate_status;
+              document.getElementById("postgrado_titulo").value                 = obj.postgraduate_title;
+              document.getElementById("postgrado_institucion").value            = obj.postgraduate_institution;
+              var $radiosEspañol                                                = $('input:radio[name=nivel_español]');
+              $radiosEspañol.filter('[value=' + obj.español_level +']').attr('checked', true);
+              var $radiosIngles                                                 = $('input:radio[name=nivel_ingles]');
+              $radiosIngles.filter('[value=' + obj.ingles_level +']').attr('checked', true);
+              var $radiosPortugues                                              = $('input:radio[name=nivel_portugues]');
+              $radiosPortugues.filter('[value=' + obj.portugues_level +']').attr('checked', true);
+              var $radiosAleman                                                 = $('input:radio[name=nivel_aleman]');
+              $radiosAleman.filter('[value=' + obj.aleman_level +']').attr('checked', true);
+              var $radiosItaliano                                               = $('input:radio[name=nivel_italiano]');
+              $radiosItaliano.filter('[value=' + obj.italiano_level +']').attr('checked', true);
+              var $radiosFrances                                                = $('input:radio[name=nivel_frances]');
+              $radiosFrances.filter('[value=' + obj.frances_level +']').attr('checked', true);
+
+              document.getElementById("trabaja").value                          = obj.works;      
+              document.getElementById("empresa_1_nombre").value                 = obj.company_name_1;
+              document.getElementById("empresa_1_tipo").value                   = obj.company_type_1;
+              document.getElementById("trabajo_1_descripcion").value            = obj.job_description_1;
+              document.getElementById("trabajo_1_area").value                   = obj.job_area_1;
+              document.getElementById("trabajo_1_senior").value                 = obj.job_range_1;
+              document.getElementById("trabajo_1_mes_desde").value              = obj.job_from_1.split("-")[0];
+              document.getElementById("trabajo_1_año_desde").value              = obj.job_from_1.split("-")[1];
+              document.getElementById("trabajo_1_mes_hasta").value              = obj.job_to_1.split("-")[0];
+              document.getElementById("trabajo_1_año_hasta").value              = obj.job_to_1.split("-")[1];
+              document.getElementById("empresa_2_nombre").value                 = obj.company_name_2;
+              document.getElementById("empresa_2_tipo").value                   = obj.company_type_2;
+              document.getElementById("trabajo_2_descripcion").value            = obj.job_description_2;
+              document.getElementById("trabajo_2_area").value                   = obj.job_area_2;
+              document.getElementById("trabajo_2_senior").value                 = obj.job_range_2;
+              document.getElementById("trabajo_2_mes_desde").value              = obj.job_from_2.split("-")[0];
+              document.getElementById("trabajo_2_año_desde").value              = obj.job_from_2.split("-")[1];
+              document.getElementById("trabajo_2_mes_hasta").value              = obj.job_to_2.split("-")[0];
+              document.getElementById("trabajo_2_año_hasta").value              = obj.job_to_2.split("-")[1];
+              document.getElementById("empresa_3_nombre").value                 = obj.company_name_3;
+              document.getElementById("empresa_3_tipo").value                   = obj.company_type_3;
+              document.getElementById("trabajo_3_descripcion").value            = obj.job_description_3;
+              document.getElementById("trabajo_3_area").value                   = obj.job_area_3;
+              document.getElementById("trabajo_3_senior").value                 = obj.job_range_3;
+              document.getElementById("trabajo_3_mes_desde").value              = obj.job_from_3.split("-")[0];
+              document.getElementById("trabajo_3_año_desde").value              = obj.job_from_3.split("-")[1];
+              document.getElementById("trabajo_3_mes_hasta").value              = obj.job_to_3.split("-")[0];
+              document.getElementById("trabajo_3_año_hasta").value              = obj.job_to_3.split("-")[1];
+
+
+              document.getElementById("personalInformation").style.display='inline';
+              document.getElementById("password_div").style.display='none';
+              document.getElementById("buttons").style.display='none';
+              newUser = false;
+            }
+    });
+
+}
+
+function createNewUser(){
+    document.getElementById("personalInformation").style.display='inline';
+    document.getElementById("password_div").style.display='none';
+    document.getElementById("buttons").style.display='none';
+    //document.getElementById("olvido_contraseña").style.display='none';
+    newUser = true;
+}
+
+function sendPersonalInformation(){
+    if(newUser){
+            if(document.getElementById("confirme_nueva_contraseña").value == document.getElementById("contraseña_nueva").value){
+              if(document.getElementById("confirme_email").value == document.getElementById("email").value){
+                if(document.getElementById("numero_de_documento").value.match(/^\s*$/)){
+                  alert("Ingrese su numero de documento");
+                  return;
+                }
+                if(document.getElementById("nombre").value.match(/^\s*$/)){
+                  alert("Ingrese su nombre");
+                  return;
+                }
+                if(document.getElementById("apellido").value.match(/^\s*$/)){
+                  alert("Ingrese su apellido");
+                  return;
+                }
+                if(document.getElementById("email").value.match(/^\s*$/)){
+                  alert("Ingrese su direccion de email");
+                  return;
+                }
+                if(document.getElementById("contraseña_nueva").value.match(/^\s*$/)){
+                  alert("Ingrese su contraseña");
+                  return;
+                }
+                if(document.getElementById("telefono_celular").value.match(/^\s*$/)){
+                  alert("Ingrese su telefono de contacto");
+                  return;
+                }
+                if(document.getElementById("fecha_nacimiento_dia").value == "0" || document.getElementById("fecha_nacimiento_mes").value == "0" || document.getElementById("fecha_nacimiento_anio").value == "0"){
+                  alert("Ingrese una fecha de nacimiento correcta");
+                  return;
+                }
+                if(document.getElementById("lugar_de_residencia_pais").value == "0"){
+                  alert("Ingrese su pais de residencia");
+                  return;
+                }
+                if(document.getElementById("lugar_de_residencia_provincia").value == "0"){
+                  alert("Ingrese su provincia de residencia");
+                  return;
+                }
+                if(document.getElementById("lugar_de_residencia_ciudad").value.match(/^\s*$/)){
+                  alert("Ingrese su ciudad de residencia");
+                  return;
+                }
+                
+                $.ajax({ url: '../js/savePersonalInformation.php',
+                     data: {user:                   "newUser",
+                            dni:                    document.getElementById("numero_de_documento").value,
+                            name:                   document.getElementById("nombre").value,
+                            lastname:               document.getElementById("apellido").value, 
+                            sex:                    document.getElementById("sexo").value,
+                            email:                  document.getElementById("confirme_email").value, 
+                            password:               document.getElementById("confirme_nueva_contraseña").value,
+                            celPhone:               document.getElementById("telefono_codigo_area").value +"-"+document.getElementById("telefono_celular").value,
+                            dayOfBorn:              document.getElementById("fecha_nacimiento_dia").value,
+                            monthOfBorn:            document.getElementById("fecha_nacimiento_mes").value,
+                            yearOfBorn:             document.getElementById("fecha_nacimiento_anio").value,
+                            countryOfResidence:     document.getElementById("lugar_de_residencia_pais").value,
+                            stateOfResidence:       document.getElementById("lugar_de_residencia_provincia").value,
+                            cityOfResidence:        document.getElementById("lugar_de_residencia_ciudad").value,
+                            civil_status:           document.getElementById("estado_civil").value,
+                            },
+                     type: 'POST',
+                     success: function(output) {
+                            if(output == "Ya existe un usuario registrado con el numero de documento" || output == "Ya existe un usuario registrado con la direccion de email"){
+                              alert(output);
+                              return;
+                            }else{
+                              document.getElementById("personalInformation").style.display = 'none';
+                              document.getElementById("numero_de_documento").style.display = 'none';
+                              document.getElementById("academicInformation").style.display = 'inline';
+                              document.getElementById("ID_div").style.display='none';
+                              document.getElementById("dni").value = document.getElementById("numero_de_documento").value;
+                            }    
+                     }
+                   });
+              }else{
+                alert("Las direcciones de e-mail no coinciden");
+              }
+              
+            }else{
+                alert("Las contraseñas no coinciden");
+            }
+            
+    }else{
+      if(document.getElementById("numero_de_documento").value.match(/^\s*$/)){
+                  alert("Ingrese su numero de documento");
+                  return;
+                }
+                if(document.getElementById("nombre").value.match(/^\s*$/)){
+                  alert("Ingrese su nombre");
+                  return;
+                }
+                if(document.getElementById("apellido").value.match(/^\s*$/)){
+                  alert("Ingrese su apellido");
+                  return;
+                }
+                if(document.getElementById("email").value.match(/^\s*$/)){
+                  alert("Ingrese su direccion de email");
+                  return;
+                }
+                if(document.getElementById("telefono_celular").value.match(/^\s*$/)){
+                  alert("Ingrese su telefono de contacto");
+                  return;
+                }
+                if(document.getElementById("fecha_nacimiento_dia").value == "0" || document.getElementById("fecha_nacimiento_mes").value == "0" || document.getElementById("fecha_nacimiento_anio").value == "0"){
+                  alert("Ingrese una fecha de nacimiento correcta");
+                  return;
+                }
+                if(document.getElementById("lugar_de_residencia_pais").value == "0"){
+                  alert("Ingrese su pais de residencia");
+                  return;
+                }
+                if(document.getElementById("lugar_de_residencia_provincia").value == "0"){
+                  alert("Ingrese su provincia de residencia");
+                  return;
+                }
+                if(document.getElementById("lugar_de_residencia_ciudad").value.match(/^\s*$/)){
+                  alert("Ingrese su ciudad de residencia");
+                  return;
+                }
+                
+                $.ajax({ url: '../js/savePersonalInformation.php',
+                     data: {user:                   "oldUser",
+                            dni:                    document.getElementById("numero_de_documento").value,
+                            name:                   document.getElementById("nombre").value,
+                            lastname:               document.getElementById("apellido").value, 
+                            sex:                    document.getElementById("sexo").value,
+                            email:                  document.getElementById("email").value, 
+                            celPhone:               document.getElementById("telefono_codigo_area").value +"-"+document.getElementById("telefono_celular").value,
+                            dayOfBorn:              document.getElementById("fecha_nacimiento_dia").value,
+                            monthOfBorn:            document.getElementById("fecha_nacimiento_mes").value,
+                            yearOfBorn:             document.getElementById("fecha_nacimiento_anio").value,
+                            countryOfResidence:     document.getElementById("lugar_de_residencia_pais").value,
+                            stateOfResidence:       document.getElementById("lugar_de_residencia_provincia").value,
+                            cityOfResidence:        document.getElementById("lugar_de_residencia_ciudad").value,
+                            civil_status:           document.getElementById("estado_civil").value,
+                            },
+                     type: 'POST',
+                     success: function(output) {
+                            if(output == "Ya existe un usuario registrado con el numero de documento" || output == "Ya existe un usuario registrado con la direccion de email"){
+                              alert(output);
+                              return;
+                            }else{
+                              document.getElementById("personalInformation").style.display = 'none';
+                              document.getElementById("numero_de_documento").style.display = 'none';
+                              document.getElementById("academicInformation").style.display = 'inline';
+                              document.getElementById("ID_div").style.display='none';
+                              document.getElementById("dni").value = document.getElementById("numero_de_documento").value;
+                            }    
+                     }
+                   });
+    }
+}
+
+function sendAcademicInformation(){
+  if(newUser){
+    var institucion;
+    if(!document.getElementById("universidad").value.match(/^\s*$/)){
+        institucion = document.getElementById("universidad").value;
+    }else{
+        if(document.getElementById("institucion").value == "0"){
+          alert("Ingrese la institucion donde estudia");
+          return;
+        }
+        institucion = document.getElementById("institucion").value;
+    }
+    var carrera;
+    if(!document.getElementById("otraCarrera").value.match(/^\s*$/)){
+        carrera = document.getElementById("otraCarrera").value;
+    }else{
+        if(document.getElementById("carrera_area").value == "0"){
+          alert("Ingrese su area de estudio");
+          return;
+        }
+        carrera = document.getElementById("carrera_area").value;
+    }
+    if(document.getElementById("carrera_titulo").value.match(/^\s*$/)){
+        alert("Ingrese la carrera que estudia");
+        return;
+    }
+    if(document.getElementById("estado_carrera").value.match(/^\s*$/)){
+        alert("Ingrese el estado de su carrera");
+        return;
+    }
+
+    if( $('input[name="nivel_ingles"]:checked').val() == undefined || $('input[name="nivel_español"]:checked').val() == undefined|| 
+        $('input[name="nivel_portugues"]:checked').val() == undefined || $('input[name="nivel_aleman"]:checked').val() == undefined ||
+        $('input[name="nivel_italiano"]:checked').val() == undefined || $('input[name="nivel_frances"]:checked').val() == undefined){
+        alert("Seleccione su nivel en todos los idiomas");
+        return;
+    }  
+    $.ajax({url: '../js/saveAcademicInformation.php',
+            data:  {user:                        "newUser",
+                    dni:                         document.getElementById("numero_de_documento").value,
+                    university:                  institucion,
+                    career_area:                 carrera,
+                    career_title:                document.getElementById("carrera_titulo").value, 
+                    career_status:               document.getElementById("estado_carrera").value,
+                    approved_subjects:           document.getElementById("carrera_materiasAprobadas").value,
+                    career_average:              document.getElementById("carrera_promedio").value,
+                    career_totalSubjects:        document.getElementById("carrera_totalMaterias").value,
+                    postgraduate_type:           document.getElementById("postgrado_tipo").value,
+                    postgraduate_status:         document.getElementById("postgrado_estado").value,
+                    postgraduate_title:          document.getElementById("postgrado_titulo").value,
+                    postgraduate_institution:    document.getElementById("postgrado_institucion").value,
+                    englishLevel:                $('input[name="nivel_ingles"]:checked').val(),
+                    spanishLevel:                $('input[name="nivel_español"]:checked').val(),
+                    portugueseLevel:             $('input[name="nivel_portugues"]:checked').val(),
+                    germanLevel:                 $('input[name="nivel_aleman"]:checked').val(),
+                    italianLevel:                $('input[name="nivel_italiano"]:checked').val(),
+                    frenchLevel:                 $('input[name="nivel_frances"]:checked').val(),
+                   },
+            type: 'POST',
+            success: function(output) {
+                    alert(output);  
+                    document.getElementById("academicInformation").style.display = 'none';
+                    document.getElementById("jobInformation").style.display = 'inline';
+            }
+    });
+  }else{
+    var institucion;
+    if(!document.getElementById("universidad").value.match(/^\s*$/)){
+        institucion = document.getElementById("universidad").value;
+    }else{
+        if(document.getElementById("institucion").value == "0"){
+          alert("Ingrese la institucion donde estudia");
+          return;
+        }
+        institucion = document.getElementById("institucion").value;
+    }
+    var carrera;
+    if(!document.getElementById("otraCarrera").value.match(/^\s*$/)){
+        carrera = document.getElementById("otraCarrera").value;
+    }else{
+        if(document.getElementById("carrera_area").value == "0"){
+          alert("Ingrese su area de estudio");
+          return;
+        }
+        carrera = document.getElementById("carrera_area").value;
+    }
+    if(document.getElementById("carrera_titulo").value.match(/^\s*$/)){
+        alert("Ingrese la carrera que estudia");
+        return;
+    }
+    if(document.getElementById("estado_carrera").value.match(/^\s*$/)){
+        alert("Ingrese el estado de su carrera");
+        return;
+    }
+
+    if( $('input[name="nivel_ingles"]:checked').val() == undefined || $('input[name="nivel_español"]:checked').val() == undefined|| 
+        $('input[name="nivel_portugues"]:checked').val() == undefined || $('input[name="nivel_aleman"]:checked').val() == undefined ||
+        $('input[name="nivel_italiano"]:checked').val() == undefined || $('input[name="nivel_frances"]:checked').val() == undefined){
+        alert("Seleccione su nivel en todos los idiomas");
+        return;
+    }  
+    $.ajax({url: '../js/saveAcademicInformation.php',
+            data:  {user:                        "oldUser",
+                    dni:                         document.getElementById("numero_de_documento").value,
+                    university:                  institucion,
+                    career_area:                 carrera,
+                    career_title:                document.getElementById("carrera_titulo").value, 
+                    career_status:               document.getElementById("estado_carrera").value,
+                    approved_subjects:           document.getElementById("carrera_materiasAprobadas").value,
+                    career_average:              document.getElementById("carrera_promedio").value,
+                    career_totalSubjects:        document.getElementById("carrera_totalMaterias").value,
+                    postgraduate_type:           document.getElementById("postgrado_tipo").value,
+                    postgraduate_status:         document.getElementById("postgrado_estado").value,
+                    postgraduate_title:          document.getElementById("postgrado_titulo").value,
+                    postgraduate_institution:    document.getElementById("postgrado_institucion").value,
+                    englishLevel:                $('input[name="nivel_ingles"]:checked').val(),
+                    spanishLevel:                $('input[name="nivel_español"]:checked').val(),
+                    portugueseLevel:             $('input[name="nivel_portugues"]:checked').val(),
+                    germanLevel:                 $('input[name="nivel_aleman"]:checked').val(),
+                    italianLevel:                $('input[name="nivel_italiano"]:checked').val(),
+                    frenchLevel:                 $('input[name="nivel_frances"]:checked').val(),
+                   },
+            type: 'POST',
+            success: function(output) {
+                    alert(output);  
+                    document.getElementById("academicInformation").style.display = 'none';
+                    document.getElementById("jobInformation").style.display = 'inline';
+            }
+    });
+  }
+}
+
+
+function sendLaboralInformation(){
+  if(newUser){
+     if(document.getElementById("trabaja").value == "0"){
+        alert("Ingrese si actualmente trabaja o no");
+        return;
+     }
+    
+     $.ajax({ url: '../js/saveLaboralInformation.php',
+            data:  {user:                        "newUser",
+                    dni:                         document.getElementById("numero_de_documento").value,
+                    still_works:                 document.getElementById("trabaja").value,
+                    
+                    company_1_name:              document.getElementById("empresa_1_nombre").value,
+                    company_1_type:              document.getElementById("empresa_1_tipo").value,
+                    job_1_description:           document.getElementById("trabajo_1_descripcion").value,
+                    job_1_area:                  document.getElementById("trabajo_1_area").value,
+                    job_1_senior:                document.getElementById("trabajo_1_senior").value,
+                    job_1_from:                  document.getElementById("trabajo_1_mes_desde").value + "-" + document.getElementById("trabajo_1_año_desde").value,
+                    job_1_to:                    document.getElementById("trabajo_1_mes_hasta").value + "-" + document.getElementById("trabajo_1_año_hasta").value,
+
+                    company_2_name:              document.getElementById("empresa_2_nombre").value,
+                    company_2_type:              document.getElementById("empresa_2_tipo").value,
+                    job_2_description:           document.getElementById("trabajo_2_descripcion").value,
+                    job_2_area:                  document.getElementById("trabajo_2_area").value,
+                    job_2_senior:                document.getElementById("trabajo_2_senior").value,
+                    job_2_from:                  document.getElementById("trabajo_2_mes_desde").value + "-" + document.getElementById("trabajo_2_año_desde").value,
+                    job_2_to:                    document.getElementById("trabajo_2_mes_hasta").value + "-" + document.getElementById("trabajo_2_año_hasta").value,
+
+                    company_3_name:              document.getElementById("empresa_3_nombre").value,
+                    company_3_type:              document.getElementById("empresa_3_tipo").value,
+                    job_3_description:           document.getElementById("trabajo_3_descripcion").value,
+                    job_3_area:                  document.getElementById("trabajo_3_area").value,
+                    job_3_senior:                document.getElementById("trabajo_3_senior").value,
+                    job_3_from:                  document.getElementById("trabajo_3_mes_desde").value + "-" + document.getElementById("trabajo_3_año_desde").value,
+                    job_3_to:                    document.getElementById("trabajo_3_mes_hasta").value + "-" + document.getElementById("trabajo_3_año_hasta").value,
+
+                   },
+                    type: 'POST',
+                    success: function(output) {
+                    		alert(output);
+                            //alert("El usuario a sido regitrado exitosamente, por favor envie su curriculum");
+                            document.getElementById("curriculum_div").style.display = 'inline-table';    
+                    }
+            });
+  }else{
+      if(document.getElementById("trabaja").value == "0"){
+        alert("Ingrese si actualmente trabaja o no");
+        return;
+     }
+    
+     $.ajax({ url: '../js/saveLaboralInformation.php',
+            data:  {user:                        "oldUser",
+                    dni:                         document.getElementById("numero_de_documento").value,
+                    still_works:                 document.getElementById("trabaja").value,
+                    
+                    company_1_name:              document.getElementById("empresa_1_nombre").value,
+                    company_1_type:              document.getElementById("empresa_1_tipo").value,
+                    job_1_description:           document.getElementById("trabajo_1_descripcion").value,
+                    job_1_area:                  document.getElementById("trabajo_1_area").value,
+                    job_1_senior:                document.getElementById("trabajo_1_senior").value,
+                    job_1_from:                  document.getElementById("trabajo_1_mes_desde").value + "-" + document.getElementById("trabajo_1_año_desde").value,
+                    job_1_to:                    document.getElementById("trabajo_1_mes_hasta").value + "-" + document.getElementById("trabajo_1_año_hasta").value,
+
+                    company_2_name:              document.getElementById("empresa_2_nombre").value,
+                    company_2_type:              document.getElementById("empresa_2_tipo").value,
+                    job_2_description:           document.getElementById("trabajo_2_descripcion").value,
+                    job_2_area:                  document.getElementById("trabajo_2_area").value,
+                    job_2_senior:                document.getElementById("trabajo_2_senior").value,
+                    job_2_from:                  document.getElementById("trabajo_2_mes_desde").value + "-" + document.getElementById("trabajo_2_año_desde").value,
+                    job_2_to:                    document.getElementById("trabajo_2_mes_hasta").value + "-" + document.getElementById("trabajo_2_año_hasta").value,
+
+                    company_3_name:              document.getElementById("empresa_3_nombre").value,
+                    company_3_type:              document.getElementById("empresa_3_tipo").value,
+                    job_3_description:           document.getElementById("trabajo_3_descripcion").value,
+                    job_3_area:                  document.getElementById("trabajo_3_area").value,
+                    job_3_senior:                document.getElementById("trabajo_3_senior").value,
+                    job_3_from:                  document.getElementById("trabajo_3_mes_desde").value + "-" + document.getElementById("trabajo_3_año_desde").value,
+                    job_3_to:                    document.getElementById("trabajo_3_mes_hasta").value + "-" + document.getElementById("trabajo_3_año_hasta").value,
+
+                   },
+                    type: 'POST',
+                    success: function(output) {
+                        alert(output);
+                            //alert("El usuario a sido regitrado exitosamente, por favor envie su curriculum");
+                            document.getElementById("curriculum_div").style.display = 'inline-table';    
+                    }
+            });
+  }
+}
+
+
