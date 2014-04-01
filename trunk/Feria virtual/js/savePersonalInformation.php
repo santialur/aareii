@@ -5,11 +5,9 @@
 					$_POST['password'], $_POST['celPhone'], $_POST['dayOfBorn'], $_POST['monthOfBorn'], $_POST['yearOfBorn'],
 					$_POST['countryOfResidence'], $_POST['stateOfResidence'], $_POST['cityOfResidence'], $_POST['civil_status']);
 	}else{
-		updateUser($_POST['dni'], $_POST['name'], $_POST['surname'], $_POST['email'], 
-					$_POST['residenceAddress'], $_POST['password'], $_POST['career'], 
-					INTVAL($_POST['subjects_approved']), $_POST['celPhone'], $_POST['countryOfResidence'], 
-					$_POST['stateOfResidence'], $_POST['cityOfResidence'], $_POST['institution'], 
-					$_POST['dayOfBorn'], $_POST['monthOfBorn'], $_POST['yearOfBorn'],$_POST['work'], $_POST['civil_status']);
+		updateUser($_POST['dni'], $_POST['name'], $_POST['lastname'],$_POST['sex'], $_POST['email'], 
+					$_POST['celPhone'], $_POST['dayOfBorn'], $_POST['monthOfBorn'], $_POST['yearOfBorn'],
+					$_POST['countryOfResidence'], $_POST['stateOfResidence'], $_POST['cityOfResidence'], $_POST['civil_status']);
 	}
 
 	function insertUser($dni, $name, $lastname, $sex, $email, $password, $celPhone, $dayOfBorn, $monthOfBorn, $yearOfBorn, $countryOfResidence, $stateOfResidence,
@@ -43,10 +41,10 @@
 			$completeName = "'".$name." ".$lastname."'";
 
 			$date = date('Y-m-d H:i:s');
-
+			echo $date;
 			//Insert values into ems_user
 			$sql= " INSERT INTO ems_user (name, username, email, password, registerDate)
-		    			VALUES ($completeName, '$dni' ,'$email', '$encriptedPass',$date) ";	
+		    			VALUES ($completeName, '$dni' ,'$email', '$encriptedPass','$date') ";	
 			$result = mysql_query($sql, $con);
 			//echo $result;
 
@@ -57,8 +55,8 @@
 			$row = mysql_fetch_array($ems_user);
 			$userid = $row['id'];
 
-			$sql = " INSERT INTO ems_comprofiler (id, username, firstname, lastname, cb_nacimiento, cb_pais, cb_provincia, cb_servicios, cb_celular)
-		    			VALUES ($userid, '$dni','$name', '$lastname', $birthday, '$countryOfResidence', '$stateOfResidence', '$cityOfResidence', '$celPhone') ";
+			$sql = " INSERT INTO ems_comprofiler (id, username, firstname, lastname, cb_sexo, cb_nacimiento, cb_pais, cb_provincia, cb_servicios, cb_celular)
+		    			VALUES ($userid, '$dni','$name', '$lastname', '$sex', $birthday, '$countryOfResidence', '$stateOfResidence', '$cityOfResidence', '$celPhone') ";
 			$result = mysql_query($sql, $con);
 			//echo $result;
 
@@ -78,5 +76,30 @@
 
 		mysql_close($con);
     }
+    function updateUser($dni, $name, $lastname, $sex, $email, $celPhone, $dayOfBorn, $monthOfBorn, $yearOfBorn, $countryOfResidence, $stateOfResidence,
+		$cityOfResidence, $civil_status){
 
+    	$con = mysql_connect('localhost','root','');
+		mysql_select_db('encontramas_test',$con);
+		mysql_query("SET NAMES 'utf8'", $con);
+		if (!$con)
+		  {
+		  die('Could not connect: ' . mysql_error($con));
+		  }
+
+
+    	$birthday = "'".$yearOfBorn."-".$monthOfBorn."-".$dayOfBorn."'";
+		$completeName = "'".$name." ".$lastname."'";
+
+		$sql = "UPDATE ems_user SET name=$completeName,  email='$email' WHERE username='$dni'";
+		$result = mysql_query($sql, $con);
+
+		$sql = "UPDATE ems_comprofiler SET firstname='$name', lastname='$lastname', cb_sexo='$sex', cb_nacimiento= $birthday, cb_pais= '$countryOfResidence', cb_provincia='$stateOfResidence', cb_servicios='$cityOfResidence', cb_celular='$celPhone' WHERE username='$dni'";
+    	$result = mysql_query($sql, $con);
+
+    	$sql = "UPDATE user_encontramas SET user_civilStatus='$civil_status' WHERE username='$dni'";
+    	$result = mysql_query($sql, $con);
+
+    	mysql_close($con);
+    }
 ?>
