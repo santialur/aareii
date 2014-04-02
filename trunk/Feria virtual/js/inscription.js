@@ -5,15 +5,15 @@
 function fillMonths(target)
 {
   $(target).html(''+
-    '<option value="01" selected="">  Enero       </option>'+
-    '<option value="02">              Febrero     </option>'+
-    '<option value="03">              Marzo       </option>'+
-    '<option value="04">              Abril       </option>'+
-    '<option value="05">              Mayo        </option>'+
-    '<option value="06">              Junio       </option>'+
-    '<option value="07">              Julio       </option>'+
-    '<option value="08">              Agosto      </option>'+
-    '<option value="09">              Septiembre  </option>'+
+    '<option value="1" selected="">  Enero       </option>'+
+    '<option value="2">              Febrero     </option>'+
+    '<option value="3">              Marzo       </option>'+
+    '<option value="4">              Abril       </option>'+
+    '<option value="5">              Mayo        </option>'+
+    '<option value="6">              Junio       </option>'+
+    '<option value="7">              Julio       </option>'+
+    '<option value="8">              Agosto      </option>'+
+    '<option value="9">              Septiembre  </option>'+
     '<option value="10">             Octubre     </option>'+
     '<option value="11">             Noviembre   </option>'+
     '<option value="12">             Diciembre   </option>');
@@ -672,35 +672,76 @@ function checkUser(){
               var $radiosFrances                                                = $('input:radio[name=nivel_frances]');
               $radiosFrances.filter('[value=' + obj.frances_level +']').attr('checked', true);
 
-              document.getElementById("trabaja").value                          = obj.works;      
-              document.getElementById("empresa_1_nombre").value                 = obj.company_name_1;
-              document.getElementById("empresa_1_tipo").value                   = obj.company_type_1;
-              document.getElementById("trabajo_1_descripcion").value            = obj.job_description_1;
-              document.getElementById("trabajo_1_area").value                   = obj.job_area_1;
-              document.getElementById("trabajo_1_senior").value                 = obj.job_range_1;
-              document.getElementById("trabajo_1_mes_desde").value              = obj.job_from_1.split("-")[0];
-              document.getElementById("trabajo_1_año_desde").value              = obj.job_from_1.split("-")[1];
-              document.getElementById("trabajo_1_mes_hasta").value              = obj.job_to_1.split("-")[0];
-              document.getElementById("trabajo_1_año_hasta").value              = obj.job_to_1.split("-")[1];
-              document.getElementById("empresa_2_nombre").value                 = obj.company_name_2;
-              document.getElementById("empresa_2_tipo").value                   = obj.company_type_2;
-              document.getElementById("trabajo_2_descripcion").value            = obj.job_description_2;
-              document.getElementById("trabajo_2_area").value                   = obj.job_area_2;
-              document.getElementById("trabajo_2_senior").value                 = obj.job_range_2;
-              document.getElementById("trabajo_2_mes_desde").value              = obj.job_from_2.split("-")[0];
-              document.getElementById("trabajo_2_año_desde").value              = obj.job_from_2.split("-")[1];
-              document.getElementById("trabajo_2_mes_hasta").value              = obj.job_to_2.split("-")[0];
-              document.getElementById("trabajo_2_año_hasta").value              = obj.job_to_2.split("-")[1];
-              document.getElementById("empresa_3_nombre").value                 = obj.company_name_3;
-              document.getElementById("empresa_3_tipo").value                   = obj.company_type_3;
-              document.getElementById("trabajo_3_descripcion").value            = obj.job_description_3;
-              document.getElementById("trabajo_3_area").value                   = obj.job_area_3;
-              document.getElementById("trabajo_3_senior").value                 = obj.job_range_3;
-              document.getElementById("trabajo_3_mes_desde").value              = obj.job_from_3.split("-")[0];
-              document.getElementById("trabajo_3_año_desde").value              = obj.job_from_3.split("-")[1];
-              document.getElementById("trabajo_3_mes_hasta").value              = obj.job_to_3.split("-")[0];
-              document.getElementById("trabajo_3_año_hasta").value              = obj.job_to_3.split("-")[1];
-
+              document.getElementById("trabaja").value                          = obj.works;
+              if(obj.company_name_1 != undefined){     
+                document.getElementById("empresa_1_nombre").value                 = obj.company_name_1;
+              }
+              if(obj.company_type_1 != undefined){
+                document.getElementById("empresa_1_tipo").value                   = obj.company_type_1;
+              }
+              if(obj.job_description_1 != undefined){
+                document.getElementById("trabajo_1_descripcion").value            = obj.job_description_1;
+              }
+              if(obj.job_area_1 != undefined){
+                document.getElementById("trabajo_1_area").value                   = obj.job_area_1;
+              }
+              if(obj.job_range_1 != undefined){
+                document.getElementById("trabajo_1_senior").value                 = obj.job_range_1;
+              }
+              if(obj.job_from_1 != undefined){
+                document.getElementById("trabajo_1_mes_desde").value              = obj.job_from_1.split("-")[0];
+                document.getElementById("trabajo_1_año_desde").value              = obj.job_from_1.split("-")[1];
+              }
+              if(obj.job_to_1 != undefined){
+                document.getElementById("trabajo_1_mes_hasta").value              = obj.job_to_1.split("-")[0];
+                document.getElementById("trabajo_1_año_hasta").value              = obj.job_to_1.split("-")[1];
+              }
+              if(obj.company_name_2 != undefined){
+                document.getElementById("empresa_2_nombre").value                 = obj.company_name_2;
+              }
+              if(obj.company_type_2 != undefined){
+                document.getElementById("empresa_2_tipo").value                   = obj.company_type_2;  
+              }
+              if(obj.job_description_2 != undefined){
+                document.getElementById("trabajo_2_descripcion").value            = obj.job_description_2;
+              }
+              if(obj.job_area_2 != undefined){
+                document.getElementById("trabajo_2_area").value                   = obj.job_area_2;
+              }
+              if(obj.job_range_2 != undefined){
+                document.getElementById("trabajo_2_senior").value                 = obj.job_range_2;
+              }
+              if(obj.job_from_2 != undefined){
+                document.getElementById("trabajo_2_mes_desde").value              = obj.job_from_2.split("-")[0];
+                document.getElementById("trabajo_2_año_desde").value              = obj.job_from_2.split("-")[1];  
+              }
+              if(obj.job_to_2 != undefined){
+                document.getElementById("trabajo_2_mes_hasta").value              = obj.job_to_2.split("-")[0];
+                document.getElementById("trabajo_2_año_hasta").value              = obj.job_to_2.split("-")[1];
+              }
+              if(obj.company_name_3 != undefined){
+                document.getElementById("empresa_3_nombre").value                 = obj.company_name_3;
+              }
+              if(obj.company_type_3 != undefined){
+                document.getElementById("empresa_3_tipo").value                   = obj.company_type_3;
+              }
+              if(obj.job_description_3 != undefined){
+                document.getElementById("trabajo_3_descripcion").value            = obj.job_description_3;
+              }
+              if(obj.job_area_3 != undefined){
+                document.getElementById("trabajo_3_area").value                   = obj.job_area_3;
+              }
+              if(obj.job_range_3 != undefined){
+                document.getElementById("trabajo_3_senior").value                 = obj.job_range_3;
+              }
+              if(obj.job_from_3 != undefined){
+                document.getElementById("trabajo_3_mes_desde").value              = obj.job_from_3.split("-")[0];
+                document.getElementById("trabajo_3_año_desde").value              = obj.job_from_3.split("-")[1];
+              }
+              if(obj.job_to_3 != undefined){
+                document.getElementById("trabajo_3_mes_hasta").value              = obj.job_to_3.split("-")[0];
+                document.getElementById("trabajo_3_año_hasta").value              = obj.job_to_3.split("-")[1];
+              }
 
               document.getElementById("personalInformation").style.display='inline';
               document.getElementById("password_div").style.display='none';
@@ -934,7 +975,6 @@ function sendAcademicInformation(){
                    },
             type: 'POST',
             success: function(output) {
-                    alert(output);  
                     document.getElementById("academicInformation").style.display = 'none';
                     document.getElementById("jobInformation").style.display = 'inline';
             }
@@ -997,8 +1037,7 @@ function sendAcademicInformation(){
                     frenchLevel:                 $('input[name="nivel_frances"]:checked').val(),
                    },
             type: 'POST',
-            success: function(output) {
-                    alert(output);  
+            success: function(output) { 
                     document.getElementById("academicInformation").style.display = 'none';
                     document.getElementById("jobInformation").style.display = 'inline';
             }
