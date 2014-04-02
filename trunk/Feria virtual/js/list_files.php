@@ -1,28 +1,29 @@
 <?php
+
+$curriculumId = $_GET['id'];
+
 // Connect to the database
-$dbLink = new mysqli('localhost', 'root', '', 'uploadfile');
+$dbLink = new mysqli('localhost', 'root', 'C4ch0bs4s3124', 'encontramas_test');
 if(mysqli_connect_errno()) {
     die("MySQL connection failed: ". mysqli_connect_error());
 }
  
 // Query for a list of all existing files
-$sql = 'SELECT `id`, `name`, `mime`, `size`, `created` FROM `file`';
+$sql = "SELECT * FROM curriculum WHERE idcurriculum = $curriculumId ";
 $result = $dbLink->query($sql);
  
 // Check if it was successfull
 if($result) {
     // Make sure there are some files in there
     if($result->num_rows == 0) {
-        echo '<p>There are no files in the database</p>';
+        echo '<p>No cargaste tu curriculum</p>';
     }
     else {
         // Print the top of a table
         echo '<table width="100%">
                 <tr>
-                    <td><b>Name</b></td>
-                    <td><b>Mime</b></td>
-                    <td><b>Size (bytes)</b></td>
-                    <td><b>Created</b></td>
+                    <td><b>Curriculum</b></td>
+                    <td><b>Actualizado</b></td>
                     <td><b>&nbsp;</b></td>
                 </tr>';
  
@@ -31,10 +32,8 @@ if($result) {
             echo "
                 <tr>
                     <td>{$row['name']}</td>
-                    <td>{$row['mime']}</td>
-                    <td>{$row['size']}</td>
                     <td>{$row['created']}</td>
-                    <td><a href='get_file.php?id={$row['id']}'>Download</a></td>
+                    <td><a href='../js/get_file.php?id={$row['idcurriculum']}'>Download</a></td>
                 </tr>";
         }
  

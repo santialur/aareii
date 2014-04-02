@@ -10,7 +10,7 @@ if(isset($_GET['id'])) {
     }
     else {
         // Connect to the database
-        $dbLink = new mysqli('localhost', 'root', '', 'uploadfile');
+        $dbLink = new mysqli('localhost', 'root', 'C4ch0bs4s3124', 'encontramas_test');
         if(mysqli_connect_errno()) {
             die("MySQL connection failed: ". mysqli_connect_error());
         }
@@ -18,8 +18,8 @@ if(isset($_GET['id'])) {
         // Fetch the file information
         $query = "
             SELECT `mime`, `name`, `size`, `data`
-            FROM `file`
-            WHERE `id` = {$id}";
+            FROM `curriculum`
+            WHERE `idcurriculum` = {$id}";
         $result = $dbLink->query($query);
  
         if($result) {
@@ -37,7 +37,7 @@ if(isset($_GET['id'])) {
                 echo $row['data'];
             }
             else {
-                echo 'Error! No image exists with that ID.';
+                echo 'Error! No file exists with that ID.';
             }
  
             // Free the mysqli resources
