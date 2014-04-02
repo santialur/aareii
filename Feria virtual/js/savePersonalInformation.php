@@ -13,7 +13,7 @@
 	function insertUser($dni, $name, $lastname, $sex, $email, $password, $celPhone, $dayOfBorn, $monthOfBorn, $yearOfBorn, $countryOfResidence, $stateOfResidence,
 		$cityOfResidence, $civil_status){
 
-		$con = mysql_connect('localhost','root','');
+		$con = mysql_connect('localhost','root','C4ch0bs4s3124');
 		mysql_select_db('encontramas_test',$con);
 		mysql_query("SET NAMES 'utf8'", $con);
 		if (!$con)
@@ -79,7 +79,7 @@
     function updateUser($dni, $name, $lastname, $sex, $email, $celPhone, $dayOfBorn, $monthOfBorn, $yearOfBorn, $countryOfResidence, $stateOfResidence,
 		$cityOfResidence, $civil_status){
 
-    	$con = mysql_connect('localhost','root','');
+    	$con = mysql_connect('localhost','root','C4ch0bs4s3124');
 		mysql_select_db('encontramas_test',$con);
 		mysql_query("SET NAMES 'utf8'", $con);
 		if (!$con)

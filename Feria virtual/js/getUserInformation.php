@@ -4,7 +4,7 @@
 	$password = $_POST['password'];
 
 
-	$con = mysql_connect('localhost','root','');
+	$con = mysql_connect('localhost','root','C4ch0bs4s3124');
 	mysql_select_db('encontramas_test',$con);
 	//mysql_query("SET NAMES 'utf8'");
 	mysql_query('SET CHARACTER SET utf8');
@@ -17,6 +17,10 @@
 	$sql_user = "SELECT * FROM ems_user WHERE username = '$dni'";
 	$user = mysql_query($sql_user, $con);
 	$row = mysql_fetch_array($user);
+	if(mysql_num_rows($user) == 0){
+		echo "Usuario no registrado";
+		return;
+	}
 	$user_password = $row['password'];
 	$user_password_salt = explode(":", $user_password);
 	//$user_password_salt[1] va a tener solo la salt
@@ -150,7 +154,7 @@
 			
 
 			$user_id = $desc["dni"];
-			$sql_laborHistory = "SELECT * FROM user_laborhistory, labor_history WHERE user_id = $user_id AND user_laborhistory.laborHistory_id = labor_history.id";
+			$sql_laborHistory = "SELECT * FROM user_laborHistory, labor_History WHERE user_id = $user_id AND user_laborHistory.laborHistory_id = labor_History.id";
 			$user_laborHistory = mysql_query($sql_laborHistory, $con);
 
 			$i = 1;
@@ -167,7 +171,13 @@
 			  	$i++;
 			  }
 
+			$sql = "SELECT * FROM user_encontramas WHERE userName=$user_id";
+			$user_encontramas = mysql_query($sql, $con);
+			$row = mysql_fetch_array($user_encontramas);
+			$desc["curriculumId"] = $row['curriculumId'];
+
 			echo json_encode($desc, JSON_UNESCAPED_UNICODE);
+			mysql_close($con);
 	}
 
 ?>

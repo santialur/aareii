@@ -617,7 +617,7 @@ function checkUser(){
                  },
             type: 'POST',
             success: function(output){
-              
+              //alert(output);
               var obj = JSON.parse(output);
               document.getElementById("numero_de_documento").value              = obj.dni;
               document.getElementById("numero_de_documento").disabled = true;
@@ -743,6 +743,10 @@ function checkUser(){
                 document.getElementById("trabajo_3_año_hasta").value              = obj.job_to_3.split("-")[1];
               }
 
+              
+              getCurriculumFile(obj.curriculumId);
+              
+
               document.getElementById("personalInformation").style.display='inline';
               document.getElementById("password_div").style.display='none';
               document.getElementById("buttons").style.display='none';
@@ -750,6 +754,45 @@ function checkUser(){
             }
     });
 
+}
+
+function getCurriculumFile(curriculumId){
+    var id;
+    if(curriculumId != null){
+      id = curriculumId;
+    }else{
+      id = -1;
+    }
+    
+
+    $.ajax({ url: '../js/list_files.php',
+              data: {id:                    id,
+                   },
+              type: 'GET',
+              success: function(output) {
+                 if(output == "<p>No cargaste tu curriculum</p>"){
+                    $("#LoadedCurriculum").append("<p>No tienes un curriculum cargado</p><br>");
+                    $("#LoadedCurriculum").append("<span style='text-align: center'><input type='submit' name='submit' value='Subir CV' class='button' onclick='uploadNewCurriculum()'></span>");
+                    
+                 }
+                 else{
+                    $("#LoadedCurriculum").append(output);
+                    $("#LoadedCurriculum").append("<span style='text-align: center'><input type='submit' name='submit' value='Subir nuevo CV' class='button' onclick='uploadCurriculum()'></span>");
+                    
+                 }
+                 
+              }
+
+          });
+
+}
+
+function uploadNewCurriculum(){
+  document.getElementById("new_curriculum_div").style.display = 'inline-table';
+}
+
+function uploadCurriculum(){
+  document.getElementById("upload_curriculum_div").style.display = 'inline-table';
 }
 
 function createNewUser(){
@@ -833,6 +876,8 @@ function sendPersonalInformation(){
                               document.getElementById("academicInformation").style.display = 'inline';
                               document.getElementById("ID_div").style.display='none';
                               document.getElementById("dni").value = document.getElementById("numero_de_documento").value;
+                              document.getElementById("dniupload").value = document.getElementById("numero_de_documento").value;
+
                             }    
                      }
                    });
@@ -909,6 +954,7 @@ function sendPersonalInformation(){
                               document.getElementById("academicInformation").style.display = 'inline';
                               document.getElementById("ID_div").style.display='none';
                               document.getElementById("dni").value = document.getElementById("numero_de_documento").value;
+                              document.getElementById("dniupload").value = document.getElementById("numero_de_documento").value;
                             }    
                      }
                    });
@@ -1087,7 +1133,7 @@ function sendLaboralInformation(){
                     success: function(output) {
                     		alert(output);
                             //alert("El usuario a sido regitrado exitosamente, por favor envie su curriculum");
-                            document.getElementById("curriculum_div").style.display = 'inline-table';    
+                            //document.getElementById("curriculum_div").style.display = 'inline-table';    
                     }
             });
   }else{
@@ -1130,7 +1176,7 @@ function sendLaboralInformation(){
                     success: function(output) {
                         alert(output);
                             //alert("El usuario a sido regitrado exitosamente, por favor envie su curriculum");
-                            document.getElementById("curriculum_div").style.display = 'inline-table';    
+                            //document.getElementById("curriculum_div").style.display = 'inline-table';    
                     }
             });
   }

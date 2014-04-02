@@ -19,7 +19,7 @@
 		$company_2_name, $company_2_type, $job_2_description, $job_2_area, $job_2_senior, $job_2_from, $job_2_to,
 		$company_3_name, $company_3_type, $job_3_description, $job_3_area, $job_3_senior, $job_3_from, $job_3_to){
 
-		$con = mysql_connect('localhost','root','');
+		$con = mysql_connect('localhost','root','C4ch0bs4s3124');
 		mysql_select_db('encontramas_test',$con);
 		mysql_query("SET NAMES 'utf8'", $con);
 		if (!$con)
@@ -64,7 +64,7 @@
 
 
 		if(!$company_2_name == ""){
-			$sql= " INSERT INTO labor_history (company_name, company_type, job_description, job_area, job_hierarchy, job_start, job_end)
+			$sql= " INSERT INTO labor_History (company_name, company_type, job_description, job_area, job_hierarchy, job_start, job_end)
 	    			VALUES ('$company_2_name', '$company_2_type', '$job_2_description', '$job_2_area', '$job_2_senior', '$job_2_from', '$job_2_to') ";
 	    	$result = mysql_query($sql, $con);
 
@@ -93,7 +93,7 @@
 
 
 		if(!$company_3_name == ""){
-			$sql= " INSERT INTO labor_history (company_name, company_type, job_description, job_area, job_hierarchy, job_start, job_end)
+			$sql= " INSERT INTO labor_History (company_name, company_type, job_description, job_area, job_hierarchy, job_start, job_end)
 	    			VALUES ('$company_3_name', '$company_3_type', '$job_3_description', '$job_3_area', '$job_3_senior', '$job_3_from', '$job_3_to') ";
 	    	$result = mysql_query($sql, $con);
 
@@ -115,7 +115,7 @@
 	    	$row = mysql_fetch_array($laborResult);
 			$laborId = $row['id'];*/
 
-			$sql = " INSERT INTO user_laborhistory (user_id, laborHistory_id)
+			$sql = " INSERT INTO user_laborHistory (user_id, laborHistory_id)
 					 VALUES ('$dni', '$laborId')";
 			$result = mysql_query($sql, $con);
 		}
@@ -128,7 +128,7 @@
 		$company_2_name, $company_2_type, $job_2_description, $job_2_area, $job_2_senior, $job_2_from, $job_2_to,
 		$company_3_name, $company_3_type, $job_3_description, $job_3_area, $job_3_senior, $job_3_from, $job_3_to){
 
-		$con = mysql_connect('localhost','root','');
+		$con = mysql_connect('localhost','root','C4ch0bs4s3124');
 		mysql_select_db('encontramas_test',$con);
 		mysql_query("SET NAMES 'utf8'", $con);
 		if (!$con)
@@ -141,7 +141,7 @@
 		    	 WHERE username = '$dni' ";
 		$result = mysql_query($sql, $con);
 
-		$sql = "SELECT * FROM user_laborhistory, labor_history WHERE user_id = '$dni' AND user_laborhistory.laborHistory_id = labor_history.id ORDER BY labor_history.id";
+		$sql = "SELECT * FROM user_laborHistory, labor_History WHERE user_id = '$dni' AND user_laborHistory.laborHistory_id = labor_History.id ORDER BY labor_History.id";
 		$laborHistory = mysql_query($sql, $con);		
 		//$row = mysql_fetch_array($laborHistory);
 		//echo mysql_num_rows($laborHistory);
@@ -154,12 +154,12 @@
 			//company_name, company_type, job_description, job_area, job_hierarchy, job_start, job_end
 			if($i==1){
 				if(!$company_1_name == ""){
-					$sql = "UPDATE labor_history
+					$sql = "UPDATE labor_History
 							SET company_name='$company_1_name', company_type='$company_1_type', job_description='$job_1_description', job_area='$job_1_area', job_hierarchy='$job_1_senior', job_start='$job_1_from', job_end='$job_1_to'
 							WHERE id=$laborHistoryId";
 							$result = mysql_query($sql, $con);
 				}else{
-					$sql = "UPDATE labor_history
+					$sql = "UPDATE labor_History
 							SET company_name='', company_type='0', job_description='', job_area='0', job_hierarchy='0', job_start='1-2014', job_end='1-2014'
 							WHERE id=$laborHistoryId";
 							$result = mysql_query($sql, $con);
@@ -167,12 +167,12 @@
 			}
 			if($i==2){
 				if(!$company_2_name == ""){
-					$sql = "UPDATE labor_history
+					$sql = "UPDATE labor_History
 							SET company_name='$company_2_name', company_type='$company_2_type', job_description='$job_2_description', job_area='$job_2_area', job_hierarchy='$job_2_senior', job_start='$job_2_from', job_end='$job_2_to'
 							WHERE id=$laborHistoryId";
 							$result = mysql_query($sql, $con);
 				}else{
-					$sql = "UPDATE labor_history
+					$sql = "UPDATE labor_History
 							SET company_name='', company_type='0', job_description='', job_area='0', job_hierarchy='0', job_start='1-2014', job_end='1-2014'
 							WHERE id=$laborHistoryId";
 							$result = mysql_query($sql, $con);
@@ -180,12 +180,12 @@
 			}
 			if($i==3){
 				if(!$company_3_name == ""){
-					$sql = "UPDATE labor_history
+					$sql = "UPDATE labor_History
 							SET company_name='$company_3_name', company_type='$company_3_type', job_description='$job_3_description', job_area='$job_3_area', job_hierarchy='$job_3_senior', job_start='$job_3_from', job_end='$job_3_to'
 							WHERE id=$laborHistoryId";
 							$result = mysql_query($sql, $con);
 				}else{
-					$sql = "UPDATE labor_history
+					$sql = "UPDATE labor_History
 							SET company_name='', company_type='0', job_description='', job_area='0', job_hierarchy='0', job_start='1-2014', job_end='1-2014'
 							WHERE id=$laborHistoryId";
 							$result = mysql_query($sql, $con);
@@ -226,7 +226,7 @@
 
 
 			if(!$company_2_name == ""){
-				$sql= " INSERT INTO labor_history (company_name, company_type, job_description, job_area, job_hierarchy, job_start, job_end)
+				$sql= " INSERT INTO labor_History (company_name, company_type, job_description, job_area, job_hierarchy, job_start, job_end)
 		    			VALUES ('$company_2_name', '$company_2_type', '$job_2_description', '$job_2_area', '$job_2_senior', '$job_2_from', '$job_2_to') ";
 		    	$result = mysql_query($sql, $con);
 
@@ -248,14 +248,14 @@
 		    	$row = mysql_fetch_array($laborResult);
 				$laborId = $row['id'];*/
 
-				$sql = " INSERT INTO user_laborhistory (user_id, laborHistory_id)
+				$sql = " INSERT INTO user_laborHistory (user_id, laborHistory_id)
 						 VALUES ('$dni', '$laborId')";
 				$result = mysql_query($sql, $con);
 			}
 
 
 			if(!$company_3_name == ""){
-				$sql= " INSERT INTO labor_history (company_name, company_type, job_description, job_area, job_hierarchy, job_start, job_end)
+				$sql= " INSERT INTO labor_History (company_name, company_type, job_description, job_area, job_hierarchy, job_start, job_end)
 		    			VALUES ('$company_3_name', '$company_3_type', '$job_3_description', '$job_3_area', '$job_3_senior', '$job_3_from', '$job_3_to') ";
 		    	$result = mysql_query($sql, $con);
 
@@ -277,14 +277,14 @@
 		    	$row = mysql_fetch_array($laborResult);
 				$laborId = $row['id'];*/
 
-				$sql = " INSERT INTO user_laborhistory (user_id, laborHistory_id)
+				$sql = " INSERT INTO user_laborHistory (user_id, laborHistory_id)
 						 VALUES ('$dni', '$laborId')";
 				$result = mysql_query($sql, $con);
 			}
 		}
 		if($i==1){
 			if(!$company_2_name == ""){
-				$sql= " INSERT INTO labor_history (company_name, company_type, job_description, job_area, job_hierarchy, job_start, job_end)
+				$sql= " INSERT INTO labor_History (company_name, company_type, job_description, job_area, job_hierarchy, job_start, job_end)
 		    			VALUES ('$company_2_name', '$company_2_type', '$job_2_description', '$job_2_area', '$job_2_senior', '$job_2_from', '$job_2_to') ";
 		    	$result = mysql_query($sql, $con);
 
@@ -306,14 +306,14 @@
 		    	$row = mysql_fetch_array($laborResult);
 				$laborId = $row['id'];*/
 
-				$sql = " INSERT INTO user_laborhistory (user_id, laborHistory_id)
+				$sql = " INSERT INTO user_laborHistory (user_id, laborHistory_id)
 						 VALUES ('$dni', '$laborId')";
 				$result = mysql_query($sql, $con);
 			}
 
 
 			if(!$company_3_name == ""){
-				$sql= " INSERT INTO labor_history (company_name, company_type, job_description, job_area, job_hierarchy, job_start, job_end)
+				$sql= " INSERT INTO labor_History (company_name, company_type, job_description, job_area, job_hierarchy, job_start, job_end)
 		    			VALUES ('$company_3_name', '$company_3_type', '$job_3_description', '$job_3_area', '$job_3_senior', '$job_3_from', '$job_3_to') ";
 		    	$result = mysql_query($sql, $con);
 
@@ -335,7 +335,7 @@
 		    	$row = mysql_fetch_array($laborResult);
 				$laborId = $row['id'];*/
 
-				$sql = " INSERT INTO user_laborhistory (user_id, laborHistory_id)
+				$sql = " INSERT INTO user_laborHistory (user_id, laborHistory_id)
 						 VALUES ('$dni', '$laborId')";
 				$result = mysql_query($sql, $con);
 			}
@@ -343,7 +343,7 @@
 
 		if($i==2){
 			if(!$company_3_name == ""){
-				$sql= " INSERT INTO labor_history (company_name, company_type, job_description, job_area, job_hierarchy, job_start, job_end)
+				$sql= " INSERT INTO labor_History (company_name, company_type, job_description, job_area, job_hierarchy, job_start, job_end)
 		    			VALUES ('$company_3_name', '$company_3_type', '$job_3_description', '$job_3_area', '$job_3_senior', '$job_3_from', '$job_3_to') ";
 		    	$result = mysql_query($sql, $con);
 
@@ -365,7 +365,7 @@
 		    	$row = mysql_fetch_array($laborResult);
 				$laborId = $row['id'];*/
 
-				$sql = " INSERT INTO user_laborhistory (user_id, laborHistory_id)
+				$sql = " INSERT INTO user_laborHistory (user_id, laborHistory_id)
 						 VALUES ('$dni', '$laborId')";
 				$result = mysql_query($sql, $con);
 			}
