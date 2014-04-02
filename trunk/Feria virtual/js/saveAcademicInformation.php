@@ -192,8 +192,17 @@
 		$francesresult = mysql_query($sqlfrances, $con);
 		$row = mysql_fetch_array($francesresult);
 		$languageid = $row['language_id'];
-		$sql = "UPDATE user_language SET level='$frenchLevel' WHERE user_id=$dni AND language_id=$languageid";	
+		$sql = "SELECT * FROM user_language WHERE language_id=$languageid";
 		$result = mysql_query($sql, $con);
+		if(mysql_num_rows($result) == 0){
+			$sql= " INSERT INTO user_language (user_id, language_id, level)
+	    			VALUES ('$dni', '$languageid', '$frenchLevel') ";	
+			$result = mysql_query($sql, $con);
+		}else{
+			$sql = "UPDATE user_language SET level='$frenchLevel' WHERE user_id=$dni AND language_id=$languageid";	
+			$result = mysql_query($sql, $con);
+		}
+		
 		/////////////////////////////////////////
 
 		mysql_close($con);

@@ -617,7 +617,7 @@ function checkUser(){
                  },
             type: 'POST',
             success: function(output){
-              alert(output);
+              
               var obj = JSON.parse(output);
               document.getElementById("numero_de_documento").value              = obj.dni;
               document.getElementById("numero_de_documento").disabled = true;
