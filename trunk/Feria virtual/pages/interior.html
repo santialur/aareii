@@ -9,23 +9,11 @@
 
 		<!--- POP UP --> 		
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
-		<script type="text/javascript">
-			$(function(){
-				var moveLeft = 20;
-				var moveDown = 10;
-        
-        		$('#trigger').hover(function(e){
-        			$('div#pop-up').show();
- 	  		 	}, 
- 	  		 function() {
-				$('div#pop-up').hide();
-        	});
-        
-        	$('#trigger').mousemove(function(e){
-			   	$("div#pop-up").css('top', e.pageY + moveDown).css('left', e.pageX + moveLeft);
-		      	});
-      		});
-    	</script>
+		<script type="text/javascript" src="../js/popup.js"></script>
+		<script>
+			popup();
+		</script>
+
 
 		<!-- FANCYBOX --> 
 		<link 	type="text/css"			rel="stylesheet" href="../features/fancybox/source/jquery.fancybox.css"  media="screen"/>
@@ -39,8 +27,7 @@
 		 			'autoScale'		: 	'none',
 		 			'transitionIn'	: 	'none',
 		 			'transitionOut' : 	'none',
-		 			'type' 			: 	'iframe'
-				});
+		 			'type' 			: 	'iframe',
 			});
 		</script>
 		
@@ -112,21 +99,35 @@
 						<!-- CROQUIS --> 
 						<div align="center" style="position: relative;">
 							<img src="../features/images/interior.jpg" id="imgMap" width="100%"/>
-							<!--
-							<a class="ifancybox" href="empresa1.html" ><img src="../features/images/stand.png" id="trigger" /></a>
+							
+							<a class="ifancybox" href="empresa1.html" ><img src="../features/images/stand1.png" id="trigger" /></a>
 							<div id="pop-up">
-								<img src="../features/images/Quilmes.png" width="100" height="60" /></br>
+								<img src="../features/images/fiat-web.png" width="60%"/></br>
+								<p>Horarios: 10:00 a 12:00</p> </br>
+								<p>Rubro: Automotriz</p>
+							</div>
+
+							<a class="ifancybox" href="empresa2.html" ><img src="../features/images/stand2.png" id="trigger2" /></a>
+							<div id="pop-up2">
+								<img src="../features/images/arcor-web.png" width="60%"/></br>
 								<p>Horarios: 10:00 a 12:00</p> </br>
 								<p>Rubro: Alimenticio</p>
 							</div>
 
-							<a class="ifancybox" href="empresa2.html" ><img src="../features/images/stand2.png" id="trigger2" /></a>
-							<div id="pop-up">
-								<img src="../features/images/Quilmes.png" width="100" height="60" /></br>
-								<p>Horarios: 11:00 a 13:00</p> </br>
+							<a class="ifancybox" href="empresa2.html" ><img src="../features/images/stand3.png" id="trigger3" /></a>
+							<div id="pop-up3">
+								<img src="../features/images/astori-web.png" width="60%"/></br>
+								<p>Horarios: 10:00 a 12:00</p> </br>
+								<p>Rubro: Construcción</p>
+							</div>
+
+							<a class="ifancybox" href="empresa2.html" ><img src="../features/images/stand4.png" id="trigger4" /></a>
+							<div id="pop-up4">
+								<img src="../features/images/quilmes-web.png" width="60%"/></br>
+								<p>Horarios: 10:00 a 12:00</p> </br>
 								<p>Rubro: Bebidas</p>
 							</div>
-							-->
+
 						</div>
 
 					</div>
