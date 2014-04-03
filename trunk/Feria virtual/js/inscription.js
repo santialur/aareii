@@ -617,140 +617,142 @@ function checkUser(){
                  },
             type: 'POST',
             success: function(output){
-              //alert(output);
-              var obj = JSON.parse(output);
-              document.getElementById("numero_de_documento").value              = obj.dni;
-              document.getElementById("numero_de_documento").disabled = true;
-              document.getElementById("nombre").value                           = obj.name;
-              document.getElementById("apellido").value                         = obj.lastname; 
-              document.getElementById("sexo").value                             = obj. sex;
-              document.getElementById("email").value                            = obj.email; 
-              document.getElementById("div_confirme_email").style.display       = 'none';
-              document.getElementById("div_password").style.display       = 'none';
-              document.getElementById("telefono_codigo_area").value             = obj.celPhone.split("-")[0];
-              document.getElementById("telefono_celular").value                 = obj.celPhone.split("-")[1];
-              document.getElementById("fecha_nacimiento_anio").value            = obj.bornDate.split("-")[0];
-              document.getElementById("fecha_nacimiento_mes").value             = obj.bornDate.split("-")[1];
-              document.getElementById("fecha_nacimiento_dia").value             = obj.bornDate.split("-")[2];
-              document.getElementById("lugar_de_residencia_pais").value         = obj.country;
-              document.getElementById("lugar_de_residencia_pais").onchange();
-              document.getElementById("lugar_de_residencia_provincia").value    = obj.state;
-              document.getElementById("lugar_de_residencia_ciudad").value       = obj.city;
-              document.getElementById("estado_civil").value                     = obj.civilStatus;
+              if(output == "Combinación de DNI y contraseña invalida"){
+                alert(output);
+              }
+              else{
+                var obj = JSON.parse(output);
+                document.getElementById("numero_de_documento").value              = obj.dni;
+                document.getElementById("numero_de_documento").disabled = true;
+                document.getElementById("nombre").value                           = obj.name;
+                document.getElementById("apellido").value                         = obj.lastname; 
+                document.getElementById("sexo").value                             = obj. sex;
+                document.getElementById("email").value                            = obj.email; 
+                document.getElementById("div_confirme_email").style.display       = 'none';
+                document.getElementById("div_password").style.display       = 'none';
+                document.getElementById("telefono_codigo_area").value             = obj.celPhone.split("-")[0];
+                document.getElementById("telefono_celular").value                 = obj.celPhone.split("-")[1];
+                document.getElementById("fecha_nacimiento_anio").value            = obj.bornDate.split("-")[0];
+                document.getElementById("fecha_nacimiento_mes").value             = obj.bornDate.split("-")[1];
+                document.getElementById("fecha_nacimiento_dia").value             = obj.bornDate.split("-")[2];
+                document.getElementById("lugar_de_residencia_pais").value         = obj.country;
+                document.getElementById("lugar_de_residencia_pais").onchange();
+                document.getElementById("lugar_de_residencia_provincia").value    = obj.state;
+                document.getElementById("lugar_de_residencia_ciudad").value       = obj.city;
+                document.getElementById("estado_civil").value                     = obj.civilStatus;
 
-              if(0 != $('#institucion option[value='+"'"+obj.university+"'"+']').length ){
-                  document.getElementById("institucion").value                  = obj.university;
-              }else{
-                  document.getElementById("universidad").value                  = obj.university;
-              }
-              if(0 != $('#carrera_area option[value='+"'"+obj.careerArea+"'"+']').length ){
-                  document.getElementById("carrera_area").value                 = obj.careerArea;
-              }else{
-                  document.getElementById("otraCarrera").value                  = obj.carreerArea;
-              }
-              document.getElementById("carrera_area").value                     = obj.careerArea;
-              document.getElementById("carrera_titulo").value                   = obj.title; 
-              document.getElementById("estado_carrera").value                   = obj.careerStatus;
-              document.getElementById("estado_carrera").onchange();
-              document.getElementById("carrera_materiasAprobadas").value        = obj.subjectsApproved;
-              document.getElementById("carrera_promedio").value                 = obj.careerAverage;
-              document.getElementById("carrera_totalMaterias").value            = obj.totalSubjects;
-              document.getElementById("postgrado_tipo").value                   = obj.postgraduate_type;
-              document.getElementById("postgrado_estado").value                 = obj.postgraduate_status;
-              document.getElementById("postgrado_titulo").value                 = obj.postgraduate_title;
-              document.getElementById("postgrado_institucion").value            = obj.postgraduate_institution;
-              var $radiosEspañol                                                = $('input:radio[name=nivel_español]');
-              $radiosEspañol.filter('[value=' + obj.español_level +']').attr('checked', true);
-              var $radiosIngles                                                 = $('input:radio[name=nivel_ingles]');
-              $radiosIngles.filter('[value=' + obj.ingles_level +']').attr('checked', true);
-              var $radiosPortugues                                              = $('input:radio[name=nivel_portugues]');
-              $radiosPortugues.filter('[value=' + obj.portugues_level +']').attr('checked', true);
-              var $radiosAleman                                                 = $('input:radio[name=nivel_aleman]');
-              $radiosAleman.filter('[value=' + obj.aleman_level +']').attr('checked', true);
-              var $radiosItaliano                                               = $('input:radio[name=nivel_italiano]');
-              $radiosItaliano.filter('[value=' + obj.italiano_level +']').attr('checked', true);
-              var $radiosFrances                                                = $('input:radio[name=nivel_frances]');
-              $radiosFrances.filter('[value=' + obj.frances_level +']').attr('checked', true);
+                if(0 != $('#institucion option[value='+"'"+obj.university+"'"+']').length ){
+                    document.getElementById("institucion").value                  = obj.university;
+                }else{
+                    document.getElementById("universidad").value                  = obj.university;
+                }
+                if(0 != $('#carrera_area option[value='+"'"+obj.careerArea+"'"+']').length ){
+                    document.getElementById("carrera_area").value                 = obj.careerArea;
+                }else{
+                    document.getElementById("otraCarrera").value                  = obj.carreerArea;
+                }
+                document.getElementById("carrera_area").value                     = obj.careerArea;
+                document.getElementById("carrera_titulo").value                   = obj.title; 
+                document.getElementById("estado_carrera").value                   = obj.careerStatus;
+                document.getElementById("estado_carrera").onchange();
+                document.getElementById("carrera_materiasAprobadas").value        = obj.subjectsApproved;
+                document.getElementById("carrera_promedio").value                 = obj.careerAverage;
+                document.getElementById("carrera_totalMaterias").value            = obj.totalSubjects;
+                document.getElementById("postgrado_tipo").value                   = obj.postgraduate_type;
+                document.getElementById("postgrado_estado").value                 = obj.postgraduate_status;
+                document.getElementById("postgrado_titulo").value                 = obj.postgraduate_title;
+                document.getElementById("postgrado_institucion").value            = obj.postgraduate_institution;
+                var $radiosEspañol                                                = $('input:radio[name=nivel_español]');
+                $radiosEspañol.filter('[value=' + obj.español_level +']').attr('checked', true);
+                var $radiosIngles                                                 = $('input:radio[name=nivel_ingles]');
+                $radiosIngles.filter('[value=' + obj.ingles_level +']').attr('checked', true);
+                var $radiosPortugues                                              = $('input:radio[name=nivel_portugues]');
+                $radiosPortugues.filter('[value=' + obj.portugues_level +']').attr('checked', true);
+                var $radiosAleman                                                 = $('input:radio[name=nivel_aleman]');
+                $radiosAleman.filter('[value=' + obj.aleman_level +']').attr('checked', true);
+                var $radiosItaliano                                               = $('input:radio[name=nivel_italiano]');
+                $radiosItaliano.filter('[value=' + obj.italiano_level +']').attr('checked', true);
+                var $radiosFrances                                                = $('input:radio[name=nivel_frances]');
+                $radiosFrances.filter('[value=' + obj.frances_level +']').attr('checked', true);
 
-              document.getElementById("trabaja").value                          = obj.works;
-              if(obj.company_name_1 != undefined){     
-                document.getElementById("empresa_1_nombre").value                 = obj.company_name_1;
+                document.getElementById("trabaja").value                          = obj.works;
+                if(obj.company_name_1 != undefined){     
+                  document.getElementById("empresa_1_nombre").value                 = obj.company_name_1;
+                }
+                if(obj.company_type_1 != undefined){
+                  document.getElementById("empresa_1_tipo").value                   = obj.company_type_1;
+                }
+                if(obj.job_description_1 != undefined){
+                  document.getElementById("trabajo_1_descripcion").value            = obj.job_description_1;
+                }
+                if(obj.job_area_1 != undefined){
+                  document.getElementById("trabajo_1_area").value                   = obj.job_area_1;
+                }
+                if(obj.job_range_1 != undefined){
+                  document.getElementById("trabajo_1_senior").value                 = obj.job_range_1;
+                }
+                if(obj.job_from_1 != undefined){
+                  document.getElementById("trabajo_1_mes_desde").value              = obj.job_from_1.split("-")[0];
+                  document.getElementById("trabajo_1_año_desde").value              = obj.job_from_1.split("-")[1];
+                }
+                if(obj.job_to_1 != undefined){
+                  document.getElementById("trabajo_1_mes_hasta").value              = obj.job_to_1.split("-")[0];
+                  document.getElementById("trabajo_1_año_hasta").value              = obj.job_to_1.split("-")[1];
+                }
+                if(obj.company_name_2 != undefined){
+                  document.getElementById("empresa_2_nombre").value                 = obj.company_name_2;
+                }
+                if(obj.company_type_2 != undefined){
+                  document.getElementById("empresa_2_tipo").value                   = obj.company_type_2;  
+                }
+                if(obj.job_description_2 != undefined){
+                  document.getElementById("trabajo_2_descripcion").value            = obj.job_description_2;
+                }
+                if(obj.job_area_2 != undefined){
+                  document.getElementById("trabajo_2_area").value                   = obj.job_area_2;
+                }
+                if(obj.job_range_2 != undefined){
+                  document.getElementById("trabajo_2_senior").value                 = obj.job_range_2;
+                }
+                if(obj.job_from_2 != undefined){
+                  document.getElementById("trabajo_2_mes_desde").value              = obj.job_from_2.split("-")[0];
+                  document.getElementById("trabajo_2_año_desde").value              = obj.job_from_2.split("-")[1];  
+                }
+                if(obj.job_to_2 != undefined){
+                  document.getElementById("trabajo_2_mes_hasta").value              = obj.job_to_2.split("-")[0];
+                  document.getElementById("trabajo_2_año_hasta").value              = obj.job_to_2.split("-")[1];
+                }
+                if(obj.company_name_3 != undefined){
+                  document.getElementById("empresa_3_nombre").value                 = obj.company_name_3;
+                }
+                if(obj.company_type_3 != undefined){
+                  document.getElementById("empresa_3_tipo").value                   = obj.company_type_3;
+                }
+                if(obj.job_description_3 != undefined){
+                  document.getElementById("trabajo_3_descripcion").value            = obj.job_description_3;
+                }
+                if(obj.job_area_3 != undefined){
+                  document.getElementById("trabajo_3_area").value                   = obj.job_area_3;
+                }
+                if(obj.job_range_3 != undefined){
+                  document.getElementById("trabajo_3_senior").value                 = obj.job_range_3;
+                }
+                if(obj.job_from_3 != undefined){
+                  document.getElementById("trabajo_3_mes_desde").value              = obj.job_from_3.split("-")[0];
+                  document.getElementById("trabajo_3_año_desde").value              = obj.job_from_3.split("-")[1];
+                }
+                if(obj.job_to_3 != undefined){
+                  document.getElementById("trabajo_3_mes_hasta").value              = obj.job_to_3.split("-")[0];
+                  document.getElementById("trabajo_3_año_hasta").value              = obj.job_to_3.split("-")[1];
+                }
+                
+                getCurriculumFile(obj.curriculumId);
+                document.getElementById("olvido_contraseña").style.display='none';
+                document.getElementById("personalInformation").style.display='inline';
+                document.getElementById("password_div").style.display='none';
+                document.getElementById("buttons").style.display='none';
+                newUser = false;
               }
-              if(obj.company_type_1 != undefined){
-                document.getElementById("empresa_1_tipo").value                   = obj.company_type_1;
-              }
-              if(obj.job_description_1 != undefined){
-                document.getElementById("trabajo_1_descripcion").value            = obj.job_description_1;
-              }
-              if(obj.job_area_1 != undefined){
-                document.getElementById("trabajo_1_area").value                   = obj.job_area_1;
-              }
-              if(obj.job_range_1 != undefined){
-                document.getElementById("trabajo_1_senior").value                 = obj.job_range_1;
-              }
-              if(obj.job_from_1 != undefined){
-                document.getElementById("trabajo_1_mes_desde").value              = obj.job_from_1.split("-")[0];
-                document.getElementById("trabajo_1_año_desde").value              = obj.job_from_1.split("-")[1];
-              }
-              if(obj.job_to_1 != undefined){
-                document.getElementById("trabajo_1_mes_hasta").value              = obj.job_to_1.split("-")[0];
-                document.getElementById("trabajo_1_año_hasta").value              = obj.job_to_1.split("-")[1];
-              }
-              if(obj.company_name_2 != undefined){
-                document.getElementById("empresa_2_nombre").value                 = obj.company_name_2;
-              }
-              if(obj.company_type_2 != undefined){
-                document.getElementById("empresa_2_tipo").value                   = obj.company_type_2;  
-              }
-              if(obj.job_description_2 != undefined){
-                document.getElementById("trabajo_2_descripcion").value            = obj.job_description_2;
-              }
-              if(obj.job_area_2 != undefined){
-                document.getElementById("trabajo_2_area").value                   = obj.job_area_2;
-              }
-              if(obj.job_range_2 != undefined){
-                document.getElementById("trabajo_2_senior").value                 = obj.job_range_2;
-              }
-              if(obj.job_from_2 != undefined){
-                document.getElementById("trabajo_2_mes_desde").value              = obj.job_from_2.split("-")[0];
-                document.getElementById("trabajo_2_año_desde").value              = obj.job_from_2.split("-")[1];  
-              }
-              if(obj.job_to_2 != undefined){
-                document.getElementById("trabajo_2_mes_hasta").value              = obj.job_to_2.split("-")[0];
-                document.getElementById("trabajo_2_año_hasta").value              = obj.job_to_2.split("-")[1];
-              }
-              if(obj.company_name_3 != undefined){
-                document.getElementById("empresa_3_nombre").value                 = obj.company_name_3;
-              }
-              if(obj.company_type_3 != undefined){
-                document.getElementById("empresa_3_tipo").value                   = obj.company_type_3;
-              }
-              if(obj.job_description_3 != undefined){
-                document.getElementById("trabajo_3_descripcion").value            = obj.job_description_3;
-              }
-              if(obj.job_area_3 != undefined){
-                document.getElementById("trabajo_3_area").value                   = obj.job_area_3;
-              }
-              if(obj.job_range_3 != undefined){
-                document.getElementById("trabajo_3_senior").value                 = obj.job_range_3;
-              }
-              if(obj.job_from_3 != undefined){
-                document.getElementById("trabajo_3_mes_desde").value              = obj.job_from_3.split("-")[0];
-                document.getElementById("trabajo_3_año_desde").value              = obj.job_from_3.split("-")[1];
-              }
-              if(obj.job_to_3 != undefined){
-                document.getElementById("trabajo_3_mes_hasta").value              = obj.job_to_3.split("-")[0];
-                document.getElementById("trabajo_3_año_hasta").value              = obj.job_to_3.split("-")[1];
-              }
-
-              
-              getCurriculumFile(obj.curriculumId);
-              
-
-              document.getElementById("personalInformation").style.display='inline';
-              document.getElementById("password_div").style.display='none';
-              document.getElementById("buttons").style.display='none';
-              newUser = false;
             }
     });
 
@@ -799,7 +801,7 @@ function createNewUser(){
     document.getElementById("personalInformation").style.display='inline';
     document.getElementById("password_div").style.display='none';
     document.getElementById("buttons").style.display='none';
-    //document.getElementById("olvido_contraseña").style.display='none';
+    document.getElementById("olvido_contraseña").style.display='none';
     newUser = true;
 }
 
@@ -807,7 +809,7 @@ function sendPersonalInformation(){
     if(newUser){
             if(document.getElementById("confirme_nueva_contraseña").value == document.getElementById("contraseña_nueva").value){
               if(document.getElementById("confirme_email").value == document.getElementById("email").value){
-                if(document.getElementById("numero_de_documento").value.match(/^\s*$/)){
+                if(document.getElementById("numero_de_documento").value.match(/^\s*$/) || document.getElementById("numero_de_documento").value.length<6 ||document.getElementById("numero_de_documento").value.length>9){
                   alert("Ingrese su numero de documento");
                   return;
                 }
