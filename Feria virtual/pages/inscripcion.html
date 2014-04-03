@@ -13,10 +13,7 @@
         
           <ul class="nav-bar">  
             <li><a href="http://www.encontramas.com.ar/">Encontra +</a></li>
-            <!--<li><a href="../index.html">Exterior</a></li>
-            <li><a href="interior.html">Interior</a></li>
-            <li><a href="empresas.html">Empresas</a></li>
-            <li><a href="ofertaLaboral.html">Ofertas laborales</a></li>-->
+           
             <li> <a href="inscripcion.html">Inscribirse</a></li>
           </ul>
         
@@ -64,8 +61,9 @@
             <br><br>
           </div>
 
-          <!--<a id="olvido_contraseña" href="http://aareii.org.ar/component/comprofiler/lostpassword.html" style="font-size:80%; text-decoration:underline;">Olvide mi contraseña</a>-->
-          
+          <div id="olvido_contraseña">
+          <a  href="../pages/forgotPassword.html" style="font-size:80%; text-decoration:underline;">Olvide mi contraseña</a><br><br>
+          </div>
           <div id="buttons" style="text-align: center">
             <input type="button" id="verify_button" value="Verificar usuario" class="button" onclick="checkUser()"      style="margin-right:  3%">
             <input type="button" id="create_button" value="Crear nuevo"       class="button" onclick="createNewUser()"  style="margin-left:   3%"><br><br>
@@ -136,8 +134,9 @@
               <strong>Teléfono</strong>:   
               <span class="red">*</span>
             </span>
+            <input type="text" id="telefono_codigo_area" name="telefono_codigo_area" class="rightSide" size="5" onkeyup="checkNumeric(this);" style="margin-right:1%" placeholder="C. Area"> 
             <input type="text" id="telefono_celular" name="telefono_celular" class="rightSide" size="12" onkeyup="checkNumeric(this);" placeholder="Numero">
-            <input type="text" id="telefono_codigo_area" name="telefono_codigo_area" class="rightSide" size="5" onkeyup="checkNumeric(this);" style="margin-right:1%" placeholder="C. Area"> <br><br>
+            <br><br>
 
             <!--FECHA NACIMIENTO-->
             <span class="leftSide">
@@ -633,7 +632,7 @@
                 </script> 
               </select>
               <br>
-              <input type="checkbox" id="hasta_presente2" name="hasta_presente2" value="hasta_presente2" onChange="stillWorkHere(this, $('select[name=trabajo_2_año_desde]'), $('select[name=trabajo_2_mes_desde]'));"> <SMALL><SMALL>Trabajo Aquí Actualmente</SMALL></SMALL>
+              <input type="checkbox" id="hasta_presente2" name="hasta_presente2" value="hasta_presente2" onChange="stillWorkHere(this, $('select[name=trabajo_2_año_hasta]'), $('select[name=trabajo_2_mes_hasta]'));"> <SMALL><SMALL>Trabajo Aquí Actualmente</SMALL></SMALL>
             </div>  <br><br> 
 
             <!-- --------------------------------------------------------------------------------------- -->
