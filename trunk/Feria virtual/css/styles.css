@@ -122,8 +122,8 @@ hr
 
 #trigger {
 	position: 				absolute;
-	left: 					34.4%;
-	top: 					22.75%;
+	left: 					34.2%;
+	top: 					22.7%;
 	width: 					11.75%;
 }
 #trigger2 {
@@ -134,7 +134,7 @@ hr
 }
 #trigger3{
 	position: 				absolute;
-	left: 					68.4%;
+	left: 					68.2%;
 	top: 					46.2%;
 	width: 					10.75%;
 }
@@ -145,13 +145,94 @@ hr
 	width: 					11.5%;
 }
 
+/******************************************************************************/
 
-#trigger, #trigger2, #trigger3{
+#trigger5{
+	position: 				absolute;
+	left: 					28.3%;
+	top: 					33.4%;
+	width: 					11.75%;
+}
+#trigger6{
+	position: 				absolute;
+	left: 					45.5%;
+	top: 					47.5%;
+	width: 					10.65%;
+}
+#trigger7{
+	position: 				absolute;
+	left: 					62.1%;
+	top: 					59.3%;
+	width: 					11.3%;
+}
+#trigger8{
+	position: 				absolute;
+	left: 					80.2%;
+	top: 					70.4%;
+	width: 					12%;
+}
+
+/******************************************************************************/
+
+#trigger9{
+	position: 				absolute;
+	left: 					21.58%;
+	top: 					44.85%;
+	width: 					12%;
+}
+#trigger10{
+	position: 				absolute;
+	left: 					39.2%;
+	top: 					59.5%;
+	width: 					11%;
+}
+#trigger11{
+	position: 				absolute;
+	left: 					54.8%;
+	top: 					75.4%;
+	width: 					12%;
+}
+
+#trigger12{
+	position: 				absolute;
+	left: 					73.6%;
+	top: 					87.3%;
+	width: 					12%;
+}
+
+/******************************************************************************/
+
+#trigger13{
+	position: 				absolute;
+	left: 					11%;
+	top: 					65.6%;
+	width: 					12%;
+}
+
+#trigger14{
+	position: 				absolute;
+	left: 					28%;
+	top: 					78.4%;
+	width: 					12%;
+}
+
+/******************************************************************************/
+
+#trigger15{
+	position: 				absolute;
+	left: 					0.6%;
+	top: 					84.4%;
+	width: 					12%;
+}
+
+/******************************************************************************/
+
+#trigger, #trigger2, #trigger3, #trigger4, #trigger5, #trigger6, #trigger7, #trigger8, #trigger9, #trigger10, #trigger11, #trigger12, #trigger13, #trigger14, #trigger15{
 	z-index: 				1;
 	height: 				auto;
 }  
 
-#trigger:hover, #trigger2:hover, #trigger3:hover, #trigger4:hover{
+#trigger:hover, #trigger2:hover, #trigger3:hover, #trigger4:hover, #trigger5:hover, #trigger6:hover, #trigger7:hover, #trigger8:hover, #trigger9:hover, #trigger10:hover, #trigger11:hover, #trigger12:hover, #trigger13:hover, #trigger14:hover, #trigger15:hover{
 	/*Escalar*/
 	-webkit-transform:			scale(1.3, 1.3);
 	-o-transform:				scale(1.3, 1.3);
@@ -173,7 +254,7 @@ hr
 }
 
 
-#pop-up, #pop-up2, #pop-up3, #pop-up4{
+#pop-up, #pop-up2, #pop-up3, #pop-up4, #pop-up5, #pop-up6, #pop-up7, #pop-up8, #pop-up9, #pop-up10, #pop-up11, #pop-up12, #pop-up13, #pop-up14, #pop-up15{
 		display: 			none;
         position: 			absolute;
         width: 				25%;
