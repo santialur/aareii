@@ -371,3 +371,69 @@ hr
 	top:1px;
 }
 */
+
+
+
+/* Banner publicitario dinámico */
+.content-item { 
+	width: 300px; 
+	background-position: 50%; 
+	height: 200px; 
+	margin: 5px 20px;  
+	overflow: hidden;  
+	position: absolute;
+	left: 2%;
+	top: -10%
+}
+.content-item .overlay 
+{ 
+	border: 30px solid #DA251D; 
+	border-radius: 15px; 
+	bottom: 0;  height: 0;  
+	opacity: .95;  
+	position: absolute;  
+	right: 0; 
+	text-indent: -9999px;  
+	-webkit-transition: all 0.5s ease-out;  
+	-moz-transition: all 0.5s ease-out;  
+	-o-transition: all 0.5s ease-out;  
+	transition: all 0.5s ease-out;  
+	width: 0;
+}
+
+.content-item:hover .overlay
+{  
+	border: 180px solid #78221F;  
+	border-radius: 0px; 
+	-webkit-transition: all 0.5s ease-out;  
+	-moz-transition: all 0.5s ease-out;  
+	-o-transition: all 0.5s ease-out;
+  	transition: all 0.5s ease-out;
+ }
+
+.content-item .corner-overlay-content 
+{  
+	bottom: 15px;  
+	color: #FFF;  
+	position: absolute;  
+	right: -48.8%;  
+	top: 73%;
+	-webkit-transition: 	all 0.5s ease-out;  
+	-moz-transition: 		all 0.5s ease-out;  
+	-o-transition: 			all 0.5s ease-out;
+ 	transition: 			all 0.5s ease-out;
+ }
+
+.content-item:hover .corner-overlay-content {  
+	opacity: 0;  
+	-webkit-transition: all 0.5s ease-out;  
+	-moz-transition: all 0.5s ease-out;  
+	-o-transition: all 0.5s ease-out;  
+	transition: all 0.5s ease-out;
+ }
+
+.content-item .overlay-content {  bottom: 0;  color: #FFF;  left: 0;  opacity: 0;  padding: 30px;  position: absolute;  right: 0;  top: 0;  -webkit-transition: all 0.3s ease-out;  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;  transition: all 0.3s ease-out;}
+.content-item .overlay-content h2 {  border-bottom: 1px solid #FFF;  padding: 0 0 12px;}
+.content-item:hover .overlay-content {  opacity: 1;  -webkit-transition: all 0.3s ease-out;  -moz-transition: all 0.3s ease-out;  -o-transition: all 0.3s ease-out;  transition: all 0.3s ease-out;  -webkit-transition-delay: 0.3s;  -moz-transition-delay: 0.3s;  -o-transition-delay: 0.3s;  transition-delay: 0.3s;}
+/* FIN Banner publicitario dinámico */
