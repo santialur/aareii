@@ -5,7 +5,7 @@
     var Plugin, defaults, pluginName;
     pluginName = "slidesjs";
     defaults = {
-      width: 940,
+      width: 900,
       height: 528,
       start: 1,
       navigation: {
