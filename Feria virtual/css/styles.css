@@ -1,6 +1,8 @@
 /*** Font 	***/
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,600,300");
 
+@import url("http://fonts.googleapis.com/css?family=Oswald");
+
 *
 {
 	padding:				0px;
@@ -21,7 +23,6 @@ a
 .centered{
 	text-align:				center;
 }
-
 
 .wrapper{
 	box-shadow: 			1px 3px 10px #000000;
@@ -51,6 +52,12 @@ a
 	font-size: 				1.2vw;
 }
 
+.titles{
+	font-family: 			'Oswald';
+	margin: 				10% 10%; 
+	text-shadow: 			1px 1px 2px #888888; 
+}
+
 .leftSide
 {
 	float: left;
@@ -59,6 +66,10 @@ a
 .rightSide
 {
 	float: right;
+}
+
+#bloqueDerecho{
+	width: 28%
 }
 
 hr
@@ -197,7 +208,7 @@ hr
 	position: 				absolute;
 	left: 					73.6%;
 	top: 					87.3%;
-	width: 					12%;
+	width: 					12.2%;
 }
 
 /******************************************************************************/
@@ -324,55 +335,45 @@ hr
 .Social img
 {
 	float: 					right;
-	height: 				40px;
-	width:  				10%;
+	height: 				5%;
+	width:  				13%;
 }
 
 
-/*
-.button2 {
-	-moz-box-shadow:inset 0px 0px 10px 0px #f5978e;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #2185c5), color-stop(1, #236688) );
-	background:-moz-linear-gradient( center top, #2185c5 5%, #236688 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2185c5', endColorstr='#236688');
-	background-color:#2185c5;
-	-webkit-border-top-left-radius:0px;
-	-moz-border-radius-topleft:0px;
-	border-top-left-radius:0px;
-	-webkit-border-top-right-radius:0px;
-	-moz-border-radius-topright:0px;
-	border-top-right-radius:0px;
-	-webkit-border-bottom-right-radius:0px;
-	-moz-border-radius-bottomright:0px;
-	border-bottom-right-radius:0px;
-	-webkit-border-bottom-left-radius:0px;
-	-moz-border-radius-bottomleft:0px;
-	border-bottom-left-radius:0px;
-	text-indent:0px;
-	border:1px solid #236688;
-	display:inline-block;
-	color:#ffffff;
-	font-family:Arial Black;
-	
-	font-style:normal;
-	height:25px;
-	
-	text-decoration:none;
-	
-	vertical-align: middle;
+#contenedor{
+border:1px solid red;
+width:600px;
 }
-.button2:hover {
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #236688), color-stop(1, #236688) );
-	background:-moz-linear-gradient( center top, #236688 5%, #2185c5 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#236688', endColorstr='#2185c5');
-	background-color:#236688;
-}.button2:active {
-	position:relative;
-	top:1px;
+
+.preview{
+	height:200px;
+	border:1px solid blue;
 }
-*/
 
+#slides{
+	margin: 	-5% 0% 5% 0%;
+	width:		100%;
+}
 
+.newsContent{
+	margin: 	2%;
+}
+
+.newsBlock{
+	background: -webkit-linear-gradient(#EEEEEE, #BBBBBB); 
+	background: -o-linear-gradient(#EEEEEE, #BBBBBB);
+	background: -moz-linear-gradient(#EEEEEE, #BBBBBB);
+	background: linear-gradient(#EEEEEE, #BBBBBB);	
+	text-align: left;
+	color: 		black;
+	font-size: 	95.5%;
+  	position: 	absolute;
+  	height: 	60%;
+  	padding:	3% 0% 2% 4%; 
+  	-webkit-box-shadow: 0 10px 6px -8px #777;
+	-moz-box-shadow: 0 10px 6px -6px #777;    
+	box-shadow: -6px 18px 6px -14px #777;
+}
 
 /* Banner publicitario dinámico */
 .content-item { 
