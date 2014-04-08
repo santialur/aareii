@@ -1,8 +1,13 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+  <title>Inscripción</title>
   <META http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link   rel=  "stylesheet"    href="../css/styles.css" type="text/css" />
+  <meta property="og:url" content="http://www.encontramas.com.ar/virtual/pages/inscripcion.html" />
+  <meta property="og:title" content="Feria de empresas- Encontra+ 2014" />
+  <meta property="og:description" content="Inscribite a la feria de empresas 2014" />
+  <meta property="og:image" content="http://www.encontramas.com.ar/virtual/features/images/encontramas_facebook_foto.jpg" />
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   <script type="text/javascript" src="../js/inscription.js"></script>
@@ -64,6 +69,7 @@
           <div id="olvido_contraseña">
           <a  href="../pages/forgotPassword.html" style="font-size:80%; text-decoration:underline;">Olvide mi contraseña</a><br><br>
           </div>
+          
           <div id="buttons" style="text-align: center">
             <input type="button" id="verify_button" value="Verificar usuario" class="button" onclick="checkUser()"      style="margin-right:  3%">
             <input type="button" id="create_button" value="Crear nuevo"       class="button" onclick="createNewUser()"  style="margin-left:   3%"><br><br>
@@ -148,7 +154,7 @@
               <select id="fecha_nacimiento_anio" name="fecha_nacimiento_anio">
                 <script>
                     $('#fecha_nacimiento_anio').append($('<option />').val(1).html("Año"));
-                    fillYears($('select[name=fecha_nacimiento_anio]'), 1996, 1959);
+                    fillYears($('select[name=fecha_nacimiento_anio]'), 1996, 1950);
                 </script> 
               </select>
               <select id="fecha_nacimiento_mes" name="fecha_nacimiento_mes"></select>

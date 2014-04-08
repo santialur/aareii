@@ -745,8 +745,10 @@ function checkUser(){
                   document.getElementById("trabajo_3_mes_hasta").value              = obj.job_to_3.split("-")[0];
                   document.getElementById("trabajo_3_año_hasta").value              = obj.job_to_3.split("-")[1];
                 }
+
                 
                 getCurriculumFile(obj.curriculumId);
+                
                 document.getElementById("olvido_contraseña").style.display='none';
                 document.getElementById("personalInformation").style.display='inline';
                 document.getElementById("password_div").style.display='none';
