@@ -617,7 +617,7 @@ function checkUser(){
                  },
             type: 'POST',
             success: function(output){
-              if(output == "Combinación de DNI y contraseña invalida"){
+              if(output == "Combinación de DNI y contraseña invalida" || output == "Usuario no registrado"){
                 alert(output);
               }
               else{
@@ -875,6 +875,7 @@ function sendPersonalInformation(){
                               alert(output);
                               return;
                             }else{
+                              alert(output);
                               document.getElementById("personalInformation").style.display = 'none';
                               document.getElementById("numero_de_documento").style.display = 'none';
                               document.getElementById("academicInformation").style.display = 'inline';
@@ -1136,6 +1137,7 @@ function sendLaboralInformation(){
                     type: 'POST',
                     success: function(output) {
                     		alert(output);
+                        newUser = false;
                             //alert("El usuario a sido regitrado exitosamente, por favor envie su curriculum");
                             //document.getElementById("curriculum_div").style.display = 'inline-table';    
                     }
@@ -1179,6 +1181,7 @@ function sendLaboralInformation(){
                     type: 'POST',
                     success: function(output) {
                         alert(output);
+                        user = "oldUser";
                             //alert("El usuario a sido regitrado exitosamente, por favor envie su curriculum");
                             //document.getElementById("curriculum_div").style.display = 'inline-table';    
                     }

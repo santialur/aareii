@@ -18,7 +18,6 @@
         
           <ul class="nav-bar">  
             <li><a href="http://www.encontramas.com.ar/">Encontra +</a></li>
-           
             <li> <a href="inscripcion.html">Inscribirse</a></li>
           </ul>
         
@@ -74,7 +73,6 @@
             <input type="button" id="verify_button" value="Verificar usuario" class="button" onclick="checkUser()"      style="margin-right:  3%">
             <input type="button" id="create_button" value="Crear nuevo"       class="button" onclick="createNewUser()"  style="margin-left:   3%"><br><br>
           </div>
-
           <div id="personalInformation" style="display: none">
 
             <!--NOMBRE--> 
@@ -140,10 +138,12 @@
               <strong>Teléfono</strong>:   
               <span class="red">*</span>
             </span>
-            <input type="text" id="telefono_codigo_area" name="telefono_codigo_area" class="rightSide" size="5" onkeyup="checkNumeric(this);" style="margin-right:1%" placeholder="C. Area"> 
-            <input type="text" id="telefono_celular" name="telefono_celular" class="rightSide" size="12" onkeyup="checkNumeric(this);" placeholder="Numero">
+            <div class="rightSide">
+            <input type="text" id="telefono_codigo_area" name="telefono_codigo_area" size="5" onkeyup="checkNumeric(this);" style="margin-right:1%" placeholder="C. Area"> 
+            <input type="text" id="telefono_celular" name="telefono_celular" size="12" onkeyup="checkNumeric(this);" placeholder="Numero">
             <br><br>
-
+            </div>
+            <br><br>
             <!--FECHA NACIMIENTO-->
             <span class="leftSide">
               <strong>Fecha de Nacimiento</strong>:   
@@ -787,6 +787,29 @@
           </div> 
 
           <!--FIN CONTENT-->
+        </div>
+        <!-- COMPARTIR -->
+        <div id="socialShare" class="rightSide">
+          <div style="margin-top: -10%"> 
+              <div class="SocialInscripcion" style="margin: -5% 25% 0 0">
+                <!-- Facebook -->
+                <a href="http://www.facebook.com/sharer.php?u=http://www.encontramas.com.ar/cv" target="_blank">
+                  <img src="http://www.simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+                </a>
+                <!-- Twitter -->
+                <a href="http://twitter.com/share?url=http://www.encontramas.com.ar/cv" target="_blank">
+                  <img src="http://www.simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter"/>
+                </a>
+                <!-- Google+ -->
+                <a href="https://plus.google.com/share?url=http://www.encontramas.com.ar/cv" target="_blank">
+                  <img src="http://www.simplesharebuttons.com/images/somacro/google.png" alt="Google" />
+                </a>
+                <!-- LinkedIn -->
+                <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.encontramas.com.ar/cv" target="_blank">
+                  <img src="http://www.simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+                </a>
+              </div>
+          </div>
         </div>
       </div>
     </div>
