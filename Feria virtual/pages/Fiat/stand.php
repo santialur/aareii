@@ -11,7 +11,7 @@
 		<link 	rel="stylesheet" 	href="../../features/themes/font-awesome/css/font-awesome.min.css" 			/>
 		<link 	rel="stylesheet"	href="../../css/empresaStyles.css"  										/> 
 
-		<script src="../../js/jquery-1.10.2.js" 	type="text/javascript"> 								</script>
+	  	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 		<script>
 			$(document).ready(function() {
 				var h = $("#content").height();
@@ -21,9 +21,10 @@
 	</head>
 
 	<body>
-    	<div class="wrapperMedium">
+    	<div class="wrapperMedium" style="">
     		<div id="header">
-    			<img src="../../features/images/AAREII-logo.png" border="0"  height="90" width="60" style="position: relative; top:10px; left: 20px; z-index:0;" >
+    			<img class="logo" src="images/fiat-web.png" width="275">
+    			<img class="rightSide" id="aareiiLogo" src="../../features/images/AAREII-logo.png" width="60">
     		</div>
 
     		<?php include '../sideMenu.html'; ?>
