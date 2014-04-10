@@ -60,11 +60,53 @@ function checkUser(){
                   alert(output);
                   
               }else{
-                document.getElementById("matriculateButton").style.display='none';
-                alert(output);
-                //$("#LoadedCurriculum").append("<p>No tienes un curriculum cargado</p><br>");
-                //$("#LoadedCurriculum").append("<span style='text-align: center'><input type='submit' name='submit' value='Subir CV' class='button' onclick='uploadNewCurriculum()'></span>");
+                document.getElementById("verificarUsuario").style.display='none';
+                prepareEnrollment(output);
+              }
+            }
+    });
+}
+
+function prepareEnrollment(userInfo){
+    var obj = JSON.parse(userInfo);
+    if(obj.matriculated == "1"){
+        $("#matricularUsuario").append("<span class='leftSide' style='text-align: center'><strong>Nombre</strong>:   "+obj.name+"</span><br><br>");
+        $("#matricularUsuario").append("<span class='leftSide' style='text-align: center'><strong>DNI</strong>:   "+obj.dni+"</span><br><br>");
+        $("#matricularUsuario").append("<span class='leftSide' style='text-align: center'><strong>E-mail</strong>:   "+obj.email+"</span><br><br>");
+        $("#matricularUsuario").append("<span class='leftSide' style='text-align: center'><strong>Titulo</strong>:   "+obj.title+"</span><br><br>");
+        $("#matricularUsuario").append("<p id='matriculatedUser'>Usuario matriculado</p><br>");
+        $("#matricularUsuario").append("<span style='text-align: center'><input type='submit' name='submit' value='Desmatricular' class='button' onclick='unmatriculateUser(obj.dni)'></span>");
+    }else{
+        $("#matricularUsuario").append("<span class='leftSide' style='text-align: center'><strong>Nombre</strong>:   "+obj.name+"</span><br><br>");
+        $("#matricularUsuario").append("<span class='leftSide' style='text-align: center'><strong>DNI</strong>:   "+obj.dni+"</span><br><br>");
+        $("#matricularUsuario").append("<span class='leftSide' style='text-align: center'><strong>E-mail</strong>:   "+obj.email+"</span><br><br>");
+        $("#matricularUsuario").append("<span class='leftSide' style='text-align: center'><strong>Titulo</strong>:   "+obj.title+"</span><br><br>");
+        $("#matricularUsuario").append("<p id='nonmatriculatedUser'>Usuario no matriculado</p><br>");
+        $("#matricularUsuario").append("<span style='text-align: center'><input type='submit' name='submit' value='Matricular' class='button' onclick='matriculateUser(obj.dni)'></span>");
+    
+    }
+    //$("#LoadedCurriculum").append("<p>No tienes un curriculum cargado</p><br>");
+    //$("#LoadedCurriculum").append("<span style='text-align: center'><input type='submit' name='submit' value='Subir CV' class='button' onclick='uploadNewCurriculum()'></span>");
               
+}
+
+function unmatriculateUser(dni){
+
+}
+
+function matriculateUser(dni){
+    $.ajax({ url: '../js/matriculate.php',
+            data: {action:                 "matriculate",
+                   dni:                     dni,
+                 },
+            type: 'POST',
+            success: function(output){
+              if(output == "Usuario no registrado"){
+                  alert(output);
+                  
+              }else{
+                document.getElementById("verificarUsuario").style.display='none';
+                prepareEnrollment(output);
               }
             }
     });

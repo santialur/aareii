@@ -547,3 +547,19 @@ width:600px;
 .ac-container input:checked ~ article.ac-large{ 
     height: 230px; 
 }
+
+#matriculatedUser{
+	color: green;
+	font-size: 100%;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+	font-family:"Verdana";
+	font-weight: bold;
+}
+
+#nonmatriculatedUser{
+	color: red;
+	font-size: 100%;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+	font-family:"Verdana";
+	font-weight: bold;
+}
