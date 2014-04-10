@@ -6,11 +6,10 @@
 		<meta name="description" content="This is page-header (.page-header &gt; h1)" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<link 	rel="stylesheet"	href="../../lib/bootstrap/css/bootstrap.min.css" 				 				/>
-		<link 	rel="stylesheet"	href="../../lib/bootstrap/css/bootstrap-responsive.min.css" 					/>
+		<link 	rel="stylesheet"	href="../../lib/bootstrap/css/bootstrap.min.css" 				 			/>
+		<link 	rel="stylesheet"	href="../../lib/bootstrap/css/bootstrap-responsive.min.css" 				/>
 		<link 	rel="stylesheet" 	href="../../features/themes/font-awesome/css/font-awesome.min.css" 			/>
-		<link 	rel="stylesheet"	href="http://fonts.googleapis.com/css?family=Raleway:500"					/> 
-		<link 	rel="stylesheet"	href="../../css/empresaStyles.css"  											/> 
+		<link 	rel="stylesheet"	href="../../css/empresaStyles.css"  										/> 
 
 		<script src="../../js/jquery-1.10.2.js" 	type="text/javascript"> 								</script>
 		<script>
@@ -27,28 +26,15 @@
     			<img src="../../features/images/AAREII-logo.png" border="0"  height="90" width="60" style="position: relative; top:10px; left: 20px; z-index:0;" >
     		</div>
 
-    		<div id="sideMenu">
- 				<ul id="listMenu">
- 					<li><a href="stand1.html">			Stand				</a></li>
- 					<li><a href="empresa1.html">		Quienes Somos		</a></li>
- 					<li><a href="agenda1.html">			Agenda				</a></li>
- 					<li><a href="ofertasEmpleo1.html">	Ofertas de Empleo 	</a></li>
- 					<li><a href="multimedia1.html">		Multimedia			</a></li>
- 					<li><a href="chat1.html">			Chat 				</a></li>
- 				</ul>
-    		</div>
+    		<?php include '../sideMenu.html'; ?>
 
     		<div id="content">
     			<div style="margin: 0 auto;">
     				<img src="../../features/images/stand01.jpg" style="position: relative;">
     			</div>
     		</div>
-    		<div id="footer">
-		    	<p>
-		    		© 2013  Encontra+    <br />
-		        	Todos los derechos reservados.
-		    	</p>
-			</div>
+    		
+    		<?php include '../footer.html'; ?>
     	</div>
 	</body>
 </html>
