@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Quienes somos?</title>
-
 		<meta 	name="description" 	content="This is page-header (.page-header &gt; h1)" />
 		<meta 	name="viewport" 	content="width=device-width, initial-scale=1.0" />
 
@@ -27,16 +26,7 @@
     			<img id="aareiiLogo" src="../../features/images/AAREII-logo.png" border="0" height="90" width="60">
     		</div>
 
-    		<div id="sideMenu">
- 				<ul id="listMenu">
- 					<li><a href="stand1.html">			Stand				</a></li>
- 					<li><a href="empresa1.html">		Quienes Somos		</a></li>
- 					<li><a href="agenda1.html">			Agenda				</a></li>
- 					<li><a href="ofertasEmpleo1.html">	Ofertas de Empleo 	</a></li>
- 					<li><a href="multimedia1.html">		Multimedia			</a></li>
- 					<li><a href="chat1.html">			Chat 				</a></li>
- 				</ul>
-    		</div>
+    		<?php include '../sideMenu.html'; ?>
 
     		<div id="content">
     			<div style="margin: 0 auto; padding: 5% 10%">
@@ -66,12 +56,8 @@
     			</div>
     		</div>
 
-    		<div id="footer">
-		    	<p>
-		    		© 2013  Encontra+    <br />
-		        	Todos los derechos reservados.
-		    	</p>
-			</div>
+    		<?php include '../footer.html'; ?>
+
     	</div>
 	</body>
 </html>
