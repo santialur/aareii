@@ -65,7 +65,7 @@
 	</head>
 
 
-	<body >
+	<body>
 			<!-- MENU --> 
 			<?php include 'menu.html'; ?>
 
