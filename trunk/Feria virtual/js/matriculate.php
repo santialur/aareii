@@ -70,13 +70,13 @@
 				  $desc["email"] = utf8_encode($row["email"]);
 				  
 			  }
-			echo $desc["name"];
 			$userdni = $desc["dni"];
 			$sql_user_encontramas = "SELECT * FROM user_encontramas WHERE userName = $userdni";
 			$user_encontramas = mysql_query($sql_user_encontramas, $con);
 			while($row = mysql_fetch_array($user_encontramas))
 			  {
 				  $desc["matriculated"] = $row["matriculated"];
+				  $desc["title"] = utf8_encode($row["title"]);
 			  }
 			 echo json_encode($desc, JSON_UNESCAPED_UNICODE);
 		}
