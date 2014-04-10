@@ -15,20 +15,21 @@
 		<link 	rel="stylesheet" 	href="../../css/agendaStyles.css"											/>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"> 				</script>
-		<script src="../../js/completeAgenda.js" 	type="text/javascript"> 								</script>
+		<script src="../../js/completeAgenda.js" 	type="text/javascript"> 							</script>
 	</head>
 
 	<body>
     	<div class="wrapperMedium">
     		<div id="header">
-    			<img id="aareiiLogo" src="../../features/images/AAREII-logo.png" border="0" height="90" width="60">
+    			<img class="logo" src="images/fiat-web.png" width="25%">
+    			<img class="rightSide" id="aareiiLogo" src="../../features/images/AAREII-logo.png" width="5.5%">
     		</div>
 
     		<?php include '../sideMenu.html'; ?>
 
     		<div id="content">
     			<div id="main-content" class="clearfix">
-	    				<table cellspacing="0" id="tableCalendar">
+	    				<table cellspacing="1" id="tableCalendar">
 							<thead>
 								<tr>
 									<th>Mon</th><th>Tue</th><th>Wed</th>
@@ -38,7 +39,8 @@
 							</thead>
 							<tbody>
 								<tr>
-									<td class="padding" colspan="2"></td>
+									<td class="padding"></td>
+									<td class="padding"></td>
 									<td> 1</td>
 									<td> 2</td>
 									<td> 3</td>
@@ -91,6 +93,8 @@
 									<td>28</td>
 									<td>29</td>
 									<td>30</td>
+									<td class="padding"></td>
+									<td class="padding"></td>
 									<td class="padding"></td>
 								</tr>
 							</tbody>

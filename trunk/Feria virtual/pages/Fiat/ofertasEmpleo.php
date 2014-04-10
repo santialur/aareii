@@ -18,9 +18,11 @@
 
 	<body>
     	<div class="wrapperMedium">
-    		<div id="header">
-    			<img id="aareiiLogo" src="../../features/images/AAREII-logo.png" border="0"  height="90" width="60">
-    		</div>
+            <div id="header">
+                <img class="logo" src="images/fiat-web.png" width="25%">
+                <img class="rightSide" id="aareiiLogo" src="../../features/images/AAREII-logo.png" width="5.5%">
+            </div>
+
 
     		<?php include '../sideMenu.html'; ?>
 
