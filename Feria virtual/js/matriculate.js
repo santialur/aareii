@@ -42,12 +42,8 @@ function checkAdminUser(){
 }
 
 function checkUser(){
-   if(document.getElementById("nombre_usuario").value.match(/^\s*$/)){
-      alert("Ingrese nombre de usuario");
-      return;
-   }
-   if(document.getElementById("contraseña").value.match(/^\s*$/)){
-      alert("Ingrese su contraseña");
+   if(document.getElementById("dni").value.match(/^\s*$/)){
+      alert("Ingrese el DNI");
       return;
    }
    $.ajax({ url: '../js/matriculate.php',
@@ -75,39 +71,54 @@ function prepareEnrollment(userInfo){
         $("#matricularUsuario").append("<span class='leftSide' style='text-align: center'><strong>E-mail</strong>:   "+obj.email+"</span><br><br>");
         $("#matricularUsuario").append("<span class='leftSide' style='text-align: center'><strong>Titulo</strong>:   "+obj.title+"</span><br><br>");
         $("#matricularUsuario").append("<p id='matriculatedUser'>Usuario matriculado</p><br>");
-        $("#matricularUsuario").append("<span style='text-align: center'><input type='submit' name='submit' value='Desmatricular' class='button' onclick='unmatriculateUser(obj.dni)'></span>");
+        $("#matricularUsuario").append("<span style='text-align: center'><input type='submit' name='submit' value='Desmatricular' class='button' onclick='unmatriculateUser()' style='margin-right:  3%'></span>");
+        $("#matricularUsuario").append("<span style='text-align: center'><input type='submit' name='submit' value='Volver' class='button' onclick='back()'></span>");
+    
     }else{
         $("#matricularUsuario").append("<span class='leftSide' style='text-align: center'><strong>Nombre</strong>:   "+obj.name+"</span><br><br>");
         $("#matricularUsuario").append("<span class='leftSide' style='text-align: center'><strong>DNI</strong>:   "+obj.dni+"</span><br><br>");
         $("#matricularUsuario").append("<span class='leftSide' style='text-align: center'><strong>E-mail</strong>:   "+obj.email+"</span><br><br>");
         $("#matricularUsuario").append("<span class='leftSide' style='text-align: center'><strong>Titulo</strong>:   "+obj.title+"</span><br><br>");
         $("#matricularUsuario").append("<p id='nonmatriculatedUser'>Usuario no matriculado</p><br>");
-        $("#matricularUsuario").append("<span style='text-align: center'><input type='submit' name='submit' value='Matricular' class='button' onclick='matriculateUser(obj.dni)'></span>");
+        $("#matricularUsuario").append("<span style='text-align: center'><input type='submit' name='submit' value='Matricular' class='button' onclick='matriculateUser()' style='margin-right:  3%'></span>");
+        $("#matricularUsuario").append("<span style='text-align: center'><input type='submit' name='submit' value='Volver' class='button' onclick='back()'></span>");
     
     }
-    //$("#LoadedCurriculum").append("<p>No tienes un curriculum cargado</p><br>");
-    //$("#LoadedCurriculum").append("<span style='text-align: center'><input type='submit' name='submit' value='Subir CV' class='button' onclick='uploadNewCurriculum()'></span>");
-              
+           
 }
 
-function unmatriculateUser(dni){
-
-}
-
-function matriculateUser(dni){
-    $.ajax({ url: '../js/matriculate.php',
-            data: {action:                 "matriculate",
-                   dni:                     dni,
+function unmatriculateUser(){
+     $.ajax({ url: '../js/matriculate.php',
+            data: {action:                 "unmatriculate",
+                   dni:                     document.getElementById("dni").value,
                  },
             type: 'POST',
             success: function(output){
-              if(output == "Usuario no registrado"){
                   alert(output);
-                  
-              }else{
-                document.getElementById("verificarUsuario").style.display='none';
-                prepareEnrollment(output);
-              }
+                  //document.getElementById("verificarUsuario").style.display='inline';
+                  $("#matricularUsuario").empty();
+                  checkUser();
             }
     });
+}
+
+function matriculateUser(){
+    $.ajax({ url: '../js/matriculate.php',
+            data: {action:                 "matriculate",
+                   dni:                     document.getElementById("dni").value,
+                 },
+            type: 'POST',
+            success: function(output){
+                  alert(output);
+                  //document.getElementById("verificarUsuario").style.display='inline';
+                  $("#matricularUsuario").empty();
+                  checkUser();
+            }
+    });
+}
+
+function back () {
+    $("#matricularUsuario").empty();
+    document.getElementById("dni").value = "";
+    document.getElementById("verificarUsuario").style.display='inline';
 }

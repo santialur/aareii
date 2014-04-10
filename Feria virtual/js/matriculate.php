@@ -1,10 +1,20 @@
 <?php
-
-	if($_POST['userType'] == "admin"){
-		checkAdminUser($_POST['user'], $_POST['password']);
+	if(isset($_POST['userType'])){
+		if($_POST['userType'] == "admin"){
+			checkAdminUser($_POST['user'], $_POST['password']);
+		}
+		if($_POST['userType'] == "user"){
+			checkUser($_POST['user']);
+		}
 	}
-	if($_POST['userType'] == "user"){
-		checkUser($_POST['user']);
+	
+	if(isset($_POST['action'])){
+		if($_POST['action'] == "matriculate"){
+			matriculateUser($_POST['dni']);
+		}
+		if($_POST['action'] == "unmatriculate"){
+			unmatriculateUser($_POST['dni']);
+		}
 	}
 
 	function checkAdminUser($user, $password){
@@ -30,6 +40,7 @@
 		//$user_password_salt[1] va a tener solo la salt
 		$encrypt = md5($password.$user_password_salt[1]);
 		$encriptedPass = $encrypt.':'.$user_password_salt[1];
+
 
 		$sql_ems_user = "SELECT * FROM ems_user WHERE username = '$user' AND password = '$encriptedPass'";
 		$ems_admin_user = mysql_query($sql_ems_user, $con);
@@ -80,6 +91,36 @@
 			  }
 			 echo json_encode($desc, JSON_UNESCAPED_UNICODE);
 		}
+		mysql_close($con);
+	}
+
+	function matriculateUser($dni){
+		$con = mysql_connect('localhost','root','');
+		mysql_select_db('encontramas_test',$con);
+		mysql_query("SET NAMES 'utf8'", $con);
+		if (!$con)
+		  {
+		  die('Could not connect: ' . mysql_error($con));
+		  }
+		$matriculated = 1;
+		$sql = "UPDATE user_encontramas SET matriculated = $matriculated WHERE username='$dni'";
+		$result = mysql_query($sql, $con);
+		echo "Usuario matriculado";
+		mysql_close($con);
+	}
+
+	function unmatriculateUser($dni){
+		$con = mysql_connect('localhost','root','');
+		mysql_select_db('encontramas_test',$con);
+		mysql_query("SET NAMES 'utf8'", $con);
+		if (!$con)
+		  {
+		  die('Could not connect: ' . mysql_error($con));
+		  }
+		$matriculated = 0;
+		$sql = "UPDATE user_encontramas SET matriculated = $matriculated WHERE username='$dni'";
+		$result = mysql_query($sql, $con);
+		echo "Usuario desmatriculado";
 		mysql_close($con);
 	}
 ?>
