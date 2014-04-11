@@ -1,11 +1,8 @@
 {
-    "title": "Cual es tu navegador favorito",
+    "title": "¿Qué consideras importante en una compañía?",
     "values": [
-        "Internet explorer",
-        "Chrome",
-        "Safari",
-        "Firefox",
-        "Opera",
-        "Otro"
+        "Salario y beneficios",
+        "Proyección de crecimiento y carrera",
+        "Flexibilidad entre trabajo y vida personal"
     ]
 }
