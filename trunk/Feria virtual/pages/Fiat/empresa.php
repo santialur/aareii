@@ -3,14 +3,14 @@
 	<head>
 		<title>Quienes somos?</title>
 		
-		<?php include '../empresasImports.html'; ?>		
+		<?php include '../_empresasImports.html'; ?>		
 	</head>
 
 	<body>
     	<div class="wrapperMedium">
-    		<?php include '../empresasHeader.html'; ?>
+    		<?php include '../_empresasHeader.html'; ?>
 
-    		<?php include '../empresasMenu.html'; 	?>
+    		<?php include '../_empresasMenu.html'; 	?>
 
     		<div id="content">
     			<div style="margin: 0 auto; padding: 5% 10%">
@@ -34,7 +34,7 @@
     			</div>
     		</div>
 
-    		<?php include '../footer.html'; ?>
+    		<?php include '../_empresasFooter.html'; ?>
 
     	</div>
 	</body>

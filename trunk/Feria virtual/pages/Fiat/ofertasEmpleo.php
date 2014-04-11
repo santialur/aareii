@@ -3,14 +3,14 @@
 	<head>
 		<title>Ofertas de Empleo</title>
 
-		<?php include '../empresasImports.html'; ?>
+		<?php include '../_empresasImports.html'; ?>
 	</head>
 
 	<body>
     	<div class="wrapperMedium">
-            <?php include '../empresasHeader.html'; ?>
+            <?php include '../_empresasHeader.html'; ?>
 
-    		<?php include '../empresasMenu.html'; 	?>
+    		<?php include '../_empresasMenu.html'; 	?>
 
     		<div id="content" style="padding-bottom:22%">
     			<div style="margin: 0 auto; padding: 0.5% 4%">
@@ -33,7 +33,7 @@
     			</div>
     		</div>
     		
-    		<?php include '../empresasFooter.html'; ?>
+    		<?php include '../_empresasFooter.html'; ?>
 
     	</div>
 	</body>
