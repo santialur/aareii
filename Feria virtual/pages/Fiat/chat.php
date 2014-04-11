@@ -15,7 +15,7 @@
 
 	</head>
 
-	<body style="background-color: #B10B0B">
+	<body>
     	<div class="wrapperMedium">
             <div id="header">
                 <img class="logo" src="images/fiat-web.png" width="25%">
@@ -24,7 +24,7 @@
 
     		<?php include '../sideMenu.html'; ?>
 
-    		<div id="content" style="height:450px;">
+    		<div id="content">
     			<div style="margin-left:5%; margin-top:5%">
     				<script id="sid0020000056189548579">
     				(function()
