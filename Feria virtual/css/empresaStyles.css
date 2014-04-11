@@ -165,6 +165,15 @@ body{
 	width:					14.3%;
 }
 
+#maletinFiat
+{
+	position: 				absolute;
+	left:					80.9%;
+	top:					66%;
+	z-index: 				200;
+	width:					14.3%;
+}
+
 #footer
 {
 	/*background-color:		#128aCd;*/
