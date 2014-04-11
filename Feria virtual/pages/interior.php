@@ -67,7 +67,7 @@
 
 	<body>
 			<!-- MENU --> 
-			<?php include 'menu.html'; ?>
+			<?php include '_menu.html'; ?>
 
 			<!-- CONTENIDO -->
 			<div class="wrapper" align="center">
@@ -278,9 +278,7 @@
 				</div>
 				
 			</div>
-			<div id="footer" class="box centered" >
-					<p>	Copyright 2013  AArEII    <br>
-						Todos los derechos reservados.
-			</div>
+
+			<?php include '_footer.html'; ?>
 	</body>
 </html>
