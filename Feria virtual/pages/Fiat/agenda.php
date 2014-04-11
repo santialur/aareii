@@ -1,29 +1,16 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8" />
 		<title>Agenda</title>
-		<meta 	name="description"	content="This is page-header (.page-header &gt; h1)" 						/>
-		<meta 	name="viewport" 	content="width=device-width, initial-scale=1.0" 							/>
 
-		<link 	rel="stylesheet"	href="../../lib/bootstrap/css/bootstrap.min.css" 				 			/>
-		<link 	rel="stylesheet"	href="../../lib/bootstrap/css/bootstrap-responsive.min.css" 				/>
-		<link 	rel="stylesheet" 	href="../../features/themes/font-awesome/css/font-awesome.min.css" 			/>
-		<link 	rel="stylesheet"	href="../../css/empresaStyles.css"  										/> 
-		<link 	rel="stylesheet" 	href="../../css/agendaStyles.css"											/>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"> 				</script>
-		<script src="../../js/completeAgenda.js" 	type="text/javascript"> 							</script>
+    	<?php include '../empresasImports.html'; ?>
 	</head>
 
 	<body>
     	<div class="wrapperMedium">
-    		<div id="header">
-    			<img class="logo" src="images/fiat-web.png" width="25%">
-    			<img class="rightSide" id="aareiiLogo" src="../../features/images/AAREII-logo.png" width="5.5%">
-    		</div>
+       		<?php include '../empresasHeader.html'; ?>
 
-    		<?php include '../sideMenu.html'; ?>
+    		<?php include '../empresasMenu.html'; 	?>
 
     		<div id="content">
     			<div id="main-content" class="clearfix">
@@ -100,7 +87,7 @@
     			</div>
     		</div>
 
-    		<?php include '../footer.html'; ?>
+    		<?php include '../empresasFooter.html'; ?>
 
     	</div>
 	</body>
