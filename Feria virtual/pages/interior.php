@@ -60,8 +60,8 @@
 		<script type="text/javascript" src="../js/functions.js"></script>
 
 		<!-- EXTRA --> 
-	  	<!--<script src="../lib/angular/angular.min.js"></script>-->
-  		<script src="../js/controllers.js"></script>
+	  	<script src="../lib/angular/angular.min.js"></script>
+  		<script src="../js/controllers.js">			</script>
 	</head>
 
 
@@ -75,17 +75,6 @@
 					
 					<!-- BLOQUE IZQUIERDO --> 
 					<div id="bloqueIzquierdo" class="leftSide" style="width: 70%; height:100%">
-
-						<!-- MARQUESINA -->
-						<div style="margin-bottom: 5%">
-							<ul class="itemMarquee">
-							  	<li><img src="../features/images/arcor-web.png"/>		</li>
-						  		<li><img src="../features/images/quilmes-web.png"/>		</li>
-						  		<li><img src="../features/images/faber-web.png"/>		</li>
-						  		<li><img src="../features/images/unilever-web.png"/>	</li>
-						  		<li><img src="../features/images/invap-web.png"/>		</li>
-							</ul>
-						</div>
 
 						<!-- CROQUIS --> 
 						<div align="center" style="position: relative;">
@@ -209,7 +198,18 @@
 							-->
 						</div>
 
-					</div>
+						<!-- MARQUESINA -->
+						<div style="margin-top: 5%">
+							<ul class="itemMarquee">
+							  	<li><img src="../features/images/arcor-web.png"/>		</li>
+						  		<li><img src="../features/images/quilmes-web.png"/>		</li>
+						  		<li><img src="../features/images/faber-web.png"/>		</li>
+						  		<li><img src="../features/images/unilever-web.png"/>	</li>
+						  		<li><img src="../features/images/invap-web.png"/>		</li>
+							</ul>
+						</div>
+
+					</div> <!-- FIN BLOQUE IZQUIERDO --> 
 
 					<!-- BLOQUE DERECHO --> 
 					<div id="bloqueDerecho" class="rightSide">
@@ -259,7 +259,7 @@
 						<div>	
 							<h4 class="titles">ENCUESTA</h4>
 
-							<div ng-controller="PollCtrl" style="text-align:left">	
+							<div ng-controller="PollCtrl" style="text-align:left;  margin:-5% 8% -4% 8%">	
 	    						<h4 style="text-align:center">{{poll.title}}</h4>	<br>
 								<div ng-repeat="value in poll.values">
 									<input type="radio" name="Q1">
@@ -271,13 +271,11 @@
 
 						<button class="button" style="position:static; top:50%">Votar</button>
 
-					</div>
-
-
+					</div> <!-- FIN BLOQUE DERECHO --> 
 
 				</div>
 				
-			</div>
+			</div> <!-- FIN WRAPPER --> 
 
 			<?php include '_footer.html'; ?>
 	</body>
