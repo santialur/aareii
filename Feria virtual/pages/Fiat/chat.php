@@ -3,14 +3,14 @@
 	<head>
 		<title>Chat</title>
 
-        <?php include '../empresasImports.html'; ?>
+        <?php include '../_empresasImports.html'; ?>
 	</head>
 
 	<body>
     	<div class="wrapperMedium">
-            <?php include '../empresasHeader.html'; ?>
+            <?php include '../_empresasHeader.html'; ?>
 
-            <?php include '../empresasMenu.html';   ?>
+            <?php include '../_empresasMenu.html';   ?>
 
     		<div id="content">
     			<div style="margin-left:5%; margin-top:5%">
@@ -57,7 +57,7 @@
     			</div>
     		</div>
     		
-            <?php include '../empresasFooter.html'; ?>
+            <?php include '../_empresasFooter.html'; ?>
     	</div>
 	</body>
 </html>
