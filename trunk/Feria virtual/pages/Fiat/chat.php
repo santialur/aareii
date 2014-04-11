@@ -1,28 +1,16 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8" />
 		<title>Chat</title>
-		<meta   name="description" content="This is page-header (.page-header &gt; h1)" />
-		<meta   name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<link 	rel="stylesheet"	href="../../lib/bootstrap/css/bootstrap.min.css" 				 		 />
-		<link 	rel="stylesheet"	href="../../lib/bootstrap/css/bootstrap-responsive.min.css" 			 />
-		<link 	rel="stylesheet" 	href="../../features/themes/font-awesome/css/font-awesome.min.css" 		 />
-		<link 	rel="stylesheet"	href="../../css/empresaStyles.css"  									 /> 
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js">                 </script>
-
+        <?php include '../empresasImports.html'; ?>
 	</head>
 
 	<body>
     	<div class="wrapperMedium">
-            <div id="header">
-                <img class="logo" src="images/fiat-web.png" width="25%">
-                <img class="rightSide" id="aareiiLogo" src="../../features/images/AAREII-logo.png" width="5.5%">
-            </div>
+            <?php include '../empresasHeader.html'; ?>
 
-    		<?php include '../sideMenu.html'; ?>
+            <?php include '../empresasMenu.html';   ?>
 
     		<div id="content">
     			<div style="margin-left:5%; margin-top:5%">
@@ -69,30 +57,8 @@
     			</div>
     		</div>
     		
-            <?php include '../footer.html'; ?>
-
+            <?php include '../empresasFooter.html'; ?>
     	</div>
 	</body>
-
-    <script>
-	    function myFunction()
-	    {
-		    window.open("Postularse.html","popUpWindow",'width=300,height=400,toolbar=0,menubar=0,location=0,status=1,scrollbars=0,resizable=0,left=700,top=300');
-		    return false;
-	    }
-	</script>
 </html>
-<!-- testferiavirtual / feriavirtual
 
-<script>var __v='barc-user-federico.90';</script>
-					<script type="text/javascript"> 
-					  (function(d){ 
-					    var b = d.createElement("script"); b.type = "text/javascript"; b.async = true; 
-
-					    b.src = ("https:" == d.location.protocol ? "https" : "http") + "://barc.com/js/libs/barc/barc.js"; 
-
-					    var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(b, s); 
-					  })(document); 
-					</script>
-
--->
