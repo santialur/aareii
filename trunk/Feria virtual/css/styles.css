@@ -53,6 +53,7 @@ a
 .titles{
 	font-family: 			'Oswald';
 	margin: 				10% 10%; 
+	font-size: 				120%;	
 	text-shadow: 			1px 1px 2px #888888; 
 }
 
@@ -67,13 +68,13 @@ a
 }
 
 #bloqueDerecho{
-	padding: 3% 3% 3% 0%;
-	width: 28%;
+	padding: 				0% 2% 3% 0%;
+	width: 					20%;
 }
 
 #bloqueIzquierdo{
-	padding: 3% 0% 3% 3%;
-	width: 60%;
+	padding:	 			0% 0% 3% 3%;
+	width: 					73%;
 }
 
 
@@ -104,7 +105,6 @@ hr
 		height:				40px;
 		float:				left;
 		width:				16.66%;
-
 	}
 	#nav li a
 	{
@@ -337,13 +337,32 @@ hr
 	}
 
 
+.Social
+{
+	margin-bottom: -10%
+}
 
 .Social img
 {
-	float: 					right;
-	height: 				5%;
-	width:  				13%;
+	width: 					15%;
+	padding: 				0.5%;
 }
+
+.Social img:hover
+{
+		/*Escalar*/
+	-webkit-transform:			scale(1.6, 1.6);
+	-o-transform:				scale(1.6, 1.6);
+	-moz-transform:				scale(1.6, 1.6);
+	transform:					scale(1.6, 1.6);
+
+	/*Transicion*/
+	-webkit-transition: 		all 0.15s ease-out;  	/* Chrome 1-25, Safari 3.2+ */
+    -moz-transition: 			all 0.15s ease-out;  	/* Firefox 4-15 */
+   	-o-transition: 				all 0.15s ease-out;  	/* Opera 10.50–12.00 */
+    transition: 				all 0.15s ease-out;  	/* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+
 
 .SocialInscripcion img
 {

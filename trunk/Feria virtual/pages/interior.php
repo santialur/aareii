@@ -8,8 +8,20 @@
 		<link 	rel=	"stylesheet" 		href="../css/marquee.css" 	type="text/css" 	/>
 
 		<!--- POP UP --> 		
-	  	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	  	<script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
 		<script type="text/javascript" src="../js/popup.js"></script>
+
+	  	<link 	href="../features/jquery_news_ticker/styles/ticker-style.css" 	rel="stylesheet" type="text/css" />
+		<script src="../features/jquery_news_ticker/includes/jquery.ticker.js" type="text/javascript"></script>
+
+		<script type="text/javascript">
+			$(function () {
+			    $('#js-news').ticker({
+			        titleText: '<h3>NOTICIAS</h3>',   // To remove the title set this to an empty String
+				    displayType: 'fade', // Animation type - current options are 'reveal' or 'fade'
+			    });
+			});	
+		</script>
 
 		<!-- FANCYBOX --> 
 		<link 	type="text/css"			rel="stylesheet" href="../features/fancybox/source/jquery.fancybox.css"  media="screen"/>
@@ -30,7 +42,7 @@
 		
 		<script type="text/javascript" src="../lib/bootstrap/js/bootstrap.min.js"></script>
 
-		<!-- SLIDES JS --> 
+		<!-- SLIDES JS 
 	  	<script src="../lib/SlidesJS-3/jquery.slides.min.js"></script>
 
 	  	<script>
@@ -52,6 +64,7 @@
 	      		});
 	    	});
 	  	</script>
+		--> 
 
 	  	<!-- MARQUESINA --> 
 	  	<script type="text/javascript" src="../js/itemMarquee.js"></script>
@@ -71,6 +84,12 @@
 
 			<!-- CONTENIDO -->
 			<div class="wrapper" align="center">
+
+					<ul id="js-news" class="js-hidden">
+					    <li class="news-item"><a href="#"> La inflacion fue del 3,6%,  es la primera desaceleracion mensual despues de dos meses por arriba del 5%</a></li>
+					    <li class="news-item"><a href="#"> Ya son 665 marcas con 29.000 locales las que usan el formato. Ropa y comida concentran el mercado. </a></li>
+					    <li class="news-item"><a href="#"> La presidenta anunci&oacute hoy un proyecto sobre la precarizaci&oacuten laboral.</a></li>
+					</ul>
 
 					<!-- BLOQUE IZQUIERDO --> 
 					<div id="bloqueIzquierdo" class="leftSide">
@@ -214,9 +233,10 @@
 					<div id="bloqueDerecho" class="rightSide">
 
 						<!-- COMPARTIR -->
-						<div style="margin-top: -10%"> 
+						<div style="margin-top: -10%;"> 
 							<h4 class="titles">COMPARTIR</h4>
-							<div class="Social" style="margin: -5% 25% 0 0">
+
+							<div class="Social">
 								<!-- Facebook -->
 								<a href="http://www.facebook.com/sharer.php?u=http://www.encontramas.com.ar/virtual/pages/interior" target="_blank">
 									<img src="http://www.simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
@@ -243,19 +263,20 @@
 						<br><br>
 
 						<!-- NOTICIAS -->
-						<div style="margin-bottom: -25%">
-							<h2 class="titles">NOTICIAS</h2>
+						<div style="margin-bottom: ">
+							<!--<h2 class="titles">NOTICIAS</h2>
 
-							<!-- SLIDES NOTICIAS --> 
+							 SLIDES NOTICIAS 
 						    <div id="slides">
 								<div class="newsBlock" id="nb1"></div>					    	
 								<div class="newsBlock" id="nb2"></div>
-								<!-- ADD ANOTHER NEWS BLOCK --> 
+								<!-- ADD ANOTHER NEWS BLOCK 
 						    </div>
+						    --> 
 						</div>
 						
 						<!-- ENCUESTA --> 
-						<div style="">	
+						<div style="margin-top: ">	
 							<h4 class="titles">ENCUESTA</h4>
 
 							<div ng-controller="PollCtrl" style="text-align:left;  margin:-5% 8% -4% 8%">	
