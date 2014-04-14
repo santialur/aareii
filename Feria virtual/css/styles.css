@@ -12,7 +12,7 @@
 body{
 	/*background-color:		#F0F0F0;*/	
 	background-image:		url(../features/images/texture1.png);
-
+	overflow: 				auto;
 }
 
 a
@@ -26,8 +26,9 @@ a
 
 .wrapper{
 	box-shadow: 			1px 3px 10px #000000;
-	background-color: 		#CCCCCC;
-	margin:					auto; 
+	background-color:		white;
+	margin:					0 auto; 
+	overflow: 				hidden;
 	width:					95%; 
 }
 
@@ -66,11 +67,13 @@ a
 }
 
 #bloqueDerecho{
+	padding: 3% 3% 3% 0%;
 	width: 28%;
 }
 
 #bloqueIzquierdo{
-	width: 70%;
+	padding: 3% 0% 3% 3%;
+	width: 60%;
 }
 
 

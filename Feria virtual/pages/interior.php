@@ -71,8 +71,7 @@
 
 			<!-- CONTENIDO -->
 			<div class="wrapper" align="center">
-				<div id="content" class="box">
-					
+
 					<!-- BLOQUE IZQUIERDO --> 
 					<div id="bloqueIzquierdo" class="leftSide">
 
@@ -272,8 +271,8 @@
 						<button class="button" style="position:static; top:50%">Votar</button>
 
 					</div> <!-- FIN BLOQUE DERECHO --> 
-				</div>
 
+					<div style="clear:both"></div>
 			</div> <!-- FIN WRAPPER --> 
 
 
