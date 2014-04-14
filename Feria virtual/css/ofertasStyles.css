@@ -7,7 +7,7 @@ table {
 td, th {
 	text-align: 		center;
 	vertical-align:		middle;
-	background: 		url(../features/images/cells1.png);
+	background: 		url(../features/images/cells.png);
 	color: 				#444;
 	position: 			relative;
 }
@@ -27,7 +27,7 @@ td.date_has_event:hover {
 	background-position: 	162px -81px;
 }
 td.padding {
-	background: 			url(../../img/calpad.jpg);
+	background: 			url(../features/images/calpad.jpg);
 }
 td.today {
 	background-position: 	81px 0px;
@@ -45,7 +45,7 @@ td.today:hover {
 	display: none;
 	z-index: 1000;
 	padding: 15px;
-	background: #E7ECF2 url(../../img/popup.png) no-repeat;
+	background: #E7ECF2 url(../features/images/popup.png) no-repeat;
 	color: white;
 	border: 1px solid white;
 	font-size: 15px;
