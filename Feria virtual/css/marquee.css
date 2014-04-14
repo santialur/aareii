@@ -9,18 +9,12 @@ ul.itemMarquee li{
 	float:				left;
     list-style-type:	none;
 }
+
 ul.itemMarquee img{
 	/*border:			1px solid #FAFAFA;*/
    	height:				65%;
 }
 
-.news{
-	/*border:			1px solid #FAFAFA;*/
-   	background-color: 	#DDDDDD;
-   	padding: 			2%;
-   	height: 			65%;
-   	text-align:    		left;
-}
 
 
 
