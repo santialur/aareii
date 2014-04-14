@@ -80,7 +80,7 @@
 						<div align="center" style="position: relative;">
 							<img src="../features/images/interior.jpg" id="imgMap" width="100%"/>
 							
-							<a class="ifancybox" href="empresa1.html" ><img src="../features/images/a1.png" id="trigger" /></a>
+							<a class="ifancybox" href="Fiat/stand.php" ><img src="../features/images/a1.png" id="trigger"/></a>
 							<div id="pop-up">
 								<img src="../features/images/fiat-web.png" width="60%"/></br>
 								<p>Horarios: 10:00 a 12:00</p> </br>
