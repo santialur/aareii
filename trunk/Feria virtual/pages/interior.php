@@ -71,10 +71,10 @@
 
 			<!-- CONTENIDO -->
 			<div class="wrapper" align="center">
-				<div id="content" class="box" style="height: 110%">
+				<div id="content" class="box">
 					
 					<!-- BLOQUE IZQUIERDO --> 
-					<div id="bloqueIzquierdo" class="leftSide" style="width: 70%; height:100%">
+					<div id="bloqueIzquierdo" class="leftSide">
 
 						<!-- CROQUIS --> 
 						<div align="center" style="position: relative;">
@@ -199,7 +199,7 @@
 						</div>
 
 						<!-- MARQUESINA -->
-						<div style="margin-top: 5%">
+						<div style="margin-top: 5%; ">
 							<ul class="itemMarquee">
 							  	<li><img src="../features/images/arcor-web.png"/>		</li>
 						  		<li><img src="../features/images/quilmes-web.png"/>		</li>
@@ -256,7 +256,7 @@
 						</div>
 						
 						<!-- ENCUESTA --> 
-						<div>	
+						<div style="">	
 							<h4 class="titles">ENCUESTA</h4>
 
 							<div ng-controller="PollCtrl" style="text-align:left;  margin:-5% 8% -4% 8%">	
@@ -272,10 +272,11 @@
 						<button class="button" style="position:static; top:50%">Votar</button>
 
 					</div> <!-- FIN BLOQUE DERECHO --> 
-
 				</div>
-				
+
 			</div> <!-- FIN WRAPPER --> 
+
+
 
 			<?php include '_footer.html'; ?>
 	</body>

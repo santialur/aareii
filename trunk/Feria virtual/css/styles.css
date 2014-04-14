@@ -28,9 +28,6 @@ a
 	box-shadow: 			1px 3px 10px #000000;
 	background-color: 		#CCCCCC;
 	margin:					auto; 
-	min-height: 			100%;
-	height:					auto !important;
-	height: 				100%;
 	width:					95%; 
 }
 
@@ -69,8 +66,13 @@ a
 }
 
 #bloqueDerecho{
-	width: 28%
+	width: 28%;
 }
+
+#bloqueIzquierdo{
+	width: 70%;
+}
+
 
 hr
 {
