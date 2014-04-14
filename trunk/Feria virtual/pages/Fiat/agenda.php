@@ -4,6 +4,7 @@
 		<title>Agenda</title>
 
     	<?php include '../_empresasImports.html'; ?>
+   		<link 	rel="stylesheet" 	href="../../css/agendaStyles.css"											/>
 	</head>
 
 	<body>
