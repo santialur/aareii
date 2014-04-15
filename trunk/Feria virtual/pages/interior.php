@@ -17,8 +17,8 @@
 		<script type="text/javascript">
 			$(function () {
 			    $('#js-news').ticker({
-			        titleText: '<h3>NOTICIAS</h3>',   // To remove the title set this to an empty String
-				    displayType: 'fade', // Animation type - current options are 'reveal' or 'fade'
+			        titleText: '<h3>NOTICIAS</h3>',  
+				    displayType: 'fade', 
 			    });
 			});	
 		</script>
