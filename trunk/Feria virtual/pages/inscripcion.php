@@ -15,12 +15,10 @@
 
 <body>
     <div id="nav">
-        
-          <ul class="nav-bar">  
+          <ul class="">  
             <li class="opensans"><a href="http://www.encontramas.com.ar/">Encontra +</a></li>
             <li class="opensans"><a href="inscripcion.html">Inscribirse</a></li>
           </ul>
-        
     </div>
     </br>
 
