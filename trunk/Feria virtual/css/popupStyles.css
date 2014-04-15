@@ -1,0 +1,169 @@
+/******************************************************************************/
+
+#trigger {
+	position: 				absolute;
+	left: 					34.2%;
+	top: 					22.7%;
+	width: 					11.75%;
+}
+#trigger2 {
+	position: 				absolute;
+	left: 					50.8%;
+	top: 					36.5%;
+	width: 					10.75%;
+}
+#trigger3{
+	position: 				absolute;
+	left: 					68.2%;
+	top: 					46.2%;
+	width: 					10.75%;
+}
+#trigger4{
+	position: 				absolute;
+	left: 					86%;
+	top: 					56.8%;
+	width: 					11.5%;
+}
+
+/******************************************************************************/
+
+#trigger5{
+	position: 				absolute;
+	left: 					28.3%;
+	top: 					33.4%;
+	width: 					11.75%;
+}
+#trigger6{
+	position: 				absolute;
+	left: 					45.5%;
+	top: 					47.5%;
+	width: 					10.65%;
+}
+#trigger7{
+	position: 				absolute;
+	left: 					62.1%;
+	top: 					59.3%;
+	width: 					11.3%;
+}
+#trigger8{
+	position: 				absolute;
+	left: 					80.2%;
+	top: 					70.4%;
+	width: 					12%;
+}
+
+/******************************************************************************/
+
+#trigger9{
+	position: 				absolute;
+	left: 					21.58%;
+	top: 					44.85%;
+	width: 					12%;
+}
+#trigger10{
+	position: 				absolute;
+	left: 					39.2%;
+	top: 					59.5%;
+	width: 					11%;
+}
+#trigger11{
+	position: 				absolute;
+	left: 					54.8%;
+	top: 					75.4%;
+	width: 					12%;
+}
+
+#trigger12{
+	position: 				absolute;
+	left: 					73.6%;
+	top: 					87.3%;
+	width: 					12.2%;
+}
+
+/******************************************************************************/
+
+#trigger13{
+	position: 				absolute;
+	left: 					11%;
+	top: 					65.6%;
+	width: 					12%;
+}
+
+#trigger14{
+	position: 				absolute;
+	left: 					28%;
+	top: 					78.4%;
+	width: 					12%;
+}
+
+/******************************************************************************/
+
+#trigger15{
+	position: 				absolute;
+	left: 					0.6%;
+	top: 					84.4%;
+	width: 					12%;
+}
+
+/******************************************************************************/
+
+#triggerAAREII{
+	position: 				absolute;
+	left: 					73.4%;
+	top: 					44.1%;
+	width: 					7.6%;
+}
+
+/******************************************************************************/
+
+#triggerAAREII, #trigger, #trigger2, #trigger3, #trigger4, #trigger5, #trigger6, #trigger7, #trigger8, #trigger9, #trigger10, #trigger11, #trigger12, #trigger13, #trigger14, #trigger15{
+	z-index: 				1;
+	height: 				auto;
+}  
+
+/******************************************************************************/
+
+#triggerAAREII:hover, #trigger:hover, #trigger2:hover, #trigger3:hover, #trigger4:hover, #trigger5:hover, #trigger6:hover, #trigger7:hover, #trigger8:hover, #trigger9:hover, #trigger10:hover, #trigger11:hover, #trigger12:hover, #trigger13:hover, #trigger14:hover, #trigger15:hover{
+	/*Escalar*/
+	-webkit-transform:			scale(1.3, 1.3);
+	-o-transform:				scale(1.3, 1.3);
+	-moz-transform:				scale(1.3, 1.3);
+	transform:					scale(1.3, 1.3);
+
+	/*Transicion*/
+	-webkit-transition: 		all 0.3s ease-out;  	/* Chrome 1-25, Safari 3.2+ */
+    -moz-transition: 			all 0.3s ease-out;  	/* Firefox 4-15 */
+   	-o-transition: 				all 0.3s ease-out;  	/* Opera 10.50–12.00 */
+    transition: 				all 0.3s ease-out;  	/* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}  
+
+/******************************************************************************/
+
+#pop-up, #pop-up2, #pop-up3, #pop-up4, #pop-up5, #pop-up6, #pop-up7, #pop-up8, #pop-up9, #pop-up10, #pop-up11, #pop-up12, #pop-up13, #pop-up14, #pop-up15{
+		display: 			none;
+        position: 			absolute;
+        width: 				25%;
+        padding: 			1%;
+        background: 		#EEEEEE;
+        color:				#000000;
+        box-shadow: 		1px 2px 2px #555555;
+		font-size: 			90%;
+		opacity: 			0.95;
+		z-index: 			500
+}
+
+#pop-upAAREII
+{
+		display: 			none;
+        position: 			absolute;
+        color: 				white;
+        width: 				12%;
+        padding: 			1%;
+        background: 		#B10B0B;
+        box-shadow: 		1px 2px 2px #555555;
+		font-size: 			90%;
+		opacity: 			0.95;
+		z-index: 			500;
+}
+
+/******************************************************************************/
