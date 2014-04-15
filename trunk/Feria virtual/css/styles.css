@@ -1,5 +1,5 @@
 /*** Font 	***/
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,600,300");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300,600");
 @import url("http://fonts.googleapis.com/css?family=Oswald");
 
 *
@@ -28,7 +28,8 @@ a
 	box-shadow: 			1px 3px 10px #000000;
 	background-color:		white;
 	margin:					0 auto; 
-	margin-bottom: 			3%;
+	margin-bottom: 			2%;
+	min-height: 			100%;
 	overflow: 				hidden;
 	width:					96%; 
 }
@@ -51,9 +52,12 @@ a
 	font-size: 				1.2vw;
 }
 
-.titles{
+.oswald{
 	font-family: 			'Oswald';
 	font-weight: 			bold;
+}
+
+.titles{
 	margin: 				10% 10%; 
 	font-size: 				110%;	
 	text-shadow: 			1px 1px 2px #888888; 
@@ -115,7 +119,8 @@ hr
 		text-align:			center;
 		display:			block;
 
-		font-family: 		'Oswald';
+		/*font-family: 		'Oswald';*/
+		font-weight: 		bolder;
 
 		/* Color Transition */
 		-moz-transition:	all .3s ease-out;
@@ -247,12 +252,23 @@ hr
 
 /******************************************************************************/
 
-#trigger, #trigger2, #trigger3, #trigger4, #trigger5, #trigger6, #trigger7, #trigger8, #trigger9, #trigger10, #trigger11, #trigger12, #trigger13, #trigger14, #trigger15{
+#triggerAAREII{
+	position: 				absolute;
+	left: 					73.4%;
+	top: 					44.1%;
+	width: 					7.6%;
+}
+
+/******************************************************************************/
+
+#triggerAAREII, #trigger, #trigger2, #trigger3, #trigger4, #trigger5, #trigger6, #trigger7, #trigger8, #trigger9, #trigger10, #trigger11, #trigger12, #trigger13, #trigger14, #trigger15{
 	z-index: 				1;
 	height: 				auto;
 }  
 
-#trigger:hover, #trigger2:hover, #trigger3:hover, #trigger4:hover, #trigger5:hover, #trigger6:hover, #trigger7:hover, #trigger8:hover, #trigger9:hover, #trigger10:hover, #trigger11:hover, #trigger12:hover, #trigger13:hover, #trigger14:hover, #trigger15:hover{
+/******************************************************************************/
+
+#triggerAAREII:hover, #trigger:hover, #trigger2:hover, #trigger3:hover, #trigger4:hover, #trigger5:hover, #trigger6:hover, #trigger7:hover, #trigger8:hover, #trigger9:hover, #trigger10:hover, #trigger11:hover, #trigger12:hover, #trigger13:hover, #trigger14:hover, #trigger15:hover{
 	/*Escalar*/
 	-webkit-transform:			scale(1.3, 1.3);
 	-o-transform:				scale(1.3, 1.3);
@@ -281,19 +297,40 @@ hr
 		z-index: 			500
 }
 
+#pop-upAAREII
+{
+		display: 			none;
+        position: 			absolute;
+        color: 				white;
+        width: 				12%;
+        padding: 			1%;
+        background: 		#B10B0B;
+        box-shadow: 		1px 2px 2px #555555;
+		font-size: 			90%;
+		opacity: 			0.95;
+		z-index: 			500;
+}
+
 /******************************************************************************/
 
 #footer{
 		height: 			auto;
 		background-image: 	url(../features/images/texture2.png);
 		color:				white;
+		font-size: 			92%;
 		text-shadow: 		0.09em 0.09em #777777;
 }
 
-#imgMap{
+.sketch{
         border: 			1px solid #1a1a1a;
         z-index:			0;
         box-shadow: 		2px 2px 6px #555555;
+}
+
+#sketchOut{
+		margin: 			4.2% 0 1.2% 0;
+		width: 				95%;
+		height: 			100%;
 }
 
 #subscriptionContent
