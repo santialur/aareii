@@ -115,6 +115,8 @@ hr
 		text-align:			center;
 		display:			block;
 
+		font-family: 		'Oswald';
+
 		/* Color Transition */
 		-moz-transition:	all .3s ease-out;
 		-webkit-transition:	all .3s ease-out;
