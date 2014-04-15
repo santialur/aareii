@@ -17,8 +17,8 @@
     <div id="nav">
         
           <ul class="nav-bar">  
-            <li><a href="http://www.encontramas.com.ar/">Encontra +</a></li>
-            <li> <a href="inscripcion.html">Inscribirse</a></li>
+            <li class="opensans"><a href="http://www.encontramas.com.ar/">Encontra +</a></li>
+            <li class="opensans"><a href="inscripcion.html">Inscribirse</a></li>
           </ul>
         
     </div>
@@ -29,8 +29,13 @@
 
         <!-- HEADER SUBSCRIPTION --> 
         <div class="leftSide">
-          <h3> Formulario de  inscripción     <h3>  <br>
-          <h5> Eventos de Actualidad laboral  <h5>
+          <h3>
+            <span class="opensans textShadow"> 
+              Formulario de  inscripción     
+            </span>
+          </h3>
+          <br>
+          <h5> Eventos de Actualidad laboral  </h5>
         </div>
 
         <div class="rightSide">
@@ -437,12 +442,16 @@
                 <option value="Si">Si       </option>
                 <option value="No">No       </option>
               </select>
-            </div>  <br><br><br>
+            </div>  <br><br>
 
             <!--EXPERIENCIA LABORAL--> 
-            <h3> Experiencia Laboral </h3>
+            <h3> 
+              <span class="opensans textShadow">
+                Experiencia Laboral 
+              </span>
+            </h3>
 
-            <div style="margin: 6% 0; text-align: justify">
+            <div style="margin: 5% 0; text-align: justify">
               <SMALL>Agregue sus últimas experiencias laborales o aquellas tres experiencias más destacadas. Si trabaja actualmente, recomendamos incluir dicha información. Si posee menos de tres experiencias o ninguna, dejar los espacios correspondientes en blanco. Al final del proceso de inscripción tendrá la opción de anexar su CV completo en formato PDF o Word. El archivo no deberá pesar más de 3Mb</SMALL>
             </div>
             <!-- --------------------------------------------------------------------------------------- -->
@@ -788,10 +797,11 @@
 
           <!--FIN CONTENT-->
         </div>
+
         <!-- COMPARTIR -->
-        <div id="socialShare" class="rightSide">
-          <div style="margin: -10% 0% 0 0; width: 70%"> 
-              <div class="SocialInscripcion" style="margin: -10% -40% 0 45%">
+        <div class="rightSide">
+          <div style="margin: -10% 0 0 0; width: 75%"> 
+              <div class="social">
                 <!-- Facebook -->
                 <a href="http://www.facebook.com/sharer.php?u=http://www.encontramas.com.ar/cv" target="_blank">
                   <img src="http://www.simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
@@ -814,12 +824,8 @@
       </div>
     </div>
 
-    <div id="footer" class="box centered" >
-        <p>
-          Copyright 2013  AArEII    <br />
-            Todos los derechos reservados.
-        </p>
-    </div>
+    <!-- FOOTER --> 
+    <?php include '_footer.html'; ?>
 
 </body>
 </html>
