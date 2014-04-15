@@ -168,14 +168,17 @@ body{
 #maletinFiat
 {
 	position: 				absolute;
-	left:					67%;
-	top:					69.2%;
+	left:					66%;
+	top:					71.5%;
 	z-index: 				200;
-	width:					6.15%;
+	width:					9.7%;
 }
 
 #maletinFiat:hover
 {	
+	cursor: pointer; 
+	cursor: hand;
+
 	/*Escalar*/
 	-webkit-transform:			scale(1.3, 1.3);
 	-o-transform:				scale(1.3, 1.3);
@@ -204,4 +207,3 @@ body{
 	width:					100%;
  	z-index: 				10
 }
-

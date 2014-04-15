@@ -18,7 +18,8 @@
                     <img src="../../features/images/stand-green.jpg">
                     
                     <img id="standFiat" src="images/s2front_fc.png">
-                    <img id="maletinFiat" src="../../features/images/maletin-green.png">
+
+                    <a href="http://www.fiat.com.ar/" target="_blank"><img id="maletinFiat" src="../../features/images/maletin-green.png"></a>
                 </div>
 
     		</div>
