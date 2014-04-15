@@ -87,7 +87,7 @@
 			$row = mysql_fetch_array($españolresult);
 			$language_id = $row['language_id'];
 
-			$sql_user_español = "SELECT * FROM user_language WHERE language_id = $language_id";
+			$sql_user_español = "SELECT * FROM user_language WHERE language_id = $language_id AND user_id = $userdni";
 			$user_español = mysql_query($sql_user_español, $con);
 			$row = mysql_fetch_array($user_español);
 			$desc["español_level"] = utf8_encode($row['level']);
@@ -99,7 +99,7 @@
 			$row = mysql_fetch_array($inglesresult);
 			$language_id = $row['language_id'];
 
-			$sql_user_ingles = "SELECT * FROM user_language WHERE language_id = $language_id";
+			$sql_user_ingles = "SELECT * FROM user_language WHERE language_id = $language_id AND user_id = $userdni";
 			$user_ingles = mysql_query($sql_user_ingles, $con);
 			$row = mysql_fetch_array($user_ingles);
 			$desc["ingles_level"] = utf8_encode($row['level']);
@@ -111,7 +111,7 @@
 			$row = mysql_fetch_array($portuguesresult);
 			$language_id = $row['language_id'];
 
-			$sql_user_portugues = "SELECT * FROM user_language WHERE language_id = $language_id";
+			$sql_user_portugues = "SELECT * FROM user_language WHERE language_id = $language_id AND user_id = $userdni";
 			$user_portugues = mysql_query($sql_user_portugues, $con);
 			$row = mysql_fetch_array($user_portugues);
 			$desc["portugues_level"] = utf8_encode($row['level']);
@@ -123,7 +123,7 @@
 			$row = mysql_fetch_array($alemanresult);
 			$language_id = $row['language_id'];
 
-			$sql_user_aleman = "SELECT * FROM user_language WHERE language_id = $language_id";
+			$sql_user_aleman = "SELECT * FROM user_language WHERE language_id = $language_id AND user_id = $userdni";
 			$user_aleman = mysql_query($sql_user_aleman, $con);
 			$row = mysql_fetch_array($user_aleman);
 			$desc["aleman_level"] = utf8_encode($row['level']);
@@ -135,7 +135,7 @@
 			$row = mysql_fetch_array($italianoresult);
 			$language_id = $row['language_id'];
 
-			$sql_user_italiano = "SELECT * FROM user_language WHERE language_id = $language_id";
+			$sql_user_italiano = "SELECT * FROM user_language WHERE language_id = $language_id AND user_id = $userdni";
 			$user_italiano = mysql_query($sql_user_italiano, $con);
 			$row = mysql_fetch_array($user_italiano);
 			$desc["italiano_level"] = utf8_encode($row['level']);
@@ -147,7 +147,7 @@
 			$row = mysql_fetch_array($francesresult);
 			$language_id = $row['language_id'];
 
-			$sql_user_frances = "SELECT * FROM user_language WHERE language_id = $language_id";
+			$sql_user_frances = "SELECT * FROM user_language WHERE language_id = $language_id AND user_id = $userdni";
 			$user_frances = mysql_query($sql_user_frances, $con);
 			$row = mysql_fetch_array($user_frances);
 			$desc["frances_level"] = utf8_encode($row['level']);

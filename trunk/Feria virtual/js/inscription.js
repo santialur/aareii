@@ -272,7 +272,6 @@ function fillDegrees(target)
     '<option value="Sistemas de informacion">       Sistemas de Información                 </option>'+
     '</optgroup>'                                                                                     +
     '<optgroup label="Exactas y Naturales">'                                                          +
-    '<option value="Acuicultura">                   Acuicultura                             </option>'+
     '<option value="Agrimensor">                    Agrimensor                              </option>'+
     '<option value="Arqueologia">                   Arqueología                             </option>'+
     '<option value="Bioingenieria">                 Bioingeniería                           </option>'+
@@ -318,6 +317,7 @@ function fillDegrees(target)
     '<option value="Tecn. mecanica">                Tecn. Mecánica                          </option>'+
     '<option value="Tecn. optico">                  Tecn. Óptico                            </option>'+
     '<option value="Tecn. telecomunicaciones">      Tecn. Telecomunicaciones                </option>'+
+    '<option value="Lic. Organización Industrial">  Lic. en Organización Industrial         </option>'+
     '</optgroup>'                                                                                     +
     '<optgroup label="Sistemas">'                                                                     +
     '<option value="analisis de sistemas">          Análisis de Sistemas                    </option>'+
@@ -562,15 +562,6 @@ function checkAnotherUniversity()
   }
 }
 
-function checkAnotherCareer()
-{
-  if($('#carrera_area').val() == "Otra carrera")
-    $('#otra_carrera').css("display","inline");
-
-  else
-      $('#otra_carrera').css("display","none");
-}
-
 function checkCareerLevel()
 {
   if($('#estado_carrera').val() == "Completo"){
@@ -599,6 +590,13 @@ function stillWorkHere(target, target2, target3)
   }
 }
 
+$(document).ready(function(){
+    $('#contraseña').keypress(function(e){
+      if(e.keyCode==13)
+      $('#verify_button').click();
+    });
+    
+});
 
 var newUser;
 
@@ -617,7 +615,7 @@ function checkUser(){
                  },
             type: 'POST',
             success: function(output){
-              if(output == "Combinación de DNI y contraseña invalida" || output == "Usuario no registrado"){
+              if(output == "Combinación de DNI y contraseña invalida"){
                 alert(output);
               }
               else{
@@ -875,7 +873,6 @@ function sendPersonalInformation(){
                               alert(output);
                               return;
                             }else{
-                              alert(output);
                               document.getElementById("personalInformation").style.display = 'none';
                               document.getElementById("numero_de_documento").style.display = 'none';
                               document.getElementById("academicInformation").style.display = 'inline';
@@ -1137,7 +1134,7 @@ function sendLaboralInformation(){
                     type: 'POST',
                     success: function(output) {
                     		alert(output);
-                        newUser = false;
+                    		newUser = false;
                             //alert("El usuario a sido regitrado exitosamente, por favor envie su curriculum");
                             //document.getElementById("curriculum_div").style.display = 'inline-table';    
                     }
@@ -1181,12 +1178,9 @@ function sendLaboralInformation(){
                     type: 'POST',
                     success: function(output) {
                         alert(output);
-                        user = "oldUser";
                             //alert("El usuario a sido regitrado exitosamente, por favor envie su curriculum");
                             //document.getElementById("curriculum_div").style.display = 'inline-table';    
                     }
             });
   }
 }
-
-
