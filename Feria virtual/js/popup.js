@@ -1,12 +1,28 @@
 $(function popup()
 {
+	$('#triggerAAREII').hover(function(e)
+		{
+			$('div#pop-upAAREII').show();
+		},
+	 	function()
+	 	{
+			$('div#pop-upAAREII').hide();
+		});
+
+	$('#triggerAAREII').mousemove(function(e)
+		{
+   			$("div#pop-upAAREII").css('top', e.pageY + 20).css('left', e.pageX +20);
+  		});
+
+	/******************************************************************************/
+
 	$('#trigger').hover(function(e)
 		{
 			$('div#pop-up').show();
 		},
 	 	function()
 	 	{
-				$('div#pop-up').hide();
+			$('div#pop-up').hide();
 		});
 
 	$('#trigger').mousemove(function(e)
@@ -22,7 +38,7 @@ $(function popup()
 		},
 	 	function()
 	 	{
-				$('div#pop-up2').hide();
+			$('div#pop-up2').hide();
 		});
 
 	$('#trigger2').mousemove(function(e)
@@ -38,7 +54,7 @@ $(function popup()
 		},
 	 	function()
 	 	{
-				$('div#pop-up3').hide();
+			$('div#pop-up3').hide();
 		});
 
 	$('#trigger3').mousemove(function(e)
@@ -54,7 +70,7 @@ $(function popup()
 		},
 	 	function()
 	 	{
-				$('div#pop-up4').hide();
+			$('div#pop-up4').hide();
 		});
 
 	$('#trigger4').mousemove(function(e)
@@ -70,7 +86,7 @@ $(function popup()
 		},
 	 	function()
 	 	{
-				$('div#pop-up5').hide();
+			$('div#pop-up5').hide();
 		});
 
 	$('#trigger5').mousemove(function(e)
@@ -86,7 +102,7 @@ $(function popup()
 		},
 	 	function()
 	 	{
-				$('div#pop-up6').hide();
+			$('div#pop-up6').hide();
 		});
 
 	$('#trigger6').mousemove(function(e)
@@ -102,7 +118,7 @@ $(function popup()
 		},
 	 	function()
 	 	{
-				$('div#pop-up7').hide();
+			$('div#pop-up7').hide();
 		});
 
 	$('#trigger7').mousemove(function(e)
@@ -118,7 +134,7 @@ $(function popup()
 		},
 	 	function()
 	 	{
-				$('div#pop-up8').hide();
+			$('div#pop-up8').hide();
 		});
 
 	$('#trigger8').mousemove(function(e)
@@ -134,7 +150,7 @@ $(function popup()
 		},
 	 	function()
 	 	{
-				$('div#pop-up9').hide();
+			$('div#pop-up9').hide();
 		});
 
 	$('#trigger9').mousemove(function(e)
@@ -150,7 +166,7 @@ $(function popup()
 		},
 	 	function()
 	 	{
-				$('div#pop-up10').hide();
+			$('div#pop-up10').hide();
 		});
 
 	$('#trigger10').mousemove(function(e)
@@ -166,7 +182,7 @@ $(function popup()
 		},
 	 	function()
 	 	{
-				$('div#pop-up11').hide();
+			$('div#pop-up11').hide();
 		});
 
 	$('#trigger11').mousemove(function(e)
@@ -182,7 +198,7 @@ $(function popup()
 		},
 	 	function()
 	 	{
-				$('div#pop-up12').hide();
+			$('div#pop-up12').hide();
 		});
 
 	$('#trigger12').mousemove(function(e)
@@ -198,7 +214,7 @@ $(function popup()
 		},
 	 	function()
 	 	{
-				$('div#pop-up13').hide();
+			$('div#pop-up13').hide();
 		});
 
 	$('#trigger13').mousemove(function(e)
@@ -214,7 +230,7 @@ $(function popup()
 		},
 	 	function()
 	 	{
-				$('div#pop-up14').hide();
+			$('div#pop-up14').hide();
 		});
 
 	$('#trigger14').mousemove(function(e)
@@ -230,7 +246,7 @@ $(function popup()
 		},
 	 	function()
 	 	{
-				$('div#pop-up15').hide();
+			$('div#pop-up15').hide();
 		});
 
 	$('#trigger15').mousemove(function(e)

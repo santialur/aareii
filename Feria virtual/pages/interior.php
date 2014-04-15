@@ -7,10 +7,13 @@
 		<link 	rel=	"stylesheet" 		href="../css/SlidesJS.css" 	type="text/css" 	/>
 		<link 	rel=	"stylesheet" 		href="../css/marquee.css" 	type="text/css" 	/>
 
-		<!--- POP UP --> 		
+		<!-- JQUERY -->
 	  	<script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
+
+	  	<!--- POP UP --> 		
 		<script type="text/javascript" src="../js/popup.js"></script>
 
+		<!--- NEWS TICKER --> 
 	  	<link 	href="../features/jquery_news_ticker/styles/ticker-style.css" 	rel="stylesheet" type="text/css" />
 		<script src="../features/jquery_news_ticker/includes/jquery.ticker.js" type="text/javascript"></script>
 
@@ -62,7 +65,7 @@
 			<div class="wrapper" align="center">
 
 					<!-- NOTICIAS -->
-					<div style="margin-top: 5%">
+					<div style="margin-top: 4%">
 						<ul id="js-news" class="js-hidden">
 						    <li class="news-item"><a href="#"> La inflacion fue del 3,6%,  es la primera desaceleracion mensual despues de dos meses por arriba del 5%</a></li>
 						    <li class="news-item"><a href="#"> Ya son 665 marcas con 29.000 locales las que usan el formato. Ropa y comida concentran el mercado. </a></li>
@@ -75,7 +78,7 @@
 
 						<!-- CROQUIS --> 
 						<div align="center" style="position: relative;">
-							<img src="../features/images/interior.jpg" id="imgMap" width="100%"/>
+							<img class="sketch" src="../features/images/interior.jpg" width="100%"/>
 							
 							<a class="ifancybox" href="Fiat/stand.php" ><img src="../features/images/a1.png" id="trigger"/></a>
 							<div id="pop-up">
@@ -213,7 +216,7 @@
 
 						<!-- COMPARTIR -->
 						<div style="margin-top: -10%;"> 
-							<h4 class="titles">COMPARTIR</h4>
+							<h4 class="oswald titles">COMPARTIR</h4>
 
 							<div class="Social">
 								<!-- Facebook -->
@@ -243,7 +246,7 @@
 
 						<!-- ENCUESTA --> 
 						<div style="margin-top: ">	
-							<h4 class="titles">ENCUESTA</h4>
+							<h4 class="oswald titles">ENCUESTA</h4>
 
 							<div ng-controller="PollCtrl" style="text-align:left;  margin:-5% 8% -4% 8%">	
 	    						<h4 style="text-align:center">{{poll.title}}</h4>	<br>
