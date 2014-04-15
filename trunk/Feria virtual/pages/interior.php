@@ -84,13 +84,13 @@
 
 			<!-- CONTENIDO -->
 			<div class="wrapper" align="center">
-
-					<ul id="js-news" class="js-hidden">
-					    <li class="news-item"><a href="#"> La inflacion fue del 3,6%,  es la primera desaceleracion mensual despues de dos meses por arriba del 5%</a></li>
-					    <li class="news-item"><a href="#"> Ya son 665 marcas con 29.000 locales las que usan el formato. Ropa y comida concentran el mercado. </a></li>
-					    <li class="news-item"><a href="#"> La presidenta anunci&oacute hoy un proyecto sobre la precarizaci&oacuten laboral.</a></li>
-					</ul>
-
+					<div style="margin-top: 5%">
+						<ul id="js-news" class="js-hidden">
+						    <li class="news-item"><a href="#"> La inflacion fue del 3,6%,  es la primera desaceleracion mensual despues de dos meses por arriba del 5%</a></li>
+						    <li class="news-item"><a href="#"> Ya son 665 marcas con 29.000 locales las que usan el formato. Ropa y comida concentran el mercado. </a></li>
+						    <li class="news-item"><a href="#"> La presidenta anunci&oacute hoy un proyecto sobre la precarizaci&oacuten laboral.</a></li>
+						</ul>
+					</div>
 					<!-- BLOQUE IZQUIERDO --> 
 					<div id="bloqueIzquierdo" class="leftSide">
 
@@ -295,8 +295,6 @@
 
 					<div style="clear:both"></div>
 			</div> <!-- FIN WRAPPER --> 
-
-
 
 			<?php include '_footer.html'; ?>
 	</body>
