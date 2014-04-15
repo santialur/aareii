@@ -42,30 +42,6 @@
 		
 		<script type="text/javascript" src="../lib/bootstrap/js/bootstrap.min.js"></script>
 
-		<!-- SLIDES JS 
-	  	<script src="../lib/SlidesJS-3/jquery.slides.min.js"></script>
-
-	  	<script>
-	    	$(function(){
-	      		$('#slides').slidesjs({
-	        		width: 	840,
-        			height: 540,
-        			play: {
-	          			active: false,
-	          			auto: true,
-	          			interval: 5000,
-	          			effect: 'fade',
-	          			swap: true,
-	          			restartDelay: 2500
-        			},
-        			navigation: {
-        				active: false
-        			}
-	      		});
-	    	});
-	  	</script>
-		--> 
-
 	  	<!-- MARQUESINA --> 
 	  	<script type="text/javascript" src="../js/itemMarquee.js"></script>
 
@@ -84,6 +60,8 @@
 
 			<!-- CONTENIDO -->
 			<div class="wrapper" align="center">
+
+					<!-- NOTICIAS -->
 					<div style="margin-top: 5%">
 						<ul id="js-news" class="js-hidden">
 						    <li class="news-item"><a href="#"> La inflacion fue del 3,6%,  es la primera desaceleracion mensual despues de dos meses por arriba del 5%</a></li>
@@ -91,6 +69,7 @@
 						    <li class="news-item"><a href="#"> La presidenta anunci&oacute hoy un proyecto sobre la precarizaci&oacuten laboral.</a></li>
 						</ul>
 					</div>
+
 					<!-- BLOQUE IZQUIERDO --> 
 					<div id="bloqueIzquierdo" class="leftSide">
 
@@ -262,19 +241,6 @@
 
 						<br><br>
 
-						<!-- NOTICIAS -->
-						<div style="margin-bottom: ">
-							<!--<h2 class="titles">NOTICIAS</h2>
-
-							 SLIDES NOTICIAS 
-						    <div id="slides">
-								<div class="newsBlock" id="nb1"></div>					    	
-								<div class="newsBlock" id="nb2"></div>
-								<!-- ADD ANOTHER NEWS BLOCK 
-						    </div>
-						    --> 
-						</div>
-						
 						<!-- ENCUESTA --> 
 						<div style="margin-top: ">	
 							<h4 class="titles">ENCUESTA</h4>
@@ -296,6 +262,7 @@
 					<div style="clear:both"></div>
 			</div> <!-- FIN WRAPPER --> 
 
+			<!-- FOOTER --> 
 			<?php include '_footer.html'; ?>
 	</body>
 </html>
