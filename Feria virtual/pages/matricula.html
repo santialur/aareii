@@ -1,88 +1,91 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-  <title>Inscripción</title>
-  <META http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <link   rel=  "stylesheet"    href="../css/styles.css" type="text/css" />
-  <meta property="og:url" content="http://www.encontramas.com.ar/virtual/pages/inscripcion.html" />
-  <meta property="og:title" content="Feria de empresas- Encontra+ 2014" />
-  <meta property="og:description" content="Inscribite a la feria de empresas 2014" />
-  <meta property="og:image" content="http://www.encontramas.com.ar/virtual/features/images/encontramas_facebook_foto.jpg" />
+  <head>
+    <title>Matriculación</title>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link   rel=  "stylesheet"    href="../css/styles.css" type="text/css" />
+    <meta property="og:url" content="http://www.encontramas.com.ar/virtual/pages/inscripcion.html" />
+    <meta property="og:title" content="Feria de empresas- Encontra+ 2014" />
+    <meta property="og:description" content="Inscribite a la feria de empresas 2014" />
+    <meta property="og:image" content="http://www.encontramas.com.ar/virtual/features/images/encontramas_facebook_foto.jpg" />
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-  <script type="text/javascript" src="../js/matriculate.js"></script>
-</head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/matriculate.js"></script>
+  </head>
 
-<body>
-    <div id="nav">
-        
-          <ul class="nav-bar">  
-            <li><a href="http://www.encontramas.com.ar/">Encontra +</a></li>
-          </ul>
-        
-    </div>
-    </br>
+  <body>
+      <div id="nav">
+            <ul>  
+              <li class="opensans"><a href="http://www.encontramas.com.ar/">Encontra +</a></li>
+            </ul>       
+      </div>
+      </br>
 
-    <div class="wrapperSmall">
-      <div id="content" class="box">
+      <div class="wrapperSmall">
+        <div id="content" class="box">
 
-        <!-- HEADER SUBSCRIPTION --> 
-        <div class="leftSide">
-          <h3> Administrador    </h3>
-        </div>
-        <br><br>
-        <hr>
-
-        <!-- CONTENT SUBSCRIPTION -->
-
-        <div id="subscriptionContent">
-
-          <div id="user_div">
-            <span class="leftSide">
-              <strong>Usuario</strong>:   
-            </span>
-            <input type="text" id="nombre_usuario" name="nombre_usuario" class="rightSide">
-            <br><br>
+          <!-- HEADER SUBSCRIPTION --> 
+          <div class="leftSide">
+            <h3> 
+              <span class="opensans textShadow">
+                Administrador    
+              </span>
+            </h3>
           </div>
+          <br><br>
+          <hr>
 
-          <div id="password_div">
-            <span class="leftSide">
-              <strong>Contraseña</strong>:          
-            </span> 
-            <input type="password" id="contraseña" name="contraseña" class="rightSide">
-            <br><br>
-          </div>
-          
-          <div id="buttons" style="text-align: center">
-            <input type="button" id="verify_button" value="Ingresar" class="button" onclick="checkAdminUser()"  style="margin-right:  3%">
-          </div>
+          <!-- CONTENT SUBSCRIPTION -->
 
-          <div id="verificarUsuario" style="display: none">
-              <div id="userName">
-                <span class="leftSide">
-                  <strong>Documento</strong>:          
-                </span> 
-                <input type="text" id="dni" name="dni" class="rightSide" onkeyup="checkNumeric(this);">
-                <br><br>
-              </div>
-              <div id="matriculateButton" style="text-align: center">
-                <input type="button" id="verify_button" value="Verificar usuario" class="button" onclick="checkUser()"  style="margin-right:  3%">
-              </div>
-          </div>
-          <div id="matricularUsuario" style="text-align: center; weight: 40%;">
-             
+          <div id="subscriptionContent">
+
+            <div id="user_div">
+              <span class="leftSide">
+                <strong>Usuario</strong>:   
+              </span>
+              <input type="text" id="nombre_usuario" name="nombre_usuario" class="rightSide">
+              <br><br>
+            </div>
+
+            <div id="password_div">
+              <span class="leftSide">
+                <strong>Contraseña</strong>:          
+              </span> 
+              <input type="password" id="contraseña" name="contraseña" class="rightSide">
+              <br><br>
+            </div>
+            
+            <div id="buttons" style="text-align: center">
+              <input type="button" id="verify_button" value="Ingresar" class="button" onclick="checkAdminUser()"  style="margin-right:  3%">
+            </div>
+
+            <div id="verificarUsuario" style="display: none">
+                <div id="userName">
+                  <span class="leftSide">
+                    <strong>Documento</strong>:          
+                  </span> 
+                  <input type="text" id="dni" name="dni" class="rightSide" onkeyup="checkNumeric(this);">
+                  <br><br>
+                </div>
+                <div id="matriculateButton" style="text-align: center">
+                  <input type="button" id="verify_button" value="Verificar usuario" class="button" onclick="checkUser()"  style="margin-right:  3%">
+                </div>
+            </div>
+            <div id="matricularUsuario" style="text-align: center; weight: 40%;">
+               
+            </div>
           </div>
         </div>
       </div>
-    </div>
-          <!-- --------------------------------------------------------------------------------------- -->
+      
+      <!-- --------------------------------------------------------------------------------------- -->
 
-    <div class="footer box centered" >
-        <p>
-          Copyright 2013  AArEII    <br />
-            Todos los derechos reservados.
-        </p>
-    </div>
+      <div class="footer box centered" style="margin-top: 15%">
+          <p>
+            Copyright 2013  AArEII    <br />
+              Todos los derechos reservados.
+          </p>
+      </div>
 
-</body>
+  </body>
 </html>
