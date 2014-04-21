@@ -1,5 +1,5 @@
 /*FONT*/
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,600,300");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300,600");
 @import url("http://fonts.googleapis.com/css?family=Oswald");
 
 /*RESET*/
@@ -64,8 +64,23 @@ body{
 	width:					75%; 
 }
 
-.titles{
+.oswald
+{
 	font-family: 			'Oswald';
+	font-weight: 			bold;
+	text-transform:			uppercase;
+}
+
+.opensans
+{
+	font-family: 			'Open Sans';	
+	font-weight: 			bolder;
+	font-size: 				90%;
+	text-transform:			uppercase;
+}
+
+.textShadow
+{
 	text-shadow: 			1px 1px 2px #888888; 
 }
 
@@ -95,8 +110,8 @@ body{
 
 
 #listMenu{
+	
 	list-style-type:		none;
-	text-shadow: 			0.07em 0.07em #777777;
 }
 
 #listMenu li{
