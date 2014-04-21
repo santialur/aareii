@@ -1,8 +1,25 @@
-/*FONT*/
+/*------------------------------------------------------------------
+EMPRESASTYLES.CSS
+
+Empresas Stylesheet
+Project:	Feria Virtual
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+TYPOGRAPHY
+
+# Everything: 					Open Sans Regular
+# Titles and Headers: 			Oswald and Caps
+# Menus: 						Open Sans Bold and Caps
+-------------------------------------------------------------------*/
+
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300,600");
 @import url("http://fonts.googleapis.com/css?family=Oswald");
 
-/*RESET*/
+/*------------------------------------------------------------------
+RESET
+-------------------------------------------------------------------*/
+
 ol, ul, li{
 	margin: 				0;
 	padding: 				0;
@@ -38,7 +55,9 @@ a
 	text-decoration: 		none;
 }
 
-/*MINE*/
+/*------------------------------------------------------------------
+GENERAL
+-------------------------------------------------------------------*/
 
 *{	
 	font-family: 			'Open Sans', sans-serif;	
@@ -175,6 +194,26 @@ body{
 	padding:				20px
 }
 
+#footer
+{
+	/*background-color:		#128aCd;*/
+	background-image:       url(../features/images/texture2.png);
+	clear:					both;
+	color:					white;
+	font-size:				80%;
+	height:					4em;	
+	padding:				3em 0em; 
+	position: 				relative;
+	bottom:					0;
+	text-align:				center;
+	width:					100%;
+ 	z-index: 				10
+}
+
+/*------------------------------------------------------------------
+FIAT
+-------------------------------------------------------------------*/
+
 #standFiat
 {
 		position: absolute;
@@ -210,19 +249,3 @@ body{
    	-o-transition: 				all 0.3s ease-out;  	/* Opera 10.50–12.00 */
     transition: 				all 0.3s ease-out;  	/* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
 }  
-
-#footer
-{
-	/*background-color:		#128aCd;*/
-	background-image:       url(../features/images/texture2.png);
-	clear:					both;
-	color:					white;
-	font-size:				80%;
-	height:					4em;	
-	padding:				3em 0em; 
-	position: 				relative;
-	bottom:					0;
-	text-align:				center;
-	width:					100%;
- 	z-index: 				10
-}
