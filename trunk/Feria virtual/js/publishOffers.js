@@ -141,3 +141,8 @@ function fillDegrees(target)
     '<input type=checkbox name="carrera" value="Redes" required />                         Redes                                   <br>'+
     '<input type=checkbox name="carrera" value="Sistemas /tecnologia" required /> Sistemas  / Tecnología         <br>');
 }
+
+function sendData(){
+   var dt = new Date();
+   alert(dt.getFullYear() + "/" + dt.getMonth() + 1 + "/" + dt.getDate());
+}
