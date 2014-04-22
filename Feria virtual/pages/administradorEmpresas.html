@@ -4,7 +4,7 @@
 		<link   rel=  "stylesheet"    href="../css/styles.css" type="text/css" />
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-		
+		<script type="text/javascript" src="../js/companyAdministration.js"></script>
 	</head>
 
 	<body >
@@ -24,13 +24,149 @@
 							<div id="stateSection">
 								<input id="ac-1" name="accordion-1" type="radio" />
 								<label for="ac-1">Filtrar</label>
-								<article class="ac-small">
-									<p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.</p>
+								<article class="ac-medium">
+									<br>
+									<div id="inner" style="overflow:hidden; width: 100%">
+										<div style="float: left; width:1%">&nbsp;</div>
+									    <div class="leftSide" style="float: left; width:13%">
+									    	<div style="text-align: left">Provincia</div>
+											<select id="lugar_de_residencia_provincia" name="lugar_de_residencia_provincia" style="float: left; width:100%">
+								                <script>
+								                    fillStates($('#lugar_de_residencia_provincia'));
+								                </script>
+								            </select>
+								        </div>
+								        <div style="float: left; width:1%">&nbsp;</div>
+								        <div class="leftSide" style="float: left; width:13%">
+								        	<div style="text-align: left">Edad</div>
+											<select id="edad" name="edad" style="float: right; width: 100%">
+								                <script>
+								                    fillAges($('#edad'));
+								                </script>
+								            </select>
+								        </div>
+								        <div style="float: left; width:1%">&nbsp;</div>
+								        <div class="leftSide" style="float: left; width:13%">
+								        	<div style="text-align: left">Universidad</div>
+											<select id="institucion" name="institucion" style="float: right; width: 100%">
+								                <script>
+								                    fillUniversities($('#institucion'));
+								                </script>
+								            </select>
+								        </div>
+								        <div style="float: left; width:1%">&nbsp;</div>
+								        <div class="leftSide" style="float: left; width:13%">
+								        	<div style="text-align: left">Carrera</div>
+											<select id="carrera_area" name="carrera_area" style="float: right; width:100%">
+								                <script>
+								                    fillDegrees($('#carrera_area'));
+								                </script>
+							                </select>
+								        </div>
+								        <div style="float: left; width:1%">&nbsp;</div>
+								        <div class="leftSide" style="float: left; width:13%">
+								        	<div style="text-align: left">Estado de carrera</div>
+											<select id="estado_carrera" name="estado_carrera" style="float: right; width:100%">
+								                <option value="0" selected="">  Indistinto    </option>
+								                <option value="Completo">       Completa      </option>
+								                <option value="Avanzado">       Avanzada      </option>
+								                <option value="En curso">       En curso      </option>
+								                <option value="Interrumpido">   Interrumpida  </option>
+							              	</select>
+								        </div>
+								        <div style="float: left; width:1%">&nbsp;</div>
+								        <div class="leftSide" style="float: left; width:13%">
+								        	<div style="text-align: left">Experiencia laboral</div>
+											<select id="experiencia" name="experiencia" style="float: right; width:100%">
+								                <option value="0" selected="">  Indistinto    </option>
+								                <option value="Si">       			Si        </option>
+								                <option value="No">       			No        </option>
+							              	</select>
+								        </div>
+								        <div style="float: left; width:1%">&nbsp;</div>
+								        <div class="leftSide" style="float: left; width:13%">
+								        	<div style="text-align: left">Experiencia en</div>
+											<select id="trabajo_area" name="trabajo_area" style="float: right; width:100%">
+								                <script>
+								                    fillAreaType($('#trabajo_area'));
+								                </script>
+							              	</select>
+								        </div>
+							        </div>
+							        <br><br>
+
+									<div id="inner" style="overflow:hidden; width: 100%">
+										<div style="float: left; width:1%">&nbsp;</div>
+									    <div class="leftSide" style="float: left; width:13%">
+									    	<div style="text-align: left">Provincia</div>
+											<select id="lugar_de_residencia_provincia" name="lugar_de_residencia_provincia" style="float: left; width:100%">
+								                <script>
+								                    fillStates($('#lugar_de_residencia_provincia'));
+								                </script>
+								            </select>
+								        </div>
+								        <div style="float: left; width:1%">&nbsp;</div>
+								        <div class="leftSide" style="float: left; width:13%">
+								        	<div style="text-align: left">Edad</div>
+											<select id="edad" name="edad" style="float: right; width: 100%">
+								                <script>
+								                    fillAges($('#edad'));
+								                </script>
+								            </select>
+								        </div>
+								        <div style="float: left; width:1%">&nbsp;</div>
+								        <div class="leftSide" style="float: left; width:13%">
+								        	<div style="text-align: left">Universidad</div>
+											<select id="institucion" name="institucion" style="float: right; width: 100%">
+								                <script>
+								                    fillUniversities($('#institucion'));
+								                </script>
+								            </select>
+								        </div>
+								        <div style="float: left; width:1%">&nbsp;</div>
+								        <div class="leftSide" style="float: left; width:13%">
+								        	<div style="text-align: left">Carrera</div>
+											<select id="carrera_area" name="carrera_area" style="float: right; width:100%">
+								                <script>
+								                    fillDegrees($('#carrera_area'));
+								                </script>
+							                </select>
+								        </div>
+								        <div style="float: left; width:1%">&nbsp;</div>
+								        <div class="leftSide" style="float: left; width:13%">
+								        	<div style="text-align: left">Estado de carrera</div>
+											<select id="estado_carrera" name="estado_carrera" style="float: right; width:100%">
+								                <option value="0" selected="">  Indistinto    </option>
+								                <option value="Completo">       Completa      </option>
+								                <option value="Avanzado">       Avanzada      </option>
+								                <option value="En curso">       En curso      </option>
+								                <option value="Interrumpido">   Interrumpida  </option>
+							              	</select>
+								        </div>
+								        <div style="float: left; width:1%">&nbsp;</div>
+								        <div class="leftSide" style="float: left; width:13%">
+								        	<div style="text-align: left">Experiencia laboral</div>
+											<select id="experiencia" name="experiencia" style="float: right; width:100%">
+								                <option value="0" selected="">  Indistinto    </option>
+								                <option value="Si">       			Si        </option>
+								                <option value="No">       			No        </option>
+							              	</select>
+								        </div>
+								        <div style="float: left; width:1%">&nbsp;</div>
+								        <div class="leftSide" style="float: left; width:13%">
+								        	<div style="text-align: left">Experiencia en</div>
+											<select id="trabajo_area" name="trabajo_area" style="float: right; width:100%">
+								                <script>
+								                    fillAreaType($('#trabajo_area'));
+								                </script>
+							              	</select>
+								        </div>
+							        </div>
 								</article>
 							</div>
-							
 						</section>
 					</div>
+					
 				</div>
 			</div>
 			<div class="footer box centered" >
