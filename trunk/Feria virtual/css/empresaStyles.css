@@ -80,7 +80,7 @@ body{
 	min-height: 			100%;
 	height:					auto !important;
 	height: 				100%;
-	width:					75%; 
+	width:					95%; 
 }
 
 .oswald
@@ -129,7 +129,7 @@ body{
 
 
 #listMenu{
-	
+
 	list-style-type:		none;
 }
 
@@ -141,10 +141,7 @@ body{
 
 #listMenu li a{
 	color:					black;
-	/* FUENTE NUEVA 
-	font-family: 			'Oswald';
-	text-shadow: 			1px 1px 2px #888888; 
-	*/
+	font-size:				1vw;
 	display: 				inline-block;
 	text-decoration: 		none;
 }
@@ -168,12 +165,25 @@ body{
 }
 
 
-.logo{
+.headerLogo{
 	width:					20%;
 	position: 				relative; 
 	padding:				2%;
-	left: 					2%;
+	left:					2%;
 	top:					10%; 
+}
+
+.headerInfo{
+	margin: 				3.5% 0% 0% 4%
+}
+
+#brandName{
+	font-size: 				2.15vw
+}
+
+#brandSlogan{
+	margin-top: 			10%;
+	font-size: 				1.5vw
 }
 
 #aareiiLogo{
