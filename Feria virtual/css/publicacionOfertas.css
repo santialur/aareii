@@ -1,0 +1,58 @@
+/*------------------------------------------------------------------
+PUBLICACIONOFERTAS.CSS
+
+Publicacion Ofertas Stylesheet
+Project:	Feria Virtual
+-------------------------------------------------------------------*/
+
+textarea
+{
+	box-shadow: 		2px 2px 5px #AAAAAA;	
+}
+
+.tableOffers
+{
+	border-collapse:	collapse;
+	width:				80%;
+	font-size: 			90%;
+	box-shadow: 		2px 2px 5px #AAAAAA;	
+}
+
+.tableOffers, .tableOffers td, .tableOffers th
+{
+	border:				1px solid black;
+}
+
+.tableOffers td, .tableOffers th
+{
+	padding:			1%;
+}
+
+.tableOffers tr.alt td 
+{
+	color:				#000000;
+	background-color:	#F5F5F5;
+}
+
+.tableOffers th
+{
+	background-color:	#D5D5D5;
+	color:				Black;
+}
+
+.block
+{
+	margin:				3% 0%;
+}
+
+#tableLanguages, #tableLanguages td, #tableLanguages th
+{
+	border:				none;
+	box-shadow: 		none;
+}
+
+#tableLanguages th
+{
+	background-color:	white;
+	color:				black;	
+}
