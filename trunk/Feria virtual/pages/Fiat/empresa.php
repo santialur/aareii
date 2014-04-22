@@ -19,10 +19,11 @@
 	                </div>
 	                <br />
 
-   	                <div class="textBoxes"><a id="#brandWebpage"></a></div>
-
+   	                <div class="textBoxes opensans textShadow centered"><a id="brandWebpage"></a></div>
+   	                <br />
+			
 	                <div class="textBoxes">
-		                <div style="text-align:center">
+		                <div class="centered">
 		                    <p>
 		                        <h4 id="companyTitle" class="titles"></h4>
 		                </div>
