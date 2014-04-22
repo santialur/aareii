@@ -81,14 +81,14 @@ function fillDegrees(target)
     '<input type=checkbox name="carrera" value="Adm. Agropecuaria" required />             Adm. Agropecuaria                       <br>'+
     '<input type=checkbox name="carrera" value="Adm. de empresas" required />              Adm. de Empresas                        <br>'+
     '<input type=checkbox name="carrera" value="Adm. y gestion publica" required />        Adm. y Gestión Pública                  <br>'+
-    '<input type=checkbox name="carrera" value="Comercio internacional" required />        Comercio Internacional  required / Exterior  <br>'+
-    '<input type=checkbox name="carrera" value="Contabilidad" required />                  Contabilidad  required / Auditoría      <br>'+
+    '<input type=checkbox name="carrera" value="Comercio internacional" required />        Comercio Internacional  / Exterior  <br>'+
+    '<input type=checkbox name="carrera" value="Contabilidad" required />                  Contabilidad  / Auditoría      <br>'+
     '<input type=checkbox name="carrera" value="Economia" required />                      Economía                                <br>'+
     '<input type=checkbox name="carrera" value="Finanzas" required />                      Finanzas                                <br>'+
-    '<input type=checkbox name="carrera" value="Marketing" required />                     Marketing  required / Comercialización  <br>'+
+    '<input type=checkbox name="carrera" value="Marketing" required />                     Marketing  / Comercialización  <br>'+
     '<input type=checkbox name="carrera" value="Negociacion" required />                   Negociación                             <br>'+
     '<input type=checkbox name="carrera" value="Organizacion insdustrial" required />      Organización industrial                 <br>'+
-    '<input type=checkbox name="carrera" value="RRHH" required />                          Recursos Humanos required /Relaciones Laborales  <br>'+
+    '<input type=checkbox name="carrera" value="RRHH" required />                          Recursos Humanos /Relaciones Laborales  <br>'+
     '<input type=checkbox name="carrera" value="Sistemas de informacion" required />       Sistemas de Información                 <br>'+
     '<input type=checkbox name="carrera" value="Agrimensor" required />                    Agrimensor                              <br>'+
     '<input type=checkbox name="carrera" value="Arqueologia" required />                   Arqueología                             <br>'+
@@ -97,13 +97,13 @@ function fillDegrees(target)
     '<input type=checkbox name="carrera" value="Cartografia" required />                   Cartografía                             <br>'+
     '<input type=checkbox name="carrera" value="Ciencias fisicas" required />              Ciencias Físicas                        <br>'+
     '<input type=checkbox name="carrera" value="Geofisica" required />                     Geofísica                               <br>'+
-    '<input type=checkbox name="carrera" value="Geologia" required />                      Geología  required / Geomensura  required / Topografía      <br>'+
+    '<input type=checkbox name="carrera" value="Geologia" required />                      Geología  / Geomensura  / Topografía      <br>'+
     '<input type=checkbox name="carrera" value="Quimica" required />                       Química                                 <br>'+
     '<input type=checkbox name="carrera" value="Tecnologia de alimentos" required />       Tecnología de Alimentos                 <br>'+
     '<input type=checkbox name="carrera" value="Higiene y seguridad" required />           Higiene y Seguridad en el Trabajo       <br>'+
     '<input type=checkbox name="carrera" value="Ing. aeroespacial" required />             Ing. Aeroespacial                       <br>'+
     '<input type=checkbox name="carrera" value="Ing. aeronautica" required />              Ing. Aeronáutica                        <br>'+
-    '<input type=checkbox name="carrera" value="Ing. agronoma" required />                 Ing. Agrónoma  required / Agropecuaria  <br>'+
+    '<input type=checkbox name="carrera" value="Ing. agronoma" required />                 Ing. Agrónoma  / Agropecuaria  <br>'+
     '<input type=checkbox name="carrera" value="Ing. alimentos" required />                Ing. Alimentos                          <br>'+
     '<input type=checkbox name="carrera" value="Ing. ambiental" required />                Ing. Ambiental                          <br>'+
     '<input type=checkbox name="carrera" value="Ing. civil" required />                    Ing. Civil                              <br>'+
@@ -116,11 +116,11 @@ function fillDegrees(target)
     '<input type=checkbox name="carrera" value="Ing. industrial" required />               Ing. Industrial                         <br>'+
     '<input type=checkbox name="carrera" value="Ing. matematica" required />               Ing. Matemática                         <br>'+
     '<input type=checkbox name="carrera" value="Ing. materiales" required />               Ing. Materiales                         <br>'+
-    '<input type=checkbox name="carrera" value="Ing. mecanica" required />                 Ing. Mecánica  required / Metalúrgica   <br>'+
+    '<input type=checkbox name="carrera" value="Ing. mecanica" required />                 Ing. Mecánica  / Metalúrgica   <br>'+
     '<input type=checkbox name="carrera" value="Ing. mecatronica" required />              Ing. Mecatrónica                        <br>'+
     '<input type=checkbox name="carrera" value="Ing. naval" required />                    Ing. Naval                              <br>'+
     '<input type=checkbox name="carrera" value="Ing. nuclear" required />                  Ing. Nuclear                            <br>'+
-    '<input type=checkbox name="carrera" value="Ing. pesquera" required />                 Ing. Pesquera  required / Cultivos Marinos  <br>'+
+    '<input type=checkbox name="carrera" value="Ing. pesquera" required />                 Ing. Pesquera  / Cultivos Marinos  <br>'+
     '<input type=checkbox name="carrera" value="Ing. petroleo" required />                 Ing. Petróleo                           <br>'+
     '<input type=checkbox name="carrera" value="Ing. quimica" required />                  Ing. Química                            <br>'+
     '<input type=checkbox name="carrera" value="Ing. recursos hidraulicos" required />     Ing. Recursos Hídricos                  <br>'+
@@ -136,8 +136,8 @@ function fillDegrees(target)
     '<input type=checkbox name="carrera" value="Lic. Organización Industrial" required />  Lic. en Organización Industrial         <br>'+
     '<input type=checkbox name="carrera" value="analisis de sistemas" required />          Análisis de Sistemas                    <br>'+
     '<input type=checkbox name="carrera" value="Computacion" required />                   Computación                             <br>'+
-    '<input type=checkbox name="carrera" value="Ing. informatica" required />              Ing. Informática  required / sistemas   <br>'+
+    '<input type=checkbox name="carrera" value="Ing. informatica" required />              Ing. Informática  / sistemas   <br>'+
     '<input type=checkbox name="carrera" value="Programacion" required />                  Programación                            <br>'+
     '<input type=checkbox name="carrera" value="Redes" required />                         Redes                                   <br>'+
-    '<input type=checkbox name="carrera" value="Sistemas required /tecnologia" required /> Sistemas  required / Tecnología         <br>');
+    '<input type=checkbox name="carrera" value="Sistemas /tecnologia" required /> Sistemas  / Tecnología         <br>');
 }
