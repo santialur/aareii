@@ -18,9 +18,11 @@
 
   <body>
       <div id="nav">
-            <ul class="">  
+            <ul class="nav-bar">  
               <li class="opensans"><a href="http://www.encontramas.com.ar/">Encontra +</a></li>
-              <li class="opensans"><a href="inscripcion.html">Inscribirse</a></li>
+              <li class="opensans"><a href="publicacionOfertas.php">Ofertas laborales</a></li>
+              <li class="opensans"><a href="candidatos.html">Candidatos</a></li>
+              <li class="opensans"><a href="">Stand</a></li>
             </ul>
       </div>
       </br>

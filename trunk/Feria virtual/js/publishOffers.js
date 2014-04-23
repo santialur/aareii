@@ -143,6 +143,10 @@ function fillDegrees(target)
 }
 
 function sendData(){
-   var dt = new Date();
-   alert(dt.getFullYear() + "/" + dt.getMonth() + 1 + "/" + dt.getDate());
+   var careerSelected;
+   $("input:checkbox[name=carrera]:checked").each(function() {
+       //selected.push($(this).val());
+       careerSelected += $(this).val();
+  });
+   alert(careerSelected);
 }
