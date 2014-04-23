@@ -18,11 +18,9 @@
 
   <body>
       <div id="nav">
-            <ul class="nav-bar">  
+            <ul class="">  
               <li class="opensans"><a href="http://www.encontramas.com.ar/">Encontra +</a></li>
-              <li class="opensans"><a href="publicacionOfertas.php">Ofertas laborales</a></li>
-              <li class="opensans"><a href="candidatos.html">Candidatos</a></li>
-              <li class="opensans"><a href="">Stand</a></li>
+              <li class="opensans"><a href="inscripcion.html">Inscribirse</a></li>
             </ul>
       </div>
       </br>
@@ -45,7 +43,7 @@
 
           <div style="clear: both"></div> <!-- BORRAR --> 
 
-          <form>
+          <form name="publishOffer" onsubmit="return sendData()">
 
             <!-- PUESTO --> 
             <div class="block">
@@ -99,10 +97,10 @@
                     Estudios Minimos
                   </th>
                   <td>
-                    <input type="radio" name="estudios" value="gradoIniciado"/>   Universitario Iniciado  <br>
-                    <input type="radio" name="estudios" value="gradoAvanzado"/>   Universitario Avanzado  <br>                
-                    <input type="radio" name="estudios" value="posgradIniciado"/> Posgrado Iniciado       <br>
-                    <input type="radio" name="estudios" value="posgradoAvanzado"/>Posgrado Avanzado 
+                    <input type="radio" name="estudios" value="gradoIniciado" required/>   Universitario Iniciado  <br>
+                    <input type="radio" name="estudios" value="gradoAvanzado" required/>   Universitario Avanzado  <br>                
+                    <input type="radio" name="estudios" value="posgradIniciado" required/> Posgrado Iniciado       <br>
+                    <input type="radio" name="estudios" value="posgradoAvanzado" required/>Posgrado Avanzado 
                   </td>
                 </tr>
                 <tr class="alt">
