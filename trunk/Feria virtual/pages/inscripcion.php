@@ -3,7 +3,10 @@
 <head>
   <title>Inscripción</title>
   <META http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <link   rel=  "stylesheet"    href="../css/styles.css" type="text/css" />
+
+  <link   rel=  "stylesheet"    href="../css/styles.css"      type="text/css" />
+  <link   rel=  "stylesheet"    href="../css/inscripcion.css" type="text/css" />
+
   <meta property="og:url" content="http://www.encontramas.com.ar/virtual/pages/inscripcion.html" />
   <meta property="og:title" content="Feria de empresas- Encontra+ 2014" />
   <meta property="og:description" content="Inscribite a la feria de empresas 2014" />
