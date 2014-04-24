@@ -7,7 +7,6 @@
 		
 		<meta 	name="viewport"			content="width=device-width, user-scalable=false"		/>
 		<link 	rel="stylesheet" 		type="text/css"		href="../css/styles.css" 			/>
-		<link 	rel="stylesheet" 		type="text/css"		href="../css/interiorExterior.css"	/>
 
 		<!-- JQUERY -->
 	  	<script type="text/javascript"	src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
