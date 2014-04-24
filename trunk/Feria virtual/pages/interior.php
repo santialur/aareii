@@ -5,19 +5,20 @@
 			Interior
 		</title>
 		
-		<meta 	name=	"viewport" 			content="width=device-width, user-scalable=false"	/>
-		<link 	rel=	"stylesheet" 		href="../css/styles.css" 		type="text/css" 	/>
-		<link 	rel=	"stylesheet" 		href="../css/marquee.css" 		type="text/css" 	/>
+		<meta 	name="viewport"			content="width=device-width, user-scalable=false"		/>
+		<link 	rel="stylesheet" 		type="text/css"		href="../css/styles.css" 			/>
+		<link 	rel="stylesheet" 		type="text/css"		href="../css/interiorExterior.css"	/>
+		<link 	rel="stylesheet" 		type="text/css"		href="../css/plugins/marquee.css"	/>
 
 		<!-- JQUERY -->
-	  	<script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
+	  	<script type="text/javascript"	src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
 
 	  	<!--- POP UP --> 		
-		<script type="text/javascript" src="../js/popup.js"></script>
+		<script type="text/javascript"	src="../js/popups.js"></script>
 
 		<!--- NEWS TICKER --> 
-	  	<link 	href="../features/jquery_news_ticker/styles/ticker-style.css" 	rel="stylesheet" type="text/css" />
-		<script src="../features/jquery_news_ticker/includes/jquery.ticker.js" type="text/javascript"></script>
+	  	<link 	rel="stylesheet"		type="text/css"		href="../features/jquery_news_ticker/styles/ticker-style.css"   />
+		<script type="text/javascript"	src="../features/jquery_news_ticker/includes/jquery.ticker.js"></script>
 
 		<script type="text/javascript">
 			$(function () {
@@ -29,13 +30,13 @@
 		</script>
 
 		<!-- NEWS --> 
-		<script type="text/javascript" src="../js/functions.js"></script>
+		<script type="text/javascript"	src="../js/interior.js"></script>
 
 		<!-- FANCYBOX --> 
-		<link 	type="text/css"			rel="stylesheet" href="../features/fancybox/source/jquery.fancybox.css"  media="screen"/>
+		<link 	rel="stylesheet"		type="text/css"		href="../features/fancybox/source/jquery.fancybox.css"  media="screen"/>
 		<script type="text/javascript" 	src="../features/fancybox/source/jquery.fancybox.pack.js"></script>
 				
-		<script language="javascript" type="text/javascript">
+		<script type="text/javascript"	language="javascript">
 			$(document).ready(function(){
 				$(".ifancybox").fancybox({
 					'width'			: 	'100%',
@@ -48,14 +49,13 @@
 			});
 		</script>
 		
-		<script type="text/javascript" src="../lib/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript"	src="../lib/bootstrap/js/bootstrap.min.js"></script>
 
 	  	<!-- MARQUESINA --> 
-	  	<script type="text/javascript" src="../js/itemMarquee.js"></script>
+	  	<script type="text/javascript"	src="../js/marquee.js"></script>
 
 		<!-- EXTRA --> 
-	  	<script src="../lib/angular/angular.min.js"></script>
-  		<script src="../js/controllers.js">			</script>
+	  	<script type="text/javascript"	src="../lib/angular/angular.min.js"></script>
 	</head>
 
 

@@ -1,11 +1,13 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>Publicacion de Ofertas Laborales</title>
+    <title>
+      Publicacion de Ofertas Laborales
+    </title>
 
-    <META http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel=  "stylesheet"    href="../css/styles.css" type="text/css" />
-    <link rel=  "stylesheet"    href="../css/publicacionOfertas.css" type="text/css" />
+    <META   http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link   rel="stylesheet"    type="text/css"   href="../css/styles.css"              />
+    <link   rel="stylesheet"    type="text/css"   href="../css/publicacionOfertas.css"  />
 
     <meta property="og:title" content="Feria de empresas- Encontra+ 2014" />
     <meta property="og:description" content="Publicacion de Ofertas Laborales" />
