@@ -8,11 +8,13 @@
 		<meta 	name="viewport"			content="width=device-width, user-scalable=false"		/>
 		<link 	rel="stylesheet" 		type="text/css"		href="../css/styles.css" 			/>
 		<link 	rel="stylesheet" 		type="text/css"		href="../css/interiorExterior.css"	/>
-		<link 	rel="stylesheet" 		type="text/css"		href="../css/plugins/marquee.css"	/>
 
 		<!-- JQUERY -->
 	  	<script type="text/javascript"	src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
 
+	  	<!-- ANGULAR --> 
+	  	<script type="text/javascript"	src="../lib/angular/angular.min.js"></script>
+	  	
 	  	<!--- POP UP --> 		
 		<script type="text/javascript"	src="../js/popups.js"></script>
 
@@ -52,10 +54,8 @@
 		<script type="text/javascript"	src="../lib/bootstrap/js/bootstrap.min.js"></script>
 
 	  	<!-- MARQUESINA --> 
+	  	<link 	rel="stylesheet" 		type="text/css"		href="../css/plugins/marquee.css"	/>
 	  	<script type="text/javascript"	src="../js/marquee.js"></script>
-
-		<!-- EXTRA --> 
-	  	<script type="text/javascript"	src="../lib/angular/angular.min.js"></script>
 	</head>
 
 
