@@ -46,8 +46,8 @@
           <div style="clear: both"></div>
 
 
-          <div id="autenticateCompany" style="text-align: center">
-            <div id="ID_div" style="width: 60%">
+          <div id="autenticateCompany" style="width: 50%; margin: 0 auto">
+            <div id="ID_div">
               <span class="leftSide">
                 <strong>Empresa</strong>:   
                 <span class="red">*</span>
@@ -56,7 +56,7 @@
               <br><br>
             </div>  
   
-            <div id="password_div" style="width: 60%">
+            <div id="password_div">
                <span class="leftSide">
                  <strong>Contraseña</strong>:          
                  <span class="red">*</span>
@@ -69,7 +69,7 @@
               <a  href="../pages/forgotPassword.html" style="font-size:80%; text-decoration:underline;">Olvide mi contraseña</a><br><br>
             </div>
         
-            <div id="buttons" style="text-align: center; width: 60%" >
+            <div id="buttons" style="text-align: center">
               <input type="button" id="create_button" value="Ingresar" class="button" onclick="checkCompany()" style="margin-left: 3%"><br><br>
             </div>
           </div>
