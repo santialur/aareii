@@ -150,20 +150,6 @@ hr
 		top: 				1px;
 	}
 
-/*------------------------------------------------------------------
-INTERIOR Y EXTERIOR
--------------------------------------------------------------------*/
-
-#rightBlock{
-	padding: 				0% 1% 3% 0%;
-	width: 					16%;
-}
-
-#leftBlock{
-	padding:	 			0% 0% 3% 1%;
-	width: 					81%;
-}
-
 #nav
 {
 	background:			-moz-linear-gradient(top, #B10B0B, #600000);
@@ -208,43 +194,6 @@ INTERIOR Y EXTERIOR
 		box-shadow:		0px 1px 1px #000000;	
 	}
 
-.titles
-{
-	margin: 			10% 10%; 
-	font-size: 			110%;	
-	text-shadow: 		1px 1px 2px #888888; 
-}
-
-.footer
-{
-	height: 			auto;
-	background-image: 	url(../features/images/texture2.png);
-	color:				white;
-	font-size: 			92%;
-	text-shadow: 		0.09em 0.09em #777777;
-}
-
-.sketch
-{
-    border: 			1px solid #1a1a1a;
-    z-index:			0;
-    box-shadow: 		2px 2px 6px #555555;
-}
-
-#sketchOut
-{
-	margin: 			4.2% 0 1.2% 0;
-	width: 				95%;
-	height: 			100%;
-}
-
-#pollContent
-{
-	text-align:			left;  
-	font-size: 			82%;
-	margin:				-5% 8% -4% 8%;
-}
-
 .social
 {
 	margin-bottom: -10%
@@ -270,6 +219,7 @@ INTERIOR Y EXTERIOR
 	   	-o-transition: 			all 0.15s ease-out;  	/* Opera 10.50–12.00 */
 	    transition: 			all 0.15s ease-out;  	/* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
 	}
+
 
 /*------------------------------------------------------------------
 OTROS
