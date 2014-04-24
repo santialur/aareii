@@ -195,12 +195,6 @@ body{
 	font-size: 				1vw;
 }
 
-#aareiiLogo{
-	position: 				relative; 
-	right:					2.25%;
-	margin-top:				2.25%;
-}
-
 .brandBanner{
 	width:					100%;
 	margin: 				0 auto;
@@ -213,9 +207,8 @@ body{
 	padding:				20px
 }
 
-#footer
+.footer
 {
-	/*background-color:		#128aCd;*/
 	background-image:       url(../features/images/texture2.png);
 	clear:					both;
 	color:					white;
@@ -224,9 +217,14 @@ body{
 	padding:				3em 0em; 
 	position: 				relative;
 	bottom:					0;
-	text-align:				center;
 	width:					100%;
  	z-index: 				10
+}
+
+#aareiiLogo{
+	position: 				relative; 
+	right:					2.25%;
+	margin-top:				2.25%;
 }
 
 /*------------------------------------------------------------------

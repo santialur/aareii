@@ -26,15 +26,6 @@ INTERIOR Y EXTERIOR
 	text-shadow: 		1px 1px 2px #888888; 
 }
 
-.footer
-{
-	height: 			auto;
-	background-image: 	url(../features/images/texture2.png);
-	color:				white;
-	font-size: 			92%;
-	text-shadow: 		0.09em 0.09em #777777;
-}
-
 .sketch
 {
     border: 			1px solid #1a1a1a;
