@@ -26,10 +26,11 @@
             </ul>
       </div>
       </br>
-
+      <br>
+      
       <div class="wrapperSmall">
         <div id="content" class="box">
-
+    
           <!-- HEADER --> 
           <div class="leftSide">
             <h3>
@@ -43,9 +44,38 @@
             <img src="../features/images/AAREII-logo.png" width="65" height="100">
           </div>
 
-          <div style="clear: both"></div> <!-- BORRAR --> 
+          <div style="clear: both"></div>
 
-          <form name="publishOffer" onsubmit="return sendData()">
+
+          <div id="autenticateCompany" style="text-align: center">
+            <div id="ID_div" style="width: 60%">
+              <span class="leftSide">
+                <strong>Empresa</strong>:   
+                <span class="red">*</span>
+              </span>
+              <input type="text" id="identification" name="identification" class="rightSide">
+              <br><br>
+            </div>  
+  
+            <div id="password_div" style="width: 60%">
+               <span class="leftSide">
+                 <strong>Contraseña</strong>:          
+                 <span class="red">*</span>
+               </span> 
+               <input type="password" id="contraseña" name="contraseña" class="rightSide">
+               <br><br>
+            </div>
+  
+            <div id="olvido_contraseña">
+              <a  href="../pages/forgotPassword.html" style="font-size:80%; text-decoration:underline;">Olvide mi contraseña</a><br><br>
+            </div>
+        
+            <div id="buttons" style="text-align: center; width: 60%" >
+              <input type="button" id="create_button" value="Ingresar" class="button" onclick="checkCompany()" style="margin-left: 3%"><br><br>
+            </div>
+          </div>
+          
+          <form id="publishOffer" style="display: none" name="publishOffer" onsubmit="return sendData()">
 
             <!-- PUESTO --> 
             <div class="block">
