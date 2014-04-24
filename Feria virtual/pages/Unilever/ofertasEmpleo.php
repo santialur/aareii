@@ -4,7 +4,7 @@
 		<title>Ofertas de Empleo</title>
 
 		<?php include '../_empresasImports.html'; ?>
-		<link 	rel="stylesheet" 	href="../../css/ofertasStyles.css"											/>
+		<link 	rel="stylesheet" 	href="../../css/ofertas.css"	/>
 	</head>
 
 	<body>

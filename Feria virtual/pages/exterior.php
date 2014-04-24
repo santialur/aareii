@@ -1,14 +1,15 @@
 <html>
 	<head>
 	<meta name="viewport" content="width=device-width, user-scalable=false;">
-		<link 	rel=	"stylesheet" 		href="../css/styles.css" 	type="text/css" 	/>
+		<!-- STYLES --> 
+		<link 	rel=	"stylesheet" 		href="../css/styles.css" 			type="text/css" 	/>
+		<link 	rel=	"stylesheet" 		href="../css/interiorExterior.css" 	type="text/css" 	/>
 
 		<!-- JQUERY -->
 	  	<script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
 
 	  	<!--- POP UP --> 		
 		<script type="text/javascript" src="../js/popup.js"></script>
-
 	</head>
 
 	<body>	
