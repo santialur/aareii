@@ -3,9 +3,9 @@
 		checkCompany( $_POST['company'],$_POST['password']);
 	}
 
-	function checkCompany($company, $password){
+	function checkCompany($company_name, $password){
 
-		$con = mysql_connect('localhost','root','');
+		$con = mysql_connect('localhost','root','C4ch0bs4s3124');
 		mysql_select_db('encontramas_test',$con);
 		mysql_query("SET NAMES 'utf8'", $con);
 		if (!$con)
@@ -13,10 +13,10 @@
 		  die('Could not connect: ' . mysql_error($con));
 		  }
 
-		/*$sql_company = "SELECT * FROM company WHERE company_name = '$comapny'";
+		$sql_company = "SELECT * FROM company WHERE company_name = '$company_name'";
 		$company = mysql_query($sql_company, $con);
 		$row = mysql_fetch_array($company);
-		if(mysql_num_rows($user) == 0){
+		if(mysql_num_rows($company) == 0){
 			echo "Empresa no registrada";
 			return;
 		}
@@ -27,21 +27,29 @@
 		$encrypt = md5($password.$company_password_salt[1]);
 		$encriptedPass = $encrypt.':'.$company_password_salt[1];
 
-		$sql = "SELECT * FROM company WHERE company_name = '$company' AND password = '$encriptedPass'";
-		$result = mysql_query($sql, $con);*/
-
-
-		$salt	= md5(mt_rand());
-		$encrypt = md5($password.$salt);
-		$encriptedPass = $encrypt.':'.$salt;
-
-		$sql = "SELECT * FROM company WHERE company_name = '$company' AND password = '$encriptedPass'";
+		$sql = "SELECT * FROM company WHERE company_name = '$company_name' AND password = '$encriptedPass'";
 		$result = mysql_query($sql, $con);
+
+
+		//$salt	= md5(mt_rand());
+		//$encrypt = md5($password.$salt);
+		//$encriptedPass = $encrypt.':'.$salt;
+
+//		$sql = "SELECT * FROM company WHERE company_name = '$company' AND password = '$encriptedPass'";
+//		$result = mysql_query($sql, $con);
 
 		if(mysql_num_rows($result) == 0){
 			echo "Compania no registrada";
 		}else{
-			echo "Compania registrada";
+			$id = mysql_fetch_array($result)['id'];
+			$sql = "UPDATE company SET lastLogin = NOW() WHERE id = $id";
+			$result = mysql_query($sql, $con);
+			
+			session_start();
+  			$_SESSION['company_name'] = $company_name;
+  			echo "Compania registrada";
+  			//header("Location: http://www.encontramas.com.ar/virtual/pages/publicacionOfertas.php"); 
+  			//exit;
 		}
 	}
 
