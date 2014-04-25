@@ -1,13 +1,23 @@
-
-
-@import "popups.css";
+@import "text.css";
 
 *
 {
-	padding:				0px;
-	margin:					0px;
-	font-family: 			'Open Sans', sans-serif;	
+	font-family: 			'Open Sans', sans-serif;
+	line-height: 			175%;
 }
 
+h2
+{
+	font-size:			2.5vw
+}
 
-			
+ul, p
+{
+	font-size:			1.9vw;
+}
+
+p
+{
+	text-align:			justify;
+	margin:				3% 0;
+}
