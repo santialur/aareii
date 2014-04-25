@@ -1,10 +1,10 @@
 $( document ).ready(function()
 {
-	var webpage		= "www.astoriestructuras.com";
-	var name		=  "Astori Estructuras";
-	var slogan		=  "";
-	var title 		=  "ASTORI ESTRUCTURAS";
-	var description =  "Astori Estructuras S.A., ha desarrollado en su 36 años de labor en el país, una amplia gama de elementos premoldeados de hormigón, para dar solución arquitectónica, técnica y económica a una gran variedad de proyectos. Entre las diez (10) mil obras en las que fueron usados elementos premoldeados de Astori se cuentan, industrias, supermercados, comercios, clubes,  estacionamientos, terminales de ómnibus, estaciones de servicio, oficinas, capillas, tribunas de estadios, hangares, pabellones para exposiciones, silos, escuelas, etc. ";
+	var webpage		= "www.astori.com.ar";
+	var name		=  "Astori Estructuras S.A.";
+	var slogan		=  "Construimos. Siempre";
+	var title 		=  "ASTORI ESTRUCTURAS S.A.";
+	var description =  "<iframe src='descripcion.html' scrolling='yes' frameborder='0' width='100%' height='400px'></iframe>";
 
 	$('#brandWebpage').html(webpage);
 	$('#brandWebpage').attr("href", "http://" + webpage);	
