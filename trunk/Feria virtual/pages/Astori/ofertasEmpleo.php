@@ -18,16 +18,44 @@
 	                <table id="offerTable">
 				        <thead>
 					        <tr>
-						        <th>Puesto</th><th>Descripcion</th><th>Fecha de Publicacion</th>
+						        <th>Puesto			</th>
+						        <th>Descripcion		</th>
+						        <th>Fecha de Cierre	</th>
+						        <th>Postularse		</th>
 					        </tr>
 				        </thead>
 				        <tbody>
 	                        <tr>
-						        <td> <h5> <a onclick="myFunction()"> Pasante de Envasado </a></h5></td>
-						        <td><h5 style="text-align: left">Nuestra busqueda esta orientada a estudiantes avanzados <br> de Ingenieria Quimica,
-	                            <br>Ingenieria electromecanica, Ingenieria Mecanica, Ingenieria<br> Electronica o afines para desarrollarse en nuestra Planta<br> Mendoza. Los...</h5> </td>
-						        <td><h5>25-Sep-2013</h5> </td>
+						        <td class="cellPosition">
+						        	<a onclick="myFunction()"> Pasante de Envasado </a>
+						        </td>
+						        <td class="cellDescription">
+						        		Nuestra busqueda esta orientada a estudiantes avanzados  de Ingenieria Quimica,
+	                            		Ingenieria electromecanica, Ingenieria Mecanica, Ingenieria Electronica o afines para desarrollarse en nuestra Planta Mendoza. Los..
+	                        	</td>
+						        <td>
+						        	25-Sep-2013
+						        </td>
+						        <td>
+						        	<button class="button">Post&uacutelese</button>						        	
+						        </td>	
 					        </tr>
+	                        <tr>
+						        <td class="cellPosition">
+						        	<a onclick="myFunction()"> Pasante de Envasado </a>
+						        </td>
+						        <td class="cellDescription">
+						        		Nuestra busqueda esta orientada a estudiantes avanzados  de Ingenieria Quimica,
+	                            		Ingenieria electromecanica, Ingenieria Mecanica, Ingenieria Electronica o afines para desarrollarse en nuestra Planta Mendoza. Los..
+	                        	</td>
+						        <td>
+						        	25-Sep-2013
+						        </td>
+						        <td>
+						        	<button class="button">Post&uacutelese</button>
+						        </td>					        
+					        </tr>
+
 				        </tbody>
 			        </table>
 
