@@ -28,6 +28,7 @@ Project:	Feria Virtual
 
 #offerTable td
 {
+	text-align:		center;
 	font-size: 			1.1vw;
 	background:			-webkit-linear-gradient(#E5E5E5, #FAFAFA); 	/* For Safari 5.1 to 6.0 */
 	background:			-o-linear-gradient(#E5E5E5, #FAFAFA); 		/* For Opera 11.1 to 12.0 */
@@ -45,12 +46,15 @@ Project:	Feria Virtual
 
 .cellPosition
 {
-	text-align: 		center;
 	font-weight: 		bold;
 }
 
 .cellDescription
 {
-	text-align: 		left;
-	width:				50%;
+	width:			50%;
+}
+
+#offerTable td:nth-child(2)
+{
+	text-align:		left;
 }
