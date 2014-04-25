@@ -51,7 +51,7 @@ body
 	overflow: 				auto;
 }
 
-a
+a:link
 {
 	text-decoration:		none;
 }
