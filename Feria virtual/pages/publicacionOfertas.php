@@ -4,7 +4,8 @@
     <title>
       Publicacion de Ofertas Laborales
     </title>
-
+    <?php header("Access-Control-Allow-Origin: *");?>
+    
     <META   http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link   rel="stylesheet"    type="text/css"   href="../css/styles.css"              />
 
@@ -13,8 +14,14 @@
     <meta property="og:image" content="http://www.encontramas.com.ar/virtual/features/images/encontramas_facebook_foto.jpg" />
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script type="text/javascript" src="../js/publishOffers.js"></script>
-   
+    <script type="text/javascript" src="../js/publicacionOfertas.js"></script>
+    <?php session_start(); ?>
+  
+    <?php if (isset($_SESSION['company_name'])) { ?>
+  <p>Welcome back, <?= $_SESSION['company_name'];?>!</p>
+  <?php } else { header('Location: http://www.encontramas.com.ar/virtual/pages/companyLogin.php'); ?>
+  
+    <?php } ?>
   </head>
 
   <body>
@@ -44,37 +51,8 @@
           </div>
 
           <div style="clear: both"></div>
-
-
-          <div id="autenticateCompany" style="width: 50%; margin: 0 auto">
-            <div id="ID_div">
-              <span class="leftSide">
-                <strong>Empresa</strong>:   
-                <span class="red">*</span>
-              </span>
-              <input type="text" id="identification" name="identification" class="rightSide">
-              <br><br>
-            </div>  
-  
-            <div id="password_div">
-               <span class="leftSide">
-                 <strong>Contraseña</strong>:          
-                 <span class="red">*</span>
-               </span> 
-               <input type="password" id="contraseña" name="contraseña" class="rightSide">
-               <br><br>
-            </div>
-  
-            <div id="olvido_contraseña">
-              <a  href="../pages/forgotPassword.html" style="font-size:80%; text-decoration:underline;">Olvide mi contraseña</a><br><br>
-            </div>
-        
-            <div id="buttons" style="text-align: center">
-              <input type="button" id="create_button" value="Ingresar" class="button" onclick="checkCompany()" style="margin-left: 3%"><br><br>
-            </div>
-          </div>
-          
-          <form id="publishOffer" style="display: none" name="publishOffer" onsubmit="return sendData()">
+           
+          <form id="publishOffer" name="publishOffer" onsubmit="return sendData()">
 
             <!-- PUESTO --> 
             <div class="block">

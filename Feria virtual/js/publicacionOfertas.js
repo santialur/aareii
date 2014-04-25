@@ -163,7 +163,7 @@ function highlightCheckboxes(flag)
 }
 
 function sendData(){
-
+   
    var checkedAtLeastOne = false;
    
    $('input[type="checkbox"]').each(function()
@@ -188,23 +188,4 @@ function sendData(){
    alert(careerSelected);
    
    return false;
-}
-
-function checkCompany(){
-
-   $.ajax({ url: '../js/loginCompany.php',
-            data: {action:                 "checkCompany",
-                   company:                document.getElementById("identification").value,
-                   password:               document.getElementById("contraseña").value,
-                 },
-            type: 'POST',
-            success: function(output){
-                if(output == "Compania no registrada"){
-                  alert(output);
-                  return;
-                }else{
-                  alert(output);
-                }
-            }
-          });
 }
