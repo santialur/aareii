@@ -17,9 +17,9 @@
                 <div align="center" style="position: relative;">
                     <img src="../../features/images/stand-red.jpg">
                     
-                    <img id="standFiat" src="images/s2front_fc.png">
+                    <img id="standAstori" src="images/s2front_fc.png">
 
-                    <a href="http://www.fiat.com.ar/" target="_blank"><img id="maletinFiat" src="../../features/images/maletin-green.png"></a>
+                    <a href="" target="_blank"><img id="maletinAstori" src="../../features/images/maletin-red.png"></a>
                 </div>
 
     		</div>
