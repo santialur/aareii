@@ -1,0 +1,21 @@
+/*------------------------------------------------------------------
+PUBLICACIONOFERTAS.CSS
+
+Publicacion Ofertas Stylesheet
+Project:	Feria Virtual
+-------------------------------------------------------------------*/
+
+@import url("tables.css");
+
+textarea
+{
+	box-shadow: 		2px 2px 5px #AAAAAA;	
+}
+
+.block
+{
+	margin:				3% 0%;
+}
+
+
+
