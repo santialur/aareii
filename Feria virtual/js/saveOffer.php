@@ -1,9 +1,8 @@
 <?php
 
-	$companyId = $_POST['companyId'];
+	$companyId = $_POST['companyid'];
 	$jobTitle = $_POST['jobTitle'];
 	$jobDescription = $_POST['jobDescription'];
-	$jobDatePublished;
 	$jobMinimumStudies = $_POST['jobMinimumStudies'];
 	$jobStudiesAreas = $_POST['jobStudiesAreas'];
 	$jobLanguages = $_POST['jobLanguages'];
@@ -12,16 +11,16 @@
 	$jobContractType = $_POST['jobContractType'];
 	$jobJourney = $_POST['jobJourney'];
 
-	$con = mysql_connect('localhost','root','');
+	$con = mysql_connect('localhost','root','C4ch0bs4s3124');
 	mysql_select_db('encontramas_test',$con);
 	mysql_query("SET NAMES 'utf8'", $con);
 	if (!$con)
 	  {
 	  die('Could not connect: ' . mysql_error($con));
 	  }
-	$sql = "INSERT INTO job_offer (companyId, jobTitle, jobDescription, jobDatePublished, jobMinimumStudies, jobStudiesAreas, jobLanguages, jobConsiderations, jobDateClose, jobContractType, jobJourney)
-		    			VALUES ($companyId, '$jobTitle' ,'$jobDescription', '$jobDatePublished','$jobMinimumStudies','$jobStudiesAreas', '$jobLanguages','$jobConsiderations','$jobDateClose','$jobContractType','$jobJourney') ";
-    $result = mysql_query($sql, $con);
-
-    mysql_close($con);
+	$sql = "INSERT INTO job_offer (companyid, jobTitle, jobDescription, jobDatePublished, jobMinimumStudies, jobStudiesAreas, jobLanguages, jobConsiderations, jobDateClose, enabled, jobContractType, jobJourney)
+		    			VALUES ($companyId, '$jobTitle' ,'$jobDescription', NOW(),'$jobMinimumStudies','$jobStudiesAreas', '$jobLanguages','$jobConsiderations','$jobDateClose', 1 ,'$jobContractType','$jobJourney') ";
+    	$result = mysql_query($sql, $con);
+    	
+    	mysql_close($con);
 ?>

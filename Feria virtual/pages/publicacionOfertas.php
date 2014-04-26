@@ -8,7 +8,8 @@
     
     <META   http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link   rel="stylesheet"    type="text/css"   href="../css/styles.css"              />
-
+    <link   rel="stylesheet"  href="../css/ofertasEmpleo.css" />
+      
     <meta property="og:title" content="Feria de empresas- Encontra+ 2014" />
     <meta property="og:description" content="Publicacion de Ofertas Laborales" />
     <meta property="og:image" content="http://www.encontramas.com.ar/virtual/features/images/encontramas_facebook_foto.jpg" />
@@ -22,23 +23,35 @@
   <?php } else { header('Location: http://www.encontramas.com.ar/virtual/pages/companyLogin.php'); ?>
   
     <?php } ?>
+   
+    <script type="text/javascript">
+      function getSession(){
+    var x = <?php echo json_encode($_SESSION['company_id']) ?>;
+    return x;
+  }
+    </script>
   </head>
 
   <body>
       <div id="nav">
             <ul>  
               <li class="opensans"><a href="http://www.encontramas.com.ar/">Encontra +</a></li>
-              <li class="opensans"><a href="inscripcion.html">Inscribirse</a></li>
+              <li class="opensans"><a href="publicacionOfertas.php">Ofertas laborales</a></li>
+              <!--<li class="opensans"><a href="candidatos.html">Candidatos</a></li>
+              <li class="opensans"><a href="stand.php">Stand</a></li>-->
             </ul>
       </div>
-      <br>
-      <br>
       
       <div class="wrapperSmall">
         <div id="content" class="box">
     
           <!-- HEADER --> 
           <div class="leftSide">
+            <h3>
+              <span class="opensans textShadow"> 
+                <label id="companyName"><?php echo $_SESSION['company_name'] ?></label>  
+              </span>
+            </h3>
             <h3>
               <span class="opensans textShadow"> 
                 Creaci&oacuten de ofertas laborales   
@@ -49,10 +62,59 @@
           <div class="rightSide">
             <img src="../features/images/AAREII-logo.png" width="65" height="100">
           </div>
-
+    
           <div style="clear: both"></div>
-           
-          <form id="publishOffer" name="publishOffer" onsubmit="return sendData()">
+          <div >
+            <input type="submit" value="Ofertas publicadas" class="button" onclick="showOffers()">
+            <span width="5%"></span>
+            <input type="submit" value="Publicar nueva oferta" class="button" onclick="showCreateOffer()">
+          </div>
+          </br>
+          <hr>
+      <table id="offerTable">
+    <thead>
+            <tr>
+              <th>Puesto      </th>
+              <th>Descripcion   </th>
+              <th>Fecha de Cierre </th>
+              <th>Postularse    </th>
+      </tr>
+    </thead>
+          <tbody>
+                        <tr>
+              <td class="cellPosition">
+                <a> Pasante de Envasado </a>
+              </td>
+              <td class="cellDescription">
+                Nuestra busqueda esta orientada a estudiantes avanzados  de Ingenieria Quimica,
+                                Ingenieria electromecanica, Ingenieria Mecanica, Ingenieria Electronica o afines para desarrollarse en nuestra Planta Mendoza. Los..
+                          </td>
+              <td>
+                25-Sep-2013
+              </td>
+              <td>
+                                    
+              </td> 
+            </tr>
+                        <tr>
+              <td class="cellPosition">
+                <a > Pasante de Envasado </a>
+              </td>
+              <td class="cellDescription">
+                Nuestra busqueda esta orientada a estudiantes avanzados  de Ingenieria Quimica,
+                                Ingenieria electromecanica, Ingenieria Mecanica, Ingenieria Electronica o afines para desarrollarse en nuestra Planta Mendoza. Los..
+                          </td>
+              <td>
+                25-Sep-2013
+              </td>
+        <td>
+               
+        </td>                 
+      </tr>
+
+    </tbody>
+    </table>
+          <form id="publishOffer" style="display: none" name="publishOffer" onsubmit="return sendData()">
 
             <!-- PUESTO --> 
             <div class="block">
@@ -106,10 +168,13 @@
                     Estudios Minimos
                   </th>
                   <td>
-                    <input type="radio" name="estudios" value="gradoIniciado" required/>   Universitario Iniciado  <br>
-                    <input type="radio" name="estudios" value="gradoAvanzado" required/>   Universitario Avanzado  <br>                
-                    <input type="radio" name="estudios" value="posgradIniciado" required/> Posgrado Iniciado       <br>
-                    <input type="radio" name="estudios" value="posgradoAvanzado" required/>Posgrado Avanzado 
+                    <input type="radio" name="estudios" value="Grado iniciado" required/>     Universitario Iniciado  <br>
+                    <input type="radio" name="estudios" value="Grado avanzado" required/>     Universitario avanzado  <br>  
+                    <input type="radio" name="estudios" value="Grado terminado" required/>    Universitario terminado  <br>             
+                    <input type="radio" name="estudios" value="Posgrado iniciado" required/>  Posgrado iniciado       <br>
+                    <input type="radio" name="estudios" value="Posgrado avanzado" required/>  Posgrado avanzado        <br>
+                    <input type="radio" name="estudios" value="Posgrado terminado" required/> Posgrado terminado        <br>
+                    
                   </td>
                 </tr>
                 <tr class="alt">
@@ -218,8 +283,8 @@
                     Tipo de Contrato
                   </th>
                   <td>
-                    <input type="radio" name="contrato" value="contratoEfectivo"/>  Efectivo  <br>
-                    <input type="radio" name="contrato" value="contratoPasante"/>   Pasante   <br> 
+                    <input type="radio" name="contrato" value="Efectivo"/>  Efectivo  <br>
+                    <input type="radio" name="contrato" value="Pasantia"/>   Pasante   <br> 
                   </td>
                 </tr>
                 <tr class="alt">
@@ -227,8 +292,8 @@
                     Jornada Laboral
                   </th>
                   <td>
-                    <input type="radio" name="jornada" value="jornadaFull"/>   Full Time  <br>
-                    <input type="radio" name="jornada" value="jornadaPart"/>   Part Time  <br>   
+                    <input type="radio" name="jornada" value="Full time"/>   Full Time  <br>
+                    <input type="radio" name="jornada" value="Part time"/>   Part Time  <br>   
                   </td>
                 </tr>
               </table>

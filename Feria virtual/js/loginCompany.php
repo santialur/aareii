@@ -47,6 +47,7 @@
 			
 			session_start();
   			$_SESSION['company_name'] = $company_name;
+  			$_SESSION['company_id'] = $id;
   			echo "Compania registrada";
   			//header("Location: http://www.encontramas.com.ar/virtual/pages/publicacionOfertas.php"); 
   			//exit;

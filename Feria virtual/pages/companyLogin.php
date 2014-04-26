@@ -21,7 +21,6 @@
       <div id="nav">
             <ul>  
               <li class="opensans"><a href="http://www.encontramas.com.ar/">Encontra +</a></li>
-              <li class="opensans"><a href="inscripcion.html">Inscribirse</a></li>
             </ul>
       </div>
       <br>
@@ -66,7 +65,7 @@
             </div>
   
             <div id="olvido_contraseña">
-              <a  href="../pages/forgotPassword.html" style="font-size:80%; text-decoration:underline;">Olvide mi contraseña</a><br><br>
+              <a  href="" style="font-size:80%; text-decoration:underline;">Cambiar contraseña</a><br><br>
             </div>
         
             <div id="buttons" style="text-align: center">
