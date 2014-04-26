@@ -77,7 +77,6 @@ function fillDegrees(target)
     '<input type=checkbox name="carrera" onclick="highlightCheckboxes(false);" value="Diseño industrial"  />             Diseño industrial                       <br>'+
     '<input type=checkbox name="carrera" onclick="highlightCheckboxes(false);" value="Diseño multimedial"  />            Diseño multimedial                      <br>'+
     '<input type=checkbox name="carrera" onclick="highlightCheckboxes(false);" value="Diseño web"  />                    Diseño Web                              <br>'+
-    '<input type=checkbox name="carrera" onclick="highlightCheckboxes(false);" value="Actuario"  />                      Actuario                                <br>'+
     '<input type=checkbox name="carrera" onclick="highlightCheckboxes(false);" value="Adm. Agropecuaria"  />             Adm. Agropecuaria                       <br>'+
     '<input type=checkbox name="carrera" onclick="highlightCheckboxes(false);" value="Adm. de empresas"  />              Adm. de Empresas                        <br>'+
     '<input type=checkbox name="carrera" onclick="highlightCheckboxes(false);" value="Adm. y gestion publica"  />        Adm. y Gestión Pública                  <br>'+
@@ -134,7 +133,7 @@ function fillDegrees(target)
     '<input type=checkbox name="carrera" onclick="highlightCheckboxes(false);" value="Tecn. optico"  />                  Tecn. Óptico                            <br>'+
     '<input type=checkbox name="carrera" onclick="highlightCheckboxes(false);" value="Tecn. telecomunicaciones"  />      Tecn. Telecomunicaciones                <br>'+
     '<input type=checkbox name="carrera" onclick="highlightCheckboxes(false);" value="Lic. Organización Industrial"  />  Lic. en Organización Industrial         <br>'+
-    '<input type=checkbox name="carrera" onclick="highlightCheckboxes(false);" value="analisis de sistemas"  />          Análisis de Sistemas                    <br>'+
+    '<input type=checkbox name="carrera" onclick="highlightCheckboxes(false);" value="Analisis de sistemas"  />          Análisis de Sistemas                    <br>'+
     '<input type=checkbox name="carrera" onclick="highlightCheckboxes(false);" value="Computacion"  />                   Computación                             <br>'+
     '<input type=checkbox name="carrera" onclick="highlightCheckboxes(false);" value="Ing. informatica"  />              Ing. Informática  / sistemas            <br>'+
     '<input type=checkbox name="carrera" onclick="highlightCheckboxes(false);" value="Programacion"  />                  Programación                            <br>'+
@@ -163,7 +162,7 @@ function highlightCheckboxes(flag)
 }
 
 function sendData(){
-   
+
    var checkedAtLeastOne = false;
    
    $('input[type="checkbox"]').each(function()
@@ -184,8 +183,57 @@ function sendData(){
    $("input:checkbox[name=carrera]:checked").each(function() 
    {
        careerSelected += $(this).val();
+       careerSelected += ", ";
    });
-   alert(careerSelected);
    
+   var languages = "";
+   if($('input[name="nivel_español"]:checked').val()!="Nada"){
+    languages += "Español: " + $('input[name="nivel_español"]:checked').val() + ", ";
+   }
+   if($('input[name="nivel_ingles"]:checked').val()!="Nada"){
+    languages += "Ingles: " + $('input[name="nivel_ingles"]:checked').val() + ", ";
+   }
+   if($('input[name="nivel_portugues"]:checked').val()!="Nada"){
+    languages += "Portugues: " + $('input[name="nivel_portugues"]:checked').val()+ ", ";
+   }
+   if($('input[name="nivel_aleman"]:checked').val()!="Nada"){
+    languages += "Aleman: " + $('input[name="nivel_aleman"]:checked').val()+ ", ";
+   }
+   if($('input[name="nivel_italiano"]:checked').val()!="Nada"){
+    languages += "Italiano: " + $('input[name="nivel_italiano"]:checked').val()+ ", ";
+   }
+   if($('input[name="nivel_frances"]:checked').val()!="Nada"){
+    languages += "Frances: " + $('input[name="nivel_frances"]:checked').val()+ ", ";
+   }
+   languages = languages.substring(0, languages.length - 2);
+   careerSelected = careerSelected.substring(0, careerSelected.length - 2);
+
+   var company_id = getSession();
+   $.ajax({ url: '../js/saveOffer.php',
+            data: {companyid:        company_id,
+                 jobTitle:       document.getElementById("info_puesto").value,
+                 jobDescription:     document.getElementById("descripcion_puesto").value,
+                 jobStudiesAreas:      careerSelected,
+                 jobMinimumStudies:      $("input[type='radio'][name='estudios']:checked").val(),
+                 jobLanguages:     languages,
+                 jobConsiderations:      document.getElementById("requisitos_puesto").value,
+                 jobDateClose:       document.getElementById("fecha_cierre_anio").value + "-" + document.getElementById("fecha_cierre_mes").value + "-" + document.getElementById("fecha_cierre_dia").value,
+                 jobContractType:      $("input[type='radio'][name='contrato']:checked").val(),
+                 jobJourney:         $("input[type='radio'][name='jornada']:checked").val(),
+                 },
+            type: 'POST',
+            success: function(output){
+    
+            }
+           });
    return false;
+}
+
+function showOffers(){
+  document.getElementById("offerTable").style.display = 'inline-table';
+  document.getElementById("publishOffer").style.display = 'none';
+}
+function showCreateOffer(){
+  document.getElementById("offerTable").style.display = 'none';
+  document.getElementById("publishOffer").style.display = 'inline';
 }
