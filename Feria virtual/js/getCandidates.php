@@ -1,0 +1,18 @@
+<?php
+	
+	header('Content-Type: text/html; charset=UTF-8'); 
+	$states = $_POST['states'];
+	$password = $_POST['password'];
+
+
+
+	$con = mysql_connect('localhost','root','');
+	mysql_select_db('encontramas_test',$con);
+	//mysql_query("SET NAMES 'utf8'");
+	mysql_query('SET CHARACTER SET utf8');
+	if (!$con)
+		  {
+		  die('Could not connect: ' . mysql_error($con));
+		  }
+
+?>
