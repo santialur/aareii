@@ -1,0 +1,113 @@
+/*------------------------------------------------------------------
+TABLES.CSS
+
+Tables Stylesheet
+Project:	Feria Virtual
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+TABLE OUTPUT 
+-------------------------------------------------------------------*/
+#tableOutput , #tableOutput td, #tableOutput th
+{
+	border-collapse: 	collapse;
+	border:				0.16em solid White;
+	padding: 			2%;
+}
+
+#tableOutput 
+{
+	width:				100%;
+	box-shadow: 		1px 2px 4px #888888;	
+	margin:				2% auto;
+}
+
+#tableOutput th
+{
+	font-size: 			1.25vw;
+	background-color:	#CC6666;
+	color:				Black;
+}
+
+#tableOutput td
+{
+	text-align:			center;
+	font-size: 			1.1vw;
+	background:			-webkit-linear-gradient(#E5E5E5, #FAFAFA); 	/* For Safari 5.1 to 6.0 */
+	background:			-o-linear-gradient(#E5E5E5, #FAFAFA); 		/* For Opera 11.1 to 12.0 */
+	background:			-moz-linear-gradient(#E5E5E5, #FAFAFA); 	/* For Firefox 3.6 to 15 */
+	background:			linear-gradient(#E5E5E5, #FAFAFA); 			/* Standard syntax */
+}
+
+#tableOutput td:hover
+{
+	background:			-webkit-linear-gradient(#D5D5D5, #F5F5F5); 	/* For Safari 5.1 to 6.0 */
+	background:			-o-linear-gradient(#D5D5D5, #F5F5F5); 		/* For Opera 11.1 to 12.0 */
+	background:			-moz-linear-gradient(#D5D5D5, #F5F5F5); 	/* For Firefox 3.6 to 15 */
+	background:			linear-gradient(#D5D5D5, #F5F5F5); 			/* Standard syntax */
+}
+
+#tableOutput td:nth-child(2)
+{
+	text-align:			left;
+}
+
+.cellPosition
+{
+	font-weight: 		bold;
+}
+
+.cellDescription
+{
+	width:				50%;
+}
+
+
+/*------------------------------------------------------------------
+TABLE INPUT 
+-------------------------------------------------------------------*/
+
+.tableInput
+{
+	border-collapse:	collapse;
+	width:				80%;
+	font-size: 			90%;
+	box-shadow: 		2px 2px 5px #AAAAAA;	
+}
+
+.tableInput, .tableInput td, .tableInput th
+{
+	border:				1px solid black;
+}
+
+.tableInput td, .tableInput th
+{
+	padding:			2%;
+}
+
+.tableInput tr.alt td 
+{
+	color:				#000000;
+	background-color:	#F5F5F5;
+}
+
+.tableInput th
+{
+	background:			-webkit-linear-gradient(#E5E5E5, #FAFAFA); 	/* For Safari 5.1 to 6.0 */
+	background:			-o-linear-gradient(#E5E5E5, #FAFAFA); 		/* For Opera 11.1 to 12.0 */
+	background:			-moz-linear-gradient(#E5E5E5, #FAFAFA); 	/* For Firefox 3.6 to 15 */
+	background:			linear-gradient(#E5E5E5, #FAFAFA); 			/* Standard syntax */
+	color:				Black;
+}
+
+.tableLanguages, .tableLanguages td, .tableLanguages th
+{
+	border:			none;
+}
+
+.tableInput .tableLanguages th
+{
+	background:		none;
+	background-color:	white !important;
+	color:			black;	
+}
