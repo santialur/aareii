@@ -20,7 +20,7 @@
                     <img id="standFiat" src="images/s2front_fc.png">
 
                     <a href="http://www.fiat.com.ar/" target="_blank"><img id="maletinGreen" src="../../features/images/maletin-green.png"></a>
-                    <a href=""><img id="agendaGreen" src="../../features/images/agenda-green.png"></a>
+                    <a href="agenda.php"><img id="agendaGreen" src="../../features/images/agenda-green.png"></a>
 
                 </div>
 
