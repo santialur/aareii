@@ -53,7 +53,7 @@
             </h3>
             <h3>
               <span class="opensans textShadow"> 
-                Creaci&oacuten de ofertas laborales   
+                Creaci&oacuten de eventos
               </span>
             </h3>
           </div>
@@ -66,21 +66,20 @@
 
           <!-- SELECTION MENU --> 
           <div >
-            <input type="submit" value="Ofertas publicadas" class="button" onclick="showOffers()">
+            <input type="submit" value="Eventos publicados" class="button" onclick="">
             <span width="5%"></span>
-            <input type="submit" value="Publicar nueva oferta" class="button" onclick="showCreateOffer()">
+            <input type="submit" value="Publicar nuevo evento" class="button" onclick="">
           </div>
           </br>
           <hr>
 
           <!-- TABLE WITH OFFERS --> 
-          <table id="tableOffers">
+          <table id="tableEvents">
           <thead>
             <tr>
-              <th>Puesto          </th>
-              <th>Descripcion     </th>
-              <th>Fecha de Cierre </th>
-              <th>Postularse      </th>
+              <th>T&iacutetulo      </th>
+              <th>Fecha de Evento   </th>
+              <th>Descripci&oacuten </th>
             </tr>
           </thead>
             <tbody>
@@ -198,66 +197,6 @@
                     Idiomas
                   </th>
                   <td>
-                    <table class="tableLanguages">
-                        <tr>
-                          <th></th><th>Nativo</th><th>Bilingüe</th><th>Avanzado</th>
-                          <th>Intermedio</th><th>Basico</th><th>Nada</th>
-                        </tr>
-                        <tr>
-                          <td> Español</td>
-                          <td><div align="center"><input type="radio" name="nivel_español" value="Nativo">         </div></td>
-                          <td><div align="center"><input type="radio" name="nivel_español" value="Bilingue">       </div></td>
-                          <td><div align="center"><input type="radio" name="nivel_español" value="lAvanzado">       </div></td>
-                          <td><div align="center"><input type="radio" name="nivel_español" value="Intermedio">     </div></td>
-                          <td><div align="center"><input type="radio" name="nivel_español" value="Basico">         </div></td>
-                          <td><div align="center"><input type="radio" name="nivel_español" value="Nada">           </div></td>
-                        </tr>
-                        <tr>
-                          <td> Ingles</td>
-                          <td><div align="center"><input type="radio" name="nivel_ingles" value="Nativo">           </div></td>
-                          <td><div align="center"><input type="radio" name="nivel_ingles" value="Bilingue">         </div></td>
-                          <td><div align="center"><input type="radio" name="nivel_ingles" value="Avanzado">         </div></td>
-                          <td><div align="center"><input type="radio" name="nivel_ingles" value="Intermedio">       </div></td>
-                          <td><div align="center"><input type="radio" name="nivel_ingles" value="Basico">           </div></td>
-                          <td><div align="center"><input type="radio" name="nivel_ingles" value="Nada">             </div></td>
-                        </tr>
-                        <tr>
-                          <td> Portugues</td>
-                          <td><div align="center"><input type="radio" name="nivel_portugues" value="Nativo">     </div></td>
-                          <td><div align="center"><input type="radio" name="nivel_portugues" value="Bilingue">   </div></td>
-                          <td><div align="center"><input type="radio" name="nivel_portugues" value="Avanzado">   </div></td>
-                          <td><div align="center"><input type="radio" name="nivel_portugues" value="Intermedio"> </div></td>
-                          <td><div align="center"><input type="radio" name="nivel_portugues" value="Basico">     </div></td>
-                          <td><div align="center"><input type="radio" name="nivel_portugues" value="Nada">       </div></td>
-                        </tr>
-                        <tr>
-                          <td> Aleman</td>
-                          <td><div align="center"><input type="radio" name="nivel_aleman" value="Nativo">           </div></td>
-                          <td><div align="center"><input type="radio" name="nivel_aleman" value="Bilingue">         </div></td>
-                          <td><div align="center"><input type="radio" name="nivel_aleman" value="Avanzado">         </div></td>
-                          <td><div align="center"><input type="radio" name="nivel_aleman" value="Intermedio">       </div></td>
-                          <td><div align="center"><input type="radio" name="nivel_aleman" value="Basico">           </div></td>
-                          <td><div align="center"><input type="radio" name="nivel_aleman" value="Nada">             </div></td>
-                        </tr>
-                        <tr>
-                          <td> Italiano</td>
-                          <td><div align="center"><input type="radio" name="nivel_italiano" value="Nativo">       </div></td>
-                          <td><div align="center"><input type="radio" name="nivel_italiano" value="Bilingue">     </div></td>
-                          <td><div align="center"><input type="radio" name="nivel_italiano" value="Avanzado">     </div></td>
-                          <td><div align="center"><input type="radio" name="nivel_italiano" value="Intermedio">   </div></td>
-                          <td><div align="center"><input type="radio" name="nivel_italiano" value="Basico">       </div></td>
-                          <td><div align="center"><input type="radio" name="nivel_italiano" value="Nada">         </div></td>
-                        </tr>
-                        <tr>
-                          <td> Frances</td>
-                          <td><div align="center"><input type="radio" name="nivel_frances" value="Nativo">       </div></td>
-                          <td><div align="center"><input type="radio" name="nivel_frances" value="Bilingue">     </div></td>
-                          <td><div align="center"><input type="radio" name="nivel_frances" value="Avanzado">     </div></td>
-                          <td><div align="center"><input type="radio" name="nivel_frances" value="Intermedio">   </div></td>
-                          <td><div align="center"><input type="radio" name="nivel_frances" value="Basico">       </div></td>
-                          <td><div align="center"><input type="radio" name="nivel_frances" value="Nada">         </div></td>
-                        </tr>
-                    </table> 
                   </td>
                 </tr>
                 <tr class="alt">
@@ -271,37 +210,6 @@
               </table>
             </div>
 
-            
-            <!-- CONTRATO --> 
-            <div class="block">
-              <h3 class="opensans textShadow">
-                Contrato
-              </h3>
-              <br>
-
-              <table class="tablePublish">
-                <tr>
-                  <th>
-                    Tipo de Contrato
-                  </th>
-                  <td>
-                    <input type="radio" name="contrato" value="Efectivo"/>  Efectivo  <br>
-                    <input type="radio" name="contrato" value="Pasantia"/>   Pasante   <br> 
-                  </td>
-                </tr>
-                <tr class="alt">
-                  <th>
-                    Jornada Laboral
-                  </th>
-                  <td>
-                    <input type="radio" name="jornada" value="Full time"/>   Full Time  <br>
-                    <input type="radio" name="jornada" value="Part time"/>   Part Time  <br>   
-                  </td>
-                </tr>
-              </table>
-            </div>
-
-            <br>
             <input type="submit" value="Publicar" class="button"> 
           </form><!-- END - FORM FOR PUBLISHING --> 
 

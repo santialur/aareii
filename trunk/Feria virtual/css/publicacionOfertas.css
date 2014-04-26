@@ -5,42 +5,11 @@ Publicacion Ofertas Stylesheet
 Project:	Feria Virtual
 -------------------------------------------------------------------*/
 
+@import url("tables.css");
+
 textarea
 {
 	box-shadow: 		2px 2px 5px #AAAAAA;	
-}
-
-.tableOffers
-{
-	border-collapse:	collapse;
-	width:				80%;
-	font-size: 			90%;
-	box-shadow: 		2px 2px 5px #AAAAAA;	
-}
-
-.tableOffers, .tableOffers td, .tableOffers th
-{
-	border:				1px solid black;
-}
-
-.tableOffers td, .tableOffers th
-{
-	padding:			1%;
-}
-
-.tableOffers tr.alt td 
-{
-	color:				#000000;
-	background-color:	#F5F5F5;
-}
-
-.tableOffers th
-{
-	background:			-webkit-linear-gradient(#E5E5E5, #FAFAFA); 	/* For Safari 5.1 to 6.0 */
-	background:			-o-linear-gradient(#E5E5E5, #FAFAFA); 		/* For Opera 11.1 to 12.0 */
-	background:			-moz-linear-gradient(#E5E5E5, #FAFAFA); 	/* For Firefox 3.6 to 15 */
-	background:			linear-gradient(#E5E5E5, #FAFAFA); 			/* Standard syntax */
-	color:				Black;
 }
 
 .block
@@ -48,14 +17,5 @@ textarea
 	margin:				3% 0%;
 }
 
-#tableLanguages, #tableLanguages td, #tableLanguages th
-{
-	border:				none;
-	box-shadow: 		none;
-}
 
-#tableLanguages th
-{
-	background-color:	white;
-	color:				black;	
-}
+

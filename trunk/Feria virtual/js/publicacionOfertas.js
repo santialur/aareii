@@ -253,10 +253,10 @@ function sendData(){
 }
 
 function showOffers(){
-  document.getElementById("offerTable").style.display = 'inline-table';
+  document.getElementById("tableOffers").style.display = 'inline-table';
   document.getElementById("publishOffer").style.display = 'none';
 }
 function showCreateOffer(){
-  document.getElementById("offerTable").style.display = 'none';
+  document.getElementById("tableOffers").style.display = 'none';
   document.getElementById("publishOffer").style.display = 'inline';
 }
