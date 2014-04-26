@@ -19,8 +19,8 @@
     <?php session_start(); ?>
   
     <?php if (isset($_SESSION['company_name'])) { ?>
-  <p>Welcome back, <?= $_SESSION['company_name'];?>!</p>
-  <?php } else { header('Location: http://www.encontramas.com.ar/virtual/pages/companyLogin.php'); ?>
+    <p>Welcome back, <?= $_SESSION['company_name'];?>!</p>
+    <?php } else { header('Location: http://www.encontramas.com.ar/virtual/pages/companyLogin.php'); ?>
   
     <?php } ?>
    
