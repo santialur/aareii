@@ -17,9 +17,17 @@
 
 	while ($row = mysql_fetch_array($result, MYSQL_ASSOC))
 	{
-	    $row_array["title"] = utf8_encode($row["jobtitle"]);
-	    $row_array["description"] =  utf8_encode($row["jobdescription"]);
-	    $row_array["datepublished"] =  utf8_encode($row["jobdatepublished"]);
+	    $row_array["title"] = utf8_encode($row["jobTitle"]);
+	    $row_array["description"] =  utf8_encode($row["jobDescription"]);
+	    $row_array["datePublished"] =  utf8_encode($row["jobDatePublished"]);
+	    $row_array["minimumStudies"] =  utf8_encode($row["jobMinimumStudies"]);
+	    $row_array["studiesAreas"] =  utf8_encode($row["jobStudiesAreas"]);
+	    $row_array["languages"] =  utf8_encode($row["jobLanguages"]);
+	    $row_array["consideratios"] =  utf8_encode($row["jobConsiderations"]);
+	    $row_array["dateClose"] =  utf8_encode($row["jobDateClose"]);
+	    $row_array["enabled"] =  utf8_encode($row["enabled"]);
+	    $row_array["contractType"] =  utf8_encode($row["jobContractType"]);
+	    $row_array["shift"] =  utf8_encode($row["jobShift"]);
 	    array_push($desc,$row_array);
 	}
 
