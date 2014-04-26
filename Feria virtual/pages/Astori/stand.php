@@ -15,7 +15,7 @@
     		<div id="content">
 
                 <div align="center" style="position: relative;">
-                    <img src="../../features/images/stand-green.jpg">
+                    <img src="../../features/images/stand-red.jpg">
                     
                     <img id="standFiat" src="images/s2front_fc.png">
 
