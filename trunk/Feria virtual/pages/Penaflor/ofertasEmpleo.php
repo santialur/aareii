@@ -15,7 +15,7 @@
 
     		<div id="content" style="padding-bottom:22%">
     			<div style="margin: 0 auto; padding: 0.5% 4%">
-	                <table id="offerTable">
+	                <table id="tableOutput">
 				        <thead>
 					        <tr>
 						        <th>Puesto			</th>
