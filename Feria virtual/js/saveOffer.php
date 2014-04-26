@@ -9,7 +9,7 @@
 	$jobConsiderations = $_POST['jobConsiderations'];
 	$jobDateClose = $_POST['jobDateClose'];
 	$jobContractType = $_POST['jobContractType'];
-	$jobJourney = $_POST['jobJourney'];
+	$jobShift = $_POST['jobShift'];
 
 	$con = mysql_connect('localhost','root','C4ch0bs4s3124');
 	mysql_select_db('encontramas_test',$con);
@@ -18,9 +18,9 @@
 	  {
 	  die('Could not connect: ' . mysql_error($con));
 	  }
-	$sql = "INSERT INTO job_offer (companyid, jobTitle, jobDescription, jobDatePublished, jobMinimumStudies, jobStudiesAreas, jobLanguages, jobConsiderations, jobDateClose, enabled, jobContractType, jobJourney)
-		    			VALUES ($companyId, '$jobTitle' ,'$jobDescription', NOW(),'$jobMinimumStudies','$jobStudiesAreas', '$jobLanguages','$jobConsiderations','$jobDateClose', 1 ,'$jobContractType','$jobJourney') ";
+	$sql = "INSERT INTO job_offer (companyid, jobTitle, jobDescription, jobDatePublished, jobMinimumStudies, jobStudiesAreas, jobLanguages, jobConsiderations, jobDateClose, enabled, jobContractType, jobShift)
+		    			VALUES ($companyId, '$jobTitle' ,'$jobDescription', NOW(),'$jobMinimumStudies','$jobStudiesAreas', '$jobLanguages','$jobConsiderations','$jobDateClose', 1 ,'$jobContractType','$jobShift') ";
     	$result = mysql_query($sql, $con);
-    	
+    	echo "Exito";
     	mysql_close($con);
 ?>
