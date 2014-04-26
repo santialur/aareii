@@ -63,9 +63,9 @@ body{
 	height: 				100%;
 }
 
-#header{
-	min-height:				7em;
-	background-image:       url(../features/images/texture1.png);
+.header{
+	min-height:			7em;
+	background-image:       	url(../features/images/texture1.png);
 }
 
 .wrapperMedium{
@@ -88,54 +88,6 @@ body{
 	float: right;
 }
 
-.textBoxes
-{
-	border:					1px solid #CCCCCC;
-	padding:				20px
-}
-
-.footer
-{
-	background-image:       url(../features/images/texture2.png);
-	clear:					both;
-	color:					white;
-	font-size:				80%;
-	height:					4em;	
-	padding:				3em 0em; 
-	position: 				relative;
-	bottom:					0;
-	width:					100%;
- 	z-index: 				10
-}
-
-.button
-{
-	box-shadow: 			1px 1px 2px Black;
-	background:				-moz-linear-gradient(top, #B10B0B, #D00000);
-	background:				-webkit-linear-gradient(top, #B10B0B, #D00000);
-	border:					0px;
-	color:					White;
-	display:				inline-block;
-	font-size: 				100%;
-	height:					33px;
-	line-height:			33px;
-	padding: 				0 3% 3% 3%;
-	text-decoration:		none;
-	text-shadow:			1px 2px 0px #810E05;
-}
-	.button:hover
-	{
-		background:	    	-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #C62D1F), color-stop(1, #F24537) );
-		background:			-moz-linear-gradient( center top, #C62D1F 5%, #F24537 100% );
-		background-color:	#C62D1F;  
-	}
-	.button:active
-	{
-		position:			relative;
-		top: 				1px;
-	}
-
-
 #content{
 	width: 					80%; 
 	background-color: 		#FAFAFA; 
@@ -144,7 +96,7 @@ body{
 }
 
 #sideMenu{
-	background-color: 		#CCCCCC;
+	background-color: 			#CCCCCC;
 	width: 					20%; 
 	float: 					left;
 	min-height:				100%;
@@ -181,10 +133,10 @@ body{
 	transform:					scale(1.04, 1.04);
 
 	/*Transicion*/
-	-webkit-transition: 		all 0.3s ease-out;  	/* Chrome 1-25, Safari 3.2+ */
-    -moz-transition: 			all 0.3s ease-out;  	/* Firefox 4-15 */
+	-webkit-transition: 			all 0.3s ease-out;  	/* Chrome 1-25, Safari 3.2+ */
+   	-moz-transition: 			all 0.3s ease-out;  	/* Firefox 4-15 */
    	-o-transition: 				all 0.3s ease-out;  	/* Opera 10.50–12.00 */
-    transition: 				all 0.3s ease-out;  
+    	transition: 				all 0.3s ease-out;  
 }
 
 .headerLogo{
@@ -217,6 +169,27 @@ body{
 	width:					100%;
 	margin: 				0 auto;
 	box-shadow: 			0px 2px 3px #000000;
+}
+
+.textBoxes
+{
+	/*border:					1px solid #CCCCCC;*/
+	box-shadow:				0px 2px 3px #888888;
+	padding:				20px
+}
+
+.footer
+{
+	background-image:       url(../features/images/texture2.png);
+	clear:					both;
+	color:					white;
+	font-size:				1.1vw;
+	height:					4em;	
+	padding:				3em 0em; 
+	position: 				relative;
+	bottom:					0;
+	width:					100%;
+ 	z-index: 				10
 }
 
 #aareiiLogo{
@@ -260,7 +233,48 @@ FIAT
 
 	/*Transicion*/
 	-webkit-transition: 		all 0.3s ease-out;  	/* Chrome 1-25, Safari 3.2+ */
-    -moz-transition: 			all 0.3s ease-out;  	/* Firefox 4-15 */
+    	-moz-transition: 			all 0.3s ease-out;  	/* Firefox 4-15 */
    	-o-transition: 				all 0.3s ease-out;  	/* Opera 10.50–12.00 */
-    transition: 				all 0.3s ease-out;  	/* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+    	transition: 				all 0.3s ease-out;  	/* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
 }  
+
+
+/*------------------------------------------------------------------
+ASTORI
+-------------------------------------------------------------------*/
+
+#standAstori
+{
+		position: 			absolute;
+		left: 				34%;
+		top:				66.5%;
+		z-index: 			200;
+		width: 				23.8%;
+}
+
+#maletinAstori
+{
+	position: 				absolute;
+	left:					35.1%;
+	top:					70.4%;
+	z-index: 				200;
+	width:					6.1%;
+}
+
+#maletinAstori:hover
+{	
+	cursor: pointer; 
+	cursor: hand;
+
+	/*Escalar*/
+	-webkit-transform:			scale(1.3, 1.3);
+	-o-transform:				scale(1.3, 1.3);
+	-moz-transform:				scale(1.3, 1.3);
+	transform:					scale(1.3, 1.3);
+
+	/*Transicion*/
+	-webkit-transition: 		all 0.3s ease-out;  	/* Chrome 1-25, Safari 3.2+ */
+    	-moz-transition: 			all 0.3s ease-out;  	/* Firefox 4-15 */
+   	-o-transition: 				all 0.3s ease-out;  	/* Opera 10.50–12.00 */
+    	transition: 				all 0.3s ease-out;  	/* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+} 3
