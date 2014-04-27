@@ -116,7 +116,7 @@
                     T&iacutetulo del evento
                   </th>
                   <td>
-                    <input type="text" id="titulo_evento" name="descripcion_evento" placeholder="Titulo del evento.." maxlength="30">     
+                    <input type="text" id="titulo_evento" name="descripcion_evento" placeholder="Titulo del evento.." maxlength="30" required>     
                   </td>
                 </tr>
                 <tr class="alt">
@@ -124,14 +124,14 @@
                     Fecha de Evento
                   </th>
                   <td>
-                    <select id="fecha_evento_anio" name="fecha_evento_anio">
+                    <select id="fecha_evento_anio" name="fecha_evento_anio" required>
                       <script>
                           $('#fecha_evento_anio').append($('<option />').val(1).html("Año"));
                           fillYears($('select[name=fecha_evento_anio]'), 2014, 2013);
                       </script> 
                     </select>
-                    <select id="fecha_evento_mes" name="fecha_evento_mes"></select>
-                    <select id="fecha_evento_dia" name="fecha_evento_dia"></select>
+                    <select id="fecha_evento_mes" name="fecha_evento_mes" required></select>
+                    <select id="fecha_evento_dia" name="fecha_evento_dia" required></select>
                     
                     <script>
                       $(fillDate);
