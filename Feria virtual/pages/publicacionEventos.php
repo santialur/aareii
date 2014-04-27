@@ -33,14 +33,8 @@
   </head>
 
   <body>
-      <div id="nav">
-            <ul>  
-              <li class="opensans"><a href="http://www.encontramas.com.ar/">Encontra +</a></li>
-              <li class="opensans"><a href="publicacionOfertas.php">Ofertas laborales</a></li>
-              <!--<li class="opensans"><a href="candidatos.html">Candidatos</a></li>
-              <li class="opensans"><a href="stand.php">Stand</a></li>-->
-            </ul>
-      </div>
+      <!-- MENU --> 
+      <?php include '_administracionMenu.html'; ?>
       
       <div class="wrapperSmall">
         <div id="content" class="box">
