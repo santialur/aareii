@@ -1,20 +1,3 @@
-function fillMonths(target)
-{
-  $(target).html(''+
-    '<option value="1" selected="">  Enero       </option>'+
-    '<option value="2">              Febrero     </option>'+
-    '<option value="3">              Marzo       </option>'+
-    '<option value="4">              Abril       </option>'+
-    '<option value="5">              Mayo        </option>'+
-    '<option value="6">              Junio       </option>'+
-    '<option value="7">              Julio       </option>'+
-    '<option value="8">              Agosto      </option>'+
-    '<option value="9">              Septiembre  </option>'+
-    '<option value="10">             Octubre     </option>'+
-    '<option value="11">             Noviembre   </option>'+
-    '<option value="12">             Diciembre   </option>');
-}
-
 function fillYears(target, x, y)
 {
   var aux;
@@ -25,7 +8,7 @@ function fillYears(target, x, y)
   $(target).append(''+aux);
 }
 
-function fillBirthDate()
+function fillDate()
 {
   $('#fecha_cierre_mes').append($('<option />').val(0).html("Mes"));
   for (i = 1; i < 13; i++)

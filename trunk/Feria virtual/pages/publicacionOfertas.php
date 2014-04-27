@@ -74,7 +74,7 @@
           <hr>
 
           <!-- TABLE WITH OFFERS --> 
-          <table id="tableOffers">
+          <table id="tableOutput">
           <thead>
             <tr>
               <th>Puesto          </th>
@@ -85,7 +85,7 @@
           </thead>
             <tbody>
               <tr>
-                <td class="cellPosition">
+                <td class="cellTitle">
                   <a> Pasante de Envasado </a>
                 </td>
                 <td class="cellDescription">
@@ -156,7 +156,7 @@
               <select id="fecha_cierre_dia" name="fecha_cierre_dia"></select>
               
               <script>
-                $(fillBirthDate);
+                $(fillDate);
               </script>
             </div>
 
@@ -167,7 +167,7 @@
               </h3>
               <br>
 
-              <table class="tablePublish">
+              <table class="tableInput">
           
                 <tr>
                   <th>
@@ -279,7 +279,7 @@
               </h3>
               <br>
 
-              <table class="tablePublish">
+              <table class="tableInput">
                 <tr>
                   <th>
                     Tipo de Contrato
