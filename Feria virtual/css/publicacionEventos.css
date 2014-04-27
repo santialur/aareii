@@ -7,8 +7,9 @@ Project:	Feria Virtual
 
 @import url("tables.css");
 
-textarea
+textarea, input
 {
+	border:				solid 1px #AAAAAA ;
 	box-shadow: 		2px 2px 5px #AAAAAA;	
 }
 
