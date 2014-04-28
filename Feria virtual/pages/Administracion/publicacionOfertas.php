@@ -15,7 +15,7 @@
     <meta property="og:image" content="http://www.encontramas.com.ar/virtual/features/images/encontramas_facebook_foto.jpg" />
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script type="text/javascript" src="../../js/publicacionOfertas.js"></script>
+    <script type="text/javascript" src="../../logic/js/publicacionOfertas.js"></script>
     <?php session_start(); ?>
   
     <?php if (isset($_SESSION['company_name'])) { 
