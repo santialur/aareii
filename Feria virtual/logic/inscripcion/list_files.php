@@ -33,7 +33,7 @@ if($result) {
                 <tr>
                     <td>{$row['name']}</td>
                     <td>{$row['created']}</td>
-                    <td><a href='../js/get_file.php?id={$row['idcurriculum']}'>Download</a></td>
+                    <td><a href='../../logic/inscripcion/get_file.php?id={$row['idcurriculum']}'>Download</a></td>
                 </tr>";
         }
  
