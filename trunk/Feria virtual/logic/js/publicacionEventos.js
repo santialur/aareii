@@ -54,7 +54,7 @@ function sendData(){
   }
   var company_id = getSession();
   
-  $.ajax({ url: '../js/saveEvent.php',
+  $.ajax({ url: '../../logic/php/saveEvent.php',
       data: {companyid:     company_id,
         eventTitle:     document.getElementById("titulo_evento").value,
         eventDate:    document.getElementById("fecha_evento_anio").value + "-" + document.getElementById("fecha_evento_mes").value + "-" + document.getElementById("fecha_evento_dia").value,

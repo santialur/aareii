@@ -3,7 +3,7 @@ $(window).load(
 	{
 		var offers;
 		$.ajax({ 
-			url: '../js/getCompanyJobOffers.php',
+			url: '../../logic/php/getCompanyJobOffers.php',
 	 	 	data: 
 	 	 	{
 	 	 		companyid : 1,

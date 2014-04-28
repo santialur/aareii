@@ -192,7 +192,7 @@ function sendData(){
    careerSelected = careerSelected.substring(0, careerSelected.length - 2);
 
    var company_id = getSession();
-   $.ajax({ url: '../js/saveOffer.php',
+   $.ajax({ url: '../../logic/php/saveOffer.php',
             data: {companyid:        company_id,
                  jobTitle:       document.getElementById("info_puesto").value,
                  jobDescription:     document.getElementById("descripcion_puesto").value,

@@ -11,7 +11,7 @@ function checkCompany(){
                   alert(output);
                   return;
                 }else{
-                  window.location = 'http://www.encontramas.com.ar/virtual/pages/publicacionOfertas.php';
+                  window.location = 'http://www.encontramas.com.ar/virtual/pages/Administracion/publicacionOfertas.php';
                 }
             }
           });
