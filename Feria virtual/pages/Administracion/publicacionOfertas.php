@@ -20,7 +20,7 @@
   
     <?php if (isset($_SESSION['company_name'])) { 
           } else { 
-            header('Location: http://www.encontramas.com.ar/virtual/pages/companyLogin.php'); 
+            header('Location: http://www.encontramas.com.ar/virtual/pages/Administracion/companyLogin.php'); 
     }?>
    
     <script type="text/javascript">
