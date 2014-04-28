@@ -48,7 +48,36 @@ function daysInMonth(month, year)
 
 
 function sendData(){
-
+  if(document.getElementById("fecha_evento_anio").value == "1" || document.getElementById("fecha_evento_mes").value == "0" || document.getElementById("fecha_evento_dia").value == "0"){
+    alert("Ingrese una fecha valida del evento");
+    return false;
+  }
+  var company_id = getSession();
+  
+  $.ajax({ url: '../js/saveEvent.php',
+      data: {companyid:     company_id,
+        eventTitle:     document.getElementById("titulo_evento").value,
+        eventDate:    document.getElementById("fecha_evento_anio").value + "-" + document.getElementById("fecha_evento_mes").value + "-" + document.getElementById("fecha_evento_dia").value,
+        eventDescription:   document.getElementById("descripcion_evento").value,
+      },
+      type: 'POST',
+      success: function(output){
+        if(output == "Exito"){
+          alert("El evento se agrego correctamente");
+          document.getElementById("titulo_evento").value = "";
+          document.getElementById("descripcion_evento").value = "";
+          document.getElementById("fecha_evento_anio").value = "1";
+          document.getElementById("fecha_evento_mes").value = "0";
+          document.getElementById("fecha_evento_dia").value = "0";
+          $('html, body').animate({scrollTop: '0px'},1500);
+        }
+        }else{
+                      alert("Hubo un problema al guardar el evento");
+                    
+                  }
+      }
+   });  
+   return false;
 }
 
 function showEvents(){
