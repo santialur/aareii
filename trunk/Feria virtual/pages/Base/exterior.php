@@ -1,14 +1,11 @@
 <html>
 	<head>
-	<meta name="viewport" content="width=device-width, user-scalable=false;">
-		<!-- STYLES --> 
-		<link 	rel="stylesheet" 		type="text/css"		href="../css/styles.css" 			/>
+		<title>
+			Exterior
+		</title>
 
-		<!-- JQUERY -->
-	  	<script type="text/javascript"	src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
+		<?php include '_imports.html'; ?>
 
-	  	<!--- POP UP --> 		
-		<script type="text/javascript" 	src="../js/popup.js"></script>
 	</head>
 
 	<body>	
@@ -18,9 +15,9 @@
 		<div class="wrapper" align="center">
 
 			<div align="center" style="position: relative;">
-				<img class="sketch" id="sketchOut" src="../features/images/exterior.jpg"/>
+				<img class="sketch" id="sketchOut" src="../../features/images/exterior.jpg"/>
 
-				<a class="ifancybox" href="Fiat/stand.php" ><img id="triggerAAREII" src="../features/images/stand-aareii.png"/></a>
+				<a class="ifancybox" href="" ><img id="triggerAAREII" src="../../features/images/stand-aareii.png"/></a>
 
 				<div id="pop-upAAREII">
 					<span style="">STAND INFORMATIVO</span>
