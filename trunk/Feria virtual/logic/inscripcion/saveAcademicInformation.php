@@ -17,7 +17,7 @@
 		$postgraduate_type, $postgraduate_state, $postgraduate_title, $postgraduate_institution, $englishLevel, $spanishLevel, $italianLevel, $germanLevel, 
 		$portugueseLevel, $frenchLevel){
 
-		$con = mysql_connect('localhost','root','');
+		$con = mysql_connect('localhost','root','C4ch0bs4s3124');
 		mysql_select_db('encontramas_test',$con);
 		mysql_query("SET NAMES 'utf8'", $con);
 		if (!$con)
@@ -112,7 +112,7 @@
 		$postgraduate_type, $postgraduate_state, $postgraduate_title, $postgraduate_institution, $englishLevel, $spanishLevel, $italianLevel, $germanLevel, 
 		$portugueseLevel, $frenchLevel){
 
-		$con = mysql_connect('localhost','root','');
+		$con = mysql_connect('localhost','root','C4ch0bs4s3124');
 		mysql_select_db('encontramas_test',$con);
 		mysql_query("SET NAMES 'utf8'", $con);
 		if (!$con)
