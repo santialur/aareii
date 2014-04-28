@@ -7,7 +7,7 @@ function getCode(){
       alert("Ingrese su email");
       return;
    }
-	$.ajax({ url: 'passwordRecovery.php',
+	$.ajax({ url: '../../logic/inscripcion/passwordRecovery.php',
 			 data: {state: 				 "Forgot password",
 			 		dni:                 document.getElementById("dni").value,
                     email:               document.getElementById("email").value,
@@ -47,7 +47,7 @@ function ChangePassword(){
       alert("Las contraseñas no coinciden");
       return;
     }
-	$.ajax({ url: 'passwordRecovery.php',
+	$.ajax({ url: '../../logic/inscripcion/passwordRecovery.php',
 			 data: {state: 				 "Create password",
 			 		dni:                 document.getElementById("dni").value,
                     email:               document.getElementById("email").value,
