@@ -609,7 +609,7 @@ function checkUser(){
       alert("Ingrese su contraseña");
       return;
    }
-   $.ajax({ url: '../js/getUserInformation.php',
+   $.ajax({ url: 'getUserInformation.php',
             data: {dni:                    document.getElementById("numero_de_documento").value,
                    password:               document.getElementById("contraseña").value,
                  },
@@ -767,7 +767,7 @@ function getCurriculumFile(curriculumId){
     }
     
 
-    $.ajax({ url: '../js/list_files.php',
+    $.ajax({ url: 'list_files.php',
               data: {id:                    id,
                    },
               type: 'GET',
@@ -850,7 +850,7 @@ function sendPersonalInformation(){
                   return;
                 }
                 
-                $.ajax({ url: '../js/savePersonalInformation.php',
+                $.ajax({ url: 'savePersonalInformation.php',
                      data: {user:                   "newUser",
                             dni:                    document.getElementById("numero_de_documento").value,
                             name:                   document.getElementById("nombre").value,
@@ -929,7 +929,7 @@ function sendPersonalInformation(){
                   return;
                 }
                 
-                $.ajax({ url: '../js/savePersonalInformation.php',
+                $.ajax({ url: 'savePersonalInformation.php',
                      data: {user:                   "oldUser",
                             dni:                    document.getElementById("numero_de_documento").value,
                             name:                   document.getElementById("nombre").value,
@@ -1000,7 +1000,7 @@ function sendAcademicInformation(){
         alert("Seleccione su nivel en todos los idiomas");
         return;
     }  
-    $.ajax({url: '../js/saveAcademicInformation.php',
+    $.ajax({url: 'saveAcademicInformation.php',
             data:  {user:                        "newUser",
                     dni:                         document.getElementById("numero_de_documento").value,
                     university:                  institucion,
@@ -1063,7 +1063,7 @@ function sendAcademicInformation(){
         alert("Seleccione su nivel en todos los idiomas");
         return;
     }  
-    $.ajax({url: '../js/saveAcademicInformation.php',
+    $.ajax({url: 'saveAcademicInformation.php',
             data:  {user:                        "oldUser",
                     dni:                         document.getElementById("numero_de_documento").value,
                     university:                  institucion,
@@ -1101,7 +1101,7 @@ function sendLaboralInformation(){
         return;
      }
     
-     $.ajax({ url: '../js/saveLaboralInformation.php',
+     $.ajax({ url: 'saveLaboralInformation.php',
             data:  {user:                        "newUser",
                     dni:                         document.getElementById("numero_de_documento").value,
                     still_works:                 document.getElementById("trabaja").value,
@@ -1145,7 +1145,7 @@ function sendLaboralInformation(){
         return;
      }
     
-     $.ajax({ url: '../js/saveLaboralInformation.php',
+     $.ajax({ url: 'saveLaboralInformation.php',
             data:  {user:                        "oldUser",
                     dni:                         document.getElementById("numero_de_documento").value,
                     still_works:                 document.getElementById("trabaja").value,
