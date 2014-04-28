@@ -11,32 +11,37 @@
 		  die('Could not connect: ' . mysql_error($con));
 		  }
 
-	$sql_pollStatement = "SELECT * FROM poll_statements HAVING MAX(dateCreated)";
-	$pollStatement = mysql_query($sql_pollStatement, $con);
+	$sql_pollQuestion = "SELECT * FROM poll_questions HAVING MAX(dateCreated)";
+	$pollQuestion = mysql_query($sql_pollQuestion, $con);
 
 	$desc = array();
-	while($row = mysql_fetch_array($pollStatement))
+	
+	$jsontext = "{";
+	while($row = mysql_fetch_array($pollQuestion ))
 	{
 	    $desc["id"] = utf8_encode($row['id']);
-	    $desc["statement"] = $row['statement'];
-	    $desc["dateCreated"] = utf8_encode($row['dateCreated']);
-				  
+	    //$desc["statement"] = $row['statement'];
+	    $jsontext .= '"id":'.'"'.$row['id'].'",';
+	    $jsontext .= '"question":'.'"'.$row['question'].'",';
 	}
 
-	$statementid = $desc["id"];
+	$questionid = $desc["id"];
 
-	$sql_pollElections = "SELECT * FROM poll_elections WHERE statement_id = $statementid";
-	$pollElections = mysql_query($sql_pollElections, $con);
-
-	$i = 1;
-	while($row = mysql_fetch_array($pollElections, MYSQL_ASSOC))
+	$sql_pollOptions = "SELECT * FROM poll_options WHERE question_id = $questionid";
+	$pollOptions = mysql_query($sql_pollOptions, $con);
+	
+	$jsontext .= '"options":'.'[';
+	while($row = mysql_fetch_array($pollOptions, MYSQL_ASSOC))
 	{
-	    $desc["id_"."$i"] = $row['id'];
-	    $desc["election_"."$i"] = $row['election'];
-	    $i++;
-				  
+	    
+	    $jsontext .= '{"id":'.'"'.$row['id'].'",';
+	    $jsontext .= '"option":'.'"'.$row['option'].'"},';
+	  
 	}
-
-	echo json_encode($desc, JSON_UNESCAPED_UNICODE);
+	$jsontext = substr_replace($jsontext, '', -1); // to get rid of extra comma
+	$jsontext .= "]}";
+	
+	//echo json_encode($desc, JSON_UNESCAPED_UNICODE);
+	echo $jsontext;
 	mysql_close($con);
 ?>
