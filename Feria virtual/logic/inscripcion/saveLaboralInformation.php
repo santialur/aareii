@@ -19,7 +19,7 @@
 		$company_2_name, $company_2_type, $job_2_description, $job_2_area, $job_2_senior, $job_2_from, $job_2_to,
 		$company_3_name, $company_3_type, $job_3_description, $job_3_area, $job_3_senior, $job_3_from, $job_3_to){
 
-		$con = mysql_connect('localhost','root','');
+		$con = mysql_connect('localhost','root','C4ch0bs4s3124');
 		mysql_select_db('encontramas_test',$con);
 		mysql_query("SET NAMES 'utf8'", $con);
 		if (!$con)
@@ -128,7 +128,7 @@
 		$company_2_name, $company_2_type, $job_2_description, $job_2_area, $job_2_senior, $job_2_from, $job_2_to,
 		$company_3_name, $company_3_type, $job_3_description, $job_3_area, $job_3_senior, $job_3_from, $job_3_to){
 
-		$con = mysql_connect('localhost','root','');
+		$con = mysql_connect('localhost','root','C4ch0bs4s3124');
 		mysql_select_db('encontramas_test',$con);
 		mysql_query("SET NAMES 'utf8'", $con);
 		if (!$con)
