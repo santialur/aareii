@@ -138,6 +138,7 @@
               </span>
               <input type="password" id="confirme_nueva_contraseña" name="confirme_nueva_contraseña" class="rightSide" placeholder="*********"> <br><br>
             </div>
+            
             <!--TELEFONO--> 
             <span class="leftSide">
               <strong>Teléfono</strong>:   
@@ -149,6 +150,7 @@
             <br><br>
             </div>
             <br><br>
+            
             <!--FECHA NACIMIENTO-->
             <span class="leftSide">
               <strong>Fecha de Nacimiento</strong>:   
@@ -164,7 +166,6 @@
               </select>
               <select id="fecha_nacimiento_mes" name="fecha_nacimiento_mes"></select>
               <select id="fecha_nacimiento_dia" name="fecha_nacimiento_dia"></select>
-              
               <script>
                 $(fillBirthDate);
               </script>
@@ -257,7 +258,7 @@
             </span>
             
             <div class="rightSide">
-              <select id="carrera_area" name="carrera_area" onChange="checkAnotherCareer();" style="float: right; width:105%">
+              <select id="carrera_area" name="carrera_area" style="float: right; width:105%">
                 <script>
                     fillDegrees($('#carrera_area'));
                 </script>
@@ -774,7 +775,7 @@
                   </span>
               </form>
             </div>
-		
+    
             <div id="upload_curriculum_div" style="display:none">
               <form action="../../logic/inscripcion/add_file.php" enctype="multipart/form-data" method="post" style="text-align: center">
                   <span class="leftSide">

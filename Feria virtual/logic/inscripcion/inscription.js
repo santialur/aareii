@@ -1133,10 +1133,10 @@ function sendLaboralInformation(){
                    },
                     type: 'POST',
                     success: function(output) {
-                    		alert(output);
-                    		newUser = false;
+                        alert(output);
+                        newUser = false;
                             //alert("El usuario a sido regitrado exitosamente, por favor envie su curriculum");
-                            //document.getElementById("curriculum_div").style.display = 'inline-table';    
+                            document.getElementById("new_curriculum_div").style.display = 'inline-table';    
                     }
             });
   }else{
