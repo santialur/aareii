@@ -1,26 +1,99 @@
-var adminApp = angular.module('AdminApp', []);
- 
-adminApp.controller('PollCtrl', function ($scope, $http) {
-  $http.get('../js/poll.json').success(function(data) {
-  	$scope.poll = data;	
-  });
+var n = [
+/****************************************************
+*****************************************************
+*****************************************************
+*****************************************************
+*****************************************************
+*****************************************************
+*****************************************************
+AGREGAR NOTICIAS ENTRE COMILLAS, Y SEPARADAS POR COMAS:
+****************************************************/
+
+"La inflacion fue del 3,6%,  es la primera desaceleracion mensual despues de dos meses por arriba del 5%",
+"Ya son 665 marcas con 29.000 locales las que usan el formato. Ropa y comida concentran el mercado.",
+
+/****************************************************
+*****************************************************
+*****************************************************
+*****************************************************
+*****************************************************
+*****************************************************
+*****************************************************
+*****************************************************/
+];
+
+
+/*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*/
+
+$(document).ready(
+  function saveNews(){
+    var noticias = n;
+    fillNews(noticias);
+  }
+);
+
+$(window).load(
+  function getPoll(){
+    var poll;
+    $.ajax({
+      url: '../js/Polls.php',
+      data: {},
+      type: 'POST',
+      success: function(output){
+        poll = JSON.parse(output);
+        fillPoll(poll);
+      }
+    });
 });
 
-adminApp.controller('NewsCtrl', function ($scope, $http){
-   $http.get('../js/news.json').success(function(data){
-   	$scope.news = data;
-   });
-});
 
-$( document ).ready(function loadNews(){
-	$('#nb1').html('<div class="newsContent"> <h3>	Los precios de la Capital Federal crecieron 3,6% durante marzo	</h3><p> La inflacion fue del 3,6%,  es la primera desaceleracion mensual despues de dos meses por arriba del 5%</div>');
-	$('#nb2').html('<div class="newsContent"> <h3>	Las franquicias suman rubros y proyectan crecer 10% en 2014	</h3><p> Ya son 665 marcas con 29.000 locales las que usan el formato. Ropa y comida concentran el mercado. </div>');
-	$.ajax({ url: '../js/Polls.php',
-              data: {
-                   },
-              type: 'POST',
-              success: function(output) {
-                 	 alert(output);
-              }
-            });
-});
+ function fillNews(noticias){
+    for(var i=0;i<noticias.length;i++)
+        $( '#js-news' ).html('<li class="news-item"><a href="#">'+noticias[i]+'</a></li>');
+ }
+
+function fillPoll(poll)
+{
+  var option = new Array(10); 
+
+  $( '#pollTitle' ).html(poll.question);
+
+  for(var i=0;i<poll.options.length; i++)
+  {
+    option[i] = poll.options[i].option;
+    $( '#pollOptions' ).append('<input type="radio" name="options" value="option'+i+'" >' + option[i] + '<br>');
+  }
+}

@@ -1,10 +1,11 @@
 
-<html ng-app="AdminApp">
+<html>
 	<head>
 		<title>
 			Interior
 		</title>
 		
+		<link rel="shortcut icon" href="../favicon.ico">
 		<meta 	name="viewport"			content="width=device-width, user-scalable=false"		/>
 		<link 	rel="stylesheet" 		type="text/css"		href="../css/styles.css" 			/>
 
@@ -17,11 +18,17 @@
 	  	<!--- POP UP --> 		
 		<script type="text/javascript"	src="../js/popups.js"></script>
 
+		<!-- NEWS AND POLLS --> 
+		<script type="text/javascript"	src="../js/interior.js"></script>
+
 		<!--- NEWS TICKER --> 
 	  	<link 	rel="stylesheet"		type="text/css"		href="../features/jquery_news_ticker/styles/ticker-style.css"   />
 		<script type="text/javascript"	src="../features/jquery_news_ticker/includes/jquery.ticker.js"></script>
 
 		<script type="text/javascript">
+		
+		
+		
 			$(function () {
 			    $('#js-news').ticker({
 			        titleText: '<h3>NOTICIAS</h3>',  
@@ -29,9 +36,6 @@
 			    });
 			});	
 		</script>
-
-		<!-- NEWS --> 
-		<script type="text/javascript"	src="../js/interior.js"></script>
 
 		<!-- FANCYBOX --> 
 		<link 	rel="stylesheet"		type="text/css"		href="../features/fancybox/source/jquery.fancybox.css"  media="screen"/>
@@ -68,9 +72,6 @@
 				<!-- NOTICIAS -->
 				<div style="margin-top: 4%">
 					<ul id="js-news" class="js-hidden">
-					    <li class="news-item"><a href="#"> La inflacion fue del 3,6%,  es la primera desaceleracion mensual despues de dos meses por arriba del 5%</a></li>
-					    <li class="news-item"><a href="#"> Ya son 665 marcas con 29.000 locales las que usan el formato. Ropa y comida concentran el mercado. </a></li>
-					    <li class="news-item"><a href="#"> La presidenta anunci&oacute hoy un proyecto sobre la precarizaci&oacuten laboral.</a></li>
 					</ul>
 				</div>
 
@@ -135,11 +136,10 @@
 					<div style="margin-top: ">	
 						<h4 class="oswald titles">Encuesta</h4>
 
-						<div ng-controller="PollCtrl" id="pollContent">	
-    						<h3 style="text-align:center">{{poll.title}}</h3>	<br>
-							<div ng-repeat="value in poll.values">
-								<input type="radio" name="Q1">
-								<label>{{value}}</label>	<br>
+						<div id="pollContent">	
+    						<h3 id="pollTitle" style="text-align:center"></h3>	<br>
+							<div id="pollOptions">
+
 					    	</div>
 					    	<br>
     					</div>
