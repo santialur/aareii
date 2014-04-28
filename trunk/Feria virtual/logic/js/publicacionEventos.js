@@ -70,7 +70,6 @@ function sendData(){
           document.getElementById("fecha_evento_mes").value = "0";
           document.getElementById("fecha_evento_dia").value = "0";
           $('html, body').animate({scrollTop: '0px'},1500);
-        }
         }else{
                       alert("Hubo un problema al guardar el evento");
                     
