@@ -4,7 +4,7 @@ $(window).load(
 		updateDay();
 		var events;
 		$.ajax({ 
-			url: '../js/getCompanyEvents.php',
+			url: '../../logic/php/getCompanyEvents.php',
 	 	 	data: 
 	 	 	{
 	 	 		companyid : 1,
