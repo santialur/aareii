@@ -24,7 +24,7 @@ function checkAdminUser(){
       alert("Ingrese su contraseña");
       return;
    }
-   $.ajax({ url: '../js/matriculate.php',
+   $.ajax({ url: 'matriculate.php',
             data: {userType:               "admin", 
                    user:                   document.getElementById("nombre_usuario").value,
                    password:               document.getElementById("contraseña").value,
@@ -46,7 +46,7 @@ function checkUser(){
       alert("Ingrese el DNI");
       return;
    }
-   $.ajax({ url: '../js/matriculate.php',
+   $.ajax({ url: 'matriculate.php',
             data: {userType:               "user",
                    user:                   document.getElementById("dni").value,
                  },
@@ -88,7 +88,7 @@ function prepareEnrollment(userInfo){
 }
 
 function unmatriculateUser(){
-     $.ajax({ url: '../js/matriculate.php',
+     $.ajax({ url: 'matriculate.php',
             data: {action:                 "unmatriculate",
                    dni:                     document.getElementById("dni").value,
                  },
@@ -103,7 +103,7 @@ function unmatriculateUser(){
 }
 
 function matriculateUser(){
-    $.ajax({ url: '../js/matriculate.php',
+    $.ajax({ url: 'matriculate.php',
             data: {action:                 "matriculate",
                    dni:                     document.getElementById("dni").value,
                  },
