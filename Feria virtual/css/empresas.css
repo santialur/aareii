@@ -64,8 +64,8 @@ body{
 }
 
 .header{
-	min-height:			7em;
-	background-image:       	url(../features/images/texture1.png);
+	min-height:				7em;
+	background-image:       url(../features/images/texture1.png);
 }
 
 .wrapperMedium{
