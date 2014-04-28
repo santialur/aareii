@@ -1,6 +1,6 @@
 function checkCompany(){
 
-   $.ajax({ url: '../js/loginCompany.php',
+   $.ajax({ url: '../../logic/php/loginCompany.php',
             data: {action:                 "checkCompany",
                    company:                document.getElementById("identification").value,
                    password:               document.getElementById("contraseña").value,

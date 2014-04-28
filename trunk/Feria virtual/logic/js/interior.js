@@ -52,7 +52,7 @@ $(window).load(
   function getPoll(){
     var poll;
     $.ajax({
-      url: '../js/Polls.php',
+      url: '../../logic/inscripcion/Polls.php',
       data: {},
       type: 'POST',
       success: function(output){
