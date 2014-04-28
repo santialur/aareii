@@ -35,16 +35,19 @@
             <span width="5%"></span>
             <input type="button" value="Publicar nuevo evento" class="button" onclick="">
           </div>
-          </br>
-          <hr>
+          <br>
+          <hr><br>
 
           <!-- TABLE WITH EVENTS --> 
+          <h3 class="opensans textShadow">
+            Noticias Publicadas
+          </h3>
           <table id="tableOutput">
           <thead>
             <tr>
-              <th>T&iacutetulo      </th>
-              <th>Fecha de Evento   </th>
-              <th>Descripci&oacuten </th>
+              <th>Titular                 </th>
+              <th>Fecha de Publicacion    </th>
+              <th>Descripci&oacuten       </th>
             </tr>
           </thead>
             <tr>
@@ -57,9 +60,6 @@
               <td class="cellDescription">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
               </td>
-              <td>
-                                    
-              </td> 
             </tr>
           </table>
 
@@ -69,7 +69,7 @@
             <!-- REQUISITOS (TABLA) --> 
             <div class="block">
               <h3 class="opensans textShadow">
-                Noticias
+                Publique una Noticia
               </h3>
               <br>
 
@@ -107,7 +107,7 @@
                     Descripcion de Noticia
                   </th>
                   <td>
-                    <textarea id="descripcion_noticia" name="descripcion_noticia" rows="9" cols="50" maxlength="25" placeholder="Ingrese descripcion de la noticia.." style="resize: none;" required></textarea>
+                    <textarea id="descripcion_noticia" name="descripcion_noticia" rows="5" cols="50" maxlength="25" placeholder="Ingrese descripcion de la noticia.." style="resize: none;" required></textarea>
                   </td>
                 </tr>
               </table>
