@@ -6,14 +6,14 @@
     </title>
     <?php header("Access-Control-Allow-Origin: *");?>
     <META   http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link   rel="stylesheet"    type="text/css"   href="../css/styles.css"              />
+    <link   rel="stylesheet"    type="text/css"   href="../../css/styles.css"              />
 
     <meta property="og:title" content="Feria de empresas- Encontra+ 2014" />
     <meta property="og:description" content="Publicacion de Ofertas Laborales" />
     <meta property="og:image" content="http://www.encontramas.com.ar/virtual/features/images/encontramas_facebook_foto.jpg" />
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script type="text/javascript" src="../js/loginCompany.js"></script>
+    <script type="text/javascript" src="../../logic/js/loginCompany.js"></script>
    
   </head>
 
@@ -39,7 +39,7 @@
           </div>
 
           <div class="rightSide">
-            <img src="../features/images/AAREII-logo.png" width="65" height="100">
+            <img src="../../features/images/AAREII-logo.png" width="65" height="100">
           </div>
 
           <div style="clear: both"></div>
