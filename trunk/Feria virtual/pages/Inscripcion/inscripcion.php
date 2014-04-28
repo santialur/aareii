@@ -825,7 +825,7 @@
     </div>
 
     <!-- FOOTER --> 
-    <?php include '_footer.html'; ?>
+    <?php include '../Base/_footer.html'; ?>
 
 </body>
 </html>
