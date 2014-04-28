@@ -45,7 +45,7 @@ if(isset($_POST['upload'])){
             // Check if it was successfull
             if($result) {
                 
-                include( '../pages/confirmacion.html' );
+                include( '../../pages/Inscripcion/confirmacion.html' );
                 
             }
             else {
@@ -107,7 +107,7 @@ if(isset($_POST['upload'])){
                         SET curriculumId = $lastId
                         WHERE username = '$dni'";
                 $result = $dbLink->query($sql);
-                include( '../pages/confirmacion.html' );
+                include( '../../pages/Inscripcion/confirmacion.html' );
             }
             else {
                 //echo 'Error! Failed to insert the file'
