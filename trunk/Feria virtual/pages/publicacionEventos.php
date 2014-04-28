@@ -68,7 +68,7 @@
           </br>
           <hr>
 
-          <!-- TABLE WITH OFFERS --> 
+          <!-- TABLE WITH EVENTS --> 
           <table id="tableOutput">
           <thead>
             <tr>
