@@ -7,7 +7,7 @@ function getCode(){
       alert("Ingrese su email");
       return;
    }
-	$.ajax({ url: '../js/passwordRecovery.php',
+	$.ajax({ url: 'passwordRecovery.php',
 			 data: {state: 				 "Forgot password",
 			 		dni:                 document.getElementById("dni").value,
                     email:               document.getElementById("email").value,
@@ -19,7 +19,7 @@ function getCode(){
             	}
             	else{
             		alert(output);
-            		window.location.href = "../pages/recoveryPassword.html";
+            		window.location.href = "../../pages/recoveryPassword.html";
             	}
             	
             }
@@ -47,7 +47,7 @@ function ChangePassword(){
       alert("Las contraseñas no coinciden");
       return;
     }
-	$.ajax({ url: '../js/passwordRecovery.php',
+	$.ajax({ url: 'passwordRecovery.php',
 			 data: {state: 				 "Create password",
 			 		dni:                 document.getElementById("dni").value,
                     email:               document.getElementById("email").value,
@@ -58,7 +58,7 @@ function ChangePassword(){
             success: function(output){
             	if(output == "Contraseña modificada con exito"){
             		alert(output);
-            		window.location.href = "../pages/inscripcion.html";
+            		window.location.href = "../../pages/inscripcion.html";
             	}
             	else{
             		alert(output);
