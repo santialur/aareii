@@ -4,7 +4,7 @@
   <title>Inscripción</title>
   <META http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-  <link   rel=  "stylesheet"    href="../css/styles.css"      type="text/css" />
+  <link   rel=  "stylesheet"    href="../../css/styles.css"      type="text/css" />
   
   <meta property="og:url" content="http://www.encontramas.com.ar/virtual/pages/inscripcion.html" />
   <meta property="og:title" content="Feria de empresas- Encontra+ 2014" />
@@ -12,14 +12,14 @@
   <meta property="og:image" content="http://www.encontramas.com.ar/virtual/features/images/encontramas_facebook_foto.jpg" />
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-  <script type="text/javascript" src="../js/inscription.js"></script>
+  <script type="text/javascript" src="../../logic/inscripcion/inscription.js"></script>
 </head>
 
 <body>
     <div id="nav">
           <ul class="">  
             <li class="opensans"><a href="http://www.encontramas.com.ar/">Encontra +</a></li>
-            <li class="opensans"><a href="inscripcion.html">Inscribirse</a></li>
+            <li class="opensans"><a href="inscripcion.php">Inscribirse</a></li>
           </ul>
     </div>
     </br>
@@ -39,7 +39,7 @@
         </div>
 
         <div class="rightSide">
-          <img src="../features/images/AAREII-logo.png" width="65" height="100">
+          <img src="../../features/images/AAREII-logo.png" width="65" height="100">
         </div>
         
         <div style="margin: 17% 0 2% 0; text-align: justify">
@@ -71,7 +71,7 @@
           </div>
 
           <div id="olvido_contraseña">
-          <a  href="../pages/forgotPassword.html" style="font-size:80%; text-decoration:underline;">Olvide mi contraseña</a><br><br>
+          <a  href="forgotPassword.html" style="font-size:80%; text-decoration:underline;">Olvide mi contraseña</a><br><br>
           </div>
           
           <div id="buttons" style="text-align: center">
@@ -760,7 +760,7 @@
             </div>
             <br>
             <div id="new_curriculum_div" style="display:none">
-              <form action="../js/add_file.php" enctype="multipart/form-data" method="post" style="text-align: center">
+              <form action="../../logic/inscripcion/add_file.php" enctype="multipart/form-data" method="post" style="text-align: center">
                   <span class="leftSide">
                       <label for="file_upload">Curriculum vitae:</label>
                   </span>
@@ -776,7 +776,7 @@
             </div>
 		
             <div id="upload_curriculum_div" style="display:none">
-              <form action="../js/add_file.php" enctype="multipart/form-data" method="post" style="text-align: center">
+              <form action="../../logic/inscripcion/add_file.php" enctype="multipart/form-data" method="post" style="text-align: center">
                   <span class="leftSide">
                       <label for="file_upload">Curriculum vitae:</label>
                   </span>
