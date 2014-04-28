@@ -5,7 +5,12 @@
       Publicacion de Noticias y Encuesta
     </title>
 
+
     <link   rel="stylesheet"    type="text/css"   href="../../css/styles.css"              />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="../../logic/js/cargaNoticiasEncuestas.js"></script>
+
 
   </head>
 
@@ -31,9 +36,9 @@
 
           <!-- SELECTION MENU --> 
           <div >
-            <input type="button" value="Publicar Noticias" class="button" onclick="">
+            <input type="button" value="Publicar Noticias" class="button" onclick="showNews();">
             <span width="5%"></span>
-            <input type="button" value="Publicar una Encuesta" class="button" onclick="">
+            <input type="button" value="Publicar una Encuesta" class="button" onclick="showPoll();">
           </div>
           <br><hr><br>
 
@@ -116,7 +121,7 @@
             <br><hr><br>
           </div>
 
-          <div id="pollBlock">
+          <div id="pollBlock" style="display:none">
             <!-- TABLE WITH POLL --> 
             <h3 class="opensans textShadow">
               Encuesta Publicada
