@@ -1,13 +1,9 @@
 <html>
 	<head>
 		<meta 	name="viewport" content="width=device-width, user-scalable=false;">
-		<link 	rel="stylesheet"	href="../css/styles.css" 	type="text/css" 	/>
+		<link 	rel="stylesheet"	href="../../css/styles.css" 	type="text/css" 	/>
 	  	
 	  	<script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
-
-		<!--script src="../js/angular/angular.js"></script>
-		<script src="../js/controllers.js"></script-->
-
 	</head>
 
 
@@ -32,55 +28,55 @@
 				    <tr>
 				    	<td>
 				    		<a href="http://www.aareii.org.ar/">AArEII</a> </br>
-				        	<img src="../features/images/AArEII-banner.jpg">
+				        	<img src="../../features/images/AArEII-banner.jpg">
 				    	</td>
 				    	<td>
 				    		<a href="http://www.aareii.org.ar/">AArEII</a> </br>
-				        	<img src="../features/images/AArEII-banner.jpg">
+				        	<img src="../../features/images/AArEII-banner.jpg">
 				    	</td>
 				    	<td>
 				    		<a href="http://www.aareii.org.ar/">AArEII</a> </br>
-				        	<img src="../features/images/AArEII-banner.jpg">
+				        	<img src="../../features/images/AArEII-banner.jpg">
 				    	</td>
 				    	<td>
 				    		<a href="http://www.aareii.org.ar/">AArEII</a> </br>
-				        	<img src="../features/images/AArEII-banner.jpg">
-				    	</td>
-				    </tr>
-				    <tr>
-				    	<td>
-				    		<a href="http://www.aareii.org.ar/">AArEII</a> </br>
-				        	<img src="../features/images/AArEII-banner.jpg">
-				    	</td>
-				    	<td>
-				    		<a href="http://www.aareii.org.ar/">AArEII</a> </br>
-				        	<img src="../features/images/AArEII-banner.jpg">
-				    	</td>
-				    	<td>
-				    		<a href="http://www.aareii.org.ar/">AArEII</a> </br>
-				        	<img src="../features/images/AArEII-banner.jpg">
-				    	</td>
-				    	<td>
-				    		<a href="http://www.aareii.org.ar/">AArEII</a> </br>
-				        	<img src="../features/images/AArEII-banner.jpg">
+				        	<img src="../../features/images/AArEII-banner.jpg">
 				    	</td>
 				    </tr>
 				    <tr>
 				    	<td>
 				    		<a href="http://www.aareii.org.ar/">AArEII</a> </br>
-				        	<img src="../features/images/AArEII-banner.jpg">
+				        	<img src="../../features/images/AArEII-banner.jpg">
 				    	</td>
 				    	<td>
 				    		<a href="http://www.aareii.org.ar/">AArEII</a> </br>
-				        	<img src="../features/images/AArEII-banner.jpg">
+				        	<img src="../../features/images/AArEII-banner.jpg">
 				    	</td>
 				    	<td>
 				    		<a href="http://www.aareii.org.ar/">AArEII</a> </br>
-				        	<img src="../features/images/AArEII-banner.jpg">
+				        	<img src="../../features/images/AArEII-banner.jpg">
 				    	</td>
 				    	<td>
 				    		<a href="http://www.aareii.org.ar/">AArEII</a> </br>
-				        	<img src="../features/images/AArEII-banner.jpg">
+				        	<img src="../../features/images/AArEII-banner.jpg">
+				    	</td>
+				    </tr>
+				    <tr>
+				    	<td>
+				    		<a href="http://www.aareii.org.ar/">AArEII</a> </br>
+				        	<img src="../../features/images/AArEII-banner.jpg">
+				    	</td>
+				    	<td>
+				    		<a href="http://www.aareii.org.ar/">AArEII</a> </br>
+				        	<img src="../../features/images/AArEII-banner.jpg">
+				    	</td>
+				    	<td>
+				    		<a href="http://www.aareii.org.ar/">AArEII</a> </br>
+				        	<img src="../../features/images/AArEII-banner.jpg">
+				    	</td>
+				    	<td>
+				    		<a href="http://www.aareii.org.ar/">AArEII</a> </br>
+				        	<img src="../../features/images/AArEII-banner.jpg">
 				    	</td>
 				    </tr>
 				    
