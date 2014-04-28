@@ -1,34 +1,19 @@
-
 <html>
 	<head>
 		<title>
 			Interior
 		</title>
-		
-		<link rel="shortcut icon" href="../favicon.ico">
-		<meta 	name="viewport"			content="width=device-width, user-scalable=false"		/>
-		<link 	rel="stylesheet" 		type="text/css"		href="../css/styles.css" 			/>
 
-		<!-- JQUERY -->
-	  	<script type="text/javascript"	src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
-
-	  	<!-- ANGULAR --> 
-	  	<script type="text/javascript"	src="../lib/angular/angular.min.js"></script>
-	  	
-	  	<!--- POP UP --> 		
-		<script type="text/javascript"	src="../js/popups.js"></script>
+		<?php include '_imports.html'; ?>
 
 		<!-- NEWS AND POLLS --> 
-		<script type="text/javascript"	src="../js/interior.js"></script>
+		<script type="text/javascript"	src="../../logic/js/interior.js"></script>
 
 		<!--- NEWS TICKER --> 
-	  	<link 	rel="stylesheet"		type="text/css"		href="../features/jquery_news_ticker/styles/ticker-style.css"   />
-		<script type="text/javascript"	src="../features/jquery_news_ticker/includes/jquery.ticker.js"></script>
+	  	<link 	rel="stylesheet"		type="text/css"		href="../../features/jquery_news_ticker/styles/ticker-style.css"   />
+		<script type="text/javascript"	src="../../features/jquery_news_ticker/includes/jquery.ticker.js"></script>
 
 		<script type="text/javascript">
-		
-		
-		
 			$(function () {
 			    $('#js-news').ticker({
 			        titleText: '<h3>NOTICIAS</h3>',  
@@ -38,8 +23,8 @@
 		</script>
 
 		<!-- FANCYBOX --> 
-		<link 	rel="stylesheet"		type="text/css"		href="../features/fancybox/source/jquery.fancybox.css"  media="screen"/>
-		<script type="text/javascript" 	src="../features/fancybox/source/jquery.fancybox.pack.js"></script>
+		<link 	rel="stylesheet"		type="text/css"		href="../../features/fancybox/source/jquery.fancybox.css"  media="screen"/>
+		<script type="text/javascript" 	src="../../features/fancybox/source/jquery.fancybox.pack.js"></script>
 				
 		<script type="text/javascript"	language="javascript">
 			$(document).ready(function(){
@@ -54,11 +39,12 @@
 			});
 		</script>
 		
-		<script type="text/javascript"	src="../lib/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript"	src="../../lib/bootstrap/js/bootstrap.min.js"></script>
 
 	  	<!-- MARQUESINA --> 
-	  	<link 	rel="stylesheet" 		type="text/css"		href="../css/plugins/marquee.css"	/>
-	  	<script type="text/javascript"	src="../js/marquee.js"></script>
+	  	<link 	rel="stylesheet" 		type="text/css"		href="../../css/plugins/marquee.css"	/>
+	  	<script type="text/javascript"	src="../../logic/marquee.js"></script>
+	  	
 	</head>
 
 
