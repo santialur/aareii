@@ -19,7 +19,7 @@ function getCode(){
             	}
             	else{
             		alert(output);
-            		window.location.href = "../../pages/recoveryPassword.html";
+            		window.location.href = "../../pages/Inscripcion/recoveryPassword.html";
             	}
             	
             }
@@ -58,7 +58,7 @@ function ChangePassword(){
             success: function(output){
             	if(output == "Contraseña modificada con exito"){
             		alert(output);
-            		window.location.href = "../../pages/inscripcion.html";
+            		window.location.href = "../../pages/Inscripcion/inscripcion.html";
             	}
             	else{
             		alert(output);
