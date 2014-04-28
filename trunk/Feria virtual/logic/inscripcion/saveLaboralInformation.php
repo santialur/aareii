@@ -86,7 +86,7 @@
 	    	$row = mysql_fetch_array($laborResult);
 			$laborId = $row['id'];*/
 
-			$sql = " INSERT INTO user_laborhistory (user_id, laborHistory_id)
+			$sql = " INSERT INTO user_laborHistory (user_id, laborHistory_id)
 					 VALUES ('$dni', '$laborId')";
 			$result = mysql_query($sql, $con);
 		}
