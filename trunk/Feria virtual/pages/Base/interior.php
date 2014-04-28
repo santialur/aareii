@@ -43,7 +43,7 @@
 
 	  	<!-- MARQUESINA --> 
 	  	<link 	rel="stylesheet" 		type="text/css"		href="../../css/plugins/marquee.css"	/>
-	  	<script type="text/javascript"	src="../../logic/marquee.js"></script>
+	  	<script type="text/javascript"	src="../../logic/js/marquee.js"></script>
 	  	
 	</head>
 
@@ -66,7 +66,7 @@
 
 					<!-- CROQUIS --> 
 					<div align="center" style="position: relative;">
-						<img class="sketch" src="../features/images/interior.jpg" width="100%"/>
+						<img class="sketch" src="../../features/images/interior.jpg" width="100%"/>
 						
 						<!-- POPUPS -->
 						<?php include '_popups.html'; ?>
@@ -75,11 +75,11 @@
 					<!-- MARQUESINA -->
 					<div style="margin-top: 5%; ">
 						<ul class="itemMarquee">
-						  	<li><img src="../features/images/arcor-web.png"/>		</li>
-					  		<li><img src="../features/images/quilmes-web.png"/>		</li>
-					  		<li><img src="../features/images/faber-web.png"/>		</li>
-					  		<li><img src="../features/images/unilever-web.png"/>	</li>
-					  		<li><img src="../features/images/invap-web.png"/>		</li>
+						  	<li><img src="../../features/images/arcor-web.png"/>		</li>
+					  		<li><img src="../../features/images/quilmes-web.png"/>		</li>
+					  		<li><img src="../../features/images/faber-web.png"/>		</li>
+					  		<li><img src="../../features/images/unilever-web.png"/>		</li>
+					  		<li><img src="../../features/images/invap-web.png"/>		</li>
 						</ul>
 					</div>
 
