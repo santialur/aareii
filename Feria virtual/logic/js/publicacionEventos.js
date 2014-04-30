@@ -1,3 +1,59 @@
+function fillHour(target, target2, target3, target4)
+{  
+  var aux;
+
+  $(target).append($('<option />').val("").html("Hora"));
+  $(target2).append($('<option />').val("").html("Minutos"));
+  $(target3).append($('<option />').val("").html("Hora"));
+  $(target4).append($('<option />').val("").html("Minutos"));
+
+  for(var i=7; i<24; i=i+1)
+    aux = aux + '<option value="'+ parseFloat(i) +'">'+ parseFloat(i) +'</option>';
+
+  $(target).append(aux);
+}
+
+function fillMinute(target)
+{
+  var aux;
+  aux = aux + '<option value="">'+ 'Minutos' +'</option>';
+
+  for(var i=0; i<60; i=i+5)
+    aux = aux + '<option value="'+ parseFloat(i) +'">'+ parseFloat(i) +'</option>';
+
+  $(target).html(aux);
+}
+
+function fillHourEnd(target, hourStart)
+{  
+  var aux;
+  aux = aux + '<option value="">'+ 'Hora' +'</option>';
+
+  for(var i=parseFloat(hourStart); i<24; i=i+1)
+    aux = aux + '<option value="'+ parseFloat(i) +'">'+ parseFloat(i) +'</option>';
+
+  $(target).html(aux);
+}
+
+function fillMinuteEnd(target, minuteStart, hourStart, hourEnd)
+{
+  var aux;
+  aux = aux + '<option value="">'+ 'Minutos' +'</option>';
+
+  hourEnd   = parseFloat(hourEnd);
+  hourStart = parseFloat(hourStart);
+
+  if(hourEnd >  hourStart)
+  {
+    minuteStart = -5;
+  }
+
+  for(var i=parseFloat(minuteStart)+5; i<60; i=i+5)
+    aux = aux + '<option value="'+ parseFloat(i) +'">'+ parseFloat(i) +'</option>';
+
+  $(target).html(aux);
+}
+
 function fillYears(target, x, y)
 {
   var aux;
@@ -8,36 +64,36 @@ function fillYears(target, x, y)
   $(target).append(''+aux);
 }
 
-function fillDate()
+function fillDate(targetDia, targetMes, targetAnio)
 {
-  $('#fecha_evento_mes').append($('<option />').val(0).html("Mes"));
+  $(targetMes).append($('<option />').val("").html("Mes"));
   for (i = 5; i < 7; i++)
   {
-    $('#fecha_evento_mes').append($('<option />').val("0"+i).html(i));
+    $(targetMes).append($('<option />').val("0"+i).html(i));
   }
   updateNumberOfDays(); 
 
-  $('#fecha_evento_anio, #fecha_evento_mes').change(function(){
-    updateNumberOfDays(); 
+  $(targetDia).append($('<option />').val("").html("Día"));
+
+  $(targetAnio).change(function(){
+    updateNumberOfDays(targetDia, targetMes, targetAnio); 
   });
 }
 
-function updateNumberOfDays()
+function updateNumberOfDays(targetDia, targetMes, targetAnio)
 {
-  $('#fecha_evento_dia').html('');
-  month = $('#fecha_evento_mes').val();
-  year  = $('#fecha_evento_anio').val();
+  $(targetDia).html('');
+  month = $(targetMes).val();
+  year  = $(targetAnio).val();
   days  = daysInMonth(month, year);
 
-  $('#fecha_evento_dia').append($('<option />').val(0).html("Día"));
 
   for(i=1; i < days+1 ; i++){
     if(i<10){
-      $('#fecha_evento_dia').append($('<option />').val("0"+i).html(i));
+      $(targetDia).append($('<option />').val("0"+i).html(i));
     }else{
-      $('#fecha_evento_dia').append($('<option />').val(i).html(i));
+      $(targetDia).append($('<option />').val(i).html(i));
     }
-    
   }
 }
 

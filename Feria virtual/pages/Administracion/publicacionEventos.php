@@ -92,6 +92,9 @@
           <!-- FORM FOR PUBLISHING --> 
           <form id="publishEvent" style="display: none" name="publishEvent" onsubmit="return sendData()">
 
+            <!-- FECHA Y HORA DE INICIO --> 
+
+
             <!-- REQUISITOS (TABLA) --> 
             <div class="block">
               <h3 class="opensans textShadow">
@@ -111,24 +114,52 @@
                 </tr>
                 <tr class="alt">
                   <th>
-                    Fecha de Evento
+                    Fecha y Hora de Inicio
                   </th>
                   <td>
-                    <select id="fecha_evento_anio" name="fecha_evento_anio" required>
+                    <select id="tiempo_inicio_anio" name="tiempo_inicio_anio" required>
                       <script>
-                          $('#fecha_evento_anio').append($('<option />').val(1).html("Año"));
-                          fillYears($('select[name=fecha_evento_anio]'), 2014, 2013);
+                          $('#tiempo_inicio_anio').append($('<option />').val("").html("Año"));
+                          fillYears($('select[name=tiempo_inicio_anio]'), 2014, 2013);
                       </script> 
                     </select>
-                    <select id="fecha_evento_mes" name="fecha_evento_mes" required></select>
-                    <select id="fecha_evento_dia" name="fecha_evento_dia" required></select>
-                    
+                    <select id="tiempo_inicio_mes" name="tiempo_inicio_mes" required></select>
+                    <select id="tiempo_inicio_dia" name="tiempo_inicio_dia" required></select>
                     <script>
-                      $(fillDate);
+                      $(fillDate($('select[name=tiempo_inicio_dia]'),$('select[name=tiempo_inicio_mes]'),$('select[name=tiempo_inicio_anio]')));
                     </script>
+
+                    <select id="tiempo_inicio_hora"   name="tiempo_inicio_hora"   required onChange="fillMinute($('select[name=tiempo_inicio_minuto]'));"></select>
+                    <select id="tiempo_inicio_minuto" name="tiempo_inicio_minuto" required onChange="fillHourEnd($('select[name=tiempo_finalizacion_hora]'), $('select[name=tiempo_inicio_hora]').val());"></select>
+
                   </td>
                 </tr>
                 <tr>
+                  <th>
+                    Fecha y Hora de Finalización
+                  </th>
+                  <td>
+                    <select id="tiempo_finalizacion_anio" name="tiempo_finalizacion_anio" required>
+                      <script>
+                          $('#tiempo_finalizacion_anio').append($('<option />').val("").html("Año"));
+                          fillYears($('select[name=tiempo_finalizacion_anio]'), 2014, 2013);
+                      </script> 
+                    </select>
+                    <select id="tiempo_finalizacion_mes" name="tiempo_finalizacion_mes" required></select>
+                    <select id="tiempo_finalizacion_dia" name="tiempo_finalizacion_dia" required></select>
+                    <script>
+                      $(fillDate($('select[name=tiempo_finalizacion_dia]'),$('select[name=tiempo_finalizacion_mes]'),$('select[name=tiempo_finalizacion_anio]')));
+                    </script>
+
+                    <select id="tiempo_finalizacion_hora" name="tiempo_finalizacion_hora" required onChange="fillMinuteEnd($('select[name=tiempo_finalizacion_minuto]'), $('select[name=tiempo_inicio_minuto]').val(), $('select[name=tiempo_inicio_hora]').val(), this.value);"></select>
+                    <select id="tiempo_finalizacion_minuto" name="tiempo_finalizacion_minuto" required></select>
+
+                    <script>
+                      fillHour($('select[name=tiempo_inicio_hora]'), $('select[name=tiempo_inicio_minuto]'), $('select[name=tiempo_finalizacion_hora]'), $('select[name=tiempo_finalizacion_minuto]'));                    
+                    </script>
+                  </td>
+                </tr>
+                <tr class="alt">
                   <th>
                     Descripcion del Evento
                   </th>
