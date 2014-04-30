@@ -148,7 +148,7 @@ $(document).ready(
       {
         companyid : company_id,
       },
-        type: 'GET',
+        type: 'POST',
         success: function(output) 
         {
           events = JSON.parse(output);
@@ -160,18 +160,18 @@ $(document).ready(
 
 function fillEvents(events)
 {
-  for(var i=0;i<events.length;i++)
+  for(var i=0;i<events.events.length;i++)
     $('#tableOutput tbody').append(''+
-      '<td class="cellTitle">'+
-        '<a>' + events[i].Titulo + '</a>'+
+      '<tr><td class="cellTitle">'+
+        '<a>' + events.events[i].Titulo + '</a>'+
       '</td>'+
       '<td class="cellDate">'+
-        events[i].Inicia +
+        events.events[i].Inicia +
       '</td>'+
       '<td class="cellDate">'+
-        events[i].Termina +
+        events.events[i].Termina +
       '</td> '+
       '<td class="cellDescription">'+
-        events[i].Descripcion +
-      '</td>');
+        events.events[i].Descripcion +
+      '</td></tr>');
 }
