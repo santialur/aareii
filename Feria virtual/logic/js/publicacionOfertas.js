@@ -219,9 +219,34 @@ function sendData(){
    return false;
 }
 
+$(document).ready(function(){
+  // we call the function
+  getJobOffers();
+});
+
+function getJobOffers()
+  {
+    var company_id = getSession();
+    
+    $.ajax({ 
+      url: '../../logic/php/getCompanyJobOffers.php',
+      data: 
+      {
+        companyid : company_id,
+      },
+        type: 'POST',
+        success: function(output) 
+        {
+          alert(output);
+        }
+      });
+  }
+
 function showOffers(){
+  getJobOffers();
   document.getElementById("tableOutput").style.display = 'inline-table';
   document.getElementById("publishOffer").style.display = 'none';
+  
 }
 function showCreateOffer(){
   document.getElementById("tableOutput").style.display = 'none';
