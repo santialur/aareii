@@ -66,28 +66,30 @@
 
           <!-- TABLE WITH EVENTS --> 
           <table id="tableOutput">
-          <thead>
-            <tr>
-              <th>T&iacutetulo            </th>
-              <th>Inicio de Evento        </th>
-              <th>Finalizacion de Evento  </th>
-              <th>Descripci&oacuten       </th>
-            </tr>
-          </thead>
-            <tr>
-              <td class="cellTitle">
-                <a> Jornada de Puertas Abiertas </a>
-              </td>
-              <td class="cellDate">
-                25-Sep-2013 a las 17:00 hs
-              </td>
-              <td class="cellDate">
-                25-Sep-2013 a las 18:00 hs                 
-              </td> 
-              <td class="cellDescription">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
-              </td>
-            </tr>
+            <thead>
+              <tr>
+                <th>T&iacutetulo            </th>
+                <th>Inicio de Evento        </th>
+                <th>Finalizacion de Evento  </th>
+                <th>Descripci&oacuten       </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cellTitle">
+                  <a> Jornada de Puertas Abiertas </a>
+                </td>
+                <td class="cellDate">
+                  25-Sep-2013 a las 17:00 hs
+                </td>
+                <td class="cellDate">
+                  25-Sep-2013 a las 18:00 hs                 
+                </td> 
+                <td class="cellDescription">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
+                </td>
+              </tr>
+            <tbody>
           </table>
 
           <!-- FORM FOR PUBLISHING --> 

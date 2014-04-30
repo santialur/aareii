@@ -81,7 +81,7 @@
                   Nuestra busqueda esta orientada a estudiantes avanzados  de Ingenieria Quimica,
                                   Ingenieria electromecanica, Ingenieria Mecanica, Ingenieria Electronica o afines para desarrollarse en nuestra Planta Mendoza. Los..
                 </td>
-                <td>
+                <td class="cellDate">
                   25-Sep-2013
                 </td>
               </tr>
@@ -93,7 +93,7 @@
                   Nuestra busqueda esta orientada a estudiantes avanzados  de Ingenieria Quimica,
                                   Ingenieria electromecanica, Ingenieria Mecanica, Ingenieria Electronica o afines para desarrollarse en nuestra Planta Mendoza. Los..
                 </td>
-                <td>
+                <td class="cellDate">
                   25-Sep-2013
                 </td>             
               </tr>
