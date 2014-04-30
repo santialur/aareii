@@ -117,11 +117,7 @@ function sendData(){
       success: function(output){
         if(output == "Exito"){
           alert("El evento se agrego correctamente");
-          document.getElementById("titulo_evento").value = "";
-          document.getElementById("descripcion_evento").value = "";
-          document.getElementById("fecha_evento_anio").value = "1";
-          document.getElementById("fecha_evento_mes").value = "0";
-          document.getElementById("fecha_evento_dia").value = "0";
+          document.publishEvent.reset();
           $('html, body').animate({scrollTop: '0px'},1500);
         }else{
           alert("Hubo un problema al guardar el evento");

@@ -208,24 +208,8 @@ function sendData(){
             success: function(output){
                 if(output == "Exito"){
                   alert("La oferta se publicó correctamente");
-                  document.getElementById("info_puesto").value = "";
-                  document.getElementById("descripcion_puesto").value = "";
-                  document.getElementById("requisitos_puesto").value = "";
-                  document.getElementById("fecha_cierre_anio").value = "1";
-                  document.getElementById("fecha_cierre_mes").value = "0";
-                  document.getElementById("fecha_cierre_dia").value = "0";
-                  $('input[name=nivel_español]').attr('checked',false);
-                  $('input[name=nivel_ingles]').attr('checked',false);
-                  $('input[name=nivel_aleman]').attr('checked',false);
-                  $('input[name=nivel_frances]').attr('checked',false);
-                  $('input[name=nivel_portugues]').attr('checked',false);
-                  $('input[name=nivel_italiano]').attr('checked',false);
-                  $('input[name=carrera]').attr('checked',false);
-                  $('input[name=estudios]').attr('checked',false);
-                  $('input[name=contrato]').attr('checked',false);
-                  $('input[name=jornada]').attr('checked',false);
+                  document.publishOffer.reset();
                   $('html, body').animate({scrollTop: '0px'},1500);
-                  
                 }else{
                   alert("Hubo un problema al guardar la publicación");
                   
