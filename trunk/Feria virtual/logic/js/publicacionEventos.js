@@ -129,6 +129,7 @@ function sendData(){
 }
 
 function showEvents(){
+  getEvents();
   document.getElementById("tableOutput").style.display = 'inline-table';
   document.getElementById("publishEvent").style.display = 'none';
 }
@@ -137,9 +138,12 @@ function showCreateEvents(){
   document.getElementById("publishEvent").style.display = 'inline';
 }
 
-$(document).ready( 
-  function getEvents()
-  {
+$(document).ready(function(){
+  getEvents();
+});
+
+function getEvents()
+{
     var company_id = getSession();
     var events;
     $.ajax({ 
@@ -155,11 +159,11 @@ $(document).ready(
           fillEvents(events);
         }
       });
-  }
-);
+}
 
 function fillEvents(events)
 {
+  $('#tableOutput tbody').empty()
   for(var i=0;i<events.events.length;i++)
     $('#tableOutput tbody').append(''+
       '<tr><td class="cellTitle">'+
