@@ -17,12 +17,7 @@
 	$jsontext = '{"events":[';
 	while ($row = mysql_fetch_array($result, MYSQL_ASSOC))
 	{
-	
-	    /*$row_array["Titulo"] = utf8_encode($row["eventTitle"]);
-	    $row_array["Descripcion"] =  utf8_encode($row["eventDescription"]);
-	    $row_array["Inicia"] =  utf8_encode($row["eventDateTimeStart"]);
-	    $row_array["Termina"] =  utf8_encode($row["eventDateTimeEnd"]);
-	    $row_array["Habilitado"] =  utf8_encode($row["enabled"]);*/
+
 	    $jsontext .= "{";
 	    $jsontext .= '"Titulo":'.'"'.$row["eventTitle"].'",';
 	    $jsontext .= '"Descripcion":'.'"'.$row["eventDescription"].'",';
