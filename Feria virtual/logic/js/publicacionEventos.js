@@ -104,17 +104,14 @@ function daysInMonth(month, year)
 
 
 function sendData(){
-  if(document.getElementById("fecha_evento_anio").value == "1" || document.getElementById("fecha_evento_mes").value == "0" || document.getElementById("fecha_evento_dia").value == "0"){
-    alert("Ingrese una fecha valida del evento");
-    return false;
-  }
   var company_id = getSession();
   
   $.ajax({ url: '../../logic/php/saveEvent.php',
       data: {companyid:     company_id,
-        eventTitle:     document.getElementById("titulo_evento").value,
-        eventDate:    document.getElementById("fecha_evento_anio").value + "-" + document.getElementById("fecha_evento_mes").value + "-" + document.getElementById("fecha_evento_dia").value,
-        eventDescription:   document.getElementById("descripcion_evento").value,
+        eventTitle:       document.getElementById("titulo_evento").value,
+        eventDateTimeStart:     document.getElementById("tiempo_inicio_anio").value + "-" + document.getElementById("tiempo_inicio_mes").value + "-" + document.getElementById("tiempo_inicio_dia").value + " " + document.getElementById("tiempo_inicio_hora").value + ":" + document.getElementById("tiempo_inicio_minuto").value,
+        eventDateTimeEnd:     document.getElementById("tiempo_finalizacion_anio").value + "-" + document.getElementById("tiempo_finalizacion_mes").value + "-" + document.getElementById("tiempo_finalizacion_dia").value + " " + document.getElementById("tiempo_finalizacion_hora").value + ":" + document.getElementById("tiempo_finalizacion_minuto").value,
+        eventDescription:     document.getElementById("descripcion_evento").value,
       },
       type: 'POST',
       success: function(output){
@@ -127,9 +124,9 @@ function sendData(){
           document.getElementById("fecha_evento_dia").value = "0";
           $('html, body').animate({scrollTop: '0px'},1500);
         }else{
-                      alert("Hubo un problema al guardar el evento");
+          alert("Hubo un problema al guardar el evento");
                     
-                  }
+        }
       }
    });  
    return false;
