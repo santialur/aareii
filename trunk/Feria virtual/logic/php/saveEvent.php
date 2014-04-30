@@ -2,7 +2,8 @@
 
 	$companyId = $_POST['companyid'];
 	$eventTitle = $_POST['eventTitle'];
-	$eventDate = $_POST['eventDate'];
+	$eventDateTimeStart = $_POST['eventDateTimeStart'];
+	$eventDateTimeEnd = $_POST['eventDateTimeEnd'];
 	$eventDescription = $_POST['eventDescription'];
 
 	$con = mysql_connect('localhost','root','C4ch0bs4s3124');
@@ -12,8 +13,8 @@
 	  {
 	  die('Could not connect: ' . mysql_error($con));
 	  }
-	$sql = "INSERT INTO events (companyid, eventTitle, eventDate, eventDescription, eventDateCreated, eventDateUpdated, enabled)
-		    			VALUES ($companyId, '$eventTitle' ,'$eventDate', '$eventDescription', NOW(), NOW(), 1) ";
+	$sql = "INSERT INTO events (companyid, eventTitle, eventDateTimeStart, eventDescription, eventDateCreated, eventDateUpdated, enabled, eventDateTimeEnd)
+		    			VALUES ($companyId, '$eventTitle' ,'$eventDateTimeStart', '$eventDescription', NOW(), NOW(), 1,'$eventDateTimeEnd') ";
 	$result = mysql_query($sql, $con);
 	echo "Exito";
 	mysql_close($con);
