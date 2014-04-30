@@ -136,3 +136,42 @@ function showCreateEvents(){
   document.getElementById("tableOutput").style.display = 'none';
   document.getElementById("publishEvent").style.display = 'inline';
 }
+
+$(document).ready( 
+  function getEvents()
+  {
+    var company_id = getSession();
+    var events;
+    $.ajax({ 
+      url: '../../logic/php/getCompanyEvents.php',
+      data: 
+      {
+        companyid : company_id,
+      },
+        type: 'GET',
+        success: function(output) 
+        {
+          events = JSON.parse(output);
+          fillEvents(events);
+        }
+      });
+  }
+);
+
+function fillEvents(events)
+{
+  for(var i=0;i<events.length;i++)
+    $('#tableOutput tbody').append(''+
+      '<td class="cellTitle">'+
+        '<a>' + events[i].Titulo + '</a>'+
+      '</td>'+
+      '<td class="cellDate">'+
+        events[i].Inicia +
+      '</td>'+
+      '<td class="cellDate">'+
+        events[i].Termina +
+      '</td> '+
+      '<td class="cellDescription">'+
+        events[i].Descripcion +
+      '</td>');
+}
