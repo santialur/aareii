@@ -70,7 +70,6 @@
               <th>Puesto          </th>
               <th>Descripcion     </th>
               <th>Fecha de Cierre </th>
-              <th>Postularse      </th>
             </tr>
           </thead>
             <tbody>
@@ -85,12 +84,9 @@
                 <td>
                   25-Sep-2013
                 </td>
-                <td>
-                                      
-                </td> 
               </tr>
               <tr>
-                <td class="cellPosition">
+                <td class="cellTitle">
                   <a > Pasante de Envasado </a>
                 </td>
                 <td class="cellDescription">
@@ -99,10 +95,7 @@
                 </td>
                 <td>
                   25-Sep-2013
-                </td>
-                <td>
-                       
-                </td>                 
+                </td>             
               </tr>
 
             </tbody>
