@@ -179,5 +179,12 @@ function fillEvents(events)
       '</td> '+
       '<td class="cellDescription">'+
         events.events[i].Descripcion +
+      '<td class="cellDate">'+
+      '<input type="button" value="Eliminar" class="button" onclick="deleteEvent();">'+
       '</td></tr>');
+}
+
+function deleteEvent()
+{
+
 }
