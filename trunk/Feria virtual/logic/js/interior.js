@@ -111,7 +111,19 @@ function sendVote(){
         },
         type: 'POST',
         success: function(output){
-          alert(output);
+            
+            alert(output);
+            document.getElementById("voteButton").style.display = 'none';
+            var option = new Array();
+            result = JSON.parse(output);
+            $( '#pollOptions' ).empty();
+            for(var i=0;i<result.results.length; i++)
+        {
+          option[i] = result.results[i].option;
+          $( '#pollOptions' ).append('<label for= "option'+i+'">' + option[i]+ ':   ' + result.results[i].quantity +'</label><br>');
+        }
+            
+
         }
       });
 }
