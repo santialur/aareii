@@ -5,14 +5,22 @@
 		</title>
 
 		<?php include '_imports.html'; ?>
-
+		
+		
 		<!-- NEWS AND POLLS --> 
 		<script type="text/javascript"	src="../../logic/js/interior.js"></script>
-
+		<script type="application/javascript">
+		    function getip(json){
+		      //alert(json.ip); // alerts the ip address
+		      saveIdentification(json.ip);
+		    }
+		</script>
+		<script type="application/javascript" src="http://jsonip.appspot.com/?callback=getip"> </script>
+		
 		<!--- NEWS TICKER --> 
 	  	<link 	rel="stylesheet"		type="text/css"		href="../../features/jquery_news_ticker/styles/ticker-style.css"   />
 		<script type="text/javascript"	src="../../features/jquery_news_ticker/includes/jquery.ticker.js"></script>
-
+		
 		<script type="text/javascript">
 			$(function () {
 			    $('#js-news').ticker({
@@ -58,7 +66,6 @@
 				<!-- NOTICIAS -->
 				<div style="margin-top: 4%">
 					<ul id="js-news" class="js-hidden">
-						
 					</ul>
 				</div>
 
@@ -126,13 +133,12 @@
 						<div id="pollContent">	
     						<h3 id="pollTitle" style="text-align:center"></h3>	<br>
 							<div id="pollOptions">
-
 					    	</div>
 					    	<br>
     					</div>
 					</div>
 
-					<button class="button" style="position:static; top:50%">Votar</button>
+					<button class="button" style="position:static; top:50%" onclick="sendVote()">Votar</button>
 
 				</div> <!-- FIN BLOQUE DERECHO --> 
 
