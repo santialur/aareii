@@ -227,7 +227,8 @@ $(document).ready(function(){
 function getJobOffers()
   {
     var company_id = getSession();
-    
+    var offers;
+
     $.ajax({ 
       url: '../../logic/php/getCompanyJobOffers.php',
       data: 
@@ -237,17 +238,61 @@ function getJobOffers()
         type: 'POST',
         success: function(output) 
         {
-          alert(output);
+          offers = JSON.parse(output);
+          fillOffers(offers);
         }
       });
   }
+
+function fillOffers(offers)
+{
+  $('#tableOutput tbody').empty();
+
+  for(var i=0;i<offers.jobOffers.length;i++)
+    $('#tableOutput tbody').append(''+
+      '<tr><td class="cellTitle">'+
+        '<a>' + offers.jobOffers[i].titulo + '</a>'+
+      '</td>'+
+      '<td class="cellDescription">'+
+        offers.jobOffers[i].descripcion +
+      '</td>'+                
+      '<td class="cellWide">'+
+        offers.jobOffers[i].areasEstudio +
+      '</td>'+
+      '<td>'+
+        offers.jobOffers[i].estudiosMinimos +      
+      '</td>'+
+      '<td class="cellWide">'+
+        offers.jobOffers[i].lenguajes +          
+      '</td>'+
+      '<td>'+
+        offers.jobOffers[i].tipoContrato +                      
+      '</td>'+
+      '<td>'+
+        offers.jobOffers[i].jornadaTrabajo +                            
+      '</td>'+         
+      '<td class="cellDate">'+
+        offers.jobOffers[i].fechaPublicacion +                            
+      '</td>'+ 
+      '<td class="cellDate">'+
+        offers.jobOffers[i].fechaCierre +    
+      '<td class="cellDate">'+
+      '<input type="button" value="Eliminar" class="button" onclick="deleteOffer();">'+
+      '</td></tr>');
+}
+
+function deleteOffer()
+{
+
+}
+
 
 function showOffers(){
   getJobOffers();
   document.getElementById("tableOutput").style.display = 'inline-table';
   document.getElementById("publishOffer").style.display = 'none';
-  
 }
+
 function showCreateOffer(){
   document.getElementById("tableOutput").style.display = 'none';
   document.getElementById("publishOffer").style.display = 'inline';

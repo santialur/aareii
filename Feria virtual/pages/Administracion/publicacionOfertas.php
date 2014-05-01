@@ -65,39 +65,23 @@
 
           <!-- TABLE WITH OFFERS --> 
           <table id="tableOutput">
-          <thead>
-            <tr>
-              <th>Puesto          </th>
-              <th>Descripcion     </th>
-              <th>Fecha de Cierre </th>
-            </tr>
-          </thead>
+            <thead>
+              <tr>
+                <th>Puesto              </th>
+                <th>Descripcion         </th>
+                <th>Areas de Estudio    </th>
+                <th>Estudios Minimos    </th>
+                <th>Lenguajes           </th>
+                <th>Tipo de Contrato    </th>
+                <th>Jornada de Trabajo  </th>
+                <th>Fecha de Publicacion</th>
+                <th>Fecha de Cierre     </th>
+                <th>Eliminar     </th>
+              </tr>
+            </thead>
             <tbody>
               <tr>
-                <td class="cellTitle">
-                  <a> Pasante de Envasado </a>
-                </td>
-                <td class="cellDescription">
-                  Nuestra busqueda esta orientada a estudiantes avanzados  de Ingenieria Quimica,
-                                  Ingenieria electromecanica, Ingenieria Mecanica, Ingenieria Electronica o afines para desarrollarse en nuestra Planta Mendoza. Los..
-                </td>
-                <td class="cellDate">
-                  25-Sep-2013
-                </td>
               </tr>
-              <tr>
-                <td class="cellTitle">
-                  <a > Pasante de Envasado </a>
-                </td>
-                <td class="cellDescription">
-                  Nuestra busqueda esta orientada a estudiantes avanzados  de Ingenieria Quimica,
-                                  Ingenieria electromecanica, Ingenieria Mecanica, Ingenieria Electronica o afines para desarrollarse en nuestra Planta Mendoza. Los..
-                </td>
-                <td class="cellDate">
-                  25-Sep-2013
-                </td>             
-              </tr>
-
             </tbody>
           </table>
 
