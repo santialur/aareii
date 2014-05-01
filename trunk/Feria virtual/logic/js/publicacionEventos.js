@@ -146,6 +146,7 @@ function getEvents()
 {
     var company_id = getSession();
     var events;
+
     $.ajax({ 
       url: '../../logic/php/getCompanyEvents.php',
       data: 
@@ -163,7 +164,8 @@ function getEvents()
 
 function fillEvents(events)
 {
-  $('#tableOutput tbody').empty()
+  $('#tableOutput tbody').empty();
+  
   for(var i=0;i<events.events.length;i++)
     $('#tableOutput tbody').append(''+
       '<tr><td class="cellTitle">'+
