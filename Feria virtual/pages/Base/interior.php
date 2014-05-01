@@ -6,7 +6,6 @@
 
 		<?php include '_imports.html'; ?>
 		
-		
 		<!-- NEWS AND POLLS --> 
 		<script type="text/javascript"	src="../../logic/js/interior.js"></script>
 		<script type="application/javascript">
@@ -52,6 +51,11 @@
 	  	<!-- MARQUESINA --> 
 	  	<link 	rel="stylesheet" 		type="text/css"		href="../../css/plugins/marquee.css"	/>
 	  	<script type="text/javascript"	src="../../logic/js/marquee.js"></script>
+	  	
+	  	
+	  	<script type="text/javascript">
+		      
+		</script>
 	  	
 	</head>
 
@@ -132,13 +136,14 @@
 
 						<div id="pollContent">	
     						<h3 id="pollTitle" style="text-align:center"></h3>	<br>
-							<div id="pollOptions">
+							<div id="pollOptions"></div>
+							<div id="chart_div" style="width: 100%; height: 100%; display:none;" ></div>
 					    	</div>
 					    	<br>
     					</div>
 					</div>
 
-					<button class="button" style="position:static; top:50%" onclick="sendVote()">Votar</button>
+					<button id="voteButton" class="button" style="position:static; top:50%" onclick="sendVote()">Votar</button>
 
 				</div> <!-- FIN BLOQUE DERECHO --> 
 

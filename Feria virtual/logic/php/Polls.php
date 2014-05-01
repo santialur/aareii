@@ -73,15 +73,15 @@
 			$sql = "SELECT * FROM poll_options WHERE question_id = '$questionId'";
 			$result = mysql_query($sql, $con);
 			
-			$jsontext .= '"options":'.'{';
+			
+			$jsontext = '{"results":[';
 			while($row = mysql_fetch_array($result, MYSQL_ASSOC))
 			{
-			    $jsontext .= '"id":'.'"'.$row['id'].'",';
-			    $jsontext .= '"option":'.'"'.$row['option'].'"},';
-			    $jsontext .= '"votes":'.'"'.$row['voteQuantity'].'"';
+			    $jsontext .= '{"option":"'.$row['option'].'",';
+			    $jsontext .= '"quantity":'.$row['voteQuantity'].'},';
 			}
-			$jsontext .= "}";
-			
+			$jsontext = substr_replace($jsontext, '', -1); // to get rid of extra comma
+			$jsontext .= ']}';
 			echo $jsontext;
 			mysql_close($con);
 			return;
@@ -102,15 +102,14 @@
 			$sql_poll = "SELECT * FROM poll_options WHERE question_id = $questionId";
 			$result = mysql_query($sql_poll, $con);
 			
-			$jsontext .= '"options":'.'{';
+			$jsontext = '{"results":[';
 			while($row = mysql_fetch_array($result, MYSQL_ASSOC))
 			{
-			    $jsontext .= '"id":'.'"'.$row['id'].'",';
-			    $jsontext .= '"option":'.'"'.$row['option'].'",';
-			    $jsontext .= '"votes":'.'"'.$row['voteQuantity'].'"';
+			    $jsontext .= '{"option":"'.$row['option'].'",';
+			    $jsontext .= '"quantity":'.$row['voteQuantity'].'},';
 			}
-			$jsontext .= "}";
-			
+			$jsontext = substr_replace($jsontext, '', -1); // to get rid of extra comma
+			$jsontext .= ']}';
 			echo $jsontext;
 			mysql_close($con);
 			return;
