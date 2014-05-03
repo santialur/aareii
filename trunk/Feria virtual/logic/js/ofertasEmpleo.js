@@ -25,7 +25,6 @@ function fillOffers(offers)
 			"<h5><strong>"+ offers.jobOffers[i].titulo +"</strong></h5></td>" + 
 			"<td><h5>"+ offers.jobOffers[i].descripcion +"</h5></td>" + 
 			"<td><h5>"+ offers.jobOffers[i].fechaPublicacion +"</h5></td>" + 
-			"<td><input type='button' class='button' value='Postúlese'></td></tr>");
+			"<td><a href=''><button type='button' class='button'>Ver más</button></a><br><br>" + 
+			"<input type='button' class='button' value='Postúlese'></td></a></tr>");
 }
-
-
