@@ -21,7 +21,7 @@
 						        <th>Puesto			</th>
 						        <th>Descripcion		</th>
 						        <th>Fecha de Cierre	</th>
-						        <th>Postularse		</th>
+						        <th>Acciones </th>
 					        </tr>
 				        </thead>
 				        <tbody>
