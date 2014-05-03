@@ -3,12 +3,12 @@ $(window).load(
 	{
 		var offers;
 		$.ajax({ 
-			url: '../../logic/php/getCompanyJobOffers.php',
+			url: '../../../logic/php/getCompanyJobOffers.php',
 	 	 	data: 
 	 	 	{
 	 	 		companyid : 1,
 	 	 	},
-	  		type: 'GET',
+	  		type: 'POST',
 	  		success: function(output) 
 	  		{
 	  			offers = JSON.parse(output);
@@ -20,9 +20,12 @@ $(window).load(
 
 function fillOffers(offers)
 {
-	for(var i=0;i<offers.length;i++)
-		$('#offerTable tbody').append("<tr><td><h5><strong>"+offers[i].title+"</strong></h5></td><td><h5>"+offers[i].description+"</h5></td><td><h5>"+offers[i].datepublished+"</h5></td><tr>");
+	for(var i=0;i<offers.jobOffers.length;i++)
+		$('#tableOutput tbody').append("<tr><td>"+
+			"<h5><strong>"+ offers.jobOffers[i].titulo +"</strong></h5></td>" + 
+			"<td><h5>"+ offers.jobOffers[i].descripcion +"</h5></td>" + 
+			"<td><h5>"+ offers.jobOffers[i].fechaPublicacion +"</h5></td>" + 
+			"<td><input type='button' class='button' value='Postúlese'></td></tr>");
 }
-
 
 

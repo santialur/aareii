@@ -1,24 +1,3 @@
-$(window).load(	
-	function getEvents()
-	{
-		updateDay();
-		var events;
-		$.ajax({ 
-			url: '../../logic/php/getCompanyEvents.php',
-	 	 	data: 
-	 	 	{
-	 	 		companyid : 1,
-	 	 	},
-	  		type: 'GET',
-	  		success: function(output) 
-	  		{
-	  			events = JSON.parse(output);
-	  			fillAgenda(events);
-	  		}
-	  	});
-	}
-);
-
 function updateDay()
 {
 	var today = new Date(); 
@@ -32,14 +11,39 @@ function updateDay()
 	});
 }
 
+$(document).ready(function(){
+  getEvents();
+});
+
+function getEvents()
+{
+	var company_id = 1;
+
+	updateDay();
+	var events;
+	$.ajax({ 
+		url: '../../../logic/php/getCompanyEvents.php',
+ 	 	data: 
+ 	 	{
+ 	 		companyid : company_id,
+ 	 	},
+  		type: 'POST',
+  		success: function(output) 
+  		{
+  			events = JSON.parse(output);
+  			fillAgenda(events);
+  		}
+  	});
+}
+
 function fillAgenda(events)
 {
 	var i = 0;
 
 	$('#tableCalendar td').each(function(){
-		for(var j=0; j<events.length; j++)
+		for(var j=0; j<events.events.length; j++)
 		{
-			var day = events[j].date.substring(8,10);
+			var day = events.events[j].Inicia.substring(8,10);
 			if($(this).html() == day)		//Is the content of the cell the same as the date of the event
 			{
 				if(!$(this).hasClass('date_has_event'))
@@ -47,7 +51,13 @@ function fillAgenda(events)
 					$(this).addClass('date_has_event'); 		//
 					$(this).append("<div class='events'><ul id='eventsList"+i+"''></ul></div>");
 				}
-				var list = $('#eventsList'+i).append("<li><span class='title'>"+ events[j].title +"</span><span class='desc'>"+ events[j].description +"</span></li>");
+				var list = $('#eventsList'+i).append("" +
+					"<li>"+
+					"<span class='title'>"+ events.events[j].Titulo +"</span>"+
+					"<span class='desc'>"+ events.events[j].Descripcion +"</span>"+
+					"<span class='desc'>"+"Inicia: "+ events.events[j].Inicia +"</span>"+
+					"<span class='desc'>"+"Finaliza: "+ events.events[j].Termina +"</span>"+
+					"</li>");
 			}
 		}
 		i++;
