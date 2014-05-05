@@ -1,3 +1,8 @@
+<?php 
+  session_start(); 
+  $offerId = $_GET['idOferta'];
+  $_SESSION['company_id'] = 1; 
+?> 
 <html>
   <head>
     <link   rel="stylesheet"    type="text/css"   href="../../../css/styles.css"               />
@@ -8,13 +13,18 @@
 
     <script type="text/javascript">
       function getSession(){
-    var x = 1;
-    return x;
-  }
+        var x = <?php echo json_encode($_SESSION['company_id']) ?>;
+        return x;
+      } 
+    
+      function getOfferId(){
+        var x = <?php echo $offerId ?>;
+        return x;
+      }
     </script>
   </head>
-  <body>
-    <table id="tableOutput">
+  <body style="padding: 2% 5%">
+    <table id="tableOutput" >
             <thead>
               <tr>
                 <th>Puesto              </th>
