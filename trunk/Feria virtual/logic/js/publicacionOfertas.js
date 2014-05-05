@@ -239,7 +239,7 @@ function getJobOffers()
         success: function(output) 
         {
           if(output == "No hay ofertas"){
-            alert(output);
+            
           }else{
             offers = JSON.parse(output);
               fillOffers(offers);

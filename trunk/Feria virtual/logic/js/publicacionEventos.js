@@ -156,8 +156,13 @@ function getEvents()
         type: 'POST',
         success: function(output) 
         {
-          events = JSON.parse(output);
-          fillEvents(events);
+          if(output == "No hay eventos"){
+            
+          }else{
+            events = JSON.parse(output);
+              fillEvents(events);
+          }
+          
         }
       });
 }
@@ -168,7 +173,10 @@ function fillEvents(events)
   
   for(var i=0;i<events.events.length;i++)
     $('#tableOutput tbody').append(''+
-      '<tr><td class="cellTitle">'+
+      '<tr><td class="cellId" style="display:none;">'+
+        '<a>' + events.events[i].Id+ '</a>'+
+      '</td>'+
+      '<td class="cellTitle">'+
         '<a>' + events.events[i].Titulo + '</a>'+
       '</td>'+
       '<td class="cellDate">'+
@@ -180,11 +188,27 @@ function fillEvents(events)
       '<td class="cellDescription">'+
         events.events[i].Descripcion +
       '<td class="cellDate">'+
-      '<input type="button" value="Eliminar" class="button" onclick="deleteEvent();">'+
+      '<input type="button" value="Eliminar" class="button" onclick="deleteEvent('+events.events[i].Id+');">'+
       '</td></tr>');
 }
 
-function deleteEvent()
+function deleteEvent(id)
 {
-
+  $.ajax({ 
+          url: '../../logic/php/deleteEvent.php',
+          data: 
+          {
+            eventId : id,
+          },
+          type: 'POST',
+          success: function(output) 
+          {
+              if(output == "Exito"){
+                location.reload();
+              }else{
+                alert(output);
+              }
+              
+          }
+        });
 }
