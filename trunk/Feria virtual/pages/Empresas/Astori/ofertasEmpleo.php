@@ -1,3 +1,8 @@
+<?php 
+	session_start(); 
+	$_SESSION['company_name'] = astori; 
+	$_SESSION['company_id'] = 1; 
+?> 
 <!DOCTYPE html>
 <html>
 	<head>
@@ -5,6 +10,15 @@
 
 		<?php include '../_empresasImports.html'; ?>
 		<link 	rel="stylesheet" 	href="../../../css/ofertasEmpleo.css"	/>
+    			
+
+		
+	    <script type="text/javascript">
+	      function getSession(){
+	        var x = <?php echo json_encode($_SESSION['company_id']) ?>;
+	        return x;
+	      }
+	    </script>
 	</head>
 
 	<body>
