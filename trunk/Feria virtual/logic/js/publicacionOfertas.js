@@ -238,8 +238,12 @@ function getJobOffers()
         type: 'POST',
         success: function(output) 
         {
-          offers = JSON.parse(output);
-          fillOffers(offers);
+          if(output == "No hay ofertas"){
+            alert(output);
+          }else{
+            offers = JSON.parse(output);
+              fillOffers(offers);
+          }
         }
       });
   }
@@ -250,7 +254,10 @@ function fillOffers(offers)
 
   for(var i=0;i<offers.jobOffers.length;i++)
     $('#tableOutput tbody').append(''+
-      '<tr><td class="cellTitle">'+
+      '<tr><td class="cellId" style="display:none;">'+
+         offers.jobOffers[i].id +
+      '</td>'+
+      '<td class="cellTitle">'+
         '<a>' + offers.jobOffers[i].titulo + '</a>'+
       '</td>'+
       '<td class="cellDescription">'+
@@ -277,13 +284,29 @@ function fillOffers(offers)
       '<td class="cellDate">'+
         offers.jobOffers[i].fechaCierre +    
       '<td class="cellDate">'+
-      '<input type="button" value="Eliminar" class="button" onclick="deleteOffer();">'+
+      '<input type="button" value="Eliminar" class="button" onclick="deleteOffer('+offers.jobOffers[i].id+');">'+
       '</td></tr>');
 }
 
-function deleteOffer()
+function deleteOffer(id)
 {
-
+  $.ajax({ 
+          url: '../../logic/php/deleteOffer.php',
+          data: 
+          {
+            offerId : id,
+          },
+          type: 'POST',
+          success: function(output) 
+          {
+              if(output == "Exito"){
+                location.reload();
+              }else{
+                alert(output);
+              }
+              
+          }
+        });
 }
 
 
