@@ -19,10 +19,9 @@
 			$(document).ready(function(){
 				$(".ifancybox").fancybox({
 					'width'			: 	'100%',
-		 			'height'		: 	'120%',
-		 			'autoScale'		: 	'none',
-		 			'transitionIn'	: 	'none',
-		 			'transitionOut' : 	'none',
+		 			'height'		: 	'10%',
+		 			'autoSize'		: 	'false',
+		 			'fitToView'		: 	'false',
 		 			'type' 			: 	'iframe'
 				});
 			});
