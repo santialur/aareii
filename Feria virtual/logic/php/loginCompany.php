@@ -30,14 +30,6 @@
 		$sql = "SELECT * FROM company WHERE company_name = '$company_name' AND password = '$encriptedPass'";
 		$result = mysql_query($sql, $con);
 
-
-		//$salt	= md5(mt_rand());
-		//$encrypt = md5($password.$salt);
-		//$encriptedPass = $encrypt.':'.$salt;
-
-//		$sql = "SELECT * FROM company WHERE company_name = '$company' AND password = '$encriptedPass'";
-//		$result = mysql_query($sql, $con);
-
 		if(mysql_num_rows($result) == 0){
 			echo "Compania no registrada";
 		}else{
@@ -49,9 +41,9 @@
   			$_SESSION['company_name'] = $company_name;
   			$_SESSION['company_id'] = $id;
   			echo "Compania registrada";
-  			//header("Location: http://www.encontramas.com.ar/virtual/pages/publicacionOfertas.php"); 
-  			//exit;
+  		
 		}
+		mysql_close($con);
 	}
 
 ?>
