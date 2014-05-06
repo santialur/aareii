@@ -1,0 +1,26 @@
+	<div>
+	  <div id="ID_div">
+            <span class="leftSide">
+              <strong>Nro. de Documento</strong>:   
+              <span class="red">*</span>
+            </span>
+            <input type="text" id="numero_de_documento" name="numero_de_documento" class="rightSide" maxlength="10" onkeyup="checkNumeric(this);">
+            <br><br>
+          </div>
+	  <div id="password_div">
+            <span class="leftSide">
+              <strong>Contraseña</strong>:          
+              <span class="red">*</span>
+            </span> 
+            <input type="password" id="contraseña" name="contraseña" class="rightSide">
+            <br><br>
+          </div>
+
+          <div id="olvido_contraseña">
+          <a  href="#" style="font-size:80%; text-decoration:underline;" onclick="forgotPassword()">Olvide mi contraseña</a><br><br>
+          </div>
+          
+          <div id="buttons" style="text-align: center">
+            <input type="button" id="postulate_button" value="Postularse" class="button" onclick="postularse()"      style="margin-right:  3%">
+          </div>
+       </div>
