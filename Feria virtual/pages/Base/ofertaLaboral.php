@@ -7,81 +7,26 @@
 	</head>
 
 
-	<body >
+	<body>
 			<!-- MENU --> 
 			<?php include '_menu.html'; ?>
 
 			<!-- CONTENIDO --> 
 			<div id="content" align="center">
-				<!--table>
-				    <tr>
-				    	<td ng-repeat="phone in phones" >
-				    		<a href="{{phone.url}}">{{phone.name}}</a> </br>
-				        	<img ng-src="{{phone.imageUrl}}">
-				    	</td>
-				    </tr>
-				</table-->
-
-
-				<!-- Esto va a ser rellenado con angularjs -->
-				<table cellspacing="10">
-				    <tr>
-				    	<td>
-				    		<a href="http://www.aareii.org.ar/">AArEII</a> </br>
-				        	<img src="../../features/images/AArEII-banner.jpg">
-				    	</td>
-				    	<td>
-				    		<a href="http://www.aareii.org.ar/">AArEII</a> </br>
-				        	<img src="../../features/images/AArEII-banner.jpg">
-				    	</td>
-				    	<td>
-				    		<a href="http://www.aareii.org.ar/">AArEII</a> </br>
-				        	<img src="../../features/images/AArEII-banner.jpg">
-				    	</td>
-				    	<td>
-				    		<a href="http://www.aareii.org.ar/">AArEII</a> </br>
-				        	<img src="../../features/images/AArEII-banner.jpg">
-				    	</td>
-				    </tr>
-				    <tr>
-				    	<td>
-				    		<a href="http://www.aareii.org.ar/">AArEII</a> </br>
-				        	<img src="../../features/images/AArEII-banner.jpg">
-				    	</td>
-				    	<td>
-				    		<a href="http://www.aareii.org.ar/">AArEII</a> </br>
-				        	<img src="../../features/images/AArEII-banner.jpg">
-				    	</td>
-				    	<td>
-				    		<a href="http://www.aareii.org.ar/">AArEII</a> </br>
-				        	<img src="../../features/images/AArEII-banner.jpg">
-				    	</td>
-				    	<td>
-				    		<a href="http://www.aareii.org.ar/">AArEII</a> </br>
-				        	<img src="../../features/images/AArEII-banner.jpg">
-				    	</td>
-				    </tr>
-				    <tr>
-				    	<td>
-				    		<a href="http://www.aareii.org.ar/">AArEII</a> </br>
-				        	<img src="../../features/images/AArEII-banner.jpg">
-				    	</td>
-				    	<td>
-				    		<a href="http://www.aareii.org.ar/">AArEII</a> </br>
-				        	<img src="../../features/images/AArEII-banner.jpg">
-				    	</td>
-				    	<td>
-				    		<a href="http://www.aareii.org.ar/">AArEII</a> </br>
-				        	<img src="../../features/images/AArEII-banner.jpg">
-				    	</td>
-				    	<td>
-				    		<a href="http://www.aareii.org.ar/">AArEII</a> </br>
-				        	<img src="../../features/images/AArEII-banner.jpg">
-				    	</td>
-				    </tr>
-				    
-				</table>
-
+				<div id="content" style="padding-bottom:22%">
+					<div style="margin: 0 auto; padding: 0.5% 4%">
+				        <table id="tableOutput">
+					        <thead>
+						        <tr>
+							        <th>Puesto			</th>
+							        <th>Descripcion		</th>
+							        <th>Fecha de Cierre	</th>
+							        <th>Acciones 		</th>
+						        </tr>
+					        </thead>
+				        </table>
+					</div>
+				</div>
 			</div>
 			
 			<!-- FOOTER --> 
