@@ -24,7 +24,7 @@
     </script>
   </head>
   
-  <body style="padding: 2% 5%">
+  <body style="padding: 1% 1.5%; height: 320px">
     <?php include '../_empresasVerOferta.html'; ?>
   </body>
 </html>
