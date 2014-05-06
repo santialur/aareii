@@ -31,7 +31,7 @@ function fillOffers(offers)
 			"<td><h5>"+ offers.jobOffers[i].descripcion +"</h5></td>" + 
 			"<td><h5>"+ fCierre +"</h5></td>" + 
 			"<td><a class='ifancybox' href='verOferta.php?idOferta="+offers.jobOffers[i].id+"'><button type='button' class='button'>Ver más</button></a><br><br>" + 
-			"<input type='button' class='button' value='Postúlese'></td></a>"+
+			"<a class='ifancybox' href='postularse.php?idOferta="+offers.jobOffers[i].id+"&titulo="+offers.jobOffers[i].titulo+"'><button type='button' class='button'>Postúlese</button></td></a>"+
 			"<td class='cellId' style='display:none;>" + offers.jobOffers[i].id + "</td>"+
 			"</tr>");
 	}
