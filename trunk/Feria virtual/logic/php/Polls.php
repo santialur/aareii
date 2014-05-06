@@ -8,7 +8,39 @@
 	if(isset($_POST['getPolls'])){
 		getPolls();
 	}
-	
+	if(isset($_POST['savePoll'])){
+		savePoll($_POST['pollQuestion'],$_POST['pollOptions']);
+	}
+	function savePoll($pollQuestion, $pollOptions){
+		$con = mysql_connect('localhost','root','C4ch0bs4s3124');
+		mysql_select_db('encontramas_test',$con);
+		mysql_query("SET NAMES 'utf8'");
+		mysql_query('SET CHARACTER SET utf8');
+		if (!$con)
+			  {
+			  die('Could not connect: ' . mysql_error($con));
+			  }
+		
+		$sql = "INSERT INTO poll_questions (question, dateCreated)
+			VALUES('$pollQuestion', NOW())";
+		$result= mysql_query($sql, $con);
+
+		$json = json_decode($pollOptions, true);
+		$res = mysql_query('SELECT LAST_INSERT_ID()');
+		$row = mysql_fetch_array($res);
+		$questionId = $row[0];
+		
+		foreach($json['options'] as $option) {
+
+			$op = $option['option'];
+			$sql = "INSERT INTO poll_options (question_id, pollOption,voteQuantity)
+			VALUES($questionId, '$op', 0)";
+			$result= mysql_query($sql, $con);
+		    
+		}
+		echo "Exito";
+		mysql_close($con);
+	}
 	function getPolls(){
 		$con = mysql_connect('localhost','root','C4ch0bs4s3124');
 		mysql_select_db('encontramas_test',$con);
@@ -19,7 +51,7 @@
 			  die('Could not connect: ' . mysql_error($con));
 			  }
 	
-		$sql_pollQuestion = "SELECT * FROM poll_questions HAVING MAX(dateCreated)";
+		$sql_pollQuestion = "SELECT * FROM poll_questions WHERE dateCreated IN (SELECT MAX(dateCreated) FROM poll_questions)";
 		$pollQuestion = mysql_query($sql_pollQuestion, $con);
 	
 		$desc = array();
@@ -43,7 +75,7 @@
 		{
 		    
 		    $jsontext .= '{"id":'.'"'.$row['id'].'",';
-		    $jsontext .= '"option":'.'"'.$row['option'].'"},';
+		    $jsontext .= '"option":'.'"'.$row['pollOption'].'"},';
 		  
 		}
 		$jsontext = substr_replace($jsontext, '', -1); // to get rid of extra comma
@@ -77,7 +109,7 @@
 			$jsontext = '{"results":[';
 			while($row = mysql_fetch_array($result, MYSQL_ASSOC))
 			{
-			    $jsontext .= '{"option":"'.$row['option'].'",';
+			    $jsontext .= '{"option":"'.$row['pollOption'].'",';
 			    $jsontext .= '"quantity":'.$row['voteQuantity'].'},';
 			}
 			$jsontext = substr_replace($jsontext, '', -1); // to get rid of extra comma
@@ -93,7 +125,7 @@
 					WHERE id= $selectedOption";
 			
 			$result = mysql_query($sql_updatePoll, $con);
-			echo $sql_updatePoll;
+			
 			
 			$sql_insertId = "INSERT INTO poll_ListVoters (pollQuestion_id, computerId)
 					VALUES($questionId, '$pcIdentification')";
@@ -105,7 +137,7 @@
 			$jsontext = '{"results":[';
 			while($row = mysql_fetch_array($result, MYSQL_ASSOC))
 			{
-			    $jsontext .= '{"option":"'.$row['option'].'",';
+			    $jsontext .= '{"option":"'.$row['pollOption'].'",';
 			    $jsontext .= '"quantity":'.$row['voteQuantity'].'},';
 			}
 			$jsontext = substr_replace($jsontext, '', -1); // to get rid of extra comma
