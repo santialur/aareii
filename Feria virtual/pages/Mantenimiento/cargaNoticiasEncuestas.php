@@ -68,7 +68,7 @@
             </table>
 
             <!-- FORM FOR PUBLISHING --> 
-            <form id="publishNews" style="" name="publishNews" onsubmit="return sendData()">
+            <form id="publishNews" style="" name="publishNews" onsubmit="return sendNews()">
 
               <!-- (TABLA) --> 
               <div class="block">
@@ -111,7 +111,7 @@
                       Descripcion de Noticia
                     </th>
                     <td>
-                      <textarea id="descripcion_noticia" name="descripcion_noticia" rows="5" cols="50" maxlength="25" placeholder="Ingrese descripcion de la noticia.." style="resize: none;" required></textarea>
+                      <textarea id="descripcion_noticia" name="descripcion_noticia" rows="5" cols="50" maxlength="120" placeholder="Ingrese descripcion de la noticia.." style="resize: none;" required></textarea>
                     </td>
                   </tr>
                 </table>
