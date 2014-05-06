@@ -36,6 +36,7 @@
                 <th>Jornada de Trabajo  </th>
                 <th>Fecha de Publicacion</th>
                 <th>Fecha de Cierre     </th>
+                <th>Postularse          </th>
               </tr>
             </thead>
             <tbody>
