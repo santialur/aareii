@@ -64,18 +64,16 @@ body{
 }
 
 .header{
-	min-height:				7em;
-	background-image:       url(../features/images/texture1.png);
+	min-height:			7em;
+	background-image:       	url(../features/images/texture1.png);
 }
 
 .wrapperMedium{
 	box-shadow: 			5px 5px 30px #000000;
 	background-color: 		#CCCCCC;
-	margin:					auto; 
+	margin:				auto; 
 	min-height: 			100%;
-	height:					auto !important;
-	height: 				100%;
-	width:					95%; 
+	width:				95%; 
 }
 
 .leftSide
@@ -137,9 +135,9 @@ body{
 }
 
 #content{
-	width: 					80%; 
+	width: 				80%; 
 	background-color: 		#FAFAFA; 
-	float: 					right;
+	float: 				right;
 	min-height: 			100%;
 }
 
@@ -152,17 +150,16 @@ body{
 
 
 #listMenu{
-
 	list-style-type:		none;
 }
 
 #listMenu li{
-	background:				-webkit-linear-gradient(top, #DADADA, #CFCFCF);
-	height:					16%;
-	padding:				15px 30px;
+	background:				-webkit-linear-gradient(top, #DADADA, #CFCFCF);		
+	padding:				7.5% 10%;
 }
 
 #listMenu li a{
+
 	color:					black;
 	font-size:				1vw;
 	display: 				inline-block;
@@ -170,9 +167,7 @@ body{
 }
 
 #listMenu li:hover{
-
-	background-color: 			#B0B0B0;
-	box-shadow:					0px 1px 1px #000000;	
+	box-shadow:				2px 2px 2px #888888;	
 
 	/*Escalar*/
 	-webkit-transform:			scale(1.04, 1.04);
