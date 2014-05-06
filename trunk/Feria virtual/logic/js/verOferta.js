@@ -53,6 +53,12 @@ function fillOffers(offers)
         offers.jobOffers[i].fechaPublicacion +                            
       '</td>'+ 
       '<td class="cellDate">'+
-        offers.jobOffers[i].fechaCierre +    
+        offers.jobOffers[i].fechaCierre + 
+      '</td>'+
+      '<td class="cellId" style="display:none;">'+ 
+        offers.jobOffers[i].id +
+      '</td>'+
+      '<td>'+
+      '<input type="button" class="button" value="Post&uacute;lese">'+
     '</td></tr>');
 }
