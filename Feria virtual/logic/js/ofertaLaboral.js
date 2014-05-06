@@ -8,10 +8,10 @@ function getJobOffers()
     var offers;
     var offerID = getOfferId();
     $.ajax({ 
-      url: '../../../logic/php/getOffer.php',
+      url: '../../../logic/php/.php',
       data: 
       {
-        jobOfferId: offerID,
+
       },
         type: 'POST',
         success: function(output) 
@@ -29,8 +29,11 @@ function fillOffers(offers)
   for(var i=0;i<offers.jobOffers.length;i++)
       $('#tableOutput tbody').append(''+
       '<tr><td class="cellTitle">'+
-        '<a>' + offers.jobOffers[i].titulo + '</a>'+
+        '<a>' + offers.jobOffers[i].+ '</a>'+ //EMPRESA
       '</td>'+
+      '<td class="cellTitle">'+
+        offers.jobOffers[i].titulo +
+      '</td>'+ 
       '<td class="cellDescription">'+
         offers.jobOffers[i].descripcion +
       '</td>'+                
