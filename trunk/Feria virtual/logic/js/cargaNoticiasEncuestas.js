@@ -1,3 +1,80 @@
+function sendNews(){
+
+   return false;
+}
+
+$(document).ready(function(){
+  getNews();
+});
+
+function getNews()
+{
+    var news;
+
+    $.ajax({ 
+      url: '../../logic/php/.php',
+      data: 
+      {
+      },
+        type: 'POST',
+        success: function(output) 
+        {
+          if(output == "No hay noticias"){
+            
+          }else{
+            news = JSON.parse(output);
+            fillNews(news);
+          }
+          
+        }
+      });
+}
+
+function fillNews(news)
+{
+  $('#tableOutput tbody').empty();
+  
+  for(var i=0;i<news..length;i++)
+    $('#tableOutput tbody').append(''+
+      '<tr><td class="cellId" style="display:none;">'+
+        '<a>' + [i].Id+ '</a>'+
+      '</td>'+
+      '<td class="cellTitle">'+
+        '<a>' + .[i]. + '</a>'+
+      '</td>'+
+      '<td class="cellDate">'+
+        .[i]. +
+      '</td>'+
+      '<td class="cellDescription">'+
+        .[i]. +
+      '<td class="cellDate">'+
+      '<input type="button" value="Eliminar" class="button" onclick="deleteNews('+[i].Id+');">'+
+      '</td></tr>');
+}
+
+function deleteNews(id)
+{
+  $.ajax({ 
+          url: '../../logic/php/.php',
+          data: 
+          {
+            newsId : id,
+          },
+          type: 'POST',
+          success: function(output) 
+          {
+              if(output == "Exito"){
+                location.reload();
+              }else{
+                alert(output);
+              }
+              
+          }
+        });
+}
+
+/***********************************************************************************/
+
 function fillYears(target, x, y)
 {
   var aux;
@@ -29,7 +106,7 @@ function updateNumberOfDays()
   year  = $('#fecha_noticia_anio').val();
   days  = daysInMonth(month, year);
 
-  $('#fecha_noticia_dia').append($('<option />').val(0).html("Día"));
+  $('#fecha_noticia_dia').append($('<option />').val(0).html("D&iacutea"));
 
   for(i=1; i < days+1 ; i++){
     if(i<10){
@@ -44,11 +121,6 @@ function updateNumberOfDays()
 function daysInMonth(month, year)
 {
     return new Date(year, month, 0).getDate();
-}
-
-function sendData(){
-
-   return false;
 }
 
 function showNews(){
