@@ -125,28 +125,24 @@
 
           <div id="pollBlock" style="display:none">
             <!-- TABLE WITH POLL --> 
-            <h3 class="opensans textShadow">
-              Encuesta Publicada
-            </h3>
-            <table id="tableOutput">
-            <thead>
-              <tr>
-                <th>Pregunta                </th>
-                <th>Opciones                </th>
-              </tr>
-            </thead>
-              <tr>
-                <td class="cellTitle">
-                  <a>  </a>
-                </td>
-                <td class="cellDate">
-
-                </td>
-              </tr>
-            </table>
-
+            <div>
+              <h3 class="opensans textShadow">
+                Encuesta Publicada
+              </h3>
+             
+            </div>
+            <br>
+            <br>
+            <br>
+            <div id="pollContent">  
+    <h3 id="pollTitle"></h3>  <br>
+    <div id="pollOptions"></div>
+    <div id="chart_div" class="opensans textShadow" style="width: 100%; height: 100%; display:none;" ></div>
+      </div>
+      <br>
+      <br>
             <!-- FORM FOR PUBLISHING --> 
-            <form id="publishPoll" style="" name="publishPoll" onsubmit="return sendData()">
+            <form id="publishPoll" style="" name="publishPoll" onsubmit="return sendPoll()">
 
               <!-- REQUISITOS (TABLA) --> 
               <div class="block">
@@ -195,4 +191,3 @@
 
   </body>
 </html>
-
