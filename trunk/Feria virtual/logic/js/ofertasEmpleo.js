@@ -13,8 +13,11 @@ $(window).load(
 	  		type: 'POST',
 	  		success: function(output) 
 	  		{
-	  			offers = JSON.parse(output);
-	  			fillOffers(offers);
+	  			if(output == "No hay ofertas"){
+	  			}else{
+	  				offers = JSON.parse(output);
+	  				fillOffers(offers);
+	  			}
 	  		}
 	  	});
 	}
