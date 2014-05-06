@@ -8,7 +8,7 @@
     <link   rel="stylesheet"    type="text/css"   href="../../../css/styles.css"               />
     <link   rel="stylesheet"    type="text/css"   href="../../../css/publicacionOfertas.css"   />
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js">     </script>
     <script type="text/javascript" src="../../../logic/js/verOferta.js"></script>
 
     <script type="text/javascript">
@@ -23,6 +23,7 @@
       }
     </script>
   </head>
+  
   <body style="padding: 2% 5%">
     <?php include '../_empresasVerOferta.html'; ?>
   </body>
