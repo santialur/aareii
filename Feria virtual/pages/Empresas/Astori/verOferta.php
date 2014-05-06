@@ -24,25 +24,6 @@
     </script>
   </head>
   <body style="padding: 2% 5%">
-    <table id="tableOutput" >
-            <thead>
-              <tr>
-                <th>Puesto              </th>
-                <th>Descripcion         </th>
-                <th>Areas de Estudio    </th>
-                <th>Estudios Minimos    </th>
-                <th>Lenguajes           </th>
-                <th>Tipo de Contrato    </th>
-                <th>Jornada de Trabajo  </th>
-                <th>Fecha de Publicacion</th>
-                <th>Fecha de Cierre     </th>
-                <th>Postularse          </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-              </tr>
-            </tbody>
-          </table>
+    <?php include '../_empresasVerOferta.html'; ?>
   </body>
 </html>
