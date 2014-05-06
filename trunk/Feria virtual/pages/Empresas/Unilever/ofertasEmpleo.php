@@ -1,7 +1,7 @@
 <?php 
 	session_start(); 
-	$_SESSION['company_name'] = unilever; 
-	$_SESSION['company_id'] = 6; 
+	$_SESSION['company_name'] = astori; 
+	$_SESSION['company_id'] = 1; 
 ?> 
 <!DOCTYPE html>
 <html>
@@ -10,13 +10,23 @@
 
 		<?php include '../_empresasImports.html'; ?>
 		<link 	rel="stylesheet" 	href="../../../css/ofertasEmpleo.css"	/>
-    		
-	    <script type="text/javascript">
-	      function getSession(){
-	        var x = <?php echo json_encode($_SESSION['company_id']) ?>;
-	        return x;
-	      }
-	    </script>
+    			
+	 	<!-- FANCYBOX --> 
+		<link 	type="text/css"			rel="stylesheet" href="../../../features/fancybox/source/jquery.fancybox.css"  media="screen"/>
+		<script type="text/javascript" 	src="../../../features/fancybox/source/jquery.fancybox.pack.js"></script>
+				
+		<script language="javascript" type="text/javascript">
+			$(document).ready(function(){
+				$(".ifancybox").fancybox({
+					'width'			: 	'100%',
+		 			'height'		: 	'120%',
+		 			'autoScale'		: 	'none',
+		 			'transitionIn'	: 	'none',
+		 			'transitionOut' : 	'none',
+		 			'type' 			: 	'iframe'
+				});
+			});
+		</script>
 	</head>
 
 	<body>
