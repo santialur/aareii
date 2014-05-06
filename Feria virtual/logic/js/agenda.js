@@ -30,8 +30,11 @@ function getEvents()
   		type: 'POST',
   		success: function(output) 
   		{
-  			events = JSON.parse(output);
-  			fillAgenda(events);
+  			if(output == "No hay eventos"){
+	  		}else{
+	  			events = JSON.parse(output);
+  				fillAgenda(events);
+	  		}
   		}
   	});
 }

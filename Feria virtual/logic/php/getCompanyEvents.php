@@ -15,7 +15,6 @@
 
 	if(mysql_num_rows($result) == 0){
 			echo "No hay eventos";
-			return;
 	}
 	else{
 		$jsontext = '{"events":[';
