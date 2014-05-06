@@ -52,7 +52,7 @@
             <thead>
               <tr>
                 <th>Titular                 </th>
-                <th>Fecha de Publicación    </th>
+                <th>Fecha de Evento    </th>
                 <th>Descripción       </th>
                 <th>Eliminar       </th>
               </tr>
@@ -171,10 +171,10 @@
                     <td>
                       <input type="text" id="opcion_encuesta_1" name="opcion_encuesta_1" maxlength="25" placeholder="Ingrese opcion" required>
                       <input type="text" id="opcion_encuesta_2" name="opcion_encuesta_2" maxlength="25" placeholder="Ingrese opcion" required>
-                      <input type="text" id="opcion_encuesta_3" name="opcion_encuesta_3" maxlength="25" placeholder="Ingrese opcion" required>
-                      <input type="text" id="opcion_encuesta_4" name="opcion_encuesta_4" maxlength="25" placeholder="Ingrese opcion" required>
-                      <input type="text" id="opcion_encuesta_5" name="opcion_encuesta_5" maxlength="25" placeholder="Ingrese opcion" required>
-                      <input type="text" id="opcion_encuesta_6" name="opcion_encuesta_6" maxlength="25" placeholder="Ingrese opcion" required>
+                      <input type="text" id="opcion_encuesta_3" name="opcion_encuesta_3" maxlength="25" placeholder="Ingrese opcion" >
+                      <input type="text" id="opcion_encuesta_4" name="opcion_encuesta_4" maxlength="25" placeholder="Ingrese opcion" >
+                      <input type="text" id="opcion_encuesta_5" name="opcion_encuesta_5" maxlength="25" placeholder="Ingrese opcion" >
+                      <input type="text" id="opcion_encuesta_6" name="opcion_encuesta_6" maxlength="25" placeholder="Ingrese opcion" >
                     </td>
 
                   </tr>
