@@ -5,6 +5,7 @@
       Publicacion de Noticias y Encuesta
     </title>
 
+    <meta charset="UTF-8">
 
     <link   rel="stylesheet"    type="text/css"   href="../../css/styles.css"              />
 
@@ -51,8 +52,9 @@
             <thead>
               <tr>
                 <th>Titular                 </th>
-                <th>Fecha de Publicacion    </th>
-                <th>Descripci&oacuten       </th>
+                <th>Fecha de Publicación    </th>
+                <th>Descripción       </th>
+                <th>Eliminar       </th>
               </tr>
             </thead>
               <tr>
@@ -82,7 +84,7 @@
                       Titular de Noticia
                     </th>
                     <td>
-                      <input type="text" id="titulo_evento" name="descripcion_evento" placeholder="Titulo del evento.." maxlength="30" required>     
+                      <input type="text" id="titulo_noticia" name="titulo_noticia" placeholder="Titulo de la Noticia.." maxlength="30" required>     
                     </td>
                   </tr>
                   <tr class="alt">
@@ -92,7 +94,7 @@
                     <td>
                       <select id="fecha_noticia_anio" name="fecha_noticia_anio" required>
                         <script>
-                            $('#fecha_noticia_anio').append($('<option />').val(1).html("Año"));
+                            $('#fecha_noticia_anio').append($('<option />').val(0).html("Año"));
                             fillYears($('select[name=fecha_noticia_anio]'), 2014, 2013);
                         </script> 
                       </select>
@@ -159,7 +161,7 @@
                       Pregunta
                     </th>
                     <td>
-                      <input type="text" id="titulo_evento" name="descripcion_evento" placeholder="Titulo del evento.." maxlength="30" required>     
+                      <input type="text" id="pregunta_encuesta" name="pregunta_encuesta" placeholder="Pregunta de la encuesta.." maxlength="30" required>     
                     </td>
                   </tr>
                   <tr class="alt">
@@ -167,8 +169,14 @@
                       Opciones
                     </th>
                     <td>
-                      <textarea id="descripcion_noticia" name="descripcion_noticia" rows="5" cols="50" maxlength="25" placeholder="Ingrese descripcion de la noticia.." style="resize: none;" required></textarea>
+                      <input type="text" id="opcion_encuesta_1" name="opcion_encuesta_1" maxlength="25" placeholder="Ingrese opcion" required>
+                      <input type="text" id="opcion_encuesta_2" name="opcion_encuesta_2" maxlength="25" placeholder="Ingrese opcion" required>
+                      <input type="text" id="opcion_encuesta_3" name="opcion_encuesta_3" maxlength="25" placeholder="Ingrese opcion" required>
+                      <input type="text" id="opcion_encuesta_4" name="opcion_encuesta_4" maxlength="25" placeholder="Ingrese opcion" required>
+                      <input type="text" id="opcion_encuesta_5" name="opcion_encuesta_5" maxlength="25" placeholder="Ingrese opcion" required>
+                      <input type="text" id="opcion_encuesta_6" name="opcion_encuesta_6" maxlength="25" placeholder="Ingrese opcion" required>
                     </td>
+
                   </tr>
                 </table>
               </div>
