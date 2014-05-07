@@ -15,13 +15,10 @@
     		<div id="content">
     			<div style="margin: 20px 210px">
     				<br>
-	              	<video width="320" height="240" controls>
-						<source src="../../features/video/Quilmes-Trabajos.mp4" type="video/mp4">
-					</video>
+    				
+    			<iframe width="560" height="315" src="//www.youtube.com/embed/uuFxY5t_dBk" frameborder="0" allowfullscreen></iframe>	
+
 					<br>
-					<video width="320" height="240" controls>
-						<source src="../../features/video/Quilmes-Hipotesis.mp4" type="video/mp4">
-					</video>
     			</div>
     		</div>
 
