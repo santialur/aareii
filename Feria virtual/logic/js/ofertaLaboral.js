@@ -40,21 +40,6 @@ function fillOffers(offers)
       '<td class="cellWide">'+
         offers.jobOffers[i].areasEstudio +
       '</td>'+
-      '<td>'+
-        offers.jobOffers[i].estudiosMinimos +      
-      '</td>'+
-      '<td class="cellWide">'+
-        offers.jobOffers[i].lenguajes +          
-      '</td>'+
-      '<td>'+
-        offers.jobOffers[i].tipoContrato +                      
-      '</td>'+
-      '<td>'+
-        offers.jobOffers[i].jornadaTrabajo +                            
-      '</td>'+         
-      '<td class="cellDate">'+
-        offers.jobOffers[i].fechaPublicacion +                            
-      '</td>'+ 
       '<td class="cellDate">'+
         offers.jobOffers[i].fechaCierre + 
       '</td>'+
