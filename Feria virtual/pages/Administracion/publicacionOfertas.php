@@ -14,14 +14,14 @@
     <script type="text/javascript" src="../../logic/js/publicacionOfertas.js"></script>
     <?php session_start(); ?>
   
-    <?php if (isset($_SESSION['company_name'])) { 
+    <?php if (isset($_SESSION['company_name'])&&isset($_SESSION['company_identification'])) { 
           } else { 
             header('Location: http://www.encontramas.com.ar/virtual/pages/Administracion/companyLogin.php'); 
     }?>
    
     <script type="text/javascript">
       function getSession(){
-    var x = <?php echo json_encode($_SESSION['company_id']) ?>;
+    var x = <?php echo json_encode($_SESSION['company_identification']) ?>;
     return x;
   }
     </script>
