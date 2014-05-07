@@ -18,7 +18,6 @@ function getJobOffers()
           if(output == "No hay ofertas"){
           
           }else{
-          alert(output);
             offers = JSON.parse(output);
             fillOffers(offers);
             }
