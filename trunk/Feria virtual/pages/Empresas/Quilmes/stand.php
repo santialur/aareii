@@ -19,7 +19,7 @@
                     
                     <img id="standFiat" src="images/s2front_fc.png">
 
-                    <a href="http://www.fiat.com.ar/" target="_blank"><img id="maletinGreen" src="../../../features/images/maletin-green.png"></a>
+                    <a href="http://www.quilmes.com.ar/" target="_blank"><img id="maletinGreen" src="../../../features/images/maletin-green.png"></a>
                 </div>
 
             </div>
