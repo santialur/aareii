@@ -1,3 +1,8 @@
+<?php 
+	session_start(); 
+	$_SESSION['company'] = techint; 
+	$_SESSION['company_id'] = ; 
+?> 
 <!DOCTYPE html>
 <html>
 	<head>

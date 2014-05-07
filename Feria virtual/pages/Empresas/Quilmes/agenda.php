@@ -1,3 +1,8 @@
+<?php 
+	session_start(); 
+	$_SESSION['company'] = quilmes; 
+	$_SESSION['company_id'] = 8; 
+?> 
 <!DOCTYPE html>
 <html>
 	<head>

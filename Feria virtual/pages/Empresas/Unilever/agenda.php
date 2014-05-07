@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php 
+	session_start(); 
+	$_SESSION['company'] = unilever; 
+	$_SESSION['company_id'] = ; 
+?> 
 <html>
 	<head>
 		<title>Agenda</title>
