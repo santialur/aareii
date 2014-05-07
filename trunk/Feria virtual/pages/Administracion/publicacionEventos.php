@@ -22,7 +22,7 @@
    
     <script type="text/javascript">
       function getSession(){
-        var x = <?php echo json_encode($_SESSION['company_id']) ?>;
+        var x = <?php echo json_encode($_SESSION['company_identification']) ?>;
         return x;
       }
     </script>
@@ -173,4 +173,3 @@
 
   </body>
 </html>
-

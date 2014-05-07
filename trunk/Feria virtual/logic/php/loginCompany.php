@@ -39,9 +39,9 @@
 			
 			session_start();
   			$_SESSION['company_name'] = $company_name;
-  			$_SESSION['company_id'] = $id;
+  			$_SESSION['company_identification'] = $id;
   			echo "Compania registrada";
-  		
+  			
 		}
 		mysql_close($con);
 	}
