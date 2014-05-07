@@ -17,7 +17,7 @@ $(document).ready(function(){
 
 function getEvents()
 {
-	var company_id = 1;
+    var company_id = getSession();
 
 	updateDay();
 	var events;
@@ -35,6 +35,7 @@ function getEvents()
 	  			events = JSON.parse(output);
   				fillAgenda(events);
 	  		}
+  			
   		}
   	});
 }
