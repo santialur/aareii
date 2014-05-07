@@ -13,7 +13,7 @@
     		<?php include '../_empresasMenu.html'; 	?>
 
     		<div id="content">
-    			<div style="margin: 0 auto; padding: 5% 10%">
+    			<div style="margin: 0 auto; padding: 2% 5%">
 	    			<div>
 	                    <img src="images/banner.png" class="brandBanner">
 	                </div>
