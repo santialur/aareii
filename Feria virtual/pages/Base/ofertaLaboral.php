@@ -34,7 +34,7 @@ header('Content-Type: text/html; charset=UTF-8');
 						        <th>Acciones 				</th>
 					        </tr>
 				        </thead>
-				        <tbody>
+				        <tbody style="height: 400px; overflow: auto">
 				        </tbody>
 			        </table>
 				</div>
