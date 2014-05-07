@@ -1,3 +1,8 @@
+<?php 
+	session_start(); 
+	$_SESSION['company'] = penaflor; 
+	$_SESSION['company_id'] = 3; 
+?> 
 <!DOCTYPE html>
 <html>
 	<head>

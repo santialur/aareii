@@ -1,3 +1,8 @@
+<?php 
+	session_start(); 
+	$_SESSION['company'] = fiat; 
+	$_SESSION['company_id'] = ; 
+?> 
 <!DOCTYPE html>
 <html>
 	<head>
