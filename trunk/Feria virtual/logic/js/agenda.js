@@ -17,20 +17,21 @@ $(document).ready(function(){
 
 function getEvents()
 {
-    var company_id = getSession();
-
+    	var company_id = getSession();
+	
 	updateDay();
 	var events;
 	$.ajax({ 
 		url: '../../../logic/php/getCompanyEvents.php',
  	 	data: 
  	 	{
- 	 		companyid : company_id,
+ 	 		companyid:  company_id,
  	 	},
   		type: 'POST',
   		success: function(output) 
   		{
   			if(output == "No hay eventos"){
+  				
 	  		}else{
 	  			events = JSON.parse(output);
   				fillAgenda(events);
