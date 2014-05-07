@@ -34,7 +34,7 @@
 			    $jsontext .= '"jornadaTrabajo":'.'"'.$row["jobShift"].'",';
 			    $jsontext .= '"fechaPublicacion":'.'"'.$row["jobDatePublished"].'",';
 			    $jsontext .= '"fechaCierre":'.'"'.$row["jobDateClose"].'",';
-			    $jsontext .= '"habilitado":'.'"'.$row["enabled"].'"';
+			    $jsontext .= '"habilitado":'.'"'.$row["enabled"].'",';
 			    $jsontext .= '"empresa":'.'"'.$row["company_name"].'"';
 			    $jsontext .= "},";
 			}
@@ -45,7 +45,8 @@
 	
 
 		mysql_close($con);
-	}else{
+	}
+	else if(!isset($_POST['getAllOffers'])){
 		$companyId = $_POST['companyid'];
 		$con = mysql_connect('localhost','root','C4ch0bs4s3124');
 		mysql_select_db('encontramas_test',$con);

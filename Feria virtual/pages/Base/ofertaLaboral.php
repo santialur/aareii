@@ -1,8 +1,13 @@
+<?php
+header('Content-Type: text/html; charset=UTF-8'); 
+?>
 <html>
 	<head>
 		<?php include '_imports.html'; ?>
 
 	  	<script type="text/javascript"	src="../../logic/js/ofertaLaboral.js"></script>
+	  	<link rel="stylesheet" type="text/css" href="../../css/ofertaLaboral.css" />
+	  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	</head>
 
 
