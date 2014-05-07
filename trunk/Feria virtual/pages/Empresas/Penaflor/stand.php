@@ -15,11 +15,11 @@
     		<div id="content">
 
                 <div align="center" style="position: relative;">
-                    <img src="../../features/images/stand-green.jpg">
+                    <img src="../../../features/images/stand-green.jpg">
                     
                     <img id="standFiat" src="images/s2front_fc.png">
 
-                    <a href="http://www.fiat.com.ar/" target="_blank"><img id="maletinFiat" src="../../features/images/maletin-green.png"></a>
+                    <a href="http://www.fiat.com.ar/" target="_blank"><img id="maletinGreen" src="../../../features/images/maletin-green.png"></a>
                 </div>
 
     		</div>
