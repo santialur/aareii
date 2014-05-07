@@ -19,7 +19,7 @@
                     
                     <img id="standFiat" src="images/s2front_fc.png">
 
-                    <a href="http://www.penaflor.com.ar/" target="_blank"><img id="maletinGreen" src="../../../features/images/maletin-green.png"></a>
+                    <a href="https://www.pan-energy.com/" target="_blank"><img id="maletinGreen" src="../../../features/images/maletin-green.png"></a>
                 </div>
 
     		</div>
