@@ -1,9 +1,9 @@
+<!DOCTYPE html>
 <?php 
 	session_start(); 
-	$_SESSION['company'] = unilever; 
-	$_SESSION['company_id'] = ; 
+	$_SESSION['company'] = pae; 
+	$_SESSION['company_id'] = 6; 
 ?> 
-<!DOCTYPE html>
 <html>
 	<head>
 		<title>Ofertas de Empleo</title>
