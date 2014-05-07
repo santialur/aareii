@@ -4,7 +4,7 @@ $( document ).ready(function()
 	var name		=  "Unilever";
 	var slogan		=  "";
 	var title 		=  "UNILEVER";
-	var description =  "Unilever es uno de los proveedores líderes del mundo de productos de consumo. Te contamos algunos acontecimientos importantes de nuestras dos divisiones globales –Alimentos y Cuidado del Hogar & Personal–, en todo el mundo."
+	var description 	=  "<iframe src='descripcion.html' scrolling='yes' frameborder='0' width='100%' height='400px'></iframe>";
 
 	$('#brandWebpage').html(webpage);
 	$('#brandWebpage').attr("href", "http://" + webpage);
