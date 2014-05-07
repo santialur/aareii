@@ -40,34 +40,49 @@ var n = [
 *
 *
 */
-
+/*
 $(document).ready(
   function saveNews(){
     var noticias = n;
     fillNews(noticias);
   }
 );
+*/
 
-$(window).load(
-  function getPoll(){
-    var poll;
-    $.ajax({
-      url: '../../logic/php/Polls.php',
-      data: {
-          getPolls:     true,
-      },
-      type: 'POST',
-      success: function(output){
-        poll = JSON.parse(output);
-        fillPoll(poll);
-      }
-    });
-});
+$(document).ready(
+  function getPollNews(){
+      var poll;
+      $.ajax({
+        url: '../../logic/php/Polls.php',
+        data: {
+            getPolls:     true,
+        },
+        type: 'POST',
+        success: function(output){
+          poll = JSON.parse(output);
+          fillPoll(poll);
+        }
+      });
+      
+          var news;
+      $.ajax({
+        url: '../../logic/php/News.php',
+        async: false,
+        data: {
+            getNews:    true,
+        },
+        type: 'POST',
+        success: function(output){
+          news = JSON.parse(output);
+          fillNews(news);
+        }
+      });
+    }
+);
 
-
-function fillNews(noticias){
-  for(var i=0;i<noticias.length;i++)
-      $( '#js-news' ).append('<li class="news-item"><a href="#">'+noticias[i]+'</a></li>');
+function fillNews(news){
+  for(var i=0;i<news.noticias.length; i++)
+      $( '#js-news' ).append('<li class="news-item"><a href="#">'+ news.noticias[i].titulo + "-" + news.noticias[i].cuerpo + "-" +news.noticias[i].fecha+ '</a></li>');
 }
 
 var actualPoll = "";
