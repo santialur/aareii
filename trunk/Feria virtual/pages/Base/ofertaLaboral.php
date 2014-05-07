@@ -16,11 +16,17 @@
 			        <table id="tableOutput">
 				        <thead>
 					        <tr>
-					        	<th>Empresa			</th>
-						        <th>Puesto			</th>
-						        <th>Descripcion		</th>
-						        <th>Fecha de Cierre	</th>
-						        <th>Acciones 		</th>
+					        	<th>Empresa					</th>
+						        <th>Puesto					</th>
+						        <th>Descripcion				</th>
+						        <th>Areas de conocimiento	</th>
+						        <th>Estudios minimos		</th>
+						        <th>Lenguajes				</th>
+						        <th>Tipo de contrato		</th>
+						        <th>Jornada de trabajo		</th>
+						        <th>Fecha de publicación	</th>
+						        <th>Fecha de Cierre			</th>
+						        <th>Acciones 				</th>
 					        </tr>
 				        </thead>
 				        <tbody>
