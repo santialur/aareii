@@ -7,7 +7,7 @@ function getJobOffers()
   {
     var offers;
     $.ajax({ 
-      url: '../../../logic/php/getCompanyJobOffers.php',
+      url: '../../logic/php/getCompanyJobOffers.php',
       data: 
       {
           getAllOffers:               true,
@@ -18,6 +18,7 @@ function getJobOffers()
           if(output == "No hay ofertas"){
           
           }else{
+          alert(output);
             offers = JSON.parse(output);
             fillOffers(offers);
             }
@@ -32,7 +33,7 @@ function fillOffers(offers)
   for(var i=0;i<offers.jobOffers.length;i++)
       $('#tableOutput tbody').append(''+
       '<tr><td class="cellCompany">'+
-      '<a>' + offers.jobOffers[i].empresa + '</a>'+
+      '<a><strong>' + offers.jobOffers[i].empresa + '</strong></a>'+
       '</td>'+
       '<td class="cellTitle">'+
         '<a>' + offers.jobOffers[i].titulo + '</a>'+
@@ -65,6 +66,6 @@ function fillOffers(offers)
         offers.jobOffers[i].id +
       '</td>'+
       '<td>'+
-      '<a href="postularse.php?idOferta="+offers.jobOffers[i].id+""><input type="button" class="button" value="Postúlese"></a>'+
+      '<a href="postularse.php?idOferta="+offers.jobOffers[i].id+""><input type="button" class="button" value="Postularse"></a>'+
     '</td></tr>');
 }
