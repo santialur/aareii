@@ -1,6 +1,6 @@
 <?php 
 	session_start(); 
-	$_SESSION['company_name'] = astori; 
+	$_SESSION['company'] = astori; 
 	$_SESSION['company_id'] = 1; 
 ?> 
 <!DOCTYPE html>
