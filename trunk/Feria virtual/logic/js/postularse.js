@@ -44,3 +44,7 @@ function forgotPassword(){
 	parent.$.fancybox.close();
     	window.open("http://encontramas.com.ar/virtual/pages/Inscripcion/forgotPassword.html");
 }
+function createUser(){
+	parent.$.fancybox.close();
+    	window.open("http://encontramas.com.ar/virtual/pages/Inscripcion/inscripcion.php");
+}
