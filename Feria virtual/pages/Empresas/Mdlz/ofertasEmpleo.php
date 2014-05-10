@@ -1,7 +1,7 @@
 <?php 
 	session_start(); 
-	$_SESSION['company'] = astori; 
-	$_SESSION['company_id'] = 1; 
+	$_SESSION['company'] = mondelez; 
+	$_SESSION['company_id'] = ; 
 ?> 
 <!DOCTYPE html>
 <html>

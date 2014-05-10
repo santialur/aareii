@@ -1,9 +1,9 @@
 $( document ).ready(function()
 {
-	var webpage		= "www.astori.com.ar";
-	var name		=  "Astori Estructuras S.A.";
-	var slogan		=  "Construimos. Siempre.";
-	var title 		=  "ASTORI ESTRUCTURAS S.A.";
+	var webpage		= global.mondelezinternational.com/ar";
+	var name		=  "MONDELEZ INTERNATIONAL";
+	var slogan		=  "";
+	var title 		=  "MONDELEZ INTERNATIONAL";
 	var description =  "<iframe src='descripcion.html' scrolling='yes' frameborder='0' width='100%' height='400px'></iframe>";
 
 	$('#brandWebpage').html(webpage);
