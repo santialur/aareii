@@ -22,7 +22,7 @@
                     <a href="" target="_blank"><img id="maletinRed"     src="../../../features/images/maletin-red.png"></a>
                     <a href="" target="_blank"><img id="descargasRed"   src="../../../features/images/descargas.png"></a>
                     <a href="ofertasEmpleo.php"><img id="ofertasRed"    src="../../../features/images/ofertas.png"></a>
-                    <a href="agenda.php"><img id="agendaRed"    src="../../../features/images/agenda-red.png"></a>
+                    <a href="agenda.php"><img id="agendaRed"            src="../../../features/images/agenda-red.png"></a>
 
                 </div>
 

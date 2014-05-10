@@ -15,13 +15,15 @@
     		<div id="content">
 
                 <div align="center" style="position: relative;">
-                    <img src="../../../features/images/stand-green.jpg">
+                    <img src="images/stand.png">
                     
-                    <img id="standFiat" src="images/s2front_fc.png">
+                    <img id="standPAE" src="images/s2front_fc.png">
 
-                    <a href="https://www.pan-energy.com/" target="_blank"><img id="maletinGreen" src="../../../features/images/maletin-green.png"></a>
+                    <a href="" target="_blank"> <img id="maletinGrande" src="../../../features/images/maletin-medio.png"> </a>
+                    <a href="" target="_blank"> <img id="maletinGrande" src="../../../features/images/descargas.png">   </a>
+                    <a href="ofertasEmpleo.php"><img id="maletinGrande" src="../../../features/images/ofertas.png">     </a>
+                    <a href="agenda.php">       <img id="maletinGrande" src="../../../features/images/maletin-medio.png">  </a>
                 </div>
-
     		</div>
     		
     		<?php include '../_empresasFooter.html'; ?>
