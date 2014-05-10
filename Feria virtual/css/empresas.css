@@ -222,10 +222,10 @@ body{
 
 
 /*------------------------------------------------------------------
-STAND GREEN
+STAND Chico
 -------------------------------------------------------------------*/
 
-#maletinGreen
+#maletinChico
 {
 	position: 				absolute;
 	left:					66%;
@@ -234,7 +234,7 @@ STAND GREEN
 	width:					9.7%;
 }
 
-#agendaGreen
+#agendaChico
 {
 	position: 				absolute;
 	left:					18.8%;
@@ -243,7 +243,7 @@ STAND GREEN
 	width:					3.8%;
 }
 
-#agendaGreen:hover, #maletinGreen:hover
+#agendaChico:hover, #maletinChico:hover
 {	
 	cursor: pointer; 
 	cursor: hand;
@@ -262,10 +262,10 @@ STAND GREEN
 }
 
 /*------------------------------------------------------------------
-STAND RED
+STAND Grande
 -------------------------------------------------------------------*/
 
-#maletinRed
+#maletinGrande
 {
 	position: 				absolute;
 	left:					35.1%;
@@ -274,7 +274,7 @@ STAND RED
 	width:					6.1%;
 }
 
-#agendaRed
+#agendaGrande
 {
 	position: 				absolute;
 	left:					13%;
@@ -283,7 +283,7 @@ STAND RED
 	width:					5.4%;
 }
 
-#ofertasRed
+#ofertasGrande
 {
 	position: 				absolute;
 	left:					15.5%;
@@ -292,7 +292,7 @@ STAND RED
 	width:					4%;
 }
 
-#descargasRed
+#descargasGrande
 {
 /*
 	-webkit-filter: drop-shadow(1px 1px 7px white);
@@ -304,7 +304,7 @@ STAND RED
 	width:					3.5%;
 }
 
-#maletinRed:hover, #agendaRed:hover, #ofertasRed:hover, #descargasRed:hover
+#maletinGrande:hover, #agendaGrande:hover, #ofertasGrande:hover, #descargasGrande:hover
 {	
 	cursor: pointer; 
 	cursor: hand;
