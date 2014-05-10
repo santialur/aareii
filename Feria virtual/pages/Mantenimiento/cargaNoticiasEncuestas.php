@@ -11,7 +11,12 @@
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/javascript" src="../../logic/js/cargaNoticiasEncuestas.js"></script>
-
+    <?php session_start(); ?>
+  
+    <?php if (isset($_SESSION['company_name'])) { 
+          } else { 
+            header('Location: http://www.encontramas.com.ar/virtual/pages/Mantenimiento/mantenianceLogin.php'); 
+    }?>
 
   </head>
 
