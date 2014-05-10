@@ -82,7 +82,7 @@ $(document).ready(
 
 function fillNews(news){
   for(var i=0;i<news.noticias.length; i++)
-      $( '#js-news' ).append('<li class="news-item"><a href="#">'+ news.noticias[i].titulo + "-" + news.noticias[i].cuerpo + "-" +news.noticias[i].fecha+ '</a></li>');
+      $( '#js-news' ).append('<li class="news-item"><a><font size="4" color="black">' +news.noticias[i].titulo + "</font> " + '<font color = "grey">('+ news.noticias[i].fecha+ ')   </font><font size="2" color="grey">-' + news.noticias[i].cuerpo + '</font></a></li>');
 }
 
 var actualPoll = "";
@@ -126,16 +126,17 @@ function sendVote(){
         },
         type: 'POST',
         success: function(output){
-            
-            alert(output);
+
             document.getElementById("voteButton").style.display = 'none';
             var option = new Array();
             result = JSON.parse(output);
             $( '#pollOptions' ).empty();
+            $( '#pollOptions' ).append('<label><b><font color="Red" size="3">Resultados:</font></b></label></br></br>');
+        
             for(var i=0;i<result.results.length; i++)
         {
           option[i] = result.results[i].option;
-          $( '#pollOptions' ).append('<label for= "option'+i+'">' + option[i]+ ':   ' + result.results[i].quantity +'</label><br>');
+          $( '#pollOptions' ).append('<center><label for= "option'+i+'"><b> <font size="2" color="grey">'+ "&#8226 " +  option[i].substring(0, 15)+ ': <font size="3" color="blue">' + result.results[i].quantity +'</font>'+ "  votos" +'</font></b></label></center></br>');
         }
             
 
