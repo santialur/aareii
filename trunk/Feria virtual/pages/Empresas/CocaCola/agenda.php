@@ -1,6 +1,6 @@
 <?php 
 	session_start(); 
-	$_SESSION['company'] = arcor; 
+	$_SESSION['company'] = cocacola; 
 	$_SESSION['company_id'] = ; 
 ?> 
 <!DOCTYPE html>
