@@ -39,7 +39,7 @@ if($result) {
         // Print each file
         while($row = $result->fetch_assoc()) {
             $output = "";
-            if(is_null($row['cv_id'])){
+            if(!is_null($row['cv_id'])){
                 $output = "<tr>
                             <td><b>{$row['jobTitle']}<b></td>
                             <td>{$row['firstname']}</td>
