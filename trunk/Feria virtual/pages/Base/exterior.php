@@ -3,9 +3,13 @@
 		<title>
 			Exterior
 		</title>
-
+		<meta property="og:url" content="http://www.encontramas.com.ar/virtual/pages/Base/exterior.php" />
+		<meta property="og:title" content="Feria virtual de empresas- Encontra+ 2014" />
+		<meta property="og:description" content="Inscribite a la feria de empresas 2014" />
+		<meta property="og:image" content="http://www.encontramas.com.ar/virtual/features/images/encontramas_facebook_foto.jpg" />
+		
 		<?php include '_imports.html'; ?>
-
+	
 	</head>
 
 	<body>	
