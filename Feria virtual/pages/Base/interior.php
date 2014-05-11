@@ -3,7 +3,11 @@
 		<title>
 			Interior
 		</title>
-
+		<meta property="og:url" content="http://www.encontramas.com.ar/pages/Base/interior.php" />
+		<meta property="og:title" content="Feria virtual de empresas- Encontra+ 2014" />
+		<meta property="og:description" content="Inscribite a la feria de empresas 2014" />
+		<meta property="og:image" content="http://www.encontramas.com.ar/virtual/features/images/encontramas_facebook_foto.jpg" />
+		
 		<?php include '_imports.html'; ?>
 		
 		<!-- NEWS AND POLLS --> 
@@ -24,7 +28,7 @@
 			$(function () {
 			    $('#js-news').ticker({
 			        titleText: '<h3>NOTICIAS</h3>',  
-				    displayType: 'fade', 
+				displayType: 'fade', 
 			    });
 			});	
 		</script>
@@ -106,25 +110,22 @@
 
 						<div class="social">
 							<!-- Facebook -->
-							<a href="http://www.facebook.com/sharer.php?u=http://www.encontramas.com.ar/virtual/pages/interior" target="_blank">
+							<a href="http://www.facebook.com/sharer.php?u=http://www.encontramas.com.ar/virtual/pages/Base/interior.php" target="_blank">
 								<img src="http://www.simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
 							</a>
 							<!-- Twitter -->
-							<a href="http://twitter.com/share?url=http://www.encontramas.com.ar&text=Encontra+" target="_blank">
+							<a href="http://twitter.com/share?url=http://www.encontramas.com.ar/virtual/pages/Base/interior.php" target="_blank">
 								<img src="http://www.simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter"/>
 							</a>
 							<!-- Google+ -->
-							<a href="https://plus.google.com/share?url=http://www.encontramas.com.ar" target="_blank">
+							<a href="https://plus.google.com/share?url=http://www.encontramas.com.ar/virtual/pages/Base/interior.php" target="_blank">
 								<img src="http://www.simplesharebuttons.com/images/somacro/google.png" alt="Google" />
 							</a>
 							<!-- LinkedIn -->
-							<a href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.simplesharebuttons.com" target="_blank">
+							<a href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.encontramas.com.ar/virtual/pages/Base/interior.php" target="_blank">
 								<img src="http://www.simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
 							</a>
-							<!-- Pinterest -->
-							<a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());">
-								<img src="http://www.simplesharebuttons.com/images/somacro/pinterest.png" alt="Pinterest"/>
-							</a>
+							
 						</div>
 					</div>
 
@@ -144,7 +145,8 @@
 					</div>
 
 					<button id="voteButton" class="button" style="position:static; top:50%" onclick="sendVote()">Votar</button>
-
+					
+					
 				</div> <!-- FIN BLOQUE DERECHO --> 
 
 				<div style="clear:both"></div> <!-- Contiene divs flotantes --> 
