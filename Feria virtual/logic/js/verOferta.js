@@ -6,18 +6,21 @@ $(document).ready(function(){
 function getJobOffers()
   {
     var offers;
-    var offerID = getOfferId();
     $.ajax({ 
-      url: '../../../logic/php/getOffer.php',
+      url: '../../../logic/php/getCompanyJobOffers.php',
       data: 
       {
-        jobOfferId: offerID,
+          getAllOffers:               true,
       },
         type: 'POST',
         success: function(output) 
         {
-          offers = JSON.parse(output);
-          fillOffers(offers);
+          if(output == "No hay ofertas"){
+          
+          }else{
+            offers = JSON.parse(output);
+            fillOffers(offers);
+            }
         }
       });
   }
@@ -28,7 +31,10 @@ function fillOffers(offers)
 
   for(var i=0;i<offers.jobOffers.length;i++)
       $('#tableOutput tbody').append(''+
-      '<tr><td class="cellTitle">'+
+      '<tr><td width="6%" class="cellCompany">'+
+      '<a>' + offers.jobOffers[i].empresa + '</a>'+
+      '</td>'+
+      '<td class="cellTitle">'+
         '<a>' + offers.jobOffers[i].titulo + '</a>'+
       '</td>'+
       '<td class="cellDescription">'+
@@ -49,16 +55,16 @@ function fillOffers(offers)
       '<td>'+
         offers.jobOffers[i].jornadaTrabajo +                            
       '</td>'+         
-      '<td class="cellDate">'+
+      /*'<td class="cellDate">'+
         offers.jobOffers[i].fechaPublicacion +                            
       '</td>'+ 
       '<td class="cellDate">'+
         offers.jobOffers[i].fechaCierre + 
-      '</td>'+
+      '</td>'+*/
       '<td class="cellId" style="display:none;">'+ 
         offers.jobOffers[i].id +
       '</td>'+
-      /*'<td>'+
+      '<td>'+
       '<a href="postularse.php?idOferta="+offers.jobOffers[i].id+""><input type="button" class="button" value="Postúlese"></a>'+
-    '</td>*/'</tr>');
+    '</td></tr>');
 }
