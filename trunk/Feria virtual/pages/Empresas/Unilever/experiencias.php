@@ -30,9 +30,9 @@
 	            	<br>
 	            	
 	            	<div class="textBoxes" style="text-align: center">
-				<iframe width="90%" height="315" src="//www.youtube.com/embed/BWwV7SWXlbA" frameborder="0" allowfullscreen></iframe>
-				<br><br>
-				<iframe width="90%" height="315" src="//www.youtube.com/embed/0kocRsLDXEw" frameborder="0" allowfullscreen></iframe>
+						<iframe width="90%" height="315" src="//www.youtube.com/embed/BWwV7SWXlbA" frameborder="0" allowfullscreen></iframe>
+						<br><br>
+						<iframe width="90%" height="315" src="//www.youtube.com/embed/0kocRsLDXEw" frameborder="0" allowfullscreen></iframe>
 	            	</div>
     			</div>
     		</div>
