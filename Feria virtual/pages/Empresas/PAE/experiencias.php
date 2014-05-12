@@ -18,7 +18,7 @@
 	                <div class="textBoxes">
 		                <div class="centered">
 		                    <p>
-		                        <h4 class="titles"></h4>
+		                    <h4 class="titles"></h4>
 		                </div>
 		                
 		                <br />
@@ -28,11 +28,7 @@
 	            	</div>
 	            	
 	            	<br>
-	            	
-	            	<div class="textBoxes" style="text-align: center">
-						<br><br>
 	            	</div>
-    			</div>
     		</div>
 
     		<?php include '../_empresasFooter.html'; ?>
