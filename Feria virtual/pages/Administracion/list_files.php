@@ -10,8 +10,8 @@ if(mysqli_connect_errno()) {
 // Query for a list of all existing files
 //$sql = "SELECT * FROM curriculum";
 $sql = "SELECT jobTitle, firstname, lastname, cb_nacimiento, cb_pais, cb_provincia, cv_id, title, email
-    FROM company AS C, job_offer AS JO, jobOfferApplied AS JOA, user_encontramas AS UE, ems_comprofiler AS EC, ems_user as EU
-    WHERE JOA.user_id = UE.userName AND UE.userName = EC.username AND JO.id = JOA.jobOffer_id AND EU.username = UE.userName AND C.id = $companyId ";
+    FROM job_offer AS JO, jobOfferApplied AS JOA, user_encontramas AS UE, ems_comprofiler AS EC, ems_user as EU
+    WHERE JOA.user_id = UE.userName AND UE.userName = EC.username AND JO.id = JOA.jobOffer_id AND EU.username = UE.userName AND JO.companyid = $companyId ";
     
 $result = $dbLink->query($sql);
 
@@ -19,7 +19,7 @@ $result = $dbLink->query($sql);
 if($result) {
     // Make sure there are some files in there
     if($result->num_rows == 0) {
-        echo '<p>No cargaste tu curriculum</p>';
+        echo '<p>No hay postulantes</p>';
     }
     else {
         // Print the top of a table

@@ -18,9 +18,13 @@ function fillMinute(target)
   var aux;
   aux = aux + '<option value="">'+ 'Minutos' +'</option>';
 
-  for(var i=0; i<60; i=i+5)
-    aux = aux + '<option value="'+ parseFloat(i) +'">'+ parseFloat(i) +'</option>';
-
+  for(var i=0; i<60; i=i+5){
+    if(i<10){
+      aux = aux + '<option value=0"'+ parseFloat(i) +'">0'+ parseFloat(i) +'</option>';
+    }else{
+      aux = aux + '<option value="'+ parseFloat(i) +'">'+ parseFloat(i) +'</option>';
+    }
+  }
   $(target).html(aux);
 }
 
@@ -48,9 +52,13 @@ function fillMinuteEnd(target, minuteStart, hourStart, hourEnd)
     minuteStart = -5;
   }
 
-  for(var i=parseFloat(minuteStart)+5; i<60; i=i+5)
-    aux = aux + '<option value="'+ parseFloat(i) +'">'+ parseFloat(i) +'</option>';
-
+  for(var i=parseFloat(minuteStart)+5; i<60; i=i+5){
+    if(i<10){
+      aux = aux + '<option value=0"'+ parseFloat(i) +'">0'+ parseFloat(i) +'</option>';
+    }else{
+      aux = aux + '<option value="'+ parseFloat(i) +'">'+ parseFloat(i) +'</option>';
+    }
+  }
   $(target).html(aux);
 }
 
