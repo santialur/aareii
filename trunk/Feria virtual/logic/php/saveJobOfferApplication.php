@@ -51,7 +51,7 @@
   				$sql = "SELECT * FROM user_encontramas WHERE userName = $userId";
   				$result = mysql_query($sql, $con);
   				$row = mysql_fetch_array($result);
-  				echo $row['curriculumId'];
+  			
   				if(is_null($row['curriculumId'])){
   				
   				}else{
