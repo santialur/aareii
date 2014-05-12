@@ -11,26 +11,26 @@ FIRST LINE
 
 #trigger {
 	position: 				absolute;
-	left: 					34.2%;
-	top: 					22.7%;
-	width: 					11.75%;
+	left: 					40%;
+	top: 					55%;
+	width: 					12%;
 }
 #trigger2 {
 	position: 				absolute;
-	left: 					50.8%;
-	top: 					36.5%;
-	width: 					10.75%;
+	left: 					21.58%;
+	top: 					44.85%;
+	width: 					12%;
 }
 #trigger3{
 	position: 				absolute;
-	left: 					68.2%;
-	top: 					46.2%;
+	left: 					33.2%;
+	top: 					30.2%;
 	width: 					10.75%;
 }
 #trigger4{
 	position: 				absolute;
-	left: 					86%;
-	top: 					56.8%;
+	left: 					50%;
+	top: 					35%;
 	width: 					11.5%;
 }
 
@@ -40,26 +40,26 @@ SECOND LINE
 
 #trigger5{
 	position: 				absolute;
-	left: 					28.3%;
-	top: 					33.4%;
+	left: 					65.3%;
+	top: 					50.4%;
 	width: 					11.75%;
 }
 #trigger6{
 	position: 				absolute;
-	left: 					45.5%;
-	top: 					47.5%;
-	width: 					10.65%;
+	left: 					57%;
+	top: 					74.4%;
+	width: 					11.75%;
 }
 #trigger7{
 	position: 				absolute;
-	left: 					62.1%;
-	top: 					59.3%;
+	left: 					32%;
+	top: 					80%;
 	width: 					11.3%;
 }
 #trigger8{
 	position: 				absolute;
-	left: 					80.2%;
-	top: 					70.4%;
+	left: 					74%;
+	top: 					80%;
 	width: 					12%;
 }
 
@@ -69,22 +69,25 @@ THIRD LINE
 
 #trigger9{
 	position: 				absolute;
-	left: 					21.58%;
-	top: 					44.85%;
+	left: 					85.58%;
+	top: 					60.85%;
 	width: 					12%;
 }
 #trigger10{
 	position: 				absolute;
-	left: 					39.2%;
-	top: 					59.5%;
+	left: 					10%;
+	top: 					65%;
 	width: 					11%;
 }
 #trigger11{
 	position: 				absolute;
-	left: 					54.8%;
-	top: 					75.4%;
+	left: 					80.2%;
+	top: 					70.4%;
 	width: 					12%;
 }
+
+/*------------------------------------------------------------------
+
 
 #trigger12{
 	position: 				absolute;
@@ -95,7 +98,6 @@ THIRD LINE
 
 /*------------------------------------------------------------------
 FOURTH LINE 
--------------------------------------------------------------------*/
 
 #trigger13{
 	position: 				absolute;
@@ -110,10 +112,12 @@ FOURTH LINE
 	top: 					78.4%;
 	width: 					12%;
 }
+-------------------------------------------------------------------*/
+
 
 /*------------------------------------------------------------------
 FIFTH LINE 
--------------------------------------------------------------------*/
+
 
 #trigger15{
 	position: 				absolute;
@@ -121,6 +125,7 @@ FIFTH LINE
 	top: 					84.4%;
 	width: 					12%;
 }
+-------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------
 EXTERIOR
