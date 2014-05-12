@@ -64,7 +64,7 @@ function fillOffers(offers)
       '<td class="cellId" style="display:none;">'+ 
         offers.jobOffers[i].id +
       '</td>'+
-      '<td>'+
+      /*'<td>'+
       '<a href="postularse.php?idOferta="+offers.jobOffers[i].id+""><input type="button" class="button" value="Postúlese"></a>'+
-    '</td></tr>');
+    '</td>*/'</tr>');
 }
