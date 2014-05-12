@@ -8,9 +8,9 @@
 
 	<body>
     	<div class="wrapperMedium">
-    		<?php include '../_empresasHeader.html'; ?>
+    		<?php include '../_empresasHeader.html'; 	?>
 
-    		<?php include '../_empresasMenu.html'; 	?>
+    		<?php include '../_empresasMenuC.html'; 	?>
 
     		<div id="content">
     			<div style="margin: 0 auto; padding: 2% 5%">
