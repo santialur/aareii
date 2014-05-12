@@ -25,7 +25,7 @@
                     <!-- REDES SOCIALES -->
                     <div class="social" style="width: 12%">
                         <!-- Facebook -->
-                        <a href="https://www.facebook.com/" target="_blank">
+                        <a href="https://www.facebook.com/CerveceriaQuilmes" target="_blank">
                             <img src="http://www.simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
                         </a>
                     </div>
