@@ -1,7 +1,7 @@
 <?php 
 	session_start(); 
 	$_SESSION['company'] = fiat; 
-	$_SESSION['company_id'] = ; 
+	$_SESSION['company_id'] = 9; 
 ?> 
 <!DOCTYPE html>
 <html>
