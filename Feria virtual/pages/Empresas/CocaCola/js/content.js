@@ -1,9 +1,9 @@
 $( document ).ready(function()
 {
-	var webpage		= "www.astori.com.ar";
-	var name		=  "Astori Estructuras S.A.";
-	var slogan		=  "Construimos. Siempre.";
-	var title 		=  "ASTORI ESTRUCTURAS S.A.";
+	var webpage		= "cocacoladeargentina.com.ar/";
+	var name		=  "Coca Cola FEMSA";
+	var slogan		=  "";
+	var title 		=  "Coca Cola FEMSA";
 	var description =  "<iframe src='descripcion.html' scrolling='yes' frameborder='0' width='100%' height='400px'></iframe>";
 
 	$('#brandWebpage').html(webpage);
