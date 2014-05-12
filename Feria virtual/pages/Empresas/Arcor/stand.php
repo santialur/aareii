@@ -17,12 +17,10 @@
                 <div align="center" style="position: relative;">
                     <img src="images/stand.png">
                     
-                    <img id="standAstori" src="">
+                    <a href="empresa.php" target="_blank"><img id="standArcor" src="images/frontal.png"></a>
 
-                    <a href="" target="_blank"><img id="maletinGrande"     src="../../../features/images/maletin-grande.png"></a>
-                    <a href="" target="_blank"><img id="descargasGrande"   src="../../../features/images/descargas.png"></a>
-                    <a href="ofertasEmpleo.php"><img id="ofertasGrande"    src="../../../features/images/ofertas.png"></a>
-                    <a href="agenda.php"><img id="agendaGrande"            src="../../../features/images/agenda-grande.png"></a>
+                    <a href="" target="_blank"><img id="maletin_C"     src="../../../features/images/object/maletin_C.png"></a>
+                    <a href="agenda.php"><img id="agenda_C"            src="../../../features/images/object/agenda_C.png"></a>
 
                 </div>
 
