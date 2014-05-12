@@ -39,9 +39,9 @@
 
             </div>
             <style>
-                .headerLogo{
-                    width: 15%;
-                }
+            	.headerLogo{
+            		width: 15%;
+            	}
             </style>
 
             <?php include '../_empresasFooter.html'; ?>

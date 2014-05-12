@@ -29,19 +29,19 @@
             <?php include '../_empresasFooter.html'; ?>
         </div>
         <script type='text/javascript'>
-            (function () { 
-                var done = false; 
-                var script = document.createElement('script'); 
-                script.async = true; 
-                script.type = 'text/javascript'; 
-                script.src = 'https://widget.purechat.com/VisitorWidget/WidgetScript'; 
-                document.getElementsByTagName('HEAD').item(0).appendChild(script); 
-                script.onreadystatechange = script.onload = function (e) { 
-                    if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { 
-                        var w = new PCWidget({ c: '53db1eaf-bf90-4e58-8f1a-28590e69680b', f: true }); 
-                        done = true; } 
-                    }; 
-            })();
+        	(function () { 
+        		var done = false; 
+        		var script = document.createElement('script'); 
+        		script.async = true; 
+        		script.type = 'text/javascript'; 
+        		script.src = 'https://widget.purechat.com/VisitorWidget/WidgetScript'; 
+        		document.getElementsByTagName('HEAD').item(0).appendChild(script); 
+        		script.onreadystatechange = script.onload = function (e) { 
+        			if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { 
+        				var w = new PCWidget({ c: '53db1eaf-bf90-4e58-8f1a-28590e69680b', f: true }); 
+        				done = true; } 
+        			}; 
+        	})();
         </script>
 
 

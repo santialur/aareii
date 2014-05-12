@@ -10,7 +10,7 @@
         <div class="wrapperMedium">
             <?php include '../_empresasHeader.html';    ?>
 
-            <?php include '../_empresasMenuA.html';     ?>
+            <?php include '../_empresasMenuA.html';      ?>
 
             <div id="content">
 
@@ -35,5 +35,23 @@
             
             <?php include '../_empresasFooter.html'; ?>
         </div>
+        <script type='text/javascript'>
+        	(function () { 
+        		var done = false; 
+        		var script = document.createElement('script'); 
+        		script.async = true; 
+        		script.type = 'text/javascript'; 
+        		script.src = 'https://widget.purechat.com/VisitorWidget/WidgetScript'; 
+        		document.getElementsByTagName('HEAD').item(0).appendChild(script); 
+        		script.onreadystatechange = script.onload = function (e) { 
+        			if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
+        				var w = new PCWidget({ c: '64d0b878-83c2-4b31-827c-af22b7aee5ec', f: true }); 
+        				done = true; 
+        			} 
+        		}; 
+        	})();
+        </script>
+
+
     </body>
 </html>

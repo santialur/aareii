@@ -1,6 +1,6 @@
 $( document ).ready(function()
 {
-	var webpage		= "cocacoladeargentina.com.ar/";
+	var webpage		= "www.cocacoladeargentina.com.ar";
 	var name		=  "Coca Cola FEMSA";
 	var slogan		=  "";
 	var title 		=  "Coca Cola FEMSA";

@@ -19,14 +19,12 @@
             <?php include '../_empresasMenuA.html';  ?>
 
             <div id="content">
-                <div style="margin: 30px 150px">
+                <div style="margin: 30px 100px">
 
-            
-                    <h3><span class="opensans textShadow"> Imágenes </span></h3>
-
-                    <br>
+                    <div class="textBoxes" style="text-align: center; padding-bottom: 10%">
                     
-                    <div id="sliderFrame">
+                        <h3><span class="opensans textShadow"> Imágenes </span></h3>
+			<div  id="sliderFrame">
                         <div id="slider">
                             <img src="images/imagenes/1.jpg" width="150%"/>
                             <img src="images/imagenes/2.jpg" width="20%"/> 
@@ -34,12 +32,14 @@
                             <img src="images/imagenes/4.jpg" width="50%"/>
                             <img src="images/imagenes/5.jpg" width="40%"/>  
                         </div>
+                        </div>
                     </div>
                     
-                    <br><br><br>
-
+                    <br><br>
+	
+		    <div class="textBoxes" style="text-align: center">
                     <h3><span class="opensans textShadow"> Videos </span></h3>
-
+	
                     <br><br>
                     <iframe width="90%" height="400" src="//www.youtube.com/embed/lq8t8xHsHSs" frameborder="0" allowfullscreen>     </iframe>
 
@@ -48,6 +48,7 @@
 
                     <br><br>
                     <iframe width="90%" height="400" src="//www.youtube.com/embed/3UTTY3HoVbo" frameborder="0" allowfullscreen>     </iframe>
+                    </div>
                  </div>
             </div>
 
