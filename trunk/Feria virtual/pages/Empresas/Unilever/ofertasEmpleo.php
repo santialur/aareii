@@ -1,7 +1,7 @@
 <?php 
 	session_start(); 
 	$_SESSION['company'] = unilever; 
-	$_SESSION['company_id'] = ; 
+	$_SESSION['company_id'] = 5; 
 ?> 
 <!DOCTYPE html>
 <html>
