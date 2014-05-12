@@ -1,28 +1,28 @@
 function postularse(){
-	if(document.getElementById("numero_de_documento").value.match(/^\s*$/)){
-		alert("Ingrese su numero de documento");
-		return;
-	}
-	if(document.getElementById("contraseña").value.match(/^\s*$/)){
-		alert("Ingrese su contraseña");
-		return;
-	}
-	var offerId = getOfferId();
-	$.ajax({ url: '../../logic/php/saveJobOfferApplication.php',
-            data: {userDni:                	document.getElementById("numero_de_documento").value,
-                   password:           		document.getElementById("contraseña").value,
-                   jobOfferId: 		   	offerId,
+  if(document.getElementById("numero_de_documento").value.match(/^\s*$/)){
+    alert("Ingrese su numero de documento");
+    return;
+  }
+  if(document.getElementById("password").value.match(/^\s*$/)){
+    alert("Ingrese su contraseña");
+    return;
+  }
+  var offerId = getOfferId();
+  $.ajax({ url: '../../logic/php/saveJobOfferApplication.php',
+            data: {userDni:                 document.getElementById("numero_de_documento").value,
+                   password:              document.getElementById("password").value,
+                   jobOfferId:        offerId,
                  },
             type: 'POST',
             success: function(output){
                 if(output == "Exito"){
-                	alert("Te postulaste exitosamente a la oferta laboral");
+                  alert("Te postulaste exitosamente a la oferta laboral");
                 }else{
-                	alert(output);
+                  alert(output);
                 }
             }
         });
-	
+  
 }
 
 function checkNumeric(target)
@@ -42,10 +42,10 @@ function checkNumeric(target)
 }
 
 function forgotPassword(){
-	parent.$.fancybox.close();
-    	window.open("http://encontramas.com.ar/virtual/pages/Inscripcion/forgotPassword.html");
+  parent.$.fancybox.close();
+      window.open("http://encontramas.com.ar/virtual/pages/Inscripcion/forgotPassword.html");
 }
 function createUser(){
-	parent.$.fancybox.close();
-    	window.open("http://encontramas.com.ar/virtual/pages/Inscripcion/inscripcion.php");
+  parent.$.fancybox.close();
+      window.open("http://encontramas.com.ar/virtual/pages/Inscripcion/inscripcion.php");
 }

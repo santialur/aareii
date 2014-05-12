@@ -6,11 +6,12 @@ $(document).ready(function(){
 function getJobOffers()
   {
     var offers;
+    var company_id = getSession();
     $.ajax({ 
       url: '../../../logic/php/getCompanyJobOffers.php',
       data: 
       {
-          getAllOffers:               true,
+          companyid : company_id,
       },
         type: 'POST',
         success: function(output) 
