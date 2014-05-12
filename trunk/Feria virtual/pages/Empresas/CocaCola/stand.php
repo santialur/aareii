@@ -24,18 +24,21 @@
 
                     <!-- REDES SOCIALES 
                     <div class="social">
-                        <!-- Facebook -->
+                         Facebook 
                         <a href="https://www.facebook.com/" target="_blank">
                             <img src="http://www.simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
                         </a>
-                        <!-- Twitter -->
+                         Twitter
                         <a href="https://twitter.com/" target="_blank">
                             <img src="http://www.simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter"/>
                         </a>
                     </div>
                     -->
+
                 </div>
+
             </div>
+            
 
             <?php include '../_empresasFooter.html'; ?>
         </div>
