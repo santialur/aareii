@@ -24,6 +24,13 @@
 		 			'fitToView'		: 	'false',
 		 			'type' 			: 	'iframe'
 				});
+				$(".postularFancybox").fancybox({
+					'width'			: 	'40%',
+		 			'height'		: 	'10%',
+		 			'autoSize'		: 	'false',
+		 			'fitToView'		: 	'false',
+		 			'type' 			: 	'iframe'
+				});
 			});
 		</script>
 	</head>

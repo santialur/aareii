@@ -8,7 +8,7 @@
 
 	<body>
     	<div class="wrapperMedium">
-    		<?php include '../_empresasHeader.html'; 	?>
+    		<?php include '../_empresasHeader.html'; ?>
 
     		<?php include '../_empresasMenuA.html'; 	?>
 

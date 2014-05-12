@@ -1,7 +1,7 @@
 <?php 
   session_start(); 
   $offerId = $_GET['idOferta'];
-  $_SESSION['company_id'] = ; 
+  $_SESSION['company_id'] = 16; 
 ?> 
 <html>
   <head>

@@ -31,20 +31,20 @@
             <?php include '../_empresasFooter.html'; ?>
         </div>
         <script type='text/javascript'>(
-            function () { 
-            var done = false; 
-            var script = document.createElement('script'); 
-            script.async = true;
-            script.type = 'text/javascript'; 
-            script.src = 'https://widget.purechat.com/VisitorWidget/WidgetScript'; 
-            document.getElementsByTagName('HEAD').item(0).appendChild(script); 
-            script.onreadystatechange = script.onload = function (e) { 
-                if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { 
-                    var w = new PCWidget({ c: 'b6e67e4e-ecff-49ea-ab84-e4eee7373bc9', f: true }); 
-                    done = true; 
-                } 
-            }; 
-            })();
+        	function () { 
+        	var done = false; 
+        	var script = document.createElement('script'); 
+        	script.async = true;
+        	script.type = 'text/javascript'; 
+        	script.src = 'https://widget.purechat.com/VisitorWidget/WidgetScript'; 
+        	document.getElementsByTagName('HEAD').item(0).appendChild(script); 
+        	script.onreadystatechange = script.onload = function (e) { 
+        		if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { 
+        			var w = new PCWidget({ c: 'b6e67e4e-ecff-49ea-ab84-e4eee7373bc9', f: true }); 
+        			done = true; 
+        		} 
+        	}; 
+        	})();
         </script>
 
 

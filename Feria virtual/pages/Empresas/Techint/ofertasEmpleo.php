@@ -1,7 +1,7 @@
 <?php 
 	session_start(); 
 	$_SESSION['company'] = techint; 
-	$_SESSION['company_id'] = ; 
+	$_SESSION['company_id'] = 4; 
 ?> 
 <!DOCTYPE html>
 <html>
