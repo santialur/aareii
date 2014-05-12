@@ -232,7 +232,7 @@
                     Otros Requisitos
                   </th>
                   <td>
-                    <textarea id="requisitos_puesto" name="requisitos_puesto" rows="15" cols="50" maxlength="1000" placeholder="Ingrese otros requisitos.." style="resize: none;" required></textarea>
+                    <textarea id="requisitos_puesto" name="requisitos_puesto" rows="15" cols="50" maxlength="1000" placeholder="Ingrese otros requisitos.." style="resize: none;"></textarea>
                   </td>
                 </tr>
               </table>
