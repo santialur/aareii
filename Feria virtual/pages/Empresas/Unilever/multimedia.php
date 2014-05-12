@@ -1,33 +1,59 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Multimedia</title>
+    <head>
+        <title>Multimedia</title>
 
         <?php include '../_empresasImports.html'; ?>
-	</head>
 
-	<body>
-    	<div class="wrapperMedium">
+        <!-- MARQUESINA --> 
+        <link   type="text/css"         href="../../../features/jsImgSlider/js-image-slider.css"    rel="stylesheet"    />
+        <script type="text/javascript"  src="../../../features/jsImgSlider/js-image-slider.js"></script>
+        <link   type="text/css"         href="../../../features/jsImgSlider/generic.css"            rel="stylesheet"    />
+
+    </head>
+
+    <body>
+        <div class="wrapperMedium">
             <?php include '../_empresasHeader.html'; ?>
 
-    		<?php include '../_empresasMenu.html'; 	?>
+            <?php include '../_empresasMenu.html';  ?>
 
-    		<div id="content">
-    			<div style="margin: 20px 210px">
-    				<br>
-	              	<video width="320" height="240" controls>
-						<source src="../../features/video/Quilmes-Trabajos.mp4" type="video/mp4">
-					</video>
-					<br>
-					<video width="320" height="240" controls>
-						<source src="../../features/video/Quilmes-Hipotesis.mp4" type="video/mp4">
-					</video>
-    			</div>
-    		</div>
+            <div id="content">
+                <div style="margin: 30px 150px">
 
-    		<?php include '../_empresasFooter.html'; ?>
+            
+                    <h3><span class="opensans textShadow"> Imágenes </span></h3>
 
-    	</div>
-	</body>
+                    <br>
+                    
+                    <div id="sliderFrame">
+                        <div id="slider">
+                            <img src="images/imagenes/1.jpg" width="150%"/>
+                            <img src="images/imagenes/2.jpg" width="20%"/> 
+                            <img src="images/imagenes/3.jpg" width="30%"/>
+                            <img src="images/imagenes/4.jpg" width="50%"/>
+                            <img src="images/imagenes/5.jpg" width="40%"/>  
+                        </div>
+                    </div>
+                    
+                    <br><br><br>
+
+                    <h3><span class="opensans textShadow"> Videos </span></h3>
+
+                    <br><br>
+                    <iframe width="90%" height="400" src="//www.youtube.com/embed/lq8t8xHsHSs" frameborder="0" allowfullscreen>     </iframe>
+
+                    <br><br>
+                    <iframe width="90%" height="400" src="//www.youtube.com/embed/gdlRlz8wscY" frameborder="0" allowfullscreen>     </iframe>
+
+                    <br><br>
+                    <iframe width="90%" height="400" src="//www.youtube.com/embed/3UTTY3HoVbo" frameborder="0" allowfullscreen>     </iframe>
+                 </div>
+            </div>
+
+            <?php include '../_empresasFooter.html'; ?>
+
+        </div>
+    </body>
 
 </html>
