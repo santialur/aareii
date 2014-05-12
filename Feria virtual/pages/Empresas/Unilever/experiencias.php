@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Quienes somos?</title>
+		<title>Experiencias Laborales</title>
 		
 		<?php include '../_empresasImports.html'; ?>		
 	</head>
