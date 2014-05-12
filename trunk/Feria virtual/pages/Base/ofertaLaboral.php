@@ -51,8 +51,6 @@ header('Content-Type: text/html; charset=UTF-8');
 						        <th>Lenguajes				</th>
 						        <th>Tipo de contrato		</th>
 						        <th>Jornada de trabajo		</th>
-						        <th>Fecha de publicación	</th>
-						        <th>Fecha de Cierre			</th>
 						        <th>Acciones 				</th>
 					        </tr>
 				        </thead>
