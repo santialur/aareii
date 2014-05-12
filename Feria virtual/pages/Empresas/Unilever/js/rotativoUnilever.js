@@ -24,7 +24,10 @@ var timer = tiempo * 1000;
 function banner() {
 	contador++;
 	contador = contador % longuitudArray
-	document.banner.src = ads[contador];
+	$("#topUnilever").fadeOut(300, function() {
+        	$("#topUnilever").attr('src',ads[contador]);
+    	}).fadeIn(300);
+    	
 	setTimeout("banner()", timer);
 }
 
