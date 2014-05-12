@@ -17,10 +17,9 @@
                 <div align="center" style="position: relative;">
                     <img src="images/stand.png">
                     
-                    <img id="standAstori" src="">
+                    <a href="empresa.php"><img id="standAstori" src="images/frontal.png"></a>
 
-                    <a href="" target="_blank"><img id="maletin_B"     src="../../../features/images/object/maletin_B.png"></a>
-                    <a href="" target="_blank"><img id="descargas_B"   src="../../../features/images/object/descargas_B.png"></a>
+                    <a href="../../Inscripcion/inscripcion.php" target="_blank"><img id="maletin_B"     src="../../../features/images/object/maletin_B.png"></a>
                     <a href="ofertasEmpleo.php"><img id="ofertas_B"    src="../../../features/images/object/ofertas_B.png"></a>
                     <a href="agenda.php"><img id="agenda_B"            src="../../../features/images/object/agenda_B.png"></a>
 
