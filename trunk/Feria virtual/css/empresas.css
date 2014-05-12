@@ -660,7 +660,7 @@ STANDS INDIVIDUALES
 #standArcor
 {position: absolute; left:34.2%; top:66.6%; z-index:200; width:23.5%;}
 
-#standUnilever
+#frontUnilever
 {position: absolute; left:45.7%; top:70.6%; z-index:200; width:13.5%;}
 #topUnilever
 {position: absolute; left: 31.3%;top: 10.6%;z-index: 200;width: 7.3%;}
@@ -1048,4 +1048,5 @@ STANDS INDIVIDUALES
 {position: absolute; left:34.2%; top:66.6%; z-index:200; width:23.5%;}
 #frontalArcor
 {position: absolute; left:34.2%; top:66.6%; z-index:200; width:23.5%;}
-
+#frontalMondelez
+{position: absolute; left:34.2%; top:66.6%; z-index:200; width:23.5%;}

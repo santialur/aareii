@@ -17,7 +17,7 @@
                 <div align="center" style="position: relative;">
                     <img src="images/stand.png">
                     
-                    <a href="ofertasEmpleo.php"><img id="standUnilever" src="images/frontal.png"></a>
+                    <a href="ofertasEmpleo.php"><img id="frontalUnilever" src="images/frontal.png"></a>
                     <body onload="banner()">
                         <a href="javascript:ponerURL()" target="_blank">
                             <img id="topUnilever" src="" name="banner" >
