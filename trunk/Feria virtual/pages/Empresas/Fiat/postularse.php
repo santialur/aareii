@@ -9,7 +9,7 @@
     <link   rel="stylesheet"    type="text/css"   href="../../../css/publicacionOfertas.css"   />
 
     <script src="http://code.jquery.com/jquery-1.9.1.min.js">     </script>
-    <script type="text/javascript" src="../../../logic/js/verOferta.js"></script>
+    <script type="text/javascript" src="../../../logic/js/postularse.js"></script>
 
     <script type="text/javascript">
       function getSession(){
@@ -18,13 +18,14 @@
       } 
     
       function getOfferId(){
-        var x = <?php echo $offerId ?>;
+        var x = <?php echo $offerId; ?>;
         return x;
       }
+
     </script>
   </head>
   
-  <body style="padding: 2% 5%">
-    <?php include '../_empresasVerOferta.html'; ?>
+  <body style="padding: 1% 1.5%; height: 320px">
+    <?php include '../_empresasPostularse.html'; ?>
   </body>
 </html>
