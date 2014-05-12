@@ -1,7 +1,7 @@
 <?php 
 	session_start(); 
 	$_SESSION['company'] = arcor; 
-	$_SESSION['company_id'] = ; 
+	$_SESSION['company_id'] = 11; 
 ?> 
 <!DOCTYPE html>
 <html>
