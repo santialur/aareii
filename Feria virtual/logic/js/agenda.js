@@ -50,8 +50,8 @@ function fillAgenda(events)
 		{
 			
 			var day = events.events[j].Inicia.substring(8,10);
-			//alert($(this).html());
-			if($(this).html() == day || $(this).html().substring(0,1) == day || $(this).html().substring(0,2) == day)		//Is the content of the cell the same as the date of the event
+			
+			if($(this).attr('id')== day )		//Is the content of the cell the same as the date of the event
 			{
 				if(!$(this).hasClass('date_has_event'))
 				{ 
