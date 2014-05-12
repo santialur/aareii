@@ -38,7 +38,11 @@
                 </div>
 
             </div>
-            
+            <style>
+                .headerLogo{
+                    width: 15%;
+                }
+            </style>
 
             <?php include '../_empresasFooter.html'; ?>
         </div>

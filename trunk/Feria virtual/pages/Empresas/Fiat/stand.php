@@ -17,11 +17,11 @@
                 <div align="center" style="position: relative;">
                     <img src="images/stand.png">
                     
-                    <a href="empresa.php"><img id="standFiat" src="images/s2front_fc.png"></a>
+                    <a href="empresa.php"><img id="frontalFiat" src="images/frontal.png"></a>
 
-                    <a href="http://www.fiat.com.ar/" target="_blank"><img id="maletin_B" src="../../../features/images/object/maletin_B.png"></a>
+                    <a href="http://hostpr.fiatauto.com.ar/rrhh/jsps/login.jsp" target="_blank"><img id="maletin_B" src="../../../features/images/object/maletin_B.png"></a>
                     <a href="agenda.php"><img id="agenda_B" src="../../../features/images/object/agenda_B.png"></a>
-                    <a href="ofertasEmpleo.php"><img id="ofertas_B"    src="../../../features/images/object/ofertas_B.png"></a>
+                    <a href="http://hostpr.fiatauto.com.ar/rrhh/jsps/login.jsp"><img id="ofertas_B"    src="../../../features/images/object/ofertas_B.png"></a>
                 </div>
 
             </div>
