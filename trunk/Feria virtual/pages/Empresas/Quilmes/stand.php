@@ -10,21 +10,34 @@
         <div class="wrapperMedium">
             <?php include '../_empresasHeader.html';    ?>
 
-            <?php include '../_empresasMenu.html';      ?>
+            <?php include '../_empresasMenuC.html';      ?>
 
             <div id="content">
 
                 <div align="center" style="position: relative;">
-                    <img src="../../../features/images/stand-green.jpg">
+                    <img src="images/stand.png">
                     
-                    <img id="standFiat" src="images/s2front_fc.png">
+                    <a href="empresa.php" target="_blank"><img id="frontalQuilmes" src="images/frontal.png"></a>
 
-                    <a href="http://www.quilmes.com.ar/" target="_blank"><img id="maletinGreen" src="../../../features/images/maletin-green.png"></a>
+                    <a href="../../Inscripcion/inscripcion.php" target="_blank"><img id="maletin_C"     src="../../../features/images/object/maletin_C.png"></a>
+                    <a href="agenda.php"><img id="agenda_C"            src="../../../features/images/object/agenda_C.png"></a>
+
+                    <!-- REDES SOCIALES -->
+                    <div class="social" style="width: 12%">
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <img src="http://www.simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+                        </a>
+                    </div>
+
                 </div>
 
             </div>
             
+
             <?php include '../_empresasFooter.html'; ?>
         </div>
+
+
     </body>
 </html>
