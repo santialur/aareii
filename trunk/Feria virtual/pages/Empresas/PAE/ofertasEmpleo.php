@@ -2,7 +2,7 @@
 <?php 
 	session_start(); 
 	$_SESSION['company'] = pae; 
-	$_SESSION['company_id'] = 6; 
+	$_SESSION['company_id'] = 5; 
 ?> 
 <html>
 	<head>

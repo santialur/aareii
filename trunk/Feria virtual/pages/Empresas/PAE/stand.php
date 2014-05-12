@@ -25,6 +25,15 @@
                     <a href="ofertasEmpleo.php"><img id="maletinGrande" src="../../../features/images/ofertas.png">     </a>
                     <a href="agenda.php">       <img id="maletinGrande" src="../../../features/images/maletin-medio.png">  </a>
                     -->
+
+                    <!-- REDES SOCIALES -->
+                    <div class="social">
+                        <!-- LinkedIn -->
+                        <a href="http://www.linkedin.com/company/pan-american-energy" target="_blank">
+                            <img src="http://www.simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn"/>
+                        </a>
+                    </div>
+                    
                 </div>
             </div>
             
