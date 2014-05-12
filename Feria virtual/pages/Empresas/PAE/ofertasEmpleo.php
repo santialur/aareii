@@ -2,7 +2,7 @@
 <?php 
 	session_start(); 
 	$_SESSION['company'] = pae; 
-	$_SESSION['company_id'] = 5; 
+	$_SESSION['company_id'] = 6; 
 ?> 
 <html>
 	<head>
@@ -30,13 +30,13 @@
 
 	<body>
     	<div class="wrapperMedium">
-            <?php include '../_empresasHeader.html'; ?>
+            <?php include '../_empresasHeader.html'; 	?>
 
-    		<?php include '../_empresasMenu.html'; 	?>
+    		<?php include '../_empresasMenuA.html';		?>
 
-    		<?php include '../_empresasOfertas.html'; ?>
+    		<?php include '../_empresasOfertas.html'; 	?>
 
-    		<?php include '../_empresasFooter.html'; ?>
+    		<?php include '../_empresasFooter.html'; 	?>
     	</div>
 	</body>
 </html>
