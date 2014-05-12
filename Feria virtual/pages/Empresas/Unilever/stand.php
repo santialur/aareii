@@ -24,10 +24,9 @@
                         </a>
                     </body>
                     
-                    <img id="middleUnilever" src="images/s1middle.png">
+                    <a href="http://www.unilever.com.ar/sustainable-living-2014/unilever-sustainable-living-plan/"><img id="middleUnilever" src="images/s1middle.png"></a>
 
                     <a href="" target="_blank"><img id="maletin_A"     src="../../../features/images/object/maletin_A.png"></a>
-                    <a href="" target="_blank"><img id="descargas_A"   src="../../../features/images/object/descargas_A.png"></a>
                     <a href="ofertasEmpleo.php"><img id="ofertas_A"    src="../../../features/images/object/ofertas_A.png"></a>
                     <a href="agenda.php"><img id="agenda_A"            src="../../../features/images/object/agenda_A.png"></a>
                 </div>
