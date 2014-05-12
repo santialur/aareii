@@ -16,7 +16,7 @@
     	<div class="wrapperMedium">
        		<?php include '../_empresasHeader.html'; 	?>
 
-    		<?php include '../_empresasMenu.html'; 		?>
+    		<?php include '../_empresasMenuC.html'; 		?>
 
     		<?php include '../_empresasAgenda.html'; 	?>
 

@@ -1024,8 +1024,10 @@ STANDS INDIVIDUALES
 
 #standFiat
 {position: absolute; left:55%; top:65.3%; z-index:200;width:14.5%;}
-#standAstori
+#frontalAstori
 {position: absolute; left:54.7%; top:67.3%; z-index:200; width:14.5%;}
+#anteriorAstori
+{position: absolute; left:67.35%; top:31.85%; z-index:200; width:10.4%;}
 #standPenaflor
 {position: absolute; left:55%; top:69.3%; z-index:200; width:14.5%;}
 #standArcor
