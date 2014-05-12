@@ -162,7 +162,7 @@
                       Pregunta
                     </th>
                     <td>
-                      <input type="text" id="pregunta_encuesta" name="pregunta_encuesta" placeholder="Pregunta de la encuesta.." maxlength="30" required>     
+                      <input type="text" id="pregunta_encuesta" name="pregunta_encuesta" placeholder="Pregunta de la encuesta.." maxlength="50" required>     
                     </td>
                   </tr>
                   <tr class="alt">
