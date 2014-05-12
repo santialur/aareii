@@ -20,7 +20,7 @@ function fillMinute(target)
 
   for(var i=0; i<60; i=i+5){
     if(i<10){
-      aux = aux + '<option value=0"'+ parseFloat(i) +'">0'+ parseFloat(i) +'</option>';
+      aux = aux + '<option value="0'+ parseFloat(i) +'">0'+ parseFloat(i) +'</option>';
     }else{
       aux = aux + '<option value="'+ parseFloat(i) +'">'+ parseFloat(i) +'</option>';
     }
@@ -54,7 +54,7 @@ function fillMinuteEnd(target, minuteStart, hourStart, hourEnd)
 
   for(var i=parseFloat(minuteStart)+5; i<60; i=i+5){
     if(i<10){
-      aux = aux + '<option value=0"'+ parseFloat(i) +'">0'+ parseFloat(i) +'</option>';
+      aux = aux + '<option value="0'+ parseFloat(i) +'">0'+ parseFloat(i) +'</option>';
     }else{
       aux = aux + '<option value="'+ parseFloat(i) +'">'+ parseFloat(i) +'</option>';
     }
@@ -167,6 +167,7 @@ function getEvents()
           if(output == "No hay eventos"){
             
           }else{
+            
             events = JSON.parse(output);
               fillEvents(events);
           }
