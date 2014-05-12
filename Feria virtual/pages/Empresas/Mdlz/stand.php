@@ -10,25 +10,33 @@
         <div class="wrapperMedium">
             <?php include '../_empresasHeader.html';    ?>
 
-            <?php include '../_empresasMenu.html';      ?>
+            <?php include '../_empresasMenuC.html';      ?>
 
             <div id="content">
 
                 <div align="center" style="position: relative;">
-                    <img src="../../../features/images/stand-red.jpg">
+                    <img src="images/stand.png">
                     
-                    <img id="standAstori" src="">
+                    <a href="empresa.php" target="_blank"><img id="frontalMondelez" src="images/frontal.png"></a>
 
-                    <a href="" target="_blank"><img id="maletinRed"     src="../../../features/images/maletin-red.png"></a>
-                    <a href="" target="_blank"><img id="descargasRed"   src="../../../features/images/descargas.png"></a>
-                    <a href="ofertasEmpleo.php"><img id="ofertasRed"    src="../../../features/images/ofertas.png"></a>
-                    <a href="agenda.php"><img id="agendaRed"    src="../../../features/images/agenda-red.png"></a>
+                    <a href="../../Inscripcion/inscripcion.php" target="_blank"><img id="maletin_C"     src="../../../features/images/object/maletin_C.png"></a>
+                    <a href="agenda.php"><img id="agenda_C"            src="../../../features/images/object/agenda_C.png"></a>
+
+                    <!-- REDES SOCIALES -->
+                    <div class="social" style="width: 12%">
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/mondelezinternational" target="_blank">
+                            <img src="http://www.simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+                        </a>
+                    </div>
 
                 </div>
 
             </div>
             
+
             <?php include '../_empresasFooter.html'; ?>
         </div>
+
     </body>
 </html>

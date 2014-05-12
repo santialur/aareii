@@ -1,6 +1,6 @@
 $( document ).ready(function()
 {
-	var webpage		= global.mondelezinternational.com/ar";
+	var webpage		= "global.mondelezinternational.com/ar";
 	var name		=  "MONDELEZ INTERNATIONAL";
 	var slogan		=  "";
 	var title 		=  "MONDELEZ INTERNATIONAL";

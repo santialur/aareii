@@ -1,7 +1,7 @@
 <?php 
 	session_start(); 
 	$_SESSION['company'] = mondelez; 
-	$_SESSION['company_id'] = ; 
+	$_SESSION['company_id'] = 12; 
 ?> 
 <!DOCTYPE html>
 <html>
@@ -9,14 +9,14 @@
 		<title>Agenda</title>
 
     	<?php include '../_empresasImports.html'; ?>
-   		<link 	rel="stylesheet" 	href="../../../css/agenda.css"											/>
+   		<link 	rel="stylesheet" 	href="../../../css/agenda.css"	/>
 	</head>
 
 	<body>
     	<div class="wrapperMedium">
        		<?php include '../_empresasHeader.html'; 	?>
 
-    		<?php include '../_empresasMenu.html'; 		?>
+    		<?php include '../_empresasMenuC.html'; 	?>
 
     		<?php include '../_empresasAgenda.html'; 	?>
 
