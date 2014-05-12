@@ -18,6 +18,7 @@ function getJobOffers()
           if(output == "No hay ofertas"){
           
           }else{
+          
             offers = JSON.parse(output);
             fillOffers(offers);
             }
@@ -55,12 +56,13 @@ function fillOffers(offers)
       '<td>'+
         offers.jobOffers[i].jornadaTrabajo +                            
       '</td>'+         
-      '<td class="cellDate">'+
+      /*'<td class="cellDate">'+
         offers.jobOffers[i].fechaPublicacion +                            
       '</td>'+ 
       '<td class="cellDate">'+
         offers.jobOffers[i].fechaCierre + 
-      '</td>'+
+      '</td>'*/+
+      
       '<td class="cellId" style="display:none;">'+ 
         offers.jobOffers[i].id +
       '</td>'+
