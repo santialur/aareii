@@ -93,10 +93,15 @@
 						<ul class="itemMarquee">
 						  	<li><img src="../../features/images/arcor-web.png"/>		</li>
 					  		<li><img src="../../features/images/quilmes-web.png"/>		</li>
-					  		<li><img src="../../features/images/faber-web.png"/>		</li>
 					  		<li><img src="../../features/images/unilever-web.png"/>		</li>
-					  		<li><img src="../../features/images/invap-web.png"/>		</li>
+					  		<li><img src="../../features/images/penaflor-web.png"/>		</li>
+					  		<li><img src="../../features/images/fiat-web.png"/>			</li>
+					  		<li><img src="../../features/images/pae-web.png"/>			</li>
+					  		<li><img src="../../features/images/consuman-web.png"/>		</li>
+					  		<li><img src="../../features/images/cocacola-web.png"/>		</li>
+
 						</ul>
+
 					</div>
 
 				</div> <!-- FIN BLOQUE IZQUIERDO --> 
