@@ -17,7 +17,8 @@
                 <div align="center" style="position: relative;">
                     <img src="images/stand.png">
                     
-                    <a href="empresa.php"><img id="standAstori" src="images/frontal.png"></a>
+                    <a href="empresa.php"><img id="frontalAstori" src="images/frontal.png"></a>
+                    <img id="anteriorAstori" src="images/anterior.png"></a>
 
                     <a href="../../Inscripcion/inscripcion.php" target="_blank"><img id="maletin_B"     src="../../../features/images/object/maletin_B.png"></a>
                     <a href="ofertasEmpleo.php"><img id="ofertas_B"    src="../../../features/images/object/ofertas_B.png"></a>
