@@ -57,7 +57,7 @@
 		  	die('Could not connect: ' . mysql_error($con));
 		}
 
-		$sql="SELECT * FROM job_offer WHERE companyid = '$companyId' AND enabled = 1";
+		$sql="SELECT * FROM job_offer, company WHERE company.id = job_offer.companyid AND job_offer.companyid = '$companyId' AND enabled = 1";
 		$result = mysql_query($sql, $con);
 
 		if(mysql_num_rows($result) == 0){
@@ -80,7 +80,8 @@
 			    $jsontext .= '"jornadaTrabajo":'.'"'.$row["jobShift"].'",';
 			    $jsontext .= '"fechaPublicacion":'.'"'.$row["jobDatePublished"].'",';
 			    $jsontext .= '"fechaCierre":'.'"'.$row["jobDateClose"].'",';
-			    $jsontext .= '"habilitado":'.'"'.$row["enabled"].'"';
+			    $jsontext .= '"habilitado":'.'"'.$row["enabled"].'",';
+			    $jsontext .= '"empresa":'.'"'.$row["company_name"].'"';
 			    $jsontext .= "},";
 			}
 			$jsontext = substr_replace($jsontext, '', -1);

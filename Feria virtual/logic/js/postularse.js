@@ -3,14 +3,14 @@ function postularse(){
 		alert("Ingrese su numero de documento");
 		return;
 	}
-	if(document.getElementById("contraseña").value.match(/^\s*$/)){
+	if(document.getElementById("password").value.match(/^\s*$/)){
 		alert("Ingrese su contraseña");
 		return;
 	}
 	var offerId = getOfferId();
 	$.ajax({ url: '../../../logic/php/saveJobOfferApplication.php',
             data: {userDni:                	document.getElementById("numero_de_documento").value,
-                   password:           		document.getElementById("contraseña").value,
+                   password:           		document.getElementById("password").value,
                    jobOfferId: 		   	offerId,
                  },
             type: 'POST',

@@ -192,10 +192,11 @@ function sendData(){
    careerSelected = careerSelected.substring(0, careerSelected.length - 2);
 
    var company_id = getSession();
+   var descripcion = document.getElementById("descripcion_puesto").value.replace(/\n/g, '');
    $.ajax({ url: '../../logic/php/saveOffer.php',
             data: {companyid:        company_id,
                  jobTitle:       document.getElementById("info_puesto").value,
-                 jobDescription:     document.getElementById("descripcion_puesto").value,
+                 jobDescription:     descripcion,
                  jobStudiesAreas:      careerSelected,
                  jobMinimumStudies:      $("input[type='radio'][name='estudios']:checked").val(),
                  jobLanguages:     languages,
@@ -241,6 +242,7 @@ function getJobOffers()
           if(output == "No hay ofertas"){
             
           }else{
+            
             offers = JSON.parse(output);
               fillOffers(offers);
           }
