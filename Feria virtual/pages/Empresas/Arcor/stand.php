@@ -17,7 +17,7 @@
                 <div align="center" style="position: relative;">
                     <img src="images/stand.png">
                     
-                    <a href="empresa.php" target="_blank"><img id="standArcor" src="images/frontal.png"></a>
+                    <a href="empresa.php" target="_blank"><img id="frontalArcor" src="images/frontal.png"></a>
 
                     <a href="../../Inscripcion/inscripcion.php" target="_blank"><img id="maletin_C"     src="../../../features/images/object/maletin_C.png"></a>
                     <a href="agenda.php"><img id="agenda_C"            src="../../../features/images/object/agenda_C.png"></a>
