@@ -22,6 +22,18 @@
                     <a href="../../Inscripcion/inscripcion.php" target="_blank"><img id="maletin_C"     src="../../../features/images/object/maletin_C.png"></a>
                     <a href="agenda.php"><img id="agenda_C"            src="../../../features/images/object/agenda_C.png"></a>
 
+                    <!-- REDES SOCIALES -->
+                    <div class="social">
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/Arcor" target="_blank">
+                            <img src="http://www.simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+                        </a>
+                        <!-- Twitter -->
+                        <a href="https://twitter.com/ArcorArg" target="_blank">
+                            <img src="http://www.simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter"/>
+                        </a>
+                    </div>
+
                 </div>
 
             </div>
