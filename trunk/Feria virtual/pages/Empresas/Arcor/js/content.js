@@ -1,8 +1,8 @@
 $( document ).ready(function()
 {
-	var webpage		= "www.arcor.com";
+	var webpage		= "www.arcor.com.ar";
 	var name		=  "Arcor";
-	var slogan		=  "Alimentanto Momentos Mágicos";
+	var slogan		=  "Alimentando Momentos Mágicos";
 	var title 		=  "ARCOR";
 	var description =  "<iframe src='descripcion.html' scrolling='yes' frameborder='0' width='100%' height='400px'></iframe>";
 
