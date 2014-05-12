@@ -15,13 +15,13 @@
             <div id="content">
 
                 <div align="center" style="position: relative;">
-                    <img src="../../../features/images/stand-green.jpg">
+                    <img src="images/stand.png">
                     
-                    <img id="standFiat" src="images/s2front_fc.png">
+                    <a href="empresa.php"><img id="standFiat" src="images/s2front_fc.png"></a>
 
-                    <a href="http://www.fiat.com.ar/" target="_blank"><img id="maletinGreen" src="../../../features/images/maletin-green.png"></a>
-                    <a href="agenda.php"><img id="agendaGreen" src="../../../features/images/agenda-green.png"></a>
-
+                    <a href="http://www.fiat.com.ar/" target="_blank"><img id="maletin_B" src="../../../features/images/object/maletin_B.png"></a>
+                    <a href="agenda.php"><img id="agenda_B" src="../../../features/images/object/agenda_B.png"></a>
+                    <a href="ofertasEmpleo.php"><img id="ofertas_B"    src="../../../features/images/object/ofertas_B.png"></a>
                 </div>
 
             </div>
