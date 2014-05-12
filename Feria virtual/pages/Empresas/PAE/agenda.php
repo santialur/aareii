@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <?php 
-	session_start(); 
-	$_SESSION['company'] = pae; 
-	$_SESSION['company_id'] = 6; 
+  session_start(); 
+  $_SESSION['company'] = pae; 
+  $_SESSION['company_id'] = 6; 
 ?> 
 <html>
-	<head>
-		<title>Agenda</title>
+  <head>
+    <title>Agenda</title>
 
-    	<?php include '../_empresasImports.html'; ?>
-   		<link 	rel="stylesheet" 	href="../../../css/agenda.css"											/>
-	</head>
+      <?php include '../_empresasImports.html'; ?>
+      <link   rel="stylesheet"  href="../../../css/agenda.css"  />
+          
+  </head>
 
-	<body>
-    	<div class="wrapperMedium">
-       		<?php include '../_empresasHeader.html'; 	?>
+  <body>
+      <div class="wrapperMedium">
+          <?php include '../_empresasHeader.html';  ?>
 
-    		<?php include '../_empresasMenuA.html'; 	?>
+        <?php include '../_empresasMenuA.html';   ?>
 
-    		<?php include '../_empresasAgenda.html'; 	?>
+          <?php include '../_empresasAgenda.html';  ?>
 
-    		<?php include '../_empresasFooter.html'; 	?>
 
-    	</div>
-	</body>
+        <?php include '../_empresasFooter.html';  ?>
+
+      </div>
+  </body>
 </html>
