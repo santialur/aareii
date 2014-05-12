@@ -10,7 +10,7 @@
         <div class="wrapperMedium">
             <?php include '../_empresasHeader.html';    ?>
 
-            <?php include '../_empresasMenu.html';      ?>
+            <?php include '../_empresasMenuC.html';      ?>
 
             <div id="content">
 
@@ -19,7 +19,7 @@
                     
                     <a href="empresa.php" target="_blank"><img id="standArcor" src="images/frontal.png"></a>
 
-                    <a href="" target="_blank"><img id="maletin_C"     src="../../../features/images/object/maletin_C.png"></a>
+                    <a href="../../Inscripcion/inscripcion.php" target="_blank"><img id="maletin_C"     src="../../../features/images/object/maletin_C.png"></a>
                     <a href="agenda.php"><img id="agenda_C"            src="../../../features/images/object/agenda_C.png"></a>
 
                 </div>
