@@ -20,7 +20,19 @@
 
 			<div align="center" style="position: relative;">
 				<img class="sketch" id="sketchOut" src="../../features/images/exterior.jpg"/>
-
+				
+				<a href="interior.php"><img src="../../features/images/ext/e.png" id="e" /></a>
+				<a href="../Empresas/Quilmes/stand.php"><img src="../../features/images/ext/e1.png" id="e1" /></a>
+				<a href="../Empresas/Fiat/stand.php"><img src="../../features/images/ext/e2.png" id="e2" /></a>
+				<a href="../Empresas/Techint/stand.php"><img src="../../features/images/ext/e3.png" id="e3" /></a>
+				<a href="../Empresas/PAE/stand.php"><img src="../../features/images/ext/e4.png" id="e4" /></a>
+				<a href="../Empresas/Arcor/stand.php"><img src="../../features/images/ext/e5.png" id="e5" /></a>
+				<a href="../Empresas/Unilever/stand.php"><img src="../../features/images/ext/e6.png" id="e6" /></a>
+				<a href="../Empresas/Penaflor/stand.php"><img src="../../features/images/ext/e7.png" id="e7" /></a>
+				<a href="../Empresas/Astori/stand.php"><img src="../../features/images/ext/e8.png" id="e8" /></a>
+				<a href="../Empresas/Mdlz/stand.php"><img src="../../features/images/ext/e9.png" id="e9" /></a>
+				<a href="../Empresas/CocaCola/stand.php"><img src="../../features/images/ext/e0.png" id="e0" /></a>
+				
 				<a class="ifancybox" href="" ><img id="triggerAAREII" src="../../features/images/stand-aareii.png"/></a>
 
 				<div id="pop-upAAREII">
@@ -34,5 +46,3 @@
 		<?php include '_footer.html'; ?>
 	</body>
 </html>
-
-

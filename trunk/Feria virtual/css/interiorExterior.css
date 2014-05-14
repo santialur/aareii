@@ -37,7 +37,6 @@ INTERIOR Y EXTERIOR
 {
 	margin: 			4.2% 0 1.2% 0;
 	width: 				95%;
-	height: 			100%;
 }
 
 #pollContent
@@ -46,3 +45,18 @@ INTERIOR Y EXTERIOR
 	font-size: 			82%;
 	margin:				-5% 8% -4% 8%;
 }
+
+
+#cartelexterior
+{position:absolute;left: 25.6%;top: 35%;z-index: 200;width: 57.5%;}
+#e{position:absolute;left: 50.1%;top: 35%;z-index: 200;width: 8.7%;}
+#e1{position:absolute;left: 25.7%;top: 44.2%;z-index: 200;width: 3.6%;}
+#e2{position:absolute;left: 29.2%;top: 43.6%;z-index: 200;width: 3.4%;}
+#e3{position:absolute;left: 32.6%;top: 43%;z-index: 200;width: 3.4%;}
+#e4{position:absolute;left: 35.9%;top: 42.5%;z-index: 200;width: 3.2%;}
+#e5{position:absolute;left: 38.9%;top: 41.9%;z-index: 200;width: 3.1%;}
+#e6{position:absolute;left: 67.5%;top: 40.8%;z-index: 200;width: 3.1%;}
+#e7{position:absolute;left: 70.4%;top: 40.8%;z-index: 200;width: 3.3%;}
+#e8{position:absolute;left: 73.4%;top: 40.9%;z-index: 200;width: 3.3%;}
+#e9{position:absolute;left: 76.3%;top: 40.9%;z-index: 200;width: 3.5%;}
+#e0{position:absolute;left: 79.2%;top: 41.07%;z-index: 200;width: 3.3%;}
