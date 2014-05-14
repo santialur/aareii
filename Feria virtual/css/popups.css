@@ -11,27 +11,27 @@ FIRST LINE
 
 #trigger {
 	position: 				absolute;
-	left: 					40%;
-	top: 					55%;
-	width: 					12%;
+left: 38.2%;
+top: 48.7%;
+width: 15.75%;
 }
 #trigger2 {
 	position: 				absolute;
-	left: 					21.58%;
-	top: 					44.85%;
-	width: 					12%;
+left: 21.8%;
+top: 37.5%;
+width: 15.75%;
 }
 #trigger3{
 	position: 				absolute;
-	left: 					33.2%;
-	top: 					30.2%;
-	width: 					10.75%;
+left: 30.2%;
+top: 21.2%;
+width: 15.75%;
 }
 #trigger4{
 	position: 				absolute;
-	left: 					50%;
-	top: 					35%;
-	width: 					11.5%;
+left: 46%;
+top: 32.8%;
+width: 15.5%;
 }
 
 /*------------------------------------------------------------------
@@ -40,21 +40,21 @@ SECOND LINE
 
 #trigger5{
 	position: 				absolute;
-	left: 					65.3%;
-	top: 					50.4%;
-	width: 					11.75%;
+left: 61.8%;
+top: 56.4%;
+width: 14.75%;
 }
 #trigger6{
 	position: 				absolute;
-	left: 					57%;
-	top: 					74.4%;
-	width: 					11.75%;
+left: 55%;
+top: 73.4%;
+width: 14.75%;
 }
 #trigger7{
 	position: 				absolute;
-	left: 					32%;
-	top: 					80%;
-	width: 					11.3%;
+left: 27%;
+top: 80%;
+width: 13.3%;
 }
 #trigger8{
 	position: 				absolute;
@@ -69,63 +69,128 @@ THIRD LINE
 
 #trigger9{
 	position: 				absolute;
-	left: 					85.58%;
-	top: 					60.85%;
-	width: 					12%;
+left: 3.58%;
+top: 77.85%;
+width: 14%;
 }
 #trigger10{
 	position: 				absolute;
-	left: 					10%;
-	top: 					65%;
-	width: 					11%;
+left: 67%;
+top: 44%;
+width: 14%;
 }
 #trigger11{
 	position: 				absolute;
-	left: 					80.2%;
-	top: 					70.4%;
-	width: 					12%;
+left: 10.2%;
+top: 65.2%;
+width: 14%;
 }
-
-/*------------------------------------------------------------------
-
 
 #trigger12{
 	position: 				absolute;
-	left: 					73.6%;
-	top: 					87.3%;
-	width: 					12.2%;
+left: 82.2%;
+top: 58.4%;
+width: 7%;
 }
-
-/*------------------------------------------------------------------
-FOURTH LINE 
 
 #trigger13{
 	position: 				absolute;
-	left: 					11%;
-	top: 					65.6%;
-	width: 					12%;
+left: 77.2%;
+top: 71.4%;
+width: 7%;
 }
 
 #trigger14{
 	position: 				absolute;
-	left: 					28%;
-	top: 					78.4%;
-	width: 					12%;
+left: 86.7%;
+top: 71.4%;
+width: 7%;
 }
--------------------------------------------------------------------*/
-
-
-/*------------------------------------------------------------------
-FIFTH LINE 
-
 
 #trigger15{
 	position: 				absolute;
-	left: 					0.6%;
-	top: 					84.4%;
-	width: 					12%;
+left: 91%;
+top: 59.4%;
+width: 7%;
 }
--------------------------------------------------------------------*/
+
+#trigger16{
+	position: 				absolute;
+left: 82.2%;
+top: 84.4%;
+width: 7%;
+}
+
+#publicityA1{
+	position: 				absolute;
+left: 41.9%;
+top: 8.9%;
+width: 6.6%;
+}
+
+#publicityA2{
+	position: 				absolute;
+left: 49.4%;
+top: 13.1%;
+width: 6.9%;
+}
+
+#publicityA3{
+	position: 				absolute;
+left: 58.2%;
+top: 19.9%;
+width: 4.6%;
+}
+
+#publicityA4{
+	position: 				absolute;
+left: 74.7%;
+top: 27.9%;
+width: 7.5%;
+}
+
+#publicityA5{
+	position: 				absolute;
+left: 82.4%;
+top: 33.4%;
+width: 7.6%;
+}
+
+#publicityA6{
+	position: 				absolute;
+left: 92%;
+top: 39.5%;
+width: 4%;
+}
+
+#publicityB1{
+	position: 				absolute;
+left: 30%;
+top: 3.9%;
+width: 3.6%;
+}
+
+#publicityB2{
+	position: 				absolute;
+left: 24.3%;
+top: 9.2%;
+width: 5%;
+}
+
+#publicityB3{
+	position: 				absolute;
+left: 11%;
+top: 29%;
+width: 7.4%;
+}
+
+#publicityB4{
+	position: 				absolute;
+left: 41.9%;
+top: 48.9%;
+width: 6.6%;
+}
+
 
 /*------------------------------------------------------------------
 EXTERIOR
@@ -142,7 +207,7 @@ EXTERIOR
 PROPERTIES
 -------------------------------------------------------------------*/
 
-#triggerAAREII, #trigger, #trigger2, #trigger3, #trigger4, #trigger5, #trigger6, #trigger7, #trigger8, #trigger9, #trigger10, #trigger11, #trigger12, #trigger13, #trigger14, #trigger15{
+#triggerAAREII, #trigger, #trigger2, #trigger3, #trigger4, #trigger5, #trigger6, #trigger7, #trigger8, #trigger9, #trigger10, #trigger11, #trigger12, #trigger13, #trigger14, #trigger15, #trigger16{
 	z-index: 				1;
 	height: 				auto;
 }  
@@ -151,7 +216,7 @@ PROPERTIES
 HOVER
 -------------------------------------------------------------------*/
 
-#triggerAAREII:hover, #trigger:hover, #trigger2:hover, #trigger3:hover, #trigger4:hover, #trigger5:hover, #trigger6:hover, #trigger7:hover, #trigger8:hover, #trigger9:hover, #trigger10:hover, #trigger11:hover, #trigger12:hover, #trigger13:hover, #trigger14:hover, #trigger15:hover{
+#triggerAAREII:hover, #trigger:hover, #trigger2:hover, #trigger3:hover, #trigger4:hover, #trigger5:hover, #trigger6:hover, #trigger7:hover, #trigger8:hover, #trigger9:hover, #trigger10:hover, #trigger11:hover, #trigger12:hover, #trigger13:hover, #trigger14:hover, #trigger15:hover, #trigger16:hover{
 	/*Escalar*/
 	-webkit-transform:			scale(1.3, 1.3);
 	-o-transform:				scale(1.3, 1.3);
@@ -169,7 +234,7 @@ HOVER
 POPUPS
 -------------------------------------------------------------------*/
 
-#pop-up, #pop-up2, #pop-up3, #pop-up4, #pop-up5, #pop-up6, #pop-up7, #pop-up8, #pop-up9, #pop-up10, #pop-up11, #pop-up12, #pop-up13, #pop-up14, #pop-up15{
+#pop-up, #pop-up2, #pop-up3, #pop-up4, #pop-up5, #pop-up6, #pop-up7, #pop-up8, #pop-up9, #pop-up10, #pop-up11, #pop-up12, #pop-up13, #pop-up14, #pop-up15, #pop-up16{
 		display: 			none;
         position: 			absolute;
         width: 				25%;

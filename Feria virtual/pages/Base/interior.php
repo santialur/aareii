@@ -4,6 +4,7 @@
 			Interior
 		</title>
 		<meta property="og:url" content="http://www.encontramas.com.ar/pages/Base/interior.php" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta property="og:title" content="Feria virtual de empresas- Encontra+ 2014" />
 		<meta property="og:description" content="Inscribite a la feria de empresas 2014" />
 		<meta property="og:image" content="http://www.encontramas.com.ar/virtual/features/images/encontramas_facebook_foto.jpg" />
@@ -47,6 +48,7 @@
 		 			'transitionOut' : 	'none',
 		 			'type' 			: 	'iframe'
 				});
+				$("a.single_image").fancybox();
 			});
 		</script>
 		
@@ -76,7 +78,6 @@
 					<ul id="js-news" class="js-hidden">
 					</ul>
 				</div>
-
 				<!-- BLOQUE IZQUIERDO --> 
 				<div id="leftBlock" class="leftSide">
 
@@ -163,17 +164,3 @@
 	</body>
 </html>
 
-
-
-<!-- LOCATED WHERE POPUPS ARE
-<div class="content-item" style="">
-	<div class="overlay"></div>
-	<div class="corner-overlay-content">
-		<img src="../features/images/fiat-web.png" width="22%"/>
-	</div>
-	<div class="overlay-content">
-		<h2>Nombre de la empresa</h2>
-		<p>Texto de la empresa</p>
-	</div>
-</div>
--->
