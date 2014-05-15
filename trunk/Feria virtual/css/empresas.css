@@ -93,6 +93,23 @@ body{
 	padding:				20px
 }
 
+.buttonSmall
+{
+	box-shadow: 			1px 1px 2px Black;
+	background:				-moz-linear-gradient(top, #B10B0B, #D00000);
+	background:				-webkit-linear-gradient(top, #B10B0B, #D00000);
+	border:					0px;
+	color:					White;
+	display:				inline-block;
+	font-size: 				100%;
+	height:					33px;
+	line-height:			33px;
+	padding: 			0 1% 1% 1%;
+	text-decoration:		none;
+	text-shadow:			1px 2px 0px #810E05;
+}
+
+
 .button
 {
 	box-shadow: 			1px 1px 2px Black;
@@ -108,13 +125,13 @@ body{
 	text-decoration:		none;
 	text-shadow:			1px 2px 0px #810E05;
 }
-	.button:hover
+	.button:hover, .buttonSmall:hover
 	{
 		background:	    	-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #C62D1F), color-stop(1, #F24537) );
 		background:			-moz-linear-gradient( center top, #C62D1F 5%, #F24537 100% );
 		background-color:	#C62D1F;  
 	}
-	.button:active
+	.button:active, .buttonSmall:active
 	{
 		position:			relative;
 		top: 				1px;
