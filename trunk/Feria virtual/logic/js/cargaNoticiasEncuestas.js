@@ -1,23 +1,29 @@
 function sendNews(){
-  $.ajax({
-        url: '../../logic/php/News.php',
-        data: {
-            saveNew:    true,
-            newTitle:     document.getElementById("titulo_noticia").value,
-            newDate:    document.getElementById("fecha_noticia_dia").value + "-" + document.getElementById("fecha_noticia_mes").value + "-" +document.getElementById("fecha_noticia_anio").value,
-            newBody:      document.getElementById("descripcion_noticia").value,
-        },
-        type: 'POST',
-        success: function(output){
-          if(output == "Hubo un problema al guardar la noticia"){
-            alert(output);
-          }else{
-            location.reload();
-          }
-          
-        }
-      });
-    return false;
+	
+	var title = document.getElementById("titulo_noticia").value.replace(/\t/g," ");
+	title = title.replace(/\r?\n|\r/g," ");
+	var descripcion = document.getElementById("descripcion_noticia").value.replace(/\t/g," ");
+	descripcion = descripcion.replace(/\r?\n|\r/g," ");
+	
+	$.ajax({
+	      url: '../../logic/php/News.php',
+	      data: {
+	      		saveNew: 		true,
+	      		newTitle: 		title,
+	      		newDate:		document.getElementById("fecha_noticia_dia").value + "-" + document.getElementById("fecha_noticia_mes").value + "-" +document.getElementById("fecha_noticia_anio").value,
+	      		newBody:  		descripcion,
+	      },
+	      type: 'POST',
+	      success: function(output){
+	      	if(output == "Hubo un problema al guardar la noticia"){
+	      		alert(output);
+	      	}else{
+	      		location.reload();
+	      	}
+	        
+	      }
+	    });
+   	return false;
 }
 
 $(document).ready(function(){
@@ -31,20 +37,20 @@ function getNews()
     $.ajax({ 
       url: '../../logic/php/News.php',
       data: {
-          getNews:      true,
+      		getNews: 			true,
       },
         type: 'POST',
         success: function(output) 
         {
           if(output == "No hay noticias"){
-              
+            	
           }else{
-            if(output == "No hay noticias"){
-              alert(output);
-            }else{
-              news = JSON.parse(output);
-                fillNews(news);
-            }
+          	if(output == "No hay noticias"){
+          		alert(output);
+          	}else{
+          		news = JSON.parse(output);
+            		fillNews(news);
+          	}
           }
           
         }
@@ -79,8 +85,8 @@ function deleteNews(id)
           url: '../../logic/php/News.php',
           data: 
           {
-            deleteNew:      true,
-            newId :       id,
+            deleteNew: 			true,
+            newId : 			id,
           },
           type: 'POST',
           success: function(output) 
@@ -97,44 +103,44 @@ function deleteNews(id)
 
 /***********************************************************************************/
 function sendPoll(){
-  var options = '{"options":[';
-  if(!document.getElementById("opcion_encuesta_1").value.match(/^\s*$/)){
-    options = options + '{"option":'+'"'+document.getElementById("opcion_encuesta_1").value+'"'+'},';
-  }
-  if(!document.getElementById("opcion_encuesta_2").value.match(/^\s*$/)){
-    options = options + '{"option":'+'"'+document.getElementById("opcion_encuesta_2").value+'"'+'},';
-  }
-  if(!document.getElementById("opcion_encuesta_3").value.match(/^\s*$/)){
-    options = options + '{"option":'+'"'+document.getElementById("opcion_encuesta_3").value+'"'+'},';
-  }
-  if(!document.getElementById("opcion_encuesta_4").value.match(/^\s*$/)){
-    options = options + '{"option":'+'"'+document.getElementById("opcion_encuesta_4").value+'"'+'},';
-  }
-  if(!document.getElementById("opcion_encuesta_5").value.match(/^\s*$/)){
-    options = options + '{"option":'+'"'+document.getElementById("opcion_encuesta_5").value+'"'+'},';
-  }
-  if(!document.getElementById("opcion_encuesta_6").value.match(/^\s*$/)){
-    options = options + '{"option":'+'"'+document.getElementById("opcion_encuesta_6").value+'"'+'},';
-  }
-  options = options.substring(0, options.length - 1);
-  options = options + "]}";
-  
-  $.ajax({
-        url: '../../logic/php/Polls.php',
-        data: {
-            savePoll:     true,
-            pollQuestion:     document.getElementById("pregunta_encuesta").value,
-            pollOptions:    options,
-        },
-        type: 'POST',
-        success: function(output){
-            if(output == "Exito"){
-              location.reload();
-            }
-          
-        }
-      });
-    return false;
+	var options = '{"options":[';
+	if(!document.getElementById("opcion_encuesta_1").value.match(/^\s*$/)){
+		options = options + '{"option":'+'"'+document.getElementById("opcion_encuesta_1").value+'"'+'},';
+	}
+	if(!document.getElementById("opcion_encuesta_2").value.match(/^\s*$/)){
+		options = options + '{"option":'+'"'+document.getElementById("opcion_encuesta_2").value+'"'+'},';
+	}
+	if(!document.getElementById("opcion_encuesta_3").value.match(/^\s*$/)){
+		options = options + '{"option":'+'"'+document.getElementById("opcion_encuesta_3").value+'"'+'},';
+	}
+	if(!document.getElementById("opcion_encuesta_4").value.match(/^\s*$/)){
+		options = options + '{"option":'+'"'+document.getElementById("opcion_encuesta_4").value+'"'+'},';
+	}
+	if(!document.getElementById("opcion_encuesta_5").value.match(/^\s*$/)){
+		options = options + '{"option":'+'"'+document.getElementById("opcion_encuesta_5").value+'"'+'},';
+	}
+	if(!document.getElementById("opcion_encuesta_6").value.match(/^\s*$/)){
+		options = options + '{"option":'+'"'+document.getElementById("opcion_encuesta_6").value+'"'+'},';
+	}
+	options = options.substring(0, options.length - 1);
+	options = options + "]}";
+	
+	$.ajax({
+	      url: '../../logic/php/Polls.php',
+	      data: {
+	      		savePoll: 		true,
+	      		pollQuestion: 		document.getElementById("pregunta_encuesta").value,
+	      		pollOptions: 		options,
+	      },
+	      type: 'POST',
+	      success: function(output){
+	        	if(output == "Exito"){
+	        		location.reload();
+	        	}
+	        
+	      }
+	    });
+   	return false;
 }
 
 function getPoll(){
@@ -142,7 +148,7 @@ function getPoll(){
     $.ajax({
       url: '../../logic/php/Polls.php',
       data: {
-          getPolls:     true,
+      		getPolls: 		true,
       },
       type: 'POST',
       success: function(output){

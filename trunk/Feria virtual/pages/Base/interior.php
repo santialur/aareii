@@ -1,5 +1,9 @@
+<!--[if IE]>
+<!DOCTYPE html>
+<![endif]-->
+
 <html>
-	<head>
+	<head>	
 		<title>
 			Interior
 		</title>
@@ -60,13 +64,29 @@
 	  	
 	  	
 	  	<script type="text/javascript">
-		      
+		      $.ajax({ url: '../../logic/php/saveVisit.php',
+		            data: {
+		            		place: 	"Interior",
+		            },
+		            type: 'POST',
+		            success: function(output){
+		                
+		            }
+		        });
 		</script>
 	  	
 	</head>
 
 
 	<body>
+	
+		<!--[if IE]>
+		<div id="ieAlert">
+			Este sitio no es 100% compatible con Internet Explorer; recomendamos descargar <br>
+			<a href="https://www.google.com.ar/chrome/index.html?hl=es">Google Chrome, aquí</a><br>
+		</div>
+		<![endif]-->
+		
 		<!-- MENU --> 
 		<?php include '_menu.html'; ?>
 
@@ -164,3 +184,17 @@
 	</body>
 </html>
 
+
+
+<!-- LOCATED WHERE POPUPS ARE
+<div class="content-item" style="">
+	<div class="overlay"></div>
+	<div class="corner-overlay-content">
+		<img src="../features/images/fiat-web.png" width="22%"/>
+	</div>
+	<div class="overlay-content">
+		<h2>Nombre de la empresa</h2>
+		<p>Texto de la empresa</p>
+	</div>
+</div>
+-->

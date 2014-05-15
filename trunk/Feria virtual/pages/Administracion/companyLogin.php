@@ -33,7 +33,7 @@
           <div class="leftSide">
             <h3>
               <span class="opensans textShadow"> 
-                Creaci&oacuten de ofertas laborales   
+                Administraci&oacuten para empresas  
               </span>
             </h3>
           </div>
@@ -62,10 +62,6 @@
                </span> 
                <input type="password" id="contraseña" name="contraseña" class="rightSide">
                <br><br>
-            </div>
-  
-            <div id="olvido_contraseña">
-              <a  href="" style="font-size:80%; text-decoration:underline;">Cambiar contraseña</a><br><br>
             </div>
         
             <div id="buttons" style="text-align: center">

@@ -10,16 +10,16 @@
     	<div class="wrapperMedium">
     		<?php include '../_empresasHeader.html'; ?>
 
-    		<?php include '../_empresasMenu.html'; 	?>
+    		<?php include '../_empresasMenuD.html'; 	?>
 
     		<div id="content">
     			<div style="margin: 0 auto; padding: 2% 5%">
 	    			<div>
-	                    <img src="images/banner.png" class="brandBanner">
+	                    <img src="images/banner.jpg" class="brandBanner">
 	                </div>
 	                <br />
 
-   	                <div class="textBoxes opensans textShadow centered"><a id="brandWebpage"></a></div>
+   	                <div class="textBoxes opensans textShadow centered"><a target="_blank" id="brandWebpage"></a></div>
    	                <br />
 			
 	                <div class="textBoxes">
@@ -32,7 +32,7 @@
 		                <div style="text-align:justify">
 		                    <p id="companyDescription">
 		                        
-		                </div>
+
 	            	</div>
     			</div>
     		</div>

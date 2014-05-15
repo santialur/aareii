@@ -6,8 +6,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Agenda</title>
-
+		
+		<title>Empresa Mondelëz - Agenda</title>
     	<?php include '../_empresasImports.html'; ?>
    		<link 	rel="stylesheet" 	href="../../../css/agenda.css"											/>
 	</head>
@@ -25,4 +25,3 @@
     	</div>
 	</body>
 </html>
-

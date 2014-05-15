@@ -1,5 +1,5 @@
 function getCode(){
-   if(document.getElementById("dni").value.match(/^\s*$/)){
+	 if(document.getElementById("dni").value.match(/^\s*$/)){
       alert("Ingrese su numero de documento");
       return;
    }
@@ -7,29 +7,29 @@ function getCode(){
       alert("Ingrese su email");
       return;
    }
-  $.ajax({ url: '../../logic/inscripcion/passwordRecovery.php',
-       data: {state:         "Forgot password",
-          dni:                 document.getElementById("dni").value,
+	$.ajax({ url: '../../logic/inscripcion/passwordRecovery.php',
+			 data: {state: 				 "Forgot password",
+			 		dni:                 document.getElementById("dni").value,
                     email:               document.getElementById("email").value,
                  },
             type: 'POST',
             success: function(output){
-              if(output == "No tenemos registrado usuarios con esta direccion de email y dni"){
-                alert(output);
-              }
-              else{
-                alert(output);
-                window.location.href = "../../pages/Inscripcion/recoveryPassword.html";
-              }
-              
+            	if(output == "No tenemos registrado usuarios con esta direccion de email y dni"){
+            		alert(output);
+            	}
+            	else{
+            		alert(output);
+            		window.location.href = "../../pages/Inscripcion/recoveryPassword.html";
+            	}
+            	
             }
         });
 }
 
 function ChangePassword(){
     if(document.getElementById("dni").value.match(/^\s*$/)){
-    alert("Ingrese su numero de documento");
-    return;
+	  alert("Ingrese su numero de documento");
+	  return;
     }
     if(document.getElementById("email").value.match(/^\s*$/)){
       alert("Ingrese su email");
@@ -47,22 +47,22 @@ function ChangePassword(){
       alert("Las contraseñas no coinciden");
       return;
     }
-  $.ajax({ url: '../../logic/inscripcion/passwordRecovery.php',
-       data: {state:         "Create password",
-          dni:                 document.getElementById("dni").value,
+	$.ajax({ url: '../../logic/inscripcion/passwordRecovery.php',
+			 data: {state: 				 "Create password",
+			 		dni:                 document.getElementById("dni").value,
                     email:               document.getElementById("email").value,
-                    code:          document.getElementById("code").value,
-                    password:        document.getElementById("new_password").value,
+                    code: 				 document.getElementById("code").value,
+                    password: 			 document.getElementById("new_password").value,
                  },
             type: 'POST',
             success: function(output){
-              if(output == "Contraseña modificada con exito"){
-                alert(output);
-                window.location.href = "../../pages/Inscripcion/inscripcion.php";
-              }
-              else{
-                alert(output);
-              }
+            	if(output == "Contraseña modificada con exito"){
+            		alert(output);
+            		window.location.href = "../../pages/Inscripcion/inscripcion.php";
+            	}
+            	else{
+            		alert(output);
+            	}
             }
         });
 }

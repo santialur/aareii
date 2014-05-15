@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Experiencias Laborales</title>
 		
+		<title>Empresa PanAmerican Energy - Experiencias Laborales</title>
 		<?php include '../_empresasImports.html'; ?>		
 	</head>
 

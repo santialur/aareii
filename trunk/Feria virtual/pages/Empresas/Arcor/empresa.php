@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Quienes somos?</title>
 		
+		<title>Empresa Arcor - Quienes somos?</title>
 		<?php include '../_empresasImports.html'; ?>		
 	</head>
 
@@ -19,7 +19,7 @@
 	                </div>
 	                <br />
 
-   	                <div class="textBoxes opensans textShadow centered"><a id="brandWebpage"></a></div>
+   	                <div class="textBoxes opensans textShadow centered"><a target="_blank" id="brandWebpage"></a></div>
    	                <br />
 			
 	                <div class="textBoxes">

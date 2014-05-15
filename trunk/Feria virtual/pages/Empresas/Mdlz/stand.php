@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Stand</title>
+        <title>Empresa Mondelëz - Stand</title>
 
         <?php include '../_empresasImports.html'; ?>
+         <script type="text/javascript">
+		      $.ajax({ url: '../../../logic/php/saveVisit.php',
+		            data: {
+		            		place: 	"Mondelez",
+		            },
+		            type: 'POST',
+		            success: function(output){
+		                
+		            }
+		        });
+	</script>
     </head>
 
     <body>

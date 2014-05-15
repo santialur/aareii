@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Quienes somos?</title>
 		
+		<title>Grupo Peñaflor - Conocenos - Encontrá+ Virtual 2014</title>
 		<?php include '../_empresasImports.html'; ?>		
 	</head>
 
@@ -10,7 +10,7 @@
     	<div class="wrapperMedium">
     		<?php include '../_empresasHeader.html'; ?>
 
-    		<?php include '../_empresasMenu.html'; 	?>
+    		<?php include '../_empresasMenuC.html'; 	?>
 
     		<div id="content">
     			<div style="margin: 0 auto; padding: 5% 10%">
@@ -19,7 +19,7 @@
 	                </div>
 	                <br />
 
-   	                <div class="textBoxes opensans textShadow centered"><a id="brandWebpage"></a></div>
+   	                <div class="textBoxes opensans textShadow centered"><a target="_blank" id="brandWebpage"></a></div>
    	                <br />
 			
 	                <div class="textBoxes">

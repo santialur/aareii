@@ -51,32 +51,32 @@ $(document).ready(
 
 $(document).ready(
   function getPollNews(){
-      var poll;
-      $.ajax({
-        url: '../../logic/php/Polls.php',
-        data: {
-            getPolls:     true,
-        },
-        type: 'POST',
-        success: function(output){
-          poll = JSON.parse(output);
-          fillPoll(poll);
-        }
-      });
-      
-          var news;
-      $.ajax({
-        url: '../../logic/php/News.php',
-        async: false,
-        data: {
-            getNews:    true,
-        },
-        type: 'POST',
-        success: function(output){
-          news = JSON.parse(output);
-          fillNews(news);
-        }
-      });
+	    var poll;
+	    $.ajax({
+	      url: '../../logic/php/Polls.php',
+	      data: {
+	      		getPolls: 		true,
+	      },
+	      type: 'POST',
+	      success: function(output){
+	        poll = JSON.parse(output);
+	        fillPoll(poll);
+	      }
+	    });
+	    
+    	    var news;
+	    $.ajax({
+	      url: '../../logic/php/News.php',
+	      async: false,
+	      data: {
+	      		getNews: 		true,
+	      },
+	      type: 'POST',
+	      success: function(output){
+	        news = JSON.parse(output);
+	        fillNews(news);
+	      }
+	    });
     }
 );
 
@@ -103,43 +103,43 @@ function fillPoll(poll)
 
 var publicIp = "";
 function saveIdentification(ip){
-  if(localStorage.getItem('Token') == null){
-    var token = Math.random().toString(36).substr(2);
-    localStorage.setItem('Token', token);
-  }
-  publicIp = ip;
+	if(localStorage.getItem('Token') == null){
+		var token = Math.random().toString(36).substr(2);
+		localStorage.setItem('Token', token);
+	}
+	publicIp = ip;
 }
 
 function sendVote(){
-  var identification = publicIp + ":" + localStorage.getItem('Token') + ":" +actualPoll.id;
-  var selectedOp = $('input:radio:checked').val();
-  
-  var questionId = actualPoll.id;
-  
-  $.ajax({
-        url: '../../logic/php/Polls.php',
-        data: {
-            saveVote:     true,
-            pcIdentification:   identification,
-            selectedOption:   selectedOp,
-            questionId:   questionId,
-        },
-        type: 'POST',
-        success: function(output){
+	var identification = publicIp + ":" + localStorage.getItem('Token') + ":" +actualPoll.id;
+	var selectedOp = $('input:radio:checked').val();
+	
+	var questionId = actualPoll.id;
+	
+	$.ajax({
+	      url: '../../logic/php/Polls.php',
+	      data: {
+	      		saveVote: 		true,
+	      		pcIdentification: 	identification,
+	      		selectedOption: 	selectedOp,
+	      		questionId:		questionId,
+	      },
+	      type: 'POST',
+	      success: function(output){
 
-            document.getElementById("voteButton").style.display = 'none';
-            var option = new Array();
-            result = JSON.parse(output);
-            $( '#pollOptions' ).empty();
-            $( '#pollOptions' ).append('<label><b><font color="Red" size="3">Resultados:</font></b></label></br></br>');
-        
-            for(var i=0;i<result.results.length; i++)
-        {
-          option[i] = result.results[i].option;
-          $( '#pollOptions' ).append('<center><label for= "option'+i+'"><b> <font size="2" color="grey">'+ "&#8226 " +  option[i].substring(0, 15)+ ': <font size="3" color="blue">' + result.results[i].quantity +'</font>'+ "  votos" +'</font></b></label></center></br>');
-        }
-            
+	      		document.getElementById("voteButton").style.display = 'none';
+	      		var option = new Array();
+	      		result = JSON.parse(output);
+	      		$( '#pollOptions' ).empty();
+	      		$( '#pollOptions' ).append('<label><b><font color="Red" size="3">Resultados:</font></b></label></br></br>');
+			  
+	      		for(var i=0;i<result.results.length; i++)
+			  {
+			    option[i] = result.results[i].option;
+			    $( '#pollOptions' ).append('<center><label for= "option'+i+'"><b> <font size="2" color="grey">'+ "&#8226 " +  option[i].substring(0, 15)+ ': <font size="3" color="blue">' + result.results[i].quantity +'</font>'+ "  votos" +'</font></b></label></center></br>');
+			  }
+	      		
 
-        }
-      });
+	      }
+	    });
 }

@@ -1,9 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Stand</title>
-
+        <title>Empresa Arcor - Stand</title>
+	 
+	
         <?php include '../_empresasImports.html'; ?>
+        <script type="text/javascript">
+		      $.ajax({ url: '../../../logic/php/saveVisit.php',
+		            data: {
+		            		place: 	"Arcor",
+		            },
+		            type: 'POST',
+		            success: function(output){
+		                
+		            }
+		        });
+	</script>
+       
     </head>
 
     <body>

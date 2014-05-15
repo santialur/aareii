@@ -44,21 +44,28 @@
               </span>
             </h3>
             <h3>
-              <span class="opensans textShadow"> 
-                Postulantes de ofertas laborales
-              </span>
-            </h3>
+	      <span class="opensans textShadow"> 
+	        Postulantes de ofertas laborales
+	      </span>
+          </h3>
           </div>
-    
+	  
           <div class="rightSide">
             <img src="../../features/images/AAREII-logo.png" width="65" height="100">
           </div>
-        
-        <div style="clear: both"></div>
-        
-        <?php $companyId=json_encode($_SESSION['company_identification']); include 'list_files.php'; ?>
-        
-        
+    	  
+    	  <div style="clear: both"></div>
+    	  
+    	  <?php $companyId=json_encode($_SESSION['company_identification']); include 'list_files.php'; ?>
+    	  
+    	  <br>
+    	  <br>
+    	  <h3>
+	      <span class="opensans textShadow"> 
+	        Interesados en ofertas laborales dentro de la empresa
+	      </span>
+          </h3>
+          <?php $companyId=json_encode($_SESSION['company_identification']); include 'list_concernedPeople.php'; ?>
           <div style="clear: both"></div>
 
         </div><!-- END - CONTENT --> 

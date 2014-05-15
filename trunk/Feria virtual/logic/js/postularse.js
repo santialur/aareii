@@ -24,6 +24,7 @@ function postularse(){
         });
 	
 }
+
 function checkNumeric(target)
 {
   if(target.value.length > 0 && isNaN(target.value))

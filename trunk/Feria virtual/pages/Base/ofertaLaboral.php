@@ -1,8 +1,10 @@
+<!DOCTYPE html>
 <?php
 header('Content-Type: text/html; charset=UTF-8'); 
 ?>
 <html>
 	<head>
+	
 		<?php include '_imports.html'; ?>
 
 	  	<script type="text/javascript"	src="../../logic/js/ofertaLaboral.js"></script>
@@ -34,6 +36,12 @@ header('Content-Type: text/html; charset=UTF-8');
 
 
 	<body>
+			<!--[if IE]>
+				<div id="ieAlert">
+					Este sitio no es 100% compatible con Internet Explorer; recomendamos descargar <br>
+					<a href="https://www.google.com.ar/chrome/index.html?hl=es">Google Chrome, aquí</a><br>
+				</div>
+			<![endif]-->
 			<!-- MENU --> 
 			<?php include '_menu.html'; ?>
 

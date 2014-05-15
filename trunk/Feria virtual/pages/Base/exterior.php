@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html>
 	<head>
 		<title>
@@ -13,6 +15,13 @@
 	</head>
 
 	<body>	
+		<!--[if IE]>
+		<div id="ieAlert">
+			Este sitio no es 100% compatible con Internet Explorer; recomendamos descargar <br>
+			<a href="https://www.google.com.ar/chrome/index.html?hl=es">Google Chrome, aquí</a><br>
+		</div>
+		<![endif]-->
+	
 		<!-- MENU --> 
 		<?php include '_menu.html'; ?>
 	

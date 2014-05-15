@@ -1,5 +1,5 @@
 <?php
-	$companyId = $_POST['companyid'];
+	$company_Id = $_POST['companyid'];
 
 	$con = mysql_connect('localhost','root','C4ch0bs4s3124');
 	mysql_select_db('encontramas_test',$con);
@@ -10,13 +10,13 @@
 	  	die('Could not connect: ' . mysql_error($con));
 	}
 
-	$sql="SELECT * FROM events WHERE companyid = $companyId AND enabled = 1";
+	$sql = "SELECT * FROM events WHERE companyid = $company_Id AND enabled = 1";
 	$result = mysql_query($sql, $con);
 
 	if(mysql_num_rows($result) == 0){
 			echo "No hay eventos";
-	}
-	else{
+			
+	}else{
 		$jsontext = '{"events":[';
 		while ($row = mysql_fetch_array($result, MYSQL_ASSOC))
 		{

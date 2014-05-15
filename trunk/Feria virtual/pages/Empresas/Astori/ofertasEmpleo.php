@@ -6,8 +6,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Ofertas de Empleo</title>
-
+		
+		<title>Empresa Astori - Ofertas de Empleo</title>
 		<?php include '../_empresasImports.html'; ?>
 		<link 	rel="stylesheet" 	href="../../../css/ofertasEmpleo.css"	/>
     			
