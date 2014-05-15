@@ -6,20 +6,24 @@
 
   <link   rel=  "stylesheet"    href="../../css/styles.css"      type="text/css" />
   
-  <meta property="og:url" content="http://www.encontramas.com.ar/virtual/pages/inscripcion.html" />
+  <meta property="og:url" content="http://www.encontramas.com.ar/virtual/pages/Inscripcion/inscripcion.php" />
   <meta property="og:title" content="Feria de empresas- Encontra+ 2014" />
   <meta property="og:description" content="Inscribite a la feria de empresas 2014" />
   <meta property="og:image" content="http://www.encontramas.com.ar/virtual/features/images/encontramas_facebook_foto.jpg" />
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   <script type="text/javascript" src="../../logic/inscripcion/inscription.js"></script>
-  <link   rel="shortcut icon"  href="../../favicon.ico"     />
+  <link 	rel="shortcut icon"  href="../../favicon.ico"			/>
 </head>
 
 <body>
+	
     <div id="nav">
-          <ul class="">  
-            <li class="opensans"><a href="http://www.encontramas.com.ar/">Encontra +</a></li>
+          <ul class="opensans">  
+            <li><a href="http://www.encontramas.com.ar/">Encontra +</a></li>
+            <li><a href="../Base/exterior.php">						Exterior 			</a></li>
+	    <li><a href="../Base/interior.php">						Interior 			</a></li>			
+            <li><a href="../Base/ofertaLaboral.php">				Ofertas laborales	</a></li>			
             <li class="opensans"><a href="inscripcion.php">Inscribirse</a></li>
           </ul>
     </div>
@@ -776,7 +780,7 @@
                   </span>
               </form>
             </div>
-    
+		
             <div id="upload_curriculum_div" style="display:none">
               <form action="../../logic/inscripcion/add_file.php" enctype="multipart/form-data" method="post" style="text-align: center">
                   <span class="leftSide">

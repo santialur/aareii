@@ -6,7 +6,7 @@
 ?> 
 <html>
 	<head>
-		<title>Agenda</title>
+		<title>Empresa PanAmerican Energy - Agenda</title>
 
     	<?php include '../_empresasImports.html'; ?>
    		<link 	rel="stylesheet" 	href="../../../css/agenda.css"	/>

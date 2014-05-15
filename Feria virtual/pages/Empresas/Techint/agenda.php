@@ -6,8 +6,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Agenda</title>
-
+		
+		<title>Organizacion Techint - Agenda - Encontrá+ Virtual 2014</title>
     	<?php include '../_empresasImports.html'; ?>
    		<link 	rel="stylesheet" 	href="../../../css/agenda.css"											/>
 	</head>
@@ -16,7 +16,7 @@
     	<div class="wrapperMedium">
        		<?php include '../_empresasHeader.html'; 	?>
 
-    		<?php include '../_empresasMenu.html'; 		?>
+    		<?php include '../_empresasMenuA.html'; 		?>
 
     		<?php include '../_empresasAgenda.html'; 	?>
 

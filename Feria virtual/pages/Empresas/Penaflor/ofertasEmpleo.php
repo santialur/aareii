@@ -6,8 +6,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Ofertas de Empleo</title>
-
+		
+		<title>Grupo Peñaflor - Ofertas - Encontrá+ Virtual 2014</title>
 		<?php include '../_empresasImports.html'; ?>
 		<link 	rel="stylesheet" 	href="../../../css/ofertasEmpleo.css"	/>
     			
@@ -32,7 +32,7 @@
     	<div class="wrapperMedium">
             <?php include '../_empresasHeader.html'; ?>
 
-    		<?php include '../_empresasMenu.html'; 	?>
+    		<?php include '../_empresasMenuC.html'; 	?>
 
     		<?php include '../_empresasOfertas.html'; ?>
 

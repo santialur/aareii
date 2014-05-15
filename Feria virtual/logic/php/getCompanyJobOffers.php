@@ -10,8 +10,10 @@
 		{
 		  	die('Could not connect: ' . mysql_error($con));
 		}
-
-		$sql="SELECT * FROM job_offer, company WHERE company.id = job_offer.companyid AND enabled = 1";
+  
+			
+		$sql="SELECT job_offer.id as id, jobTitle, jobDescription, jobStudiesAreas, jobMinimumStudies, jobLanguages, jobContractType, jobShift, jobDatePublished, jobDateClose, enabled, company_name
+		FROM job_offer, company WHERE company.id = job_offer.companyid AND enabled = 1";
 		$result = mysql_query($sql, $con);
 
 		if(mysql_num_rows($result) == 0){
@@ -57,7 +59,8 @@
 		  	die('Could not connect: ' . mysql_error($con));
 		}
 
-		$sql="SELECT * FROM job_offer, company WHERE company.id = job_offer.companyid AND job_offer.companyid = '$companyId' AND enabled = 1";
+		$sql="SELECT job_offer.id as id, jobTitle, jobDescription, jobStudiesAreas, jobMinimumStudies, jobLanguages, jobContractType, jobShift, jobDatePublished, jobDateClose, enabled, company_name
+			FROM job_offer, company WHERE company.id = job_offer.companyid AND job_offer.companyid = '$companyId' AND enabled = 1";
 		$result = mysql_query($sql, $con);
 
 		if(mysql_num_rows($result) == 0){

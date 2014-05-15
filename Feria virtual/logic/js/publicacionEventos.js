@@ -20,9 +20,9 @@ function fillMinute(target)
 
   for(var i=0; i<60; i=i+5){
     if(i<10){
-      aux = aux + '<option value="0'+ parseFloat(i) +'">0'+ parseFloat(i) +'</option>';
+    	aux = aux + '<option value="0'+ parseFloat(i) +'">0'+ parseFloat(i) +'</option>';
     }else{
-      aux = aux + '<option value="'+ parseFloat(i) +'">'+ parseFloat(i) +'</option>';
+    	aux = aux + '<option value="'+ parseFloat(i) +'">'+ parseFloat(i) +'</option>';
     }
   }
   $(target).html(aux);
@@ -54,9 +54,9 @@ function fillMinuteEnd(target, minuteStart, hourStart, hourEnd)
 
   for(var i=parseFloat(minuteStart)+5; i<60; i=i+5){
     if(i<10){
-      aux = aux + '<option value="0'+ parseFloat(i) +'">0'+ parseFloat(i) +'</option>';
+    	aux = aux + '<option value="0'+ parseFloat(i) +'">0'+ parseFloat(i) +'</option>';
     }else{
-      aux = aux + '<option value="'+ parseFloat(i) +'">'+ parseFloat(i) +'</option>';
+    	aux = aux + '<option value="'+ parseFloat(i) +'">'+ parseFloat(i) +'</option>';
     }
   }
   $(target).html(aux);
@@ -114,12 +114,17 @@ function daysInMonth(month, year)
 function sendData(){
   var company_id = getSession();
   
+  var title = document.getElementById("titulo_evento").value.replace(/\t/g," ");
+  title = title.replace(/\r?\n|\r/g," ");
+  var descripcion = document.getElementById("descripcion_evento").value.replace(/\t/g," ");
+  descripcion = descripcion.replace(/\r?\n|\r/g," ");
+  
   $.ajax({ url: '../../logic/php/saveEvent.php',
       data: {companyid:     company_id,
-        eventTitle:       document.getElementById("titulo_evento").value,
+        eventTitle:       title ,
         eventDateTimeStart:     document.getElementById("tiempo_inicio_anio").value + "-" + document.getElementById("tiempo_inicio_mes").value + "-" + document.getElementById("tiempo_inicio_dia").value + " " + document.getElementById("tiempo_inicio_hora").value + ":" + document.getElementById("tiempo_inicio_minuto").value,
         eventDateTimeEnd:     document.getElementById("tiempo_finalizacion_anio").value + "-" + document.getElementById("tiempo_finalizacion_mes").value + "-" + document.getElementById("tiempo_finalizacion_dia").value + " " + document.getElementById("tiempo_finalizacion_hora").value + ":" + document.getElementById("tiempo_finalizacion_minuto").value,
-        eventDescription:     document.getElementById("descripcion_evento").value,
+        eventDescription:     descripcion ,
       },
       type: 'POST',
       success: function(output){
@@ -164,13 +169,13 @@ function getEvents()
         type: 'POST',
         success: function(output) 
         {
-          if(output == "No hay eventos"){
-            
-          }else{
-            
-            events = JSON.parse(output);
-              fillEvents(events);
-          }
+        	if(output == "No hay eventos"){
+        		
+        	}else{
+        		
+        		events = JSON.parse(output);
+          		fillEvents(events);
+        	}
           
         }
       });
@@ -203,21 +208,21 @@ function fillEvents(events)
 
 function deleteEvent(id)
 {
-  $.ajax({ 
-          url: '../../logic/php/deleteEvent.php',
-          data: 
-          {
-            eventId : id,
-          },
-          type: 'POST',
-          success: function(output) 
-          {
-              if(output == "Exito"){
-                location.reload();
-              }else{
-                alert(output);
-              }
-              
-          }
-        });
+	$.ajax({ 
+      		url: '../../logic/php/deleteEvent.php',
+      		data: 
+      		{
+        		eventId : id,
+      		},
+        	type: 'POST',
+        	success: function(output) 
+        	{
+          		if(output == "Exito"){
+          			location.reload();
+          		}else{
+          			alert(output);
+          		}
+          		
+        	}
+      	});
 }

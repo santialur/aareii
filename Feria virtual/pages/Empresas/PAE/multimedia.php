@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Multimedia</title>
-
+        
+	<title>Empresa PanAmerican Energy - Multimedia</title>
         <?php include '../_empresasImports.html'; ?>
 
         <!-- MARQUESINA --> 

@@ -28,7 +28,8 @@ OVERRIDE
 #tableOutput td
 {
 	text-align:			center;
-	font-size: 			0.9vw;
+	/*font-size: 			0.9vw;*/
+	font-size: 			12 px;
 }
 
 .cellWide

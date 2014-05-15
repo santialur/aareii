@@ -192,7 +192,12 @@ function sendData(){
    careerSelected = careerSelected.substring(0, careerSelected.length - 2);
 
    var company_id = getSession();
-   var descripcion = document.getElementById("descripcion_puesto").value.replace(/\n/g, '');
+   var descripcion = document.getElementById("descripcion_puesto").value.replace(/\n/g, " ");
+   descripcion = descripcion.replace(/\t/g," ");
+  
+   var consideraciones = document.getElementById("requisitos_puesto").value.replace(/\t/g," ");
+   consideraciones = consideraciones.replace(/\r?\n|\r/g," ");
+   
    $.ajax({ url: '../../logic/php/saveOffer.php',
             data: {companyid:        company_id,
                  jobTitle:       document.getElementById("info_puesto").value,
@@ -200,7 +205,7 @@ function sendData(){
                  jobStudiesAreas:      careerSelected,
                  jobMinimumStudies:      $("input[type='radio'][name='estudios']:checked").val(),
                  jobLanguages:     languages,
-                 jobConsiderations:      document.getElementById("requisitos_puesto").value,
+                 jobConsiderations:      consideraciones,
                  jobDateClose:       document.getElementById("fecha_cierre_anio").value + "-" + document.getElementById("fecha_cierre_mes").value + "-" + document.getElementById("fecha_cierre_dia").value,
                  jobContractType:      $("input[type='radio'][name='contrato']:checked").val(),
                  jobShift:         $("input[type='radio'][name='jornada']:checked").val(),
@@ -239,13 +244,13 @@ function getJobOffers()
         type: 'POST',
         success: function(output) 
         {
-          if(output == "No hay ofertas"){
-            
-          }else{
-            
-            offers = JSON.parse(output);
-              fillOffers(offers);
-          }
+        	if(output == "No hay ofertas"){
+        		
+        	}else{
+        		
+        		offers = JSON.parse(output);
+          		fillOffers(offers);
+        	}
         }
       });
   }
@@ -292,23 +297,23 @@ function fillOffers(offers)
 
 function deleteOffer(id)
 {
-  $.ajax({ 
-          url: '../../logic/php/deleteOffer.php',
-          data: 
-          {
-            offerId : id,
-          },
-          type: 'POST',
-          success: function(output) 
-          {
-              if(output == "Exito"){
-                location.reload();
-              }else{
-                alert(output);
-              }
-              
-          }
-        });
+	$.ajax({ 
+      		url: '../../logic/php/deleteOffer.php',
+      		data: 
+      		{
+        		offerId : id,
+      		},
+        	type: 'POST',
+        	success: function(output) 
+        	{
+          		if(output == "Exito"){
+          			location.reload();
+          		}else{
+          			alert(output);
+          		}
+          		
+        	}
+      	});
 }
 
 

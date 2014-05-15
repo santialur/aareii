@@ -40,29 +40,29 @@ if($result) {
         while($row = $result->fetch_assoc()) {
             $output = "";
             if(!is_null($row['cv_id'])){
-                $output = "<tr>
-                            <td><b>{$row['jobTitle']}<b></td>
-                            <td>{$row['firstname']}</td>
-                            <td>{$row['lastname']}</td>
-                            <td>{$row['title']}</td>
-                            <td>{$row['cb_nacimiento']}</td>
-                            <td>{$row['cb_pais']}</td>
-                            <td>{$row['cb_provincia']}</td>
-                            <td>{$row['email']}</td>
-                            <td><a href='../../logic/inscripcion/get_file.php?id={$row['cv_id']}'>Download</a></td>
-                       </tr>";
+            	$output = "<tr>
+                    	 	<td><b>{$row['jobTitle']}<b></td>
+                    		<td>{$row['firstname']}</td>
+                    		<td>{$row['lastname']}</td>
+                    		<td>{$row['title']}</td>
+                    		<td>{$row['cb_nacimiento']}</td>
+                    		<td>{$row['cb_pais']}</td>
+                    		<td>{$row['cb_provincia']}</td>
+                    		<td>{$row['email']}</td>
+                    		<td><a href='../../logic/inscripcion/get_file.php?id={$row['cv_id']}'>Download</a></td>
+                	   </tr>";
             }else{
-                $output = "<tr>
-                            <td><b>{$row['jobTitle']}<b></td>
-                            <td>{$row['firstname']}</td>
-                            <td>{$row['lastname']}</td>
-                            <td>{$row['title']}</td>
-                            <td>{$row['cb_nacimiento']}</td>
-                            <td>{$row['cb_pais']}</td>
-                            <td>{$row['cb_provincia']}</td>
-                            <td>{$row['email']}</td>
-                            <td><a>No cargó CV</a></td>
-                       </tr>";
+            	$output = "<tr>
+                    	 	<td><b>{$row['jobTitle']}<b></td>
+                    		<td>{$row['firstname']}</td>
+                    		<td>{$row['lastname']}</td>
+                    		<td>{$row['title']}</td>
+                    		<td>{$row['cb_nacimiento']}</td>
+                    		<td>{$row['cb_pais']}</td>
+                    		<td>{$row['cb_provincia']}</td>
+                    		<td>{$row['email']}</td>
+                    		<td><a>No cargó CV</a></td>
+                	   </tr>";
             }
             echo $output;
         }

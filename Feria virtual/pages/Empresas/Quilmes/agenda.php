@@ -6,8 +6,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Agenda</title>
-
+		
+		<title>Quilmes - Agenda - Encontrá+ Virtual 2014</title>
     	<?php include '../_empresasImports.html'; ?>
    		<link 	rel="stylesheet" 	href="../../../css/agenda.css"											/>
 	</head>

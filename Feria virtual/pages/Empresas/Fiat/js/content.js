@@ -1,9 +1,9 @@
 $( document ).ready(function()
 {
 	var webpage		= "www.fiat.com.ar";
-	var name		=  "Fiat Chrysler Automobiles";
+	var name		=  "Fiat-Chrysler Automóviles";
 	var slogan		=  "";
-	var title 		=  "FIAT CHRYSLER AUTOMOBILES";
+	var title 		=  "FIAT AUTO ARGENTINA";
 	var description 	=  "<iframe src='descripcion.html' scrolling='yes' frameborder='0' width='100%' height='400px'></iframe>";
 	
 	$('#brandWebpage').html(webpage);

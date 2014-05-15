@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Stand</title>
+        <title>Quilmes - Stand - Encontrá+ Virtual 2014</title>
 
         <?php include '../_empresasImports.html'; ?>
+        
+         <script type="text/javascript">
+		      $.ajax({ url: '../../../logic/php/saveVisit.php',
+		            data: {
+		            		place: 	"Quilmes",
+		            },
+		            type: 'POST',
+		            success: function(output){
+		                
+		            }
+		        });
+	</script>
     </head>
 
     <body>

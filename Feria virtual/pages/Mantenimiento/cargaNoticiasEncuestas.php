@@ -131,21 +131,21 @@
           <div id="pollBlock" style="display:none">
             <!-- TABLE WITH POLL --> 
             <div>
-              <h3 class="opensans textShadow">
-                Encuesta Publicada
-              </h3>
-             
+	            <h3 class="opensans textShadow">
+	              Encuesta Publicada
+	            </h3>
+	           
             </div>
             <br>
             <br>
             <br>
-            <div id="pollContent">  
-    <h3 id="pollTitle"></h3>  <br>
-    <div id="pollOptions"></div>
-    <div id="chart_div" class="opensans textShadow" style="width: 100%; height: 100%; display:none;" ></div>
-      </div>
-      <br>
-      <br>
+            <div id="pollContent">	
+		<h3 id="pollTitle"></h3>	<br>
+		<div id="pollOptions"></div>
+		<div id="chart_div" class="opensans textShadow" style="width: 100%; height: 100%; display:none;" ></div>
+	    </div>
+	    <br>
+	    <br>
             <!-- FORM FOR PUBLISHING --> 
             <form id="publishPoll" style="" name="publishPoll" onsubmit="return sendPoll()">
 

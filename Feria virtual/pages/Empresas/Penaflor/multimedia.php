@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Multimedia</title>
-
+		
+		<title>Grupo Peñaflor - Multimedia - Encontrá+ Virtual 2014</title>
         <?php include '../_empresasImports.html'; ?>
 	</head>
 

@@ -1,9 +1,9 @@
 $( document ).ready(function()
 {
-	var webpage		= "www.astori.com.ar";
-	var name		=  "Astori Estructuras S.A.";
-	var slogan		=  "Construimos. Siempre.";
-	var title 		=  "ASTORI ESTRUCTURAS S.A.";
+	var webpage		=  "http://www.iae.edu.ar/programas/JAP/Paginas/ContenidoAcademico.aspx";
+	var name		=  "Jóvenes de Alto Potencial - IAE Business School";
+	var slogan		=  "Tu primer paso en educación ejecutiva";
+	var title 		=  "Jóvenes de Alto Potencial - IAE Business School";
 	var description =  "<iframe src='descripcion.html' scrolling='yes' frameborder='0' width='100%' height='400px'></iframe>";
 
 	$('#brandWebpage').html(webpage);

@@ -16,12 +16,12 @@ function getJobOffers()
         type: 'POST',
         success: function(output) 
         {
-          if(output == "No hay ofertas"){
-          
-          }else{
-            offers = JSON.parse(output);
-            fillOffers(offers);
-            }
+        	if(output == "No hay ofertas"){
+        	
+        	}else{
+	          offers = JSON.parse(output);
+	          fillOffers(offers);
+          	}
         }
       });
   }

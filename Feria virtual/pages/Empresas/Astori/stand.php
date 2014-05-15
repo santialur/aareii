@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Stand</title>
+        <title>Empresa Astori - Stand</title>
 
         <?php include '../_empresasImports.html'; ?>
+         <script type="text/javascript">
+		      $.ajax({ url: '../../../logic/php/saveVisit.php',
+		            data: {
+		            		place: 	"Astori",
+		            },
+		            type: 'POST',
+		            success: function(output){
+		                
+		            }
+		        });
+	</script>
     </head>
 
     <body>
@@ -18,7 +29,7 @@
                     <img src="images/stand.png">
                     
                     <a href="empresa.php"><img id="frontalAstori" src="images/frontal.png"></a>
-                    <img id="anteriorAstori" src="images/anterior.png"></a>
+                    <img id="anteriorAstori" src="images/anterior.png">
 
                     <a href="../../Inscripcion/inscripcion.php" target="_blank"><img id="maletin_B"     src="../../../features/images/object/maletin_B.png"></a>
                     <a href="ofertasEmpleo.php"><img id="ofertas_B"    src="../../../features/images/object/ofertas_B.png"></a>

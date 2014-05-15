@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Quienes somos?</title>
 		
+		<title>Fiat-Chrysler - La empresa - Encontrá+ Virtual 2014</title>
+
 		<?php include '../_empresasImports.html'; ?>		
 	</head>
 
 	<body>
     	<div class="wrapperMedium">
-    		<?php include '../_empresasHeader.html'; ?>
+    		<?php include '../_empresasHeader.html';    ?>
 
     		<?php include '../_empresasMenuC.html'; 	?>
 
     		<div id="content">
     			<div style="margin: 0 auto; padding: 5% 10%">
 	    			<div>
-	                    <img src="images/banner.png" class="brandBanner">
+	                    <img src="images/Banner-Fondo.jpg" class="brandBanner">
 	                </div>
 	                <br />
 
-   	                <div class="textBoxes opensans textShadow centered"><a id="brandWebpage"></a></div>
+   	                <div class="textBoxes opensans textShadow centered"><a target="_blank" id="brandWebpage"></a></div>
    	                <br />
 			
 	                <div class="textBoxes">
